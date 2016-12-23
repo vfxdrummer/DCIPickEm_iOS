@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		22A0F49A1E0D0BA400DD2F2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4991E0D0BA400DD2F2D /* AppDelegate.swift */; };
-		22A0F49C1E0D0BA400DD2F2D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F49B1E0D0BA400DD2F2D /* MasterViewController.swift */; };
-		22A0F49E1E0D0BA400DD2F2D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F49D1E0D0BA400DD2F2D /* DetailViewController.swift */; };
 		22A0F4A11E0D0BA400DD2F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A0F49F1E0D0BA400DD2F2D /* Main.storyboard */; };
 		22A0F4A31E0D0BA400DD2F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A0F4A21E0D0BA400DD2F2D /* Assets.xcassets */; };
 		22A0F4A61E0D0BA400DD2F2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A0F4A41E0D0BA400DD2F2D /* LaunchScreen.storyboard */; };
@@ -25,6 +23,18 @@
 		22A0F4DC1E0D1AAF00DD2F2D /* ContestPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4DA1E0D1AAF00DD2F2D /* ContestPick.swift */; };
 		22A0F4DE1E0D1BA800DD2F2D /* ContestLineUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4DD1E0D1BA800DD2F2D /* ContestLineUp.swift */; };
 		22A0F4DF1E0D1BA800DD2F2D /* ContestLineUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4DD1E0D1BA800DD2F2D /* ContestLineUp.swift */; };
+		22A0F4E11E0D238F00DD2F2D /* ContestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E01E0D238F00DD2F2D /* ContestView.swift */; };
+		22A0F4E21E0D238F00DD2F2D /* ContestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E01E0D238F00DD2F2D /* ContestView.swift */; };
+		22A0F4E41E0D26A500DD2F2D /* ContestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E31E0D26A500DD2F2D /* ContestViewModel.swift */; };
+		22A0F4E51E0D26A500DD2F2D /* ContestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E31E0D26A500DD2F2D /* ContestViewModel.swift */; };
+		22A0F4E71E0D279C00DD2F2D /* CPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E61E0D279C00DD2F2D /* CPViewModel.swift */; };
+		22A0F4E81E0D279C00DD2F2D /* CPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E61E0D279C00DD2F2D /* CPViewModel.swift */; };
+		22A0F4EB1E0D2A5500DD2F2D /* ContestRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E91E0D2A5500DD2F2D /* ContestRow.swift */; };
+		22A0F4EC1E0D2A5500DD2F2D /* ContestRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E91E0D2A5500DD2F2D /* ContestRow.swift */; };
+		22A0F4ED1E0D2A5500DD2F2D /* ContestRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A0F4EA1E0D2A5500DD2F2D /* ContestRow.xib */; };
+		22A0F4EE1E0D2A5500DD2F2D /* ContestRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A0F4EA1E0D2A5500DD2F2D /* ContestRow.xib */; };
+		22A0F4F01E0D36D900DD2F2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4EF1E0D36D900DD2F2D /* Constants.swift */; };
+		22A0F4F11E0D36D900DD2F2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4EF1E0D36D900DD2F2D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +57,6 @@
 /* Begin PBXFileReference section */
 		22A0F4961E0D0BA400DD2F2D /* CorpsPicks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorpsPicks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A0F4991E0D0BA400DD2F2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22A0F49B1E0D0BA400DD2F2D /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		22A0F49D1E0D0BA400DD2F2D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		22A0F4A01E0D0BA400DD2F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22A0F4A21E0D0BA400DD2F2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22A0F4A51E0D0BA400DD2F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +72,12 @@
 		22A0F4D71E0D1A5F00DD2F2D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		22A0F4DA1E0D1AAF00DD2F2D /* ContestPick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestPick.swift; sourceTree = "<group>"; };
 		22A0F4DD1E0D1BA800DD2F2D /* ContestLineUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestLineUp.swift; sourceTree = "<group>"; };
+		22A0F4E01E0D238F00DD2F2D /* ContestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestView.swift; sourceTree = "<group>"; };
+		22A0F4E31E0D26A500DD2F2D /* ContestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestViewModel.swift; sourceTree = "<group>"; };
+		22A0F4E61E0D279C00DD2F2D /* CPViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPViewModel.swift; sourceTree = "<group>"; };
+		22A0F4E91E0D2A5500DD2F2D /* ContestRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestRow.swift; sourceTree = "<group>"; };
+		22A0F4EA1E0D2A5500DD2F2D /* ContestRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContestRow.xib; sourceTree = "<group>"; };
+		22A0F4EF1E0D36D900DD2F2D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +165,8 @@
 			children = (
 				22A0F49F1E0D0BA400DD2F2D /* Main.storyboard */,
 				22A0F4A41E0D0BA400DD2F2D /* LaunchScreen.storyboard */,
+				22A0F4E91E0D2A5500DD2F2D /* ContestRow.swift */,
+				22A0F4EA1E0D2A5500DD2F2D /* ContestRow.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -158,8 +174,7 @@
 		22A0F4CA1E0D10C300DD2F2D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				22A0F49B1E0D0BA400DD2F2D /* MasterViewController.swift */,
-				22A0F49D1E0D0BA400DD2F2D /* DetailViewController.swift */,
+				22A0F4E01E0D238F00DD2F2D /* ContestView.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -167,6 +182,8 @@
 		22A0F4CB1E0D10D900DD2F2D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				22A0F4E61E0D279C00DD2F2D /* CPViewModel.swift */,
+				22A0F4E31E0D26A500DD2F2D /* ContestViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -200,6 +217,7 @@
 		22A0F4CF1E0D16A300DD2F2D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				22A0F4EF1E0D36D900DD2F2D /* Constants.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -318,6 +336,7 @@
 			files = (
 				22A0F4A61E0D0BA400DD2F2D /* LaunchScreen.storyboard in Resources */,
 				22A0F4A31E0D0BA400DD2F2D /* Assets.xcassets in Resources */,
+				22A0F4ED1E0D2A5500DD2F2D /* ContestRow.xib in Resources */,
 				22A0F4A11E0D0BA400DD2F2D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A0F4EE1E0D2A5500DD2F2D /* ContestRow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,13 +364,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A0F4D51E0D17F400DD2F2D /* Contest.swift in Sources */,
-				22A0F49E1E0D0BA400DD2F2D /* DetailViewController.swift in Sources */,
+				22A0F4F01E0D36D900DD2F2D /* Constants.swift in Sources */,
+				22A0F4EB1E0D2A5500DD2F2D /* ContestRow.swift in Sources */,
 				22A0F4DB1E0D1AAF00DD2F2D /* ContestPick.swift in Sources */,
 				22A0F4DE1E0D1BA800DD2F2D /* ContestLineUp.swift in Sources */,
+				22A0F4E71E0D279C00DD2F2D /* CPViewModel.swift in Sources */,
 				22A0F4D81E0D1A5F00DD2F2D /* User.swift in Sources */,
 				22A0F4D21E0D177400DD2F2D /* Corps.swift in Sources */,
-				22A0F49C1E0D0BA400DD2F2D /* MasterViewController.swift in Sources */,
+				22A0F4E11E0D238F00DD2F2D /* ContestView.swift in Sources */,
 				22A0F49A1E0D0BA400DD2F2D /* AppDelegate.swift in Sources */,
+				22A0F4E41E0D26A500DD2F2D /* ContestViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,9 +382,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A0F4DC1E0D1AAF00DD2F2D /* ContestPick.swift in Sources */,
+				22A0F4F11E0D36D900DD2F2D /* Constants.swift in Sources */,
+				22A0F4E21E0D238F00DD2F2D /* ContestView.swift in Sources */,
+				22A0F4EC1E0D2A5500DD2F2D /* ContestRow.swift in Sources */,
 				22A0F4D91E0D1A5F00DD2F2D /* User.swift in Sources */,
+				22A0F4E81E0D279C00DD2F2D /* CPViewModel.swift in Sources */,
 				22A0F4B11E0D0BA500DD2F2D /* CorpsPicksTests.swift in Sources */,
 				22A0F4DF1E0D1BA800DD2F2D /* ContestLineUp.swift in Sources */,
+				22A0F4E51E0D26A500DD2F2D /* ContestViewModel.swift in Sources */,
 				22A0F4D31E0D177400DD2F2D /* Corps.swift in Sources */,
 				22A0F4D61E0D17F400DD2F2D /* Contest.swift in Sources */,
 			);
@@ -582,6 +610,7 @@
 				22A0F4C21E0D0BA500DD2F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22A0F4C31E0D0BA500DD2F2D /* Build configuration list for PBXNativeTarget "CorpsPicksTests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +619,7 @@
 				22A0F4C51E0D0BA500DD2F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22A0F4C61E0D0BA500DD2F2D /* Build configuration list for PBXNativeTarget "CorpsPicksUITests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +628,7 @@
 				22A0F4C81E0D0BA500DD2F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
