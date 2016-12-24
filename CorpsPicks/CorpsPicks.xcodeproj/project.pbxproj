@@ -35,6 +35,8 @@
 		22A0F4EE1E0D2A5500DD2F2D /* ContestRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A0F4EA1E0D2A5500DD2F2D /* ContestRow.xib */; };
 		22A0F4F01E0D36D900DD2F2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4EF1E0D36D900DD2F2D /* Constants.swift */; };
 		22A0F4F11E0D36D900DD2F2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4EF1E0D36D900DD2F2D /* Constants.swift */; };
+		22FA69341E0E2986003CAFEF /* CPTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69331E0E2986003CAFEF /* CPTopView.swift */; };
+		22FA69371E0E36B8003CAFEF /* bd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22FA69361E0E36B8003CAFEF /* bd.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		22A0F4E91E0D2A5500DD2F2D /* ContestRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestRow.swift; sourceTree = "<group>"; };
 		22A0F4EA1E0D2A5500DD2F2D /* ContestRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContestRow.xib; sourceTree = "<group>"; };
 		22A0F4EF1E0D36D900DD2F2D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		22FA69331E0E2986003CAFEF /* CPTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPTopView.swift; sourceTree = "<group>"; };
+		22FA69361E0E36B8003CAFEF /* bd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bd.jpg; path = resources/images/bd.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 		22A0F4CA1E0D10C300DD2F2D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				22FA69331E0E2986003CAFEF /* CPTopView.swift */,
 				22A0F4E01E0D238F00DD2F2D /* ContestView.swift */,
 			);
 			name = ViewControllers;
@@ -225,9 +230,18 @@
 		22A0F4D01E0D16B200DD2F2D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22FA69351E0E36AE003CAFEF /* images */,
 				22A0F4A71E0D0BA400DD2F2D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22FA69351E0E36AE003CAFEF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				22FA69361E0E36B8003CAFEF /* bd.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22FA69371E0E36B8003CAFEF /* bd.jpg in Resources */,
 				22A0F4A61E0D0BA400DD2F2D /* LaunchScreen.storyboard in Resources */,
 				22A0F4A31E0D0BA400DD2F2D /* Assets.xcassets in Resources */,
 				22A0F4ED1E0D2A5500DD2F2D /* ContestRow.xib in Resources */,
@@ -366,6 +381,7 @@
 				22A0F4D51E0D17F400DD2F2D /* Contest.swift in Sources */,
 				22A0F4F01E0D36D900DD2F2D /* Constants.swift in Sources */,
 				22A0F4EB1E0D2A5500DD2F2D /* ContestRow.swift in Sources */,
+				22FA69341E0E2986003CAFEF /* CPTopView.swift in Sources */,
 				22A0F4DB1E0D1AAF00DD2F2D /* ContestPick.swift in Sources */,
 				22A0F4DE1E0D1BA800DD2F2D /* ContestLineUp.swift in Sources */,
 				22A0F4E71E0D279C00DD2F2D /* CPViewModel.swift in Sources */,

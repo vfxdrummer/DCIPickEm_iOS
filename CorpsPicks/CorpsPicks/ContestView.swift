@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContestView: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ContestView: UITableViewController {
   
   var contestViewModel : ContestViewModel? = nil
   
@@ -66,21 +66,25 @@ class ContestView: UIViewController, UITableViewDelegate, UITableViewDataSource 
   
   //  MARK: UITableViewDelegate - UITableViewDataSource Methods
   
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }
   
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return contestViewModel!.corps.count
   }
   
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return 100
+  }
+  
+  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("ContestRow") as! ContestRow
     cell.load(contestViewModel!.corps[indexPath.row])
     return cell
   }
   
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
   }
 }
 

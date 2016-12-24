@@ -12,7 +12,9 @@ class ContestViewModel: CPViewModel {
   
   var corps : [Corps] {
     get {
-      return []
+      let a : Corps = Corps()
+      a.name = "Blue Devils"
+      return [a]
     }
   }
   

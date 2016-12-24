@@ -14,9 +14,9 @@ class ContestRow: UITableViewCell {
   var corps : Corps? = nil
   var viewModel : CPViewModel? = nil
   
-//  @IBOutlet var subName: UILabel!
-//  @IBOutlet var albumName: UILabel!
-//  @IBOutlet var coverImage: UIImageView!
+  @IBOutlet var corpsName: UILabel!
+  @IBOutlet var corpsImage: UIImageView!
+  @IBOutlet var corpsScore: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -34,5 +34,8 @@ class ContestRow: UITableViewCell {
    - parameter album: Album
    */
   func load(corps:Corps) {
+    self.corpsName.text = corps.name
+    self.corpsScore.text = "99.5"
+//    self.corpsImage.image = 
   }
 }
