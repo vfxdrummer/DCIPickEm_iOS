@@ -84,7 +84,7 @@ class ContestView: UITableViewController {
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("ContestRow") as! ContestRow
-    cell.load(contestViewModel!.corps[indexPath.row])
+    cell.load(corps[indexPath.row])
     return cell
   }
   
@@ -102,7 +102,12 @@ class ContestView: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+    let score = corps[destinationIndexPath.row].score
+    corps[destinationIndexPath.row].score = corps[sourceIndexPath.row].score
+    corps[sourceIndexPath.row].score = score
+    contestTable.reloadData()
     return swap(&corps[sourceIndexPath.row], &corps[destinationIndexPath.row])
+    
   }
 }
 
