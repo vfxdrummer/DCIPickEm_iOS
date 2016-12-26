@@ -11,6 +11,7 @@ import UIKit
 class ContestView: UITableViewController {
   
   var contestViewModel : ContestViewModel? = nil
+  var corps : [Corps] = []
   
   @IBOutlet var contestTable: UITableView!
   
@@ -23,6 +24,7 @@ class ContestView: UITableViewController {
     // Setup the ViewModel
     contestViewModel = ContestViewModel(viewController: self)
     contestViewModel?.setup()
+    corps = contestViewModel!.corps
     
     // Setup the Tableview Delegates
     contestTable.delegate = self
@@ -30,6 +32,8 @@ class ContestView: UITableViewController {
     contestTable.tableFooterView = UIView(frame: CGRectZero)
     let corpsNib = UINib(nibName: "ContestRow", bundle: nil)
     contestTable.registerNib(corpsNib, forCellReuseIdentifier: "ContestRow")
+    
+    contestTable.setEditing(true, animated: true)
     
 //    // Setup the ViewController Title
 //    self.title = Constants.album
@@ -85,6 +89,20 @@ class ContestView: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+  }
+  
+  //  MARK: UITableViewDelegate - editting / rearranging methods
+  
+  override func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+    return UITableViewCellEditingStyle.None
+  }
+  
+  override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    return true
+  }
+  
+  override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+    return swap(&corps[sourceIndexPath.row], &corps[destinationIndexPath.row])
   }
 }
 

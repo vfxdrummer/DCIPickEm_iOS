@@ -14,7 +14,15 @@ class ContestViewModel: CPViewModel {
     get {
       let a : Corps = Corps()
       a.name = "Blue Devils"
-      return [a]
+      let b : Corps = Corps()
+      b.name = "Bluecoats"
+      let c : Corps = Corps()
+      c.name = "Crown"
+      let d : Corps = Corps()
+      d.name = "Cadets"
+      let e : Corps = Corps()
+      e.name = "Cavaliers"
+      return [a, b, c, d, e]
     }
   }
   
