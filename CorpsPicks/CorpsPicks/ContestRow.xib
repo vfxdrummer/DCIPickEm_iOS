@@ -22,9 +22,10 @@
                         </constraints>
                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-3T-i1K" userLabel="Corps Name">
-                        <rect key="frame" x="106" y="35" width="305" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-3T-i1K" userLabel="Corps Name">
+                        <rect key="frame" x="106" y="44" width="150" height="18"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="150" id="B8Q-5p-gd9"/>
                             <constraint firstAttribute="width" secondItem="yvE-3T-i1K" secondAttribute="height" multiplier="352:21" id="U5r-Ps-uo1"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -36,8 +37,8 @@
                             </mask>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="Corps Score">
-                        <rect key="frame" x="106" y="56" width="305" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="Corps Score">
+                        <rect key="frame" x="256" y="44" width="33" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ylr-i8-IIi" secondAttribute="height" multiplier="352:21" id="TCx-4w-yOI"/>
                         </constraints>
@@ -53,21 +54,29 @@
                 </subviews>
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
+                    <constraint firstItem="ylr-i8-IIi" firstAttribute="leading" secondItem="yvE-3T-i1K" secondAttribute="trailing" id="0Ex-3K-4c2"/>
                     <constraint firstAttribute="bottom" secondItem="4W8-HH-yB2" secondAttribute="bottom" constant="8" id="7w6-8J-U42"/>
                     <constraint firstAttribute="trailing" secondItem="yvE-3T-i1K" secondAttribute="trailing" constant="8" id="EJA-vZ-PmT"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="8" id="P5A-0F-gFl"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="top" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="1" id="PgV-xz-4Mq"/>
+                    <constraint firstItem="ylr-i8-IIi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Q3d-Xs-7I0"/>
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="top" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="-45" id="RMy-wa-OaY"/>
                     <constraint firstAttribute="trailing" secondItem="ylr-i8-IIi" secondAttribute="trailing" constant="8" id="RY8-6e-fzh"/>
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="V39-6m-Xez"/>
+                    <constraint firstItem="yvE-3T-i1K" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cgU-av-oqN"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="leading" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="8" id="cnW-Sz-3X7"/>
+                    <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="8" id="nLv-78-FBp"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="top" secondItem="4W8-HH-yB2" secondAttribute="top" id="t3C-ik-2wj"/>
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="vfd-sL-Yjb"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
+                        <exclude reference="RMy-wa-OaY"/>
                         <exclude reference="EJA-vZ-PmT"/>
+                        <exclude reference="P5A-0F-gFl"/>
+                        <exclude reference="PgV-xz-4Mq"/>
                         <exclude reference="RY8-6e-fzh"/>
+                        <exclude reference="cnW-Sz-3X7"/>
                         <exclude reference="t3C-ik-2wj"/>
                     </mask>
                 </variation>
