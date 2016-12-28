@@ -51,6 +51,15 @@
                             </mask>
                         </variation>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
+                        <rect key="frame" x="210" y="62" width="125" height="47"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="47" id="BEm-25-iYr"/>
+                            <constraint firstAttribute="width" constant="125" id="ieX-h0-dkI"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
@@ -63,8 +72,10 @@
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="top" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="-45" id="RMy-wa-OaY"/>
                     <constraint firstAttribute="trailing" secondItem="ylr-i8-IIi" secondAttribute="trailing" constant="8" id="RY8-6e-fzh"/>
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="V39-6m-Xez"/>
+                    <constraint firstItem="sB2-EP-uKl" firstAttribute="centerX" secondItem="ylr-i8-IIi" secondAttribute="centerX" id="aFu-5h-4xP"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cgU-av-oqN"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="leading" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="8" id="cnW-Sz-3X7"/>
+                    <constraint firstItem="sB2-EP-uKl" firstAttribute="top" secondItem="ylr-i8-IIi" secondAttribute="bottom" constant="2" id="mT8-Hm-Srq"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="8" id="nLv-78-FBp"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="top" secondItem="4W8-HH-yB2" secondAttribute="top" id="t3C-ik-2wj"/>
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="vfd-sL-Yjb"/>
@@ -87,6 +98,7 @@
                 <outlet property="corpsImage" destination="4W8-HH-yB2" id="EgS-Vb-irZ"/>
                 <outlet property="corpsName" destination="yvE-3T-i1K" id="LOp-8C-Ox6"/>
                 <outlet property="corpsScore" destination="ylr-i8-IIi" id="FVb-RX-mwQ"/>
+                <outlet property="scorePanGestureView" destination="sB2-EP-uKl" id="SxX-ME-UfU"/>
             </connections>
             <point key="canvasLocation" x="512.5" y="437"/>
         </tableViewCell>

@@ -13,10 +13,12 @@ class ContestRow: UITableViewCell {
 
   var corps : Corps? = nil
   var viewModel : CPViewModel? = nil
+  var scoreGesture : UIPanGestureRecognizer? = nil
   
   @IBOutlet var corpsName: UILabel!
   @IBOutlet var corpsImage: UIImageView!
   @IBOutlet var corpsScore: UILabel!
+  @IBOutlet var scorePanGestureView: UIView!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -37,5 +39,15 @@ class ContestRow: UITableViewCell {
     self.corpsName.text = corps.name
     self.corpsScore.text = corps.score
     self.corpsImage.fadeIn(corps.imageFileName)
+//
+    self.scoreGesture = UIPanGestureRecognizer(target: self, action: #selector(ContestRow.handlePan(_:)))
+    self.addGestureRecognizer(self.scoreGesture!)
   }
+  
+  @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
+    
+  }
+  
+  
+  
 }
