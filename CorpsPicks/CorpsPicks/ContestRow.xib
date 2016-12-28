@@ -37,8 +37,8 @@
                             </mask>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="Corps Score">
-                        <rect key="frame" x="256" y="44" width="33" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="Corps Score">
+                        <rect key="frame" x="256" y="52" width="0.0" height="0.0"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ylr-i8-IIi" secondAttribute="height" multiplier="352:21" id="TCx-4w-yOI"/>
                         </constraints>
@@ -51,12 +51,12 @@
                             </mask>
                         </variation>
                     </label>
-                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
-                        <rect key="frame" x="185" y="62" width="175" height="47"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
+                        <rect key="frame" x="168" y="54" width="175" height="40"/>
+                        <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="47" id="BEm-25-iYr"/>
+                            <constraint firstAttribute="height" constant="40" id="BEm-25-iYr"/>
                             <constraint firstAttribute="width" constant="175" id="ieX-h0-dkI"/>
                         </constraints>
                     </view>

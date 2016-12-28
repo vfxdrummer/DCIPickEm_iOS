@@ -16,6 +16,7 @@ class ContestRow: UITableViewCell {
   var scoreGesture : UIPanGestureRecognizer? = nil
   var tapGesture : UITapGestureRecognizer? = nil
   var scoreDirection : Bool = true
+  var parentTable: UITableView?
   
   @IBOutlet var corpsName: UILabel!
   @IBOutlet var corpsImage: UIImageView!
@@ -44,8 +45,8 @@ class ContestRow: UITableViewCell {
     
     self.scoreGesture = UIPanGestureRecognizer(target: self, action: #selector(ContestRow.handlePan(_:)))
     self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(ContestRow.handleTap(_:)))
-    self.addGestureRecognizer(self.scoreGesture!)
-    self.addGestureRecognizer(self.tapGesture!)
+    self.scorePanGestureView.addGestureRecognizer(self.scoreGesture!)
+    self.scorePanGestureView.addGestureRecognizer(self.tapGesture!)
   }
   
   @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
@@ -55,15 +56,8 @@ class ContestRow: UITableViewCell {
     corpsScoreFloat = (corpsScoreFloat >= 0) ? corpsScoreFloat : 0
     self.scoreDirection = translation.x > 0.0 ? true : false
     self.corpsScore.text = String(format:"%.2f", corpsScoreFloat)
-    print(translation.x / 100.0)
-//    if recognizer.state == UIGestureRecognizerState.Ended {
-//      let velocity = recognizer.velocityInView(self.scorePanGestureView)
-//      var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!) + (velocity.x / 100.0)
-//      corpsScoreFloat = (corpsScoreFloat <= 100) ? corpsScoreFloat : 100
-//      corpsScoreFloat = (corpsScoreFloat >= 0) ? corpsScoreFloat : 0
-//      self.corpsScore.text = String(format:"%.2f", corpsScoreFloat)
-//      print(velocity.x / 100.0)
-//    }
+    
+    if (parentTable != nil) { parentTable!.reloadData() }
   }
 
   @IBAction func handleTap(recognizer:UIPanGestureRecognizer) {

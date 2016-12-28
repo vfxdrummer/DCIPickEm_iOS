@@ -10,7 +10,7 @@ import UIKit
 
 class ContestViewModel: CPViewModel {
   
-  var corps : [Corps] {
+  var corpsScores : CorpsScores {
     get {
       let a : Corps = Corps()
       a.name = "Blue Devils"
@@ -32,7 +32,9 @@ class ContestViewModel: CPViewModel {
       e.name = "Cavaliers"
       e.score = "94.2"
       e.imageFileName = "cavaliers.jpeg"
-      return [a, b, c, d, e]
+      let cS : CorpsScores = CorpsScores()
+      cS.corps = [a, b, c, d, e]
+      return cS
     }
   }
   

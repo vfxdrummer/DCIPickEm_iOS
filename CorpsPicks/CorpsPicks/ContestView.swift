@@ -11,7 +11,7 @@ import UIKit
 class ContestView: UITableViewController {
   
   var contestViewModel : ContestViewModel? = nil
-  var corps : [Corps] = []
+  var corpsScores : CorpsScores = CorpsScores()
   
   @IBOutlet var contestTable: UITableView!
   
@@ -24,7 +24,7 @@ class ContestView: UITableViewController {
     // Setup the ViewModel
     contestViewModel = ContestViewModel(viewController: self)
     contestViewModel?.setup()
-    corps = contestViewModel!.corps
+    corpsScores = contestViewModel!.corpsScores
     
     // Setup the Tableview Delegates
     contestTable.delegate = self
@@ -75,7 +75,7 @@ class ContestView: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return contestViewModel!.corps.count
+    return contestViewModel!.corpsScores.corps.count
   }
   
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -106,7 +106,9 @@ class ContestView: UITableViewController {
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("ContestRow") as! ContestRow
-    cell.load(corps[indexPath.row])
+    corpsScores.corps[indexPath.row].score = cell.corpsScore.text != "" ? cell.corpsScore.text! : corpsScores.corps[indexPath.row].score
+    cell.parentTable = self.contestTable
+    cell.load(corpsScores.corps[indexPath.row])
     return cell
   }
   
@@ -124,12 +126,13 @@ class ContestView: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-    let score = corps[destinationIndexPath.row].score
-    corps[destinationIndexPath.row].score = corps[sourceIndexPath.row].score
-    corps[sourceIndexPath.row].score = score
-    swap(&corps[sourceIndexPath.row], &corps[destinationIndexPath.row])
-    
-    contestTable.reloadData()
+    if (sourceIndexPath.row != destinationIndexPath.row) {
+      let score = corpsScores.corps[destinationIndexPath.row].score
+      corpsScores.corps[destinationIndexPath.row].score = corpsScores.corps[sourceIndexPath.row].score
+      corpsScores.corps[sourceIndexPath.row].score = score
+      swap(&corpsScores.corps[sourceIndexPath.row], &corpsScores.corps[destinationIndexPath.row])
+      contestTable.reloadData()
+    }
   }
 }
 
