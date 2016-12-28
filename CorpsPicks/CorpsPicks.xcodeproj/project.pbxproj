@@ -19,8 +19,6 @@
 		22A0F4D61E0D17F400DD2F2D /* Contest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4D41E0D17F400DD2F2D /* Contest.swift */; };
 		22A0F4D81E0D1A5F00DD2F2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4D71E0D1A5F00DD2F2D /* User.swift */; };
 		22A0F4D91E0D1A5F00DD2F2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4D71E0D1A5F00DD2F2D /* User.swift */; };
-		22A0F4DB1E0D1AAF00DD2F2D /* ContestPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4DA1E0D1AAF00DD2F2D /* ContestPick.swift */; };
-		22A0F4DC1E0D1AAF00DD2F2D /* ContestPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4DA1E0D1AAF00DD2F2D /* ContestPick.swift */; };
 		22A0F4DE1E0D1BA800DD2F2D /* ContestLineUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4DD1E0D1BA800DD2F2D /* ContestLineUp.swift */; };
 		22A0F4DF1E0D1BA800DD2F2D /* ContestLineUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4DD1E0D1BA800DD2F2D /* ContestLineUp.swift */; };
 		22A0F4E11E0D238F00DD2F2D /* ContestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E01E0D238F00DD2F2D /* ContestView.swift */; };
@@ -45,7 +43,9 @@
 		22FA69431E11BEB1003CAFEF /* bluecoats.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22FA693D1E11BEB0003CAFEF /* bluecoats.jpeg */; };
 		22FA69471E133D24003CAFEF /* ExtUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69451E133D24003CAFEF /* ExtUIImage.swift */; };
 		22FA69481E133D24003CAFEF /* ExtUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69461E133D24003CAFEF /* ExtUIImageView.swift */; };
-		22FA694A1E13C641003CAFEF /* CorpsScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69491E13C641003CAFEF /* CorpsScores.swift */; };
+		22FA694A1E13C641003CAFEF /* ContestPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69491E13C641003CAFEF /* ContestPick.swift */; };
+		22FA694C1E145C90003CAFEF /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA694B1E145C90003CAFEF /* Score.swift */; };
+		22FA694E1E145EA2003CAFEF /* CorpsScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA694D1E145EA2003CAFEF /* CorpsScore.swift */; };
 		55E50D1CED783C98FAD2CDB9 /* Pods_CorpsPicksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2628E076101F686E2A7E88 /* Pods_CorpsPicksTests.framework */; };
 		D3A5F3F6D48D9AEC78BBEFF2 /* Pods_CorpsPicks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5321C5BAC1CD1D0A388782 /* Pods_CorpsPicks.framework */; };
 /* End PBXBuildFile section */
@@ -83,7 +83,6 @@
 		22A0F4D11E0D177400DD2F2D /* Corps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Corps.swift; sourceTree = "<group>"; };
 		22A0F4D41E0D17F400DD2F2D /* Contest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contest.swift; sourceTree = "<group>"; };
 		22A0F4D71E0D1A5F00DD2F2D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		22A0F4DA1E0D1AAF00DD2F2D /* ContestPick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestPick.swift; sourceTree = "<group>"; };
 		22A0F4DD1E0D1BA800DD2F2D /* ContestLineUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestLineUp.swift; sourceTree = "<group>"; };
 		22A0F4E01E0D238F00DD2F2D /* ContestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestView.swift; sourceTree = "<group>"; };
 		22A0F4E31E0D26A500DD2F2D /* ContestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestViewModel.swift; sourceTree = "<group>"; };
@@ -101,7 +100,9 @@
 		22FA693D1E11BEB0003CAFEF /* bluecoats.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bluecoats.jpeg; path = resources/images/bluecoats.jpeg; sourceTree = "<group>"; };
 		22FA69451E133D24003CAFEF /* ExtUIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUIImage.swift; sourceTree = "<group>"; };
 		22FA69461E133D24003CAFEF /* ExtUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUIImageView.swift; sourceTree = "<group>"; };
-		22FA69491E13C641003CAFEF /* CorpsScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorpsScores.swift; sourceTree = "<group>"; };
+		22FA69491E13C641003CAFEF /* ContestPick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestPick.swift; sourceTree = "<group>"; };
+		22FA694B1E145C90003CAFEF /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		22FA694D1E145EA2003CAFEF /* CorpsScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorpsScore.swift; sourceTree = "<group>"; };
 		242284AB0ACFD824281F9DBB /* Pods-CorpsPicksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorpsPicksTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CorpsPicksTests/Pods-CorpsPicksTests.release.xcconfig"; sourceTree = "<group>"; };
 		319B230EEA0D42603C530A90 /* Pods-CorpsPicks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorpsPicks.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CorpsPicks/Pods-CorpsPicks.debug.xcconfig"; sourceTree = "<group>"; };
 		4F2628E076101F686E2A7E88 /* Pods_CorpsPicksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CorpsPicksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,9 +236,10 @@
 			children = (
 				22A0F4D41E0D17F400DD2F2D /* Contest.swift */,
 				22A0F4DD1E0D1BA800DD2F2D /* ContestLineUp.swift */,
-				22A0F4DA1E0D1AAF00DD2F2D /* ContestPick.swift */,
 				22A0F4D11E0D177400DD2F2D /* Corps.swift */,
-				22FA69491E13C641003CAFEF /* CorpsScores.swift */,
+				22FA694D1E145EA2003CAFEF /* CorpsScore.swift */,
+				22FA69491E13C641003CAFEF /* ContestPick.swift */,
+				22FA694B1E145C90003CAFEF /* Score.swift */,
 				22A0F4D71E0D1A5F00DD2F2D /* User.swift */,
 			);
 			name = Models;
@@ -555,14 +557,15 @@
 				22A0F4EB1E0D2A5500DD2F2D /* ContestRow.swift in Sources */,
 				22FA69341E0E2986003CAFEF /* CPTopView.swift in Sources */,
 				22FA69481E133D24003CAFEF /* ExtUIImageView.swift in Sources */,
-				22A0F4DB1E0D1AAF00DD2F2D /* ContestPick.swift in Sources */,
+				22FA694C1E145C90003CAFEF /* Score.swift in Sources */,
 				22A0F4DE1E0D1BA800DD2F2D /* ContestLineUp.swift in Sources */,
 				22A0F4E71E0D279C00DD2F2D /* CPViewModel.swift in Sources */,
 				22FA69471E133D24003CAFEF /* ExtUIImage.swift in Sources */,
 				22A0F4D81E0D1A5F00DD2F2D /* User.swift in Sources */,
 				22A0F4D21E0D177400DD2F2D /* Corps.swift in Sources */,
 				22A0F4E11E0D238F00DD2F2D /* ContestView.swift in Sources */,
-				22FA694A1E13C641003CAFEF /* CorpsScores.swift in Sources */,
+				22FA694A1E13C641003CAFEF /* ContestPick.swift in Sources */,
+				22FA694E1E145EA2003CAFEF /* CorpsScore.swift in Sources */,
 				22A0F49A1E0D0BA400DD2F2D /* AppDelegate.swift in Sources */,
 				22A0F4E41E0D26A500DD2F2D /* ContestViewModel.swift in Sources */,
 			);
@@ -572,7 +575,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22A0F4DC1E0D1AAF00DD2F2D /* ContestPick.swift in Sources */,
 				22A0F4F11E0D36D900DD2F2D /* Constants.swift in Sources */,
 				22A0F4E21E0D238F00DD2F2D /* ContestView.swift in Sources */,
 				22A0F4EC1E0D2A5500DD2F2D /* ContestRow.swift in Sources */,

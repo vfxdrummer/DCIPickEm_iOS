@@ -10,35 +10,48 @@ import UIKit
 
 class ContestViewModel: CPViewModel {
   
-  var corpsScores : CorpsScores {
-    get {
-      let a : Corps = Corps()
-      a.name = "Blue Devils"
-      a.score = "97.3"
-      a.imageFileName = "bluedevils.png"
-      let b : Corps = Corps()
-      b.name = "Bluecoats"
-      b.score = "96.9"
-      b.imageFileName = "bluecoats.jpeg"
-      let c : Corps = Corps()
-      c.name = "Crown"
-      c.score = "96.7"
-      c.imageFileName = "crown2.jpg"
-      let d : Corps = Corps()
-      d.name = "Cadets"
-      d.score = "94.5"
-      d.imageFileName = "cadets.jpeg"
-      let e : Corps = Corps()
-      e.name = "Cavaliers"
-      e.score = "94.2"
-      e.imageFileName = "cavaliers.jpeg"
-      let cS : CorpsScores = CorpsScores()
-      cS.corps = [a, b, c, d, e]
-      return cS
-    }
-  }
+//  var contestPick : ContestPick
+  
+  var corpsScores : [CorpsScore] = []
   
   func setup() {
+    let a : Corps = Corps()
+    a.name = "Blue Devils"
+    a.imageFileName = "bluedevils.png"
+    let aS : Score = Score(score: "97.3")
+    let aCS : CorpsScore = CorpsScore(corps: a, score: aS)
+    
+    let b : Corps = Corps()
+    b.name = "Bluecoats"
+    b.imageFileName = "bluecoats.jpeg"
+    let bS : Score = Score(score: "96.9")
+    let bCS : CorpsScore = CorpsScore(corps: b, score: bS)
+    
+    let c : Corps = Corps()
+    c.name = "Crown"
+    c.imageFileName = "crown2.jpg"
+    let cS : Score = Score(score: "96.7")
+    let cCS : CorpsScore = CorpsScore(corps: c, score: cS)
+    
+    let d : Corps = Corps()
+    d.name = "Cadets"
+    d.imageFileName = "cadets.jpeg"
+    let dS : Score = Score(score: "94.5")
+    let dCS : CorpsScore = CorpsScore(corps: d, score: dS)
+    
+    let e : Corps = Corps()
+    e.name = "Cavaliers"
+    e.imageFileName = "cavaliers.jpeg"
+    let eS : Score = Score(score: "94.2")
+    let eCS : CorpsScore = CorpsScore(corps: e, score: eS)
+    
+//    _ : ContestPick = ContestPick()
+    self.corpsScores = [aCS, bCS, cCS, dCS, eCS]
+//    self.contestPick = contestPick
+  }
+  
+  func sort() {
+    self.corpsScores.sortInPlace { $0.score.pick > $1.score.pick }
   }
 }
 

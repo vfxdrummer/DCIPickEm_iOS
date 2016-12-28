@@ -1,9 +1,9 @@
 //
 //  CPViewModel.swift
-//  Earbits Radio
+//  CorpsPicks
 //
-//  Created by James Tan on 5/14/16.
-//  Copyright © 2016 Earbits. All rights reserved.
+//  Created by Tim Brandt on 12/23/16.
+//  Copyright © 2016 Tim Brandt. All rights reserved.
 //
 
 import UIKit

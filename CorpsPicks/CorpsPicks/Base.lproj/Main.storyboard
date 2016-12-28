@@ -21,6 +21,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="pak-Fh-9gX"/>
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="893-Nl-ZXX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                     <connections>
                         <outlet property="contestTable" destination="r7i-6Z-zg0" id="zOw-jJ-W8S"/>
                     </connections>

@@ -16,7 +16,8 @@ class ContestRow: UITableViewCell {
   var scoreGesture : UIPanGestureRecognizer? = nil
   var tapGesture : UITapGestureRecognizer? = nil
   var scoreDirection : Bool = true
-  var parentTable: UITableView?
+  var index : Int = 0
+  weak var contestView: ContestView?
   
   @IBOutlet var corpsName: UILabel!
   @IBOutlet var corpsImage: UIImageView!
@@ -38,10 +39,11 @@ class ContestRow: UITableViewCell {
    viewModel is not assigned here and is assined in the ArtistView
    - parameter album: Album
    */
-  func load(corps:Corps) {
-    self.corpsName.text = corps.name
-    self.corpsScore.text = corps.score
-    self.corpsImage.fadeIn(corps.imageFileName)
+  func load(index:Int, corpsScore:CorpsScore) {
+    self.index = index
+    self.corpsName.text = corpsScore.corps.name
+    self.corpsScore.text = corpsScore.score.pick
+    self.corpsImage.fadeIn(corpsScore.corps.imageFileName)
     
     self.scoreGesture = UIPanGestureRecognizer(target: self, action: #selector(ContestRow.handlePan(_:)))
     self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(ContestRow.handleTap(_:)))
@@ -55,15 +57,20 @@ class ContestRow: UITableViewCell {
     corpsScoreFloat = (corpsScoreFloat <= 100) ? corpsScoreFloat : 100
     corpsScoreFloat = (corpsScoreFloat >= 0) ? corpsScoreFloat : 0
     self.scoreDirection = translation.x > 0.0 ? true : false
-    self.corpsScore.text = String(format:"%.2f", corpsScoreFloat)
+    let scoreText = String(format:"%.2f", corpsScoreFloat)
+//    self.corpsScore.text = scoreText
     
-    if (parentTable != nil) { parentTable!.reloadData() }
+    if (contestView != nil) { contestView!.updateCorpsScore(self.index, pickScore: scoreText) }
   }
 
   @IBAction func handleTap(recognizer:UIPanGestureRecognizer) {
     var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!)
     corpsScoreFloat = self.scoreDirection ? corpsScoreFloat + 0.01 : corpsScoreFloat - 0.01
-    self.corpsScore.text = String(format:"%.2f", corpsScoreFloat)
+    let scoreText = String(format:"%.2f", corpsScoreFloat)
+//        self.corpsScore.text = scoreText
+    
+    if (contestView != nil) { contestView!.updateCorpsScore(self.index, pickScore: scoreText
+      ) }
   }
   
 }

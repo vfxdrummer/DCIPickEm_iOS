@@ -1,5 +1,5 @@
 //
-//  ContestPick.swift
+//  CorpsScores.swift
 //  CorpsPicks
 //
 //  Created by Tim Brandt on 12/23/16.
@@ -9,7 +9,15 @@
 import UIKit
 
 class ContestPick : NSObject {
-  var contestId : String = ""
-  var userId : String = ""
-  var scores : [Corps : Float] = [:]
+  var corpsScores : [CorpsScore] = []
+  
+  private func sortCorpsByScore(corpsScore1: Score, corpsScore2: Score) -> Bool {
+    return Double(corpsScore1.pick) < Double(corpsScore2.pick)
+  }
+  
+  func sort() {
+    self.corpsScores.sortInPlace {
+      return sortCorpsByScore($0.score, corpsScore2: $1.score)
+    }
+  }
 }

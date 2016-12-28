@@ -11,7 +11,7 @@ import UIKit
 class ContestView: UITableViewController {
   
   var contestViewModel : ContestViewModel? = nil
-  var corpsScores : CorpsScores = CorpsScores()
+//  var corpsScores : CorpsScores = CorpsScores()
   
   @IBOutlet var contestTable: UITableView!
   
@@ -24,7 +24,6 @@ class ContestView: UITableViewController {
     // Setup the ViewModel
     contestViewModel = ContestViewModel(viewController: self)
     contestViewModel?.setup()
-    corpsScores = contestViewModel!.corpsScores
     
     // Setup the Tableview Delegates
     contestTable.delegate = self
@@ -35,12 +34,24 @@ class ContestView: UITableViewController {
     
     contestTable.setEditing(true, animated: true)
     
-//    // Setup the ViewController Title
-//    self.title = Constants.album
-//    self.restorationIdentifier = "album"
+    // Setup the ViewController Title
+//    self.title = Constants.contestTitle
+    //    self.restorationIdentifier = "contest"
+    
+    self.refreshControl!.addTarget(self, action: #selector(ContestView.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
   }
   
   override func viewWillAppear(animated: Bool) {
+  }
+  
+  func refresh(refreshControl: UIRefreshControl) {
+    self.contestViewModel!.sort()
+    self.contestTable.reloadData()
+    
+    if self.refreshControl!.refreshing
+    {
+      self.refreshControl!.endRefreshing()
+    }
   }
   
   override func didReceiveMemoryWarning() {
@@ -59,6 +70,14 @@ class ContestView: UITableViewController {
     
   }
   
+  func updateCorpsScore(index:Int, pickScore:String) {
+    if (self.contestViewModel != nil) {
+      self.contestViewModel!.corpsScores[index].score.pick = pickScore
+      self.contestViewModel!.sort()
+      self.contestTable.reloadData()
+    }
+  }
+  
   /**
    dismiss
    Called by EBViewModel - will execute if playing from a cell
@@ -75,7 +94,7 @@ class ContestView: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return contestViewModel!.corpsScores.corps.count
+    return contestViewModel!.corpsScores.count
   }
   
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -106,9 +125,8 @@ class ContestView: UITableViewController {
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("ContestRow") as! ContestRow
-    corpsScores.corps[indexPath.row].score = cell.corpsScore.text != "" ? cell.corpsScore.text! : corpsScores.corps[indexPath.row].score
-    cell.parentTable = self.contestTable
-    cell.load(corpsScores.corps[indexPath.row])
+    cell.contestView = self
+    cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row])
     return cell
   }
   
@@ -127,11 +145,11 @@ class ContestView: UITableViewController {
   
   override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
     if (sourceIndexPath.row != destinationIndexPath.row) {
-      let score = corpsScores.corps[destinationIndexPath.row].score
-      corpsScores.corps[destinationIndexPath.row].score = corpsScores.corps[sourceIndexPath.row].score
-      corpsScores.corps[sourceIndexPath.row].score = score
-      swap(&corpsScores.corps[sourceIndexPath.row], &corpsScores.corps[destinationIndexPath.row])
-      contestTable.reloadData()
+      let score = contestViewModel!.corpsScores[destinationIndexPath.row].score.pick
+      contestViewModel!.corpsScores[destinationIndexPath.row].score.pick = contestViewModel!.corpsScores[sourceIndexPath.row].score.pick
+      contestViewModel!.corpsScores[sourceIndexPath.row].score.pick = score
+      swap(&contestViewModel!.corpsScores[sourceIndexPath.row], &contestViewModel!.corpsScores[destinationIndexPath.row])
+      self.contestTable.reloadData()
     }
   }
 }

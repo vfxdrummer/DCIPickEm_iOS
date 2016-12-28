@@ -13,3 +13,9 @@ enum StoryboardName : String {
   case Onboarding = "Onboarding"
 }
 
+class Constants: NSObject {
+  
+  // titles
+  let contestTitle : String = NSLocalizedString("CONTEST_TITLE", comment: "")
+  
+}
