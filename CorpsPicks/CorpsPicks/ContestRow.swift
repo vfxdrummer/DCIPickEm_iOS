@@ -14,6 +14,8 @@ class ContestRow: UITableViewCell {
   var corps : Corps? = nil
   var viewModel : CPViewModel? = nil
   var scoreGesture : UIPanGestureRecognizer? = nil
+  var tapGesture : UITapGestureRecognizer? = nil
+  var scoreDirection : Bool = true
   
   @IBOutlet var corpsName: UILabel!
   @IBOutlet var corpsImage: UIImageView!
@@ -41,7 +43,9 @@ class ContestRow: UITableViewCell {
     self.corpsImage.fadeIn(corps.imageFileName)
     
     self.scoreGesture = UIPanGestureRecognizer(target: self, action: #selector(ContestRow.handlePan(_:)))
+    self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(ContestRow.handleTap(_:)))
     self.addGestureRecognizer(self.scoreGesture!)
+    self.addGestureRecognizer(self.tapGesture!)
   }
   
   @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
@@ -49,10 +53,23 @@ class ContestRow: UITableViewCell {
     var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!) + (translation.x / 100.0)
     corpsScoreFloat = (corpsScoreFloat <= 100) ? corpsScoreFloat : 100
     corpsScoreFloat = (corpsScoreFloat >= 0) ? corpsScoreFloat : 0
+    self.scoreDirection = translation.x > 0.0 ? true : false
     self.corpsScore.text = String(format:"%.2f", corpsScoreFloat)
     print(translation.x / 100.0)
+//    if recognizer.state == UIGestureRecognizerState.Ended {
+//      let velocity = recognizer.velocityInView(self.scorePanGestureView)
+//      var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!) + (velocity.x / 100.0)
+//      corpsScoreFloat = (corpsScoreFloat <= 100) ? corpsScoreFloat : 100
+//      corpsScoreFloat = (corpsScoreFloat >= 0) ? corpsScoreFloat : 0
+//      self.corpsScore.text = String(format:"%.2f", corpsScoreFloat)
+//      print(velocity.x / 100.0)
+//    }
   }
-  
-  
+
+  @IBAction func handleTap(recognizer:UIPanGestureRecognizer) {
+    var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!)
+    corpsScoreFloat = self.scoreDirection ? corpsScoreFloat + 0.01 : corpsScoreFloat - 0.01
+    self.corpsScore.text = String(format:"%.2f", corpsScoreFloat)
+  }
   
 }
