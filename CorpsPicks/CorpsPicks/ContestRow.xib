@@ -51,13 +51,13 @@
                             </mask>
                         </variation>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
-                        <rect key="frame" x="210" y="62" width="125" height="47"/>
+                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
+                        <rect key="frame" x="185" y="62" width="175" height="47"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="height" constant="47" id="BEm-25-iYr"/>
-                            <constraint firstAttribute="width" constant="125" id="ieX-h0-dkI"/>
+                            <constraint firstAttribute="width" constant="175" id="ieX-h0-dkI"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -39,13 +39,18 @@ class ContestRow: UITableViewCell {
     self.corpsName.text = corps.name
     self.corpsScore.text = corps.score
     self.corpsImage.fadeIn(corps.imageFileName)
-//
+    
     self.scoreGesture = UIPanGestureRecognizer(target: self, action: #selector(ContestRow.handlePan(_:)))
     self.addGestureRecognizer(self.scoreGesture!)
   }
   
   @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
-    
+    let translation = recognizer.translationInView(self.scorePanGestureView)
+    var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!) + (translation.x / 100.0)
+    corpsScoreFloat = (corpsScoreFloat <= 100) ? corpsScoreFloat : 100
+    corpsScoreFloat = (corpsScoreFloat >= 0) ? corpsScoreFloat : 0
+    self.corpsScore.text = String(format:"%.2f", corpsScoreFloat)
+    print(translation.x / 100.0)
   }
   
   
