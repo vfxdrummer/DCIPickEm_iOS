@@ -86,6 +86,7 @@ class ContestView: UITableViewController {
     for view in cell.subviews {
       if NSStringFromClass(view.classForCoder) == "UITableViewCellReorderControl"
       {
+        // Move reorder handle to the far left of the cell
         // Creates a new subview the size of the entire cell
         let movedReorderRect : CGRect = CGRectMake(0.0, 0.0, CGRectGetMaxX(view.frame), CGRectGetMaxY(view.frame))
         // Adds the reorder control view to our new subview
@@ -99,19 +100,6 @@ class ContestView: UITableViewController {
         var transform : CGAffineTransform = CGAffineTransformIdentity
         transform = CGAffineTransformTranslate(transform, -moveLeft.width, -moveLeft.height)
         movedReorderControl.transform = transform
-        
-//        // Creates a new subview the size of the entire cell
-//        UIView *movedReorderControl = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetMaxX(view.frame), CGRectGetMaxY(view.frame))];
-//        // Adds the reorder control view to our new subview
-//        [movedReorderControl addSubview:view];
-//        // Adds our new subview to the cell
-//        [cell addSubview:movedReorderControl];
-//        // CGStuff to move it to the left
-//        CGSize moveLeft = CGSizeMake(movedReorderControl.frame.size.width - view.frame.size.width, movedReorderControl.frame.size.height - view.frame.size.height);
-//        CGAffineTransform transform = CGAffineTransformIdentity;
-//        transform = CGAffineTransformTranslate(transform, -moveLeft.width, -moveLeft.height);
-//        // Performs the transform
-//        [movedReorderControl setTransform:transform];
       }
     }
   }

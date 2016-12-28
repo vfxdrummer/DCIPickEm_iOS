@@ -12,6 +12,7 @@ class Corps : NSObject {
   var id : String = ""
   var name : String = ""
   var score : String = ""
+  var imageFileName : String = ""
   var logo_image_url : String = ""
   var logo_image_url_thumb : String = ""
 }

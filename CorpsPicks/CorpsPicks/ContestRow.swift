@@ -36,6 +36,6 @@ class ContestRow: UITableViewCell {
   func load(corps:Corps) {
     self.corpsName.text = corps.name
     self.corpsScore.text = corps.score
-//    self.corpsImage.image = 
+    self.corpsImage.fadeIn(corps.imageFileName)
   }
 }
