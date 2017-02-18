@@ -51,7 +51,7 @@ class ContestViewModel: CPViewModel {
   }
   
   func sort() {
-    self.corpsScores.sortInPlace { $0.score.pick > $1.score.pick }
+    self.corpsScores.sort { $0.score.pick > $1.score.pick }
   }
 }
 

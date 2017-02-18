@@ -28,9 +28,9 @@ class ContestView: UITableViewController {
     // Setup the Tableview Delegates
     contestTable.delegate = self
     contestTable.dataSource = self
-    contestTable.tableFooterView = UIView(frame: CGRectZero)
+    contestTable.tableFooterView = UIView(frame: CGRect.zero)
     let corpsNib = UINib(nibName: "ContestRow", bundle: nil)
-    contestTable.registerNib(corpsNib, forCellReuseIdentifier: "ContestRow")
+    contestTable.register(corpsNib, forCellReuseIdentifier: "ContestRow")
     
     contestTable.setEditing(true, animated: true)
     
@@ -38,17 +38,17 @@ class ContestView: UITableViewController {
 //    self.title = Constants.contestTitle
     //    self.restorationIdentifier = "contest"
     
-    self.refreshControl!.addTarget(self, action: #selector(ContestView.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+    self.refreshControl!.addTarget(self, action: #selector(ContestView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
   
-  override func viewWillAppear(animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
   }
   
-  func refresh(refreshControl: UIRefreshControl) {
+  func refresh(_ refreshControl: UIRefreshControl) {
     self.contestViewModel!.sort()
     self.contestTable.reloadData()
     
-    if self.refreshControl!.refreshing
+    if self.refreshControl!.isRefreshing
     {
       self.refreshControl!.endRefreshing()
     }
@@ -66,11 +66,11 @@ class ContestView: UITableViewController {
    Called by AlbumViewModel on Load Complete [Handles Albums Pulled from Remote]
    - parameter album: Album
    */
-  func load(contest:Contest) {
+  func load(_ contest:Contest) {
     
   }
   
-  func updateCorpsScore(index:Int, pickScore:String) {
+  func updateCorpsScore(_ index:Int, pickScore:String) {
     if (self.contestViewModel != nil) {
       self.contestViewModel!.corpsScores[index].score.pick = pickScore
       self.contestViewModel!.sort()
@@ -84,30 +84,30 @@ class ContestView: UITableViewController {
    Dismiss back to EBTabView
    */
   func dismiss() {
-    self.navigationController?.popToRootViewControllerAnimated(true)
+    self.navigationController?.popToRootViewController(animated: true)
   }
   
   //  MARK: UITableViewDelegate - UITableViewDataSource Methods
   
-  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
   
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return contestViewModel!.corpsScores.count
   }
   
-  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 100
   }
   
-  override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+  override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     for view in cell.subviews {
       if NSStringFromClass(view.classForCoder) == "UITableViewCellReorderControl"
       {
         // Move reorder handle to the far left of the cell
         // Creates a new subview the size of the entire cell
-        let movedReorderRect : CGRect = CGRectMake(0.0, 0.0, CGRectGetMaxX(view.frame), CGRectGetMaxY(view.frame))
+        let movedReorderRect : CGRect = CGRect(x: 0.0, y: 0.0, width: view.frame.maxX, height: view.frame.maxY)
         // Adds the reorder control view to our new subview
         let movedReorderControl : UIView = UIView(frame: movedReorderRect)
         // Adds our new subview to the cell
@@ -115,35 +115,35 @@ class ContestView: UITableViewController {
         // Adds our new subview to the cell
         cell.addSubview(movedReorderControl)
         // move it to the left
-        let moveLeft : CGSize = CGSizeMake(movedReorderControl.frame.size.width - view.frame.size.width, movedReorderControl.frame.size.height - view.frame.size.height)
-        var transform : CGAffineTransform = CGAffineTransformIdentity
-        transform = CGAffineTransformTranslate(transform, -moveLeft.width, -moveLeft.height)
+        let moveLeft : CGSize = CGSize(width: movedReorderControl.frame.size.width - view.frame.size.width, height: movedReorderControl.frame.size.height - view.frame.size.height)
+        var transform : CGAffineTransform = CGAffineTransform.identity
+        transform = transform.translatedBy(x: -moveLeft.width, y: -moveLeft.height)
         movedReorderControl.transform = transform
       }
     }
   }
   
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("ContestRow") as! ContestRow
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "ContestRow") as! ContestRow
     cell.contestView = self
     cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row])
     return cell
   }
   
-  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
   }
   
   //  MARK: UITableViewDelegate - editting / rearranging methods
   
-  override func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-    return UITableViewCellEditingStyle.None
+  override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    return UITableViewCellEditingStyle.none
   }
   
-  override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+  override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
     return true
   }
   
-  override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+  override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
     if (sourceIndexPath.row != destinationIndexPath.row) {
       let score = contestViewModel!.corpsScores[destinationIndexPath.row].score.pick
       contestViewModel!.corpsScores[destinationIndexPath.row].score.pick = contestViewModel!.corpsScores[sourceIndexPath.row].score.pick

@@ -18,14 +18,14 @@ extension UIImageView {
    Used on the Artist View and Home View
    - parameter isHome: Bool : False - true for the home page
    */
-  func greyFade(isHome:Bool=false) {
+  func greyFade(_ isHome:Bool=false) {
     let gradiant : CAGradientLayer = CAGradientLayer()
     gradiant.frame = self.bounds
     if isHome {
-      gradiant.startPoint = CGPointMake(0, 0.1)
-      gradiant.endPoint = CGPointMake(0, 1.0)
+      gradiant.startPoint = CGPoint(x: 0, y: 0.1)
+      gradiant.endPoint = CGPoint(x: 0, y: 1.0)
     }
-    gradiant.colors = [UIColor.grayColor().CGColor, UIColor.clearColor().CGColor]
+    gradiant.colors = [UIColor.gray.cgColor, UIColor.clear.cgColor]
     self.layer.mask = gradiant
   }
   
@@ -35,7 +35,7 @@ extension UIImageView {
    Used for the Artist View Background image
    */
   func blur() {
-    let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
+    let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light)) as UIVisualEffectView
     visualEffectView.frame = self.bounds
     self.addSubview(visualEffectView)
   }
@@ -48,13 +48,13 @@ extension UIImageView {
   func roundify() {
     self.layer.cornerRadius = self.frame.size.width/2;
     self.layer.borderWidth=2.0;
-    self.layer.borderColor = UIColor.whiteColor().CGColor
+    self.layer.borderColor = UIColor.white.cgColor
     self.clipsToBounds = true;
   }
   
   func borderize() {
     self.layer.borderWidth=2.0;
-    self.layer.borderColor = UIColor.whiteColor().CGColor
+    self.layer.borderColor = UIColor.white.cgColor
     self.clipsToBounds = true;
   }
   /**
@@ -66,24 +66,24 @@ extension UIImageView {
    - parameter useEmptyAlbum: Bool : False - which default image to load
    - parameter handler:       (UIImage)->() : Nil, Optional Calllback
    */
-  func fadeIn(url:String, useEmptyAlbum:Bool=false, handler: ((UIImage)->())? = nil) {
+  func fadeIn(_ url:String, useEmptyAlbum:Bool=false, handler: ((UIImage)->())? = nil) {
     
-    if !url.containsString("http://") {
+    if !url.contains("http://") {
       // Load Local Image
-      let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
-      let path = documentsPath.stringByAppendingString(url)
+      let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+      let path = documentsPath + url
       let image = UIImage(contentsOfFile: path)
       if image != nil {
         self.image = image
         self.handleFadeInImageHandler(handler)
       } else {
         var toks = url.characters.split{$0 == "."}.map(String.init)
-        self.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource(toks[0], ofType:toks[1] )!)
+        self.image = UIImage(contentsOfFile: Bundle.main.path(forResource: toks[0], ofType:toks[1] )!)
       }
     } else {
       // Load Remote Image
       let urlClean = cleanImageURL(url)
-      self.sd_setImageWithURL(urlClean, completed: { Void in
+      self.sd_setImage(with: urlClean, completed: { Void in
         self.handleFadeInImageHandler(handler)
       })
     }
@@ -96,9 +96,9 @@ extension UIImageView {
    IF there is a handler, defer the behavior to the handler and NOT the UIImageView.
    - parameter handler: (UIImage)->()? = nil (optional handler)
    */
-  private func handleFadeInImageHandler(handler:((UIImage)->())? = nil) {
+  fileprivate func handleFadeInImageHandler(_ handler:((UIImage)->())? = nil) {
     if self.alpha != 1.0 && handler == nil {
-      UIView.animateWithDuration(0.2, animations: { self.alpha = 1.0 })
+      UIView.animate(withDuration: 0.2, animations: { self.alpha = 1.0 })
     }
     if handler != nil && self.image != nil {
       handler!(self.image!)
@@ -113,13 +113,13 @@ extension UIImageView {
    - parameter url: String
    - returns: NSURL
    */
-  private func cleanImageURL(url:String) -> NSURL {
+  fileprivate func cleanImageURL(_ url:String) -> URL {
     
-    if url.containsString(" ") {
-      let cleanURL = url.stringByReplacingOccurrencesOfString(" ", withString: "%20")
-      return NSURL(string: cleanURL)!
+    if url.contains(" ") {
+      let cleanURL = url.replacingOccurrences(of: " ", with: "%20")
+      return URL(string: cleanURL)!
     }
-    return NSURL(string: url)!
+    return URL(string: url)!
     
   }
   

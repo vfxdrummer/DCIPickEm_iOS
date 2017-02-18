@@ -20,6 +20,10 @@ def myPods
 
   # FB SDK
 #  pod 'FBSDKLoginKit'
+
+  # Firebase
+  pod 'Firebase/Core'
+
 end
 
 target 'CorpsPicks' do

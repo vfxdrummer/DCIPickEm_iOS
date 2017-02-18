@@ -11,7 +11,7 @@ import UIKit
 class Contest : NSObject {
   var id : String = ""
   var name : String = ""
-  var date : NSDate? = nil
+  var date : Date? = nil
   var lineup : [Int : Corps] = [:]
   var scores : [Corps : Float] = [:]
 }

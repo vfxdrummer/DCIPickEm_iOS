@@ -28,7 +28,7 @@ class ContestRow: UITableViewCell {
     super.awakeFromNib()
   }
 
-  override func setSelected(selected: Bool, animated: Bool) {
+  override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
   }
   
@@ -39,7 +39,7 @@ class ContestRow: UITableViewCell {
    viewModel is not assigned here and is assined in the ArtistView
    - parameter album: Album
    */
-  func load(index:Int, corpsScore:CorpsScore) {
+  func load(_ index:Int, corpsScore:CorpsScore) {
     self.index = index
     self.corpsName.text = corpsScore.corps.name
     self.corpsScore.text = corpsScore.score.pick
@@ -51,8 +51,8 @@ class ContestRow: UITableViewCell {
     self.scorePanGestureView.addGestureRecognizer(self.tapGesture!)
   }
   
-  @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
-    let translation = recognizer.translationInView(self.scorePanGestureView)
+  @IBAction func handlePan(_ recognizer:UIPanGestureRecognizer) {
+    let translation = recognizer.translation(in: self.scorePanGestureView)
     var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!) + (translation.x / 100.0)
     corpsScoreFloat = (corpsScoreFloat <= 100) ? corpsScoreFloat : 100
     corpsScoreFloat = (corpsScoreFloat >= 0) ? corpsScoreFloat : 0
@@ -63,7 +63,7 @@ class ContestRow: UITableViewCell {
     if (contestView != nil) { contestView!.updateCorpsScore(self.index, pickScore: scoreText) }
   }
 
-  @IBAction func handleTap(recognizer:UIPanGestureRecognizer) {
+  @IBAction func handleTap(_ recognizer:UIPanGestureRecognizer) {
     var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!)
     corpsScoreFloat = self.scoreDirection ? corpsScoreFloat + 0.01 : corpsScoreFloat - 0.01
     let scoreText = String(format:"%.2f", corpsScoreFloat)
