@@ -21,12 +21,14 @@ class EventInterface: NSObject {
     let eventsRef = ref.child("events")
     eventsRef.observe(.value, with: { snapshot in
       var events:[Event] = []
-      for child in snapshot.children {
+      for _ in snapshot.children {
         for event in snapshot.children.allObjects as! [FIRDataSnapshot] {
           guard let eventDict = event.value as? [String: AnyObject] else {
             continue
           }
-          let event = Event.init(eventDict: eventDict as! Dictionary<String, String>)
+          var eventDictNew = eventDict
+          eventDictNew["id"] = event.key as String? as AnyObject?
+          let event = Event.init(eventDict: eventDictNew as! Dictionary<String, String>)
           events.append(event)
         }
       }

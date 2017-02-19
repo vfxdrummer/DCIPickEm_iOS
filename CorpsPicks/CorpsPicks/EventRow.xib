@@ -40,12 +40,12 @@
                 </subviews>
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="ylr-i8-IIi" firstAttribute="top" secondItem="06a-4S-Asd" secondAttribute="bottom" constant="3" id="EMK-aw-kDR"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="IG0-DW-p9S"/>
                     <constraint firstAttribute="topMargin" secondItem="yvE-3T-i1K" secondAttribute="top" id="Kzg-sz-AFm"/>
                     <constraint firstItem="06a-4S-Asd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="S9a-Vn-Epg"/>
+                    <constraint firstItem="ylr-i8-IIi" firstAttribute="top" secondItem="06a-4S-Asd" secondAttribute="bottom" constant="3" id="SQQ-1k-StJ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="06a-4S-Asd" secondAttribute="trailing" constant="291" id="bvi-FY-6OM"/>
-                    <constraint firstItem="06a-4S-Asd" firstAttribute="top" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="28" id="mZu-tm-a4l"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ylr-i8-IIi" secondAttribute="bottom" constant="2.5" id="jhb-pq-Dcl"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ylr-i8-IIi" secondAttribute="trailing" constant="291" id="maO-dD-0IH"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="u2u-7Y-m1V"/>
                     <constraint firstAttribute="trailingMargin" secondItem="yvE-3T-i1K" secondAttribute="trailing" constant="10" id="wew-y5-7nV"/>
