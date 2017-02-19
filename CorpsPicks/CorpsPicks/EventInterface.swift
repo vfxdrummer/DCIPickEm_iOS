@@ -20,9 +20,15 @@ class EventInterface: NSObject {
     let ref = FIRDatabase.database().reference()
     let eventsRef = ref.child("events")
     eventsRef.observe(.value, with: { snapshot in
-      let events:[Event] = []
+      var events:[Event] = []
       for child in snapshot.children {
-        
+        for event in snapshot.children.allObjects as! [FIRDataSnapshot] {
+          guard let eventDict = event.value as? [String: AnyObject] else {
+            continue
+          }
+          let event = Event.init(eventDict: eventDict as! Dictionary<String, String>)
+          events.append(event)
+        }
       }
       CurrentEventItems.sharedInstance.events = events
     }) { (error) in
