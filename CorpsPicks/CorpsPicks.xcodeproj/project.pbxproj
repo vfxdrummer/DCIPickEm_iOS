@@ -47,6 +47,13 @@
 		22FA694C1E145C90003CAFEF /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA694B1E145C90003CAFEF /* Score.swift */; };
 		22FA694E1E145EA2003CAFEF /* CorpsScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA694D1E145EA2003CAFEF /* CorpsScore.swift */; };
 		55E50D1CED783C98FAD2CDB9 /* Pods_CorpsPicksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2628E076101F686E2A7E88 /* Pods_CorpsPicksTests.framework */; };
+		81055D671E594F6600FF8DCD /* EventInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81055D661E594F6600FF8DCD /* EventInterface.swift */; };
+		812F5BB01E5A23BF009B068C /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BAF1E5A23BF009B068C /* EventView.swift */; };
+		812F5BB21E5A255D009B068C /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB11E5A255D009B068C /* EventViewModel.swift */; };
+		812F5BB41E5A25E6009B068C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB31E5A25E6009B068C /* Event.swift */; };
+		812F5BB71E5A29A6009B068C /* EventRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F5BB51E5A29A6009B068C /* EventRow.xib */; };
+		812F5BB81E5A29A6009B068C /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB61E5A29A6009B068C /* EventRow.swift */; };
+		812F5BBA1E5A30B8009B068C /* CurrentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB91E5A30B8009B068C /* CurrentStatus.swift */; };
 		D3A5F3F6D48D9AEC78BBEFF2 /* Pods_CorpsPicks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5321C5BAC1CD1D0A388782 /* Pods_CorpsPicks.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +114,13 @@
 		319B230EEA0D42603C530A90 /* Pods-CorpsPicks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorpsPicks.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CorpsPicks/Pods-CorpsPicks.debug.xcconfig"; sourceTree = "<group>"; };
 		4F2628E076101F686E2A7E88 /* Pods_CorpsPicksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CorpsPicksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5909963469B03EFCE2C17BDA /* Pods-CorpsPicksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorpsPicksTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CorpsPicksTests/Pods-CorpsPicksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81055D661E594F6600FF8DCD /* EventInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInterface.swift; sourceTree = "<group>"; };
+		812F5BAF1E5A23BF009B068C /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		812F5BB11E5A255D009B068C /* EventViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		812F5BB31E5A25E6009B068C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		812F5BB51E5A29A6009B068C /* EventRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventRow.xib; sourceTree = "<group>"; };
+		812F5BB61E5A29A6009B068C /* EventRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		812F5BB91E5A30B8009B068C /* CurrentStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentStatus.swift; sourceTree = "<group>"; };
 		B998BB0AEB8D9ACA72757E46 /* Pods-CorpsPicks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorpsPicks.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CorpsPicks/Pods-CorpsPicks.release.xcconfig"; sourceTree = "<group>"; };
 		FA5321C5BAC1CD1D0A388782 /* Pods_CorpsPicks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CorpsPicks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -202,6 +216,8 @@
 				22A0F4A41E0D0BA400DD2F2D /* LaunchScreen.storyboard */,
 				22A0F4E91E0D2A5500DD2F2D /* ContestRow.swift */,
 				22A0F4EA1E0D2A5500DD2F2D /* ContestRow.xib */,
+				812F5BB61E5A29A6009B068C /* EventRow.swift */,
+				812F5BB51E5A29A6009B068C /* EventRow.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -211,6 +227,7 @@
 			children = (
 				22FA69331E0E2986003CAFEF /* CPTopView.swift */,
 				22A0F4E01E0D238F00DD2F2D /* ContestView.swift */,
+				812F5BAF1E5A23BF009B068C /* EventView.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -218,8 +235,10 @@
 		22A0F4CB1E0D10D900DD2F2D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				812F5BB91E5A30B8009B068C /* CurrentStatus.swift */,
 				22A0F4E61E0D279C00DD2F2D /* CPViewModel.swift */,
 				22A0F4E31E0D26A500DD2F2D /* ContestViewModel.swift */,
+				812F5BB11E5A255D009B068C /* EventViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -227,6 +246,7 @@
 		22A0F4CC1E0D110B00DD2F2D /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				81055D661E594F6600FF8DCD /* EventInterface.swift */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -239,6 +259,7 @@
 				22A0F4D11E0D177400DD2F2D /* Corps.swift */,
 				22FA694D1E145EA2003CAFEF /* CorpsScore.swift */,
 				22FA69491E13C641003CAFEF /* ContestPick.swift */,
+				812F5BB31E5A25E6009B068C /* Event.swift */,
 				22FA694B1E145C90003CAFEF /* Score.swift */,
 				22A0F4D71E0D1A5F00DD2F2D /* User.swift */,
 			);
@@ -437,6 +458,7 @@
 				22A0F4ED1E0D2A5500DD2F2D /* ContestRow.xib in Resources */,
 				22A0F4A11E0D0BA400DD2F2D /* Main.storyboard in Resources */,
 				22FA693F1E11BEB1003CAFEF /* crown2.jpg in Resources */,
+				812F5BB71E5A29A6009B068C /* EventRow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,11 +580,17 @@
 				22A0F4D51E0D17F400DD2F2D /* Contest.swift in Sources */,
 				22A0F4F01E0D36D900DD2F2D /* Constants.swift in Sources */,
 				22A0F4EB1E0D2A5500DD2F2D /* ContestRow.swift in Sources */,
+				812F5BB01E5A23BF009B068C /* EventView.swift in Sources */,
+				812F5BB81E5A29A6009B068C /* EventRow.swift in Sources */,
+				812F5BB41E5A25E6009B068C /* Event.swift in Sources */,
 				22FA69341E0E2986003CAFEF /* CPTopView.swift in Sources */,
+				812F5BBA1E5A30B8009B068C /* CurrentStatus.swift in Sources */,
 				22FA69481E133D24003CAFEF /* ExtUIImageView.swift in Sources */,
 				22FA694C1E145C90003CAFEF /* Score.swift in Sources */,
 				22A0F4DE1E0D1BA800DD2F2D /* ContestLineUp.swift in Sources */,
+				812F5BB21E5A255D009B068C /* EventViewModel.swift in Sources */,
 				22A0F4E71E0D279C00DD2F2D /* CPViewModel.swift in Sources */,
+				81055D671E594F6600FF8DCD /* EventInterface.swift in Sources */,
 				22FA69471E133D24003CAFEF /* ExtUIImage.swift in Sources */,
 				22A0F4D81E0D1A5F00DD2F2D /* User.swift in Sources */,
 				22A0F4D21E0D177400DD2F2D /* Corps.swift in Sources */,

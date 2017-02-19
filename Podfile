@@ -1,6 +1,6 @@
 platform :ios, '9.0'
 
-xcodeproj './CorpsPicks/CorpsPicks.xcodeproj'
+project './CorpsPicks/CorpsPicks.xcodeproj'
 
 def myPods
   use_frameworks!
@@ -22,7 +22,8 @@ def myPods
 #  pod 'FBSDKLoginKit'
 
   # Firebase
-  pod 'Firebase/Core'
+  pod 'Firebase'
+  pod 'Firebase/Database'
 
 end
 
