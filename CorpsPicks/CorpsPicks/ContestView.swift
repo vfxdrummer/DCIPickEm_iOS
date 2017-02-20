@@ -11,7 +11,7 @@ import UIKit
 class ContestView: UITableViewController {
   
   var contestViewModel : ContestViewModel? = nil
-//  var corpsScores : CorpsScores = CorpsScores()
+  var eventId : String? = nil
   
   @IBOutlet var contestTable: UITableView!
   
@@ -38,6 +38,8 @@ class ContestView: UITableViewController {
 //    self.title = Constants.contestTitle
     //    self.restorationIdentifier = "contest"
     
+    contestViewModel?.loadContest(eventId: eventId!)
+    
     self.refreshControl!.addTarget(self, action: #selector(ContestView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
   
@@ -61,14 +63,14 @@ class ContestView: UITableViewController {
   //  MARK: Custom Methods
   
   /**
-   load
-   Called by viewDidLoad [Handles Albums Loaded Locally]
-   Called by AlbumViewModel on Load Complete [Handles Albums Pulled from Remote]
-   - parameter album: Album
+   loadContest
+   - parameter contest:Contest
    */
-  func load(_ contest:Contest) {
+  func loadContest(contest:Contest) {
     
+    contestTable.reloadData()
   }
+  
   
   func updateCorpsScore(_ index:Int, pickScore:String) {
     if (self.contestViewModel != nil) {

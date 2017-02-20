@@ -8,7 +8,7 @@
 
 import UIKit
 
-//  MARK: CurrentLeaderboardItems
+//  MARK: CurrentEventItems
 protocol CurrentEventProtocol {
   func updateEvents(events:[Event])
 }
@@ -25,6 +25,28 @@ class CurrentEventItems : NSObject {
     didSet {
       _ = delegates.map({
         $0.updateEvents(events: events)
+      })
+    }
+  }
+}
+
+//  MARK: CurrentContestItems
+protocol CurrentContestProtocol {
+  func updateContest(contest:Contest)
+}
+class CurrentContestItems : NSObject {
+  static let sharedInstance = CurrentContestItems()
+  private var delegates : [CurrentContestProtocol] = []
+  
+  var delegate : CurrentContestProtocol? = nil {
+    didSet {
+      delegates.append(delegate!)
+    }
+  }
+  var contest : Contest? {
+    didSet {
+      _ = delegates.map({
+        $0.updateContest(contest: contest!)
       })
     }
   }

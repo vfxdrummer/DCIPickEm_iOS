@@ -16,7 +16,6 @@ class Event : NSObject {
   var location : String = ""
   var time : Date = Date()
   
-  
   init(eventDict: Dictionary<String, String>) {
     super.init()
     if let id = eventDict["id"] {

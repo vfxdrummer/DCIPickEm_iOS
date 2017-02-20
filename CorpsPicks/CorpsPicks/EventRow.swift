@@ -12,7 +12,6 @@ import UIKit
 class EventRow: UITableViewCell {
 
   var event : Event? = nil
-  var viewModel : EventViewModel? = nil
   weak var eventView: EventView?
   var index : Int = 0
   

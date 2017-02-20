@@ -14,4 +14,9 @@ class Corps : NSObject {
   var imageFileName : String = ""
   var logo_image_url : String = ""
   var logo_image_url_thumb : String = ""
+  
+  init(corpsString: String) {
+    super.init()
+    self.name = corpsString
+  }
 }

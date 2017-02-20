@@ -100,6 +100,11 @@ class EventView: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if let event = eventViewModel?.events[indexPath.row] as Event? {
+      let contestVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Contest") as! ContestView
+      contestVC.eventId = event.id
+      show(contestVC, sender: self)
+    }
   }
 }
 
