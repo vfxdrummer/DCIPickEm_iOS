@@ -1,5 +1,5 @@
 //
-//  ContestInterface.swift
+//  LineupInterface.swift
 //  CorpsPicks
 //
 //  Created by Timothy Brandt on 2/18/17.
@@ -10,21 +10,21 @@ import UIKit
 import FirebaseAnalytics
 import FirebaseDatabase
 
-class ContestInterface: NSObject {
+class LineupInterface: NSObject {
   
   /**
    getEvents
    Get Event list from Firebase DB
    */
-  class func getContest(eventId: String) {
+  class func getLineup(eventId: String) {
     let ref = FIRDatabase.database().reference()
     
     ref.child("lineups").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
-      guard let contestArray = snapshot.value as? [String] else {
+      guard let lineupArray = snapshot.value as? [String] else {
         return
       }
-      let contest = Contest.init(contestArray: contestArray as! [String])
-      CurrentContestItems.sharedInstance.contest = contest
+      let lineup = Lineup.init(lineupArray: lineupArray as! [String])
+      CurrentContestItems.sharedInstance.lineup = lineup
     }) { (error) in
       print(error.localizedDescription)
     }

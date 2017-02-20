@@ -32,7 +32,8 @@ class CurrentEventItems : NSObject {
 
 //  MARK: CurrentContestItems
 protocol CurrentContestProtocol {
-  func updateContest(contest:Contest)
+  func updateLineup(lineup:Lineup)
+  func updateScores(corpsScores:[CorpsScore])
 }
 class CurrentContestItems : NSObject {
   static let sharedInstance = CurrentContestItems()
@@ -43,10 +44,17 @@ class CurrentContestItems : NSObject {
       delegates.append(delegate!)
     }
   }
-  var contest : Contest? {
+  var lineup : Lineup? {
     didSet {
       _ = delegates.map({
-        $0.updateContest(contest: contest!)
+        $0.updateLineup(lineup:lineup!)
+      })
+    }
+  }
+  var corpsScores : [CorpsScore] = [] {
+    didSet {
+      _ = delegates.map({
+        $0.updateScores(corpsScores:corpsScores)
       })
     }
   }

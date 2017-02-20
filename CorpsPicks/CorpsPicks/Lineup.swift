@@ -1,5 +1,5 @@
 //
-//  Contest.swift
+//  Lineup.swift
 //  CorpsPicks
 //
 //  Created by Tim Brandt on 12/23/16.
@@ -8,16 +8,14 @@
 
 import UIKit
 
-class Contest : NSObject {
-  var id : String = ""
-  var name : String = ""
-  var date : Date? = nil
+class Lineup : NSObject {
+  var event_id : String = ""
   var lineup : [String : Corps] = [:]
   var scores : [Corps : Float] = [:]
   
-  init(contestArray: [String]) {
+  init(lineupArray: [String]) {
     super.init()
-    for rowString:String in contestArray {
+    for rowString:String in lineupArray {
       parseLineupRowString(rowString: rowString)
     }
   }

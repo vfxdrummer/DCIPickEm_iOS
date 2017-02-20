@@ -10,7 +10,7 @@ import UIKit
 
 class ContestViewModel: CPViewModel, CurrentContestProtocol {
   
-  var contest : Contest? = nil
+  var lineup : Lineup? = nil
   var corpsScores : [CorpsScore] = []
   
   func setup() {
@@ -50,18 +50,25 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
 ////    self.contestPick = contestPick
   }
   
-  func loadContest(eventId: String) {
-    ContestInterface.getContest(eventId: eventId)
+  func loadLineup(eventId: String) {
+    LineupInterface.getLineup(eventId: eventId)
   }
   
   func sort() {
     self.corpsScores.sort { $0.score.pick > $1.score.pick }
   }
   
-  func updateContest(contest:Contest){
+  // CurrentContestProtocol
+  
+  func updateLineup(lineup:Lineup) {
+    self.lineup = lineup
     if let view = self.vc as? ContestView {
-      view.loadContest(contest: contest)
+      view.loadLineup(lineup: lineup)
     }
+  }
+  
+  func updateScores(corpsScores:[CorpsScore]) {
+    self.corpsScores = corpsScores
   }
   
 }

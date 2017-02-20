@@ -15,6 +15,8 @@ class Event : NSObject {
   var date_label : String = ""
   var location : String = ""
   var time : Date = Date()
+  var lineup : [String : Corps] = [:]
+  var scores : [Corps : Float] = [:]
   
   init(eventDict: Dictionary<String, String>) {
     super.init()
@@ -37,6 +39,8 @@ class Event : NSObject {
       self.time = parseFirebaseTime(timeString: time)
     }
   }
+  
+  // Parsers
   
   func parseFirebaseTime(timeString: String) -> Date {
     let dateFormatter = DateFormatter()
@@ -62,6 +66,16 @@ class Event : NSObject {
     let dateFormatString = "20\(characters[0])\(characters[1])-\(characters[2])\(characters[3])-\(characters[4])\(characters[5]) 00:00:00"
     let date: Date? = dateFormatter.date(from: dateFormatString)
     return date!
+  }
+  
+  func parseLineupRowString(rowString: String) {
+    var tokens = rowString.components(separatedBy:":")
+    if (tokens.count == 2) {
+      let index = tokens[0].replacingOccurrences(of: "\0", with: "", options: NSString.CompareOptions.literal, range:nil)
+      let corpsString = tokens[1].replacingOccurrences(of: "\0", with: "", options: NSString.CompareOptions.literal, range:nil)
+      
+      lineup[index] = Corps.init(corpsString: corpsString)
+    }
   }
   
 }

@@ -38,7 +38,7 @@ class ContestView: UITableViewController {
 //    self.title = Constants.contestTitle
     //    self.restorationIdentifier = "contest"
     
-    contestViewModel?.loadContest(eventId: eventId!)
+    contestViewModel?.loadLineup(eventId: eventId!)
     
     self.refreshControl!.addTarget(self, action: #selector(ContestView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
@@ -66,11 +66,10 @@ class ContestView: UITableViewController {
    loadContest
    - parameter contest:Contest
    */
-  func loadContest(contest:Contest) {
+  func loadLineup(lineup:Lineup) {
     
     contestTable.reloadData()
   }
-  
   
   func updateCorpsScore(_ index:Int, pickScore:String) {
     if (self.contestViewModel != nil) {
