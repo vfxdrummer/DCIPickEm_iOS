@@ -74,7 +74,7 @@ class Event : NSObject {
       let index = tokens[0].replacingOccurrences(of: "\0", with: "", options: NSString.CompareOptions.literal, range:nil)
       let corpsString = tokens[1].replacingOccurrences(of: "\0", with: "", options: NSString.CompareOptions.literal, range:nil)
       
-      lineup[index] = Corps.init(corpsString: corpsString)
+      lineup[index] = CorpsInterface.getCorpsById(corpsId:corpsString)
     }
   }
   

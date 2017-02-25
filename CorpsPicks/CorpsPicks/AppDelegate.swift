@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Set status bar style
     launchStoryboard(StoryboardName.Main)
     
+    // Startup code
+    StartupService.sharedInstance.start()
+    
     return true
   }
 

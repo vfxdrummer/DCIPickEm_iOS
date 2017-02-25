@@ -60,16 +60,14 @@ class ContestView: UITableViewController {
     super.didReceiveMemoryWarning()
   }
   
-  //  MARK: Custom Methods
-  
   /**
-   loadContest
-   - parameter contest:Contest
+   reload
    */
-  func loadLineup(lineup:Lineup) {
-    
+  func reload() {
     contestTable.reloadData()
   }
+  
+  //  MARK: Custom Methods
   
   func updateCorpsScore(_ index:Int, pickScore:String) {
     if (self.contestViewModel != nil) {

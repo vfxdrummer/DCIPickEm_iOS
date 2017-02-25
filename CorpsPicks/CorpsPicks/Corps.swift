@@ -15,8 +15,13 @@ class Corps : NSObject {
   var logo_image_url : String = ""
   var logo_image_url_thumb : String = ""
   
-  init(corpsString: String) {
+  init(corpsDict: Dictionary<String, String>) {
     super.init()
-    self.name = corpsString
+    if let id = corpsDict["id"] {
+      self.id = id
+    }
+    if let name = corpsDict["name"] {
+      self.name = name
+    }
   }
 }

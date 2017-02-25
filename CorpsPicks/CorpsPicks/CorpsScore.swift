@@ -9,7 +9,7 @@
 import UIKit
 
 class CorpsScore : NSObject {
-  var corps : Corps = Corps(corpsString: "")
+  var corps : Corps = Corps(corpsDict: [:])
   var score : Score = Score(score: "")
   
   init(corps: Corps, score : Score) {

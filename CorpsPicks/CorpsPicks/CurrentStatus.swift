@@ -8,6 +8,28 @@
 
 import UIKit
 
+//  MARK: CurrentCorpsItems
+protocol CurrentCorpsProtocol {
+  func updateCorps(corps:[String:Corps])
+}
+class CurrentCorpsItems : NSObject {
+  static let sharedInstance = CurrentCorpsItems()
+  private var delegates : [CurrentCorpsProtocol] = []
+  
+  var delegate : CurrentCorpsProtocol? = nil {
+    didSet {
+      delegates.append(delegate!)
+    }
+  }
+  var corps : [String:Corps] = [:] {
+    didSet {
+      _ = delegates.map({
+        $0.updateCorps(corps: corps)
+      })
+    }
+  }
+}
+
 //  MARK: CurrentEventItems
 protocol CurrentEventProtocol {
   func updateEvents(events:[Event])

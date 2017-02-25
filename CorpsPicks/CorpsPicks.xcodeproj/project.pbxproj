@@ -46,6 +46,8 @@
 		22FA694E1E145EA2003CAFEF /* CorpsScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA694D1E145EA2003CAFEF /* CorpsScore.swift */; };
 		55E50D1CED783C98FAD2CDB9 /* Pods_CorpsPicksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2628E076101F686E2A7E88 /* Pods_CorpsPicksTests.framework */; };
 		81055D671E594F6600FF8DCD /* EventInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81055D661E594F6600FF8DCD /* EventInterface.swift */; };
+		811B9B401E61042D0084E8AB /* CorpsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B9B3F1E61042D0084E8AB /* CorpsInterface.swift */; };
+		811B9B421E614BF80084E8AB /* StartupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B9B411E614BF80084E8AB /* StartupService.swift */; };
 		812F5BB01E5A23BF009B068C /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BAF1E5A23BF009B068C /* EventView.swift */; };
 		812F5BB21E5A255D009B068C /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB11E5A255D009B068C /* EventViewModel.swift */; };
 		812F5BB41E5A25E6009B068C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB31E5A25E6009B068C /* Event.swift */; };
@@ -53,7 +55,7 @@
 		812F5BB81E5A29A6009B068C /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB61E5A29A6009B068C /* EventRow.swift */; };
 		812F5BBA1E5A30B8009B068C /* CurrentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB91E5A30B8009B068C /* CurrentStatus.swift */; };
 		812F5BBC1E5A3635009B068C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 812F5BBB1E5A3635009B068C /* GoogleService-Info.plist */; };
-		812F5BBE1E5A71A1009B068C /* LineupInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BBD1E5A71A1009B068C /* LineupInterface.swift */; };
+		812F5BBE1E5A71A1009B068C /* ContestInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BBD1E5A71A1009B068C /* ContestInterface.swift */; };
 		D3A5F3F6D48D9AEC78BBEFF2 /* Pods_CorpsPicks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5321C5BAC1CD1D0A388782 /* Pods_CorpsPicks.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,8 @@
 		4F2628E076101F686E2A7E88 /* Pods_CorpsPicksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CorpsPicksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5909963469B03EFCE2C17BDA /* Pods-CorpsPicksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorpsPicksTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CorpsPicksTests/Pods-CorpsPicksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81055D661E594F6600FF8DCD /* EventInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInterface.swift; sourceTree = "<group>"; };
+		811B9B3F1E61042D0084E8AB /* CorpsInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorpsInterface.swift; sourceTree = "<group>"; };
+		811B9B411E614BF80084E8AB /* StartupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupService.swift; sourceTree = "<group>"; };
 		812F5BAF1E5A23BF009B068C /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		812F5BB11E5A255D009B068C /* EventViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		812F5BB31E5A25E6009B068C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -121,7 +125,7 @@
 		812F5BB61E5A29A6009B068C /* EventRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
 		812F5BB91E5A30B8009B068C /* CurrentStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentStatus.swift; sourceTree = "<group>"; };
 		812F5BBB1E5A3635009B068C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		812F5BBD1E5A71A1009B068C /* LineupInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineupInterface.swift; sourceTree = "<group>"; };
+		812F5BBD1E5A71A1009B068C /* ContestInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestInterface.swift; sourceTree = "<group>"; };
 		B998BB0AEB8D9ACA72757E46 /* Pods-CorpsPicks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorpsPicks.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CorpsPicks/Pods-CorpsPicks.release.xcconfig"; sourceTree = "<group>"; };
 		FA5321C5BAC1CD1D0A388782 /* Pods_CorpsPicks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CorpsPicks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -247,7 +251,8 @@
 		22A0F4CC1E0D110B00DD2F2D /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				812F5BBD1E5A71A1009B068C /* LineupInterface.swift */,
+				812F5BBD1E5A71A1009B068C /* ContestInterface.swift */,
+				811B9B3F1E61042D0084E8AB /* CorpsInterface.swift */,
 				81055D661E594F6600FF8DCD /* EventInterface.swift */,
 			);
 			name = Interfaces;
@@ -270,6 +275,7 @@
 		22A0F4CE1E0D169000DD2F2D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				811B9B411E614BF80084E8AB /* StartupService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -580,9 +586,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				812F5BBE1E5A71A1009B068C /* LineupInterface.swift in Sources */,
+				812F5BBE1E5A71A1009B068C /* ContestInterface.swift in Sources */,
 				22A0F4D51E0D17F400DD2F2D /* Lineup.swift in Sources */,
 				22A0F4F01E0D36D900DD2F2D /* Constants.swift in Sources */,
+				811B9B421E614BF80084E8AB /* StartupService.swift in Sources */,
 				22A0F4EB1E0D2A5500DD2F2D /* ContestRow.swift in Sources */,
 				812F5BB01E5A23BF009B068C /* EventView.swift in Sources */,
 				812F5BB81E5A29A6009B068C /* EventRow.swift in Sources */,
@@ -600,6 +607,7 @@
 				22A0F4E11E0D238F00DD2F2D /* ContestView.swift in Sources */,
 				22FA694A1E13C641003CAFEF /* ContestPick.swift in Sources */,
 				22FA694E1E145EA2003CAFEF /* CorpsScore.swift in Sources */,
+				811B9B401E61042D0084E8AB /* CorpsInterface.swift in Sources */,
 				22A0F49A1E0D0BA400DD2F2D /* AppDelegate.swift in Sources */,
 				22A0F4E41E0D26A500DD2F2D /* ContestViewModel.swift in Sources */,
 			);
