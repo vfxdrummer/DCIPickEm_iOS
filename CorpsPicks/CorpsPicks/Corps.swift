@@ -23,5 +23,7 @@ class Corps : NSObject {
     if let name = corpsDict["name"] {
       self.name = name
     }
+    
+    self.imageFileName = "bluedevils.png"
   }
 }
