@@ -47,7 +47,7 @@ class ContestView: UITableViewController {
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
-    self.contestViewModel!.sort()
+    self.contestViewModel!.sortCorpsScores()
     self.contestTable.reloadData()
     
     if self.refreshControl!.isRefreshing
@@ -72,8 +72,7 @@ class ContestView: UITableViewController {
   func updateCorpsScore(_ index:Int, pickScore:String) {
     if (self.contestViewModel != nil) {
       self.contestViewModel!.corpsScores[index].score.pick = pickScore
-      self.contestViewModel!.sort()
-      self.contestTable.reloadData()
+      self.contestViewModel!.sortCorpsScores()
     }
   }
   

@@ -27,8 +27,15 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     ContestInterface.getScorePicks(eventId:eventId, userId:"test")
   }
   
-  func sort() {
-    self.corpsScores.sorted { $0.score.pick > $1.score.pick }
+  func sortCorpsScores() {
+    let newCorpsScores:[CorpsScore] = self.corpsScores.sorted {
+      ($0.score.pick as NSString).doubleValue > ($1.score.pick as NSString).doubleValue
+    }
+    self.updateScores(corpsScores: newCorpsScores)
+    print("sorted :")
+    for corpsScore in newCorpsScores {
+      print("\(corpsScore.corps.name) \(corpsScore.score.pick)")
+    }
   }
   
   // CurrentContestProtocol
