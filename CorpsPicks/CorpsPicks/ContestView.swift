@@ -99,27 +99,27 @@ class ContestView: UITableViewController {
     return 100
   }
   
-  override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    for view in cell.subviews {
-      if NSStringFromClass(view.classForCoder) == "UITableViewCellReorderControl"
-      {
-        // Move reorder handle to the far left of the cell
-        // Creates a new subview the size of the entire cell
-        let movedReorderRect : CGRect = CGRect(x: 0.0, y: 0.0, width: view.frame.maxX, height: view.frame.maxY)
-        // Adds the reorder control view to our new subview
-        let movedReorderControl : UIView = UIView(frame: movedReorderRect)
-        // Adds our new subview to the cell
-        movedReorderControl.addSubview(view)
-        // Adds our new subview to the cell
-        cell.addSubview(movedReorderControl)
-        // move it to the left
-        let moveLeft : CGSize = CGSize(width: movedReorderControl.frame.size.width - view.frame.size.width, height: movedReorderControl.frame.size.height - view.frame.size.height)
-        var transform : CGAffineTransform = CGAffineTransform.identity
-        transform = transform.translatedBy(x: -moveLeft.width, y: -moveLeft.height)
-        movedReorderControl.transform = transform
-      }
-    }
-  }
+//  override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//    for view in cell.subviews {
+//      if NSStringFromClass(view.classForCoder) == "UITableViewCellReorderControl"
+//      {
+//        // Move reorder handle to the far left of the cell
+//        // Creates a new subview the size of the entire cell
+//        let movedReorderRect : CGRect = CGRect(x: 0.0, y: 0.0, width: view.frame.maxX, height: view.frame.maxY)
+//        // Adds the reorder control view to our new subview
+//        let movedReorderControl : UIView = UIView(frame: movedReorderRect)
+//        // Adds our new subview to the cell
+//        movedReorderControl.addSubview(view)
+//        // Adds our new subview to the cell
+//        cell.addSubview(movedReorderControl)
+//        // move it to the left
+//        let moveLeft : CGSize = CGSize(width: movedReorderControl.frame.size.width - view.frame.size.width, height: movedReorderControl.frame.size.height - view.frame.size.height)
+//        var transform : CGAffineTransform = CGAffineTransform.identity
+//        transform = transform.translatedBy(x: -moveLeft.width, y: -moveLeft.height)
+//        movedReorderControl.transform = transform
+//      }
+//    }
+//  }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ContestRow") as! ContestRow

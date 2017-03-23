@@ -18,12 +18,15 @@ def myPods
   pod 'Fabric'
   pod 'Crashlytics'
 
-  # FB SDK
-#  pod 'FBSDKLoginKit'
+  # Pods for FBSwiftLogin
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
 
   # Firebase
   pod 'Firebase'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
 
 end
 

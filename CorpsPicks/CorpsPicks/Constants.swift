@@ -18,4 +18,8 @@ class Constants: NSObject {
   // titles
   let contestTitle : String = NSLocalizedString("CONTEST_TITLE", comment: "")
   
+  // facebook auth
+  let faceBookAppId = "263416347402894"
+  let faceBookAppSecret = "24cbbbe9f011c4247d52293f8f8d47b3"
+  
 }
