@@ -35,6 +35,9 @@ class ContestInterface: NSObject {
    Get User score picks for lineup from Firebase DB
    */
   class func getScorePicks(eventId:String, userId:String) {
+    // move this to singleton, set on Auth
+    var userId = "123456"
+    
     let ref = FIRDatabase.database().reference()
     
     // walk lineup for eventId
@@ -66,6 +69,30 @@ class ContestInterface: NSObject {
       }
     }) { (error) in
       print(error.localizedDescription)
+    }
+  }
+  
+  class func setScorePicks(eventId:String, corpsScores:[CorpsScore]) {
+    // move this to singleton, set on Auth
+    var userId = "123456"
+    
+    let ref = FIRDatabase.database().reference()
+    print("Setting scores for \(eventId)")
+    for corpsScore in corpsScores {
+      print("\(corpsScore.corps.name) \(corpsScore.score)")
+      var corpsNameArray:Array<Any> = []
+      _ = corpsScores.map({
+        corpsNameArray.append($0.corps.name)
+      })
+      var corpsScoreArray:Array<Any> = []
+      _ = corpsScores.map({
+        corpsScoreArray.append($0.score.pick)
+      })
+      let picksRef = ref.child("/picks")
+      let eventRef = picksRef.child("/\(eventId)")
+      let userRef = eventRef.child("/\(userId)")
+      userRef.child("name").setValue(corpsNameArray)
+      userRef.child("score").setValue(corpsScoreArray)
     }
   }
   

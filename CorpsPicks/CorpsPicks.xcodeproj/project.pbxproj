@@ -56,6 +56,7 @@
 		812F5BBA1E5A30B8009B068C /* CurrentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB91E5A30B8009B068C /* CurrentStatus.swift */; };
 		812F5BBC1E5A3635009B068C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 812F5BBB1E5A3635009B068C /* GoogleService-Info.plist */; };
 		812F5BBE1E5A71A1009B068C /* ContestInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BBD1E5A71A1009B068C /* ContestInterface.swift */; };
+		81FBE9071E84D19E00A67A02 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FBE9061E84D19E00A67A02 /* CurrentUser.swift */; };
 		D3A5F3F6D48D9AEC78BBEFF2 /* Pods_CorpsPicks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5321C5BAC1CD1D0A388782 /* Pods_CorpsPicks.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		812F5BB91E5A30B8009B068C /* CurrentStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentStatus.swift; sourceTree = "<group>"; };
 		812F5BBB1E5A3635009B068C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		812F5BBD1E5A71A1009B068C /* ContestInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestInterface.swift; sourceTree = "<group>"; };
+		81FBE9061E84D19E00A67A02 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		B998BB0AEB8D9ACA72757E46 /* Pods-CorpsPicks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorpsPicks.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CorpsPicks/Pods-CorpsPicks.release.xcconfig"; sourceTree = "<group>"; };
 		FA5321C5BAC1CD1D0A388782 /* Pods_CorpsPicks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CorpsPicks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -264,6 +266,7 @@
 				22A0F4D11E0D177400DD2F2D /* Corps.swift */,
 				22FA694D1E145EA2003CAFEF /* CorpsScore.swift */,
 				22FA69491E13C641003CAFEF /* ContestPick.swift */,
+				81FBE9061E84D19E00A67A02 /* CurrentUser.swift */,
 				812F5BB31E5A25E6009B068C /* Event.swift */,
 				22A0F4D41E0D17F400DD2F2D /* Lineup.swift */,
 				22FA694B1E145C90003CAFEF /* Score.swift */,
@@ -591,6 +594,7 @@
 				22A0F4F01E0D36D900DD2F2D /* Constants.swift in Sources */,
 				811B9B421E614BF80084E8AB /* StartupService.swift in Sources */,
 				22A0F4EB1E0D2A5500DD2F2D /* ContestRow.swift in Sources */,
+				81FBE9071E84D19E00A67A02 /* CurrentUser.swift in Sources */,
 				812F5BB01E5A23BF009B068C /* EventView.swift in Sources */,
 				812F5BB81E5A29A6009B068C /* EventRow.swift in Sources */,
 				812F5BB41E5A25E6009B068C /* Event.swift in Sources */,

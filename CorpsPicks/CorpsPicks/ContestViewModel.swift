@@ -17,14 +17,22 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   }
 
   var corpsScores : [CorpsScore] = []
+  var eventId : String? = nil
   
-  func setup() {
+  func setup(eventId:String) {
+    self.eventId = eventId
     CurrentContestItems.sharedInstance.delegate = self
   }
   
-  func loadLineup(eventId: String) {
-    ContestInterface.getLineup(eventId: eventId)
-    ContestInterface.getScorePicks(eventId:eventId, userId:"test")
+  func loadLineup() {
+    guard (eventId != nil) else { return }
+    ContestInterface.getLineup(eventId: eventId!)
+    ContestInterface.getScorePicks(eventId:eventId!, userId:"test")
+  }
+  
+  func setScorePicks() {
+    guard (eventId != nil) else { return }
+    ContestInterface.setScorePicks(eventId: eventId!, corpsScores:corpsScores)
   }
   
   func sortCorpsScores() {
@@ -36,6 +44,7 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     for corpsScore in newCorpsScores {
       print("\(corpsScore.corps.name) \(corpsScore.score.pick)")
     }
+    setScorePicks()
   }
   
   // CurrentContestProtocol

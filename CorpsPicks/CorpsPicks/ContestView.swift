@@ -23,7 +23,7 @@ class ContestView: UITableViewController {
     
     // Setup the ViewModel
     contestViewModel = ContestViewModel(viewController: self)
-    contestViewModel?.setup()
+    contestViewModel?.setup(eventId:eventId!)
     
     // Setup the Tableview Delegates
     contestTable.delegate = self
@@ -38,7 +38,7 @@ class ContestView: UITableViewController {
 //    self.title = Constants.contestTitle
     //    self.restorationIdentifier = "contest"
     
-    contestViewModel?.loadLineup(eventId: eventId!)
+    contestViewModel?.loadLineup()
     
     self.refreshControl!.addTarget(self, action: #selector(ContestView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
@@ -70,10 +70,8 @@ class ContestView: UITableViewController {
   //  MARK: Custom Methods
   
   func updateCorpsScore(_ index:Int, pickScore:String) {
-    if (self.contestViewModel != nil) {
-      self.contestViewModel!.corpsScores[index].score.pick = pickScore
-      self.contestViewModel!.sortCorpsScores()
-    }
+    self.contestViewModel?.corpsScores[index].score.pick = pickScore
+    self.contestViewModel?.sortCorpsScores()
   }
   
   /**
@@ -147,6 +145,7 @@ class ContestView: UITableViewController {
       contestViewModel!.corpsScores[destinationIndexPath.row].score.pick = contestViewModel!.corpsScores[sourceIndexPath.row].score.pick
       contestViewModel!.corpsScores[sourceIndexPath.row].score.pick = score
       swap(&contestViewModel!.corpsScores[sourceIndexPath.row], &contestViewModel!.corpsScores[destinationIndexPath.row])
+      contestViewModel!.setScorePicks()
       self.contestTable.reloadData()
     }
   }

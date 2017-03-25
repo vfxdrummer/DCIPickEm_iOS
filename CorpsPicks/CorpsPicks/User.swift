@@ -11,4 +11,9 @@ import UIKit
 class User : NSObject {
   var id : String = ""
   var name : String = ""
+  
+  override init() {
+    id = "123456"
+    name = "Timothy Brandt"
+  }
 }
