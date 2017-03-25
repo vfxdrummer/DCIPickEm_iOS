@@ -26,8 +26,8 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   
   func loadLineup() {
     guard (eventId != nil) else { return }
-    ContestInterface.getLineup(eventId: eventId!)
-    ContestInterface.getScorePicks(eventId:eventId!, userId:"test")
+    ContestInterface.getLineup(eventId:eventId!)
+    ContestInterface.getScorePicks(eventId:eventId!)
   }
   
   func setScorePicks() {

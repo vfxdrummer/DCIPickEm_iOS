@@ -31,42 +31,92 @@ class ContestInterface: NSObject {
   }
   
   /**
-   getScorePicks
+   setDefaultScorePicks
    Get User score picks for lineup from Firebase DB
    */
-  class func getScorePicks(eventId:String, userId:String) {
-    // move this to singleton, set on Auth
-    var userId = "123456"
-    
+  class func setDefaultScorePicks(eventId:String) {
     let ref = FIRDatabase.database().reference()
     
-    // walk lineup for eventId
     ref.child("lineups").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
       guard let lineupArray = snapshot.value as? [String] else {
         return
       }
       
-      // walk picks for eventId
-      ref.child("picks").child(eventId).child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
-        // grab array of scores for corps, else fill with 0's
-        var scoreArray = snapshot.value as? [String]
-        if (scoreArray == nil) {
-          _ = lineupArray.map({_ in 
-            if (scoreArray?.append("0")) == nil {
-              scoreArray = ["0"]
-            }
-          })
-        }
-        // create formal array of CorpsScore objects
-        var corpsScores:[CorpsScore] = []
-        for (index, element) in lineupArray.enumerated() {
-          let corpsScore = ContestInterface.getCorpsScore(corpsId: element, score:(scoreArray?[index])!)
-          corpsScores.append(corpsScore!)
-        }
-        CurrentContestItems.sharedInstance.corpsScores = corpsScores
-      }) { (error) in
-        print(error.localizedDescription)
+      // create formal array of CorpsScore objects
+      var corpsScores:[CorpsScore] = []
+      for (index, element) in lineupArray.enumerated() {
+        let corpsScore = ContestInterface.getCorpsScore(corpsId: element, score:(lineupArray[index]))
+        corpsScores.append(corpsScore!)
       }
+      CurrentContestItems.sharedInstance.corpsScores = corpsScores
+      
+      
+    }) { (error) in
+      print(error.localizedDescription)
+    }
+  }
+  
+  /**
+   getScorePicks
+   Get User score picks for lineup from Firebase DB
+   */
+  class func getScorePicks(eventId:String) {
+    // move this to singleton, set on Auth
+    var userId = "123456"
+    
+    let ref = FIRDatabase.database().reference()
+    
+    // observe picks
+    ref.child("picks").observeSingleEvent(of: .value, with: { (snapshot) in
+      
+      if snapshot.hasChild(eventId){
+        
+        // observe picks eventId
+        ref.child("picks").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
+          
+          if snapshot.hasChild(userId){
+            
+            var nameArray:Array<String> = []
+            var scoreArray:Array<String> = []
+            
+            // observe userId name
+            ref.child("picks").child(eventId).child(userId).child("name").observeSingleEvent(of: .value, with: { (snapshot) in
+              
+              nameArray = (snapshot.value as? [String])!
+              
+              // observe userId score
+              ref.child("picks").child(eventId).child(userId).child("score").observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                scoreArray = (snapshot.value as? [String])!
+                
+                // create formal array of CorpsScore objects
+                var corpsScores:[CorpsScore] = []
+                for (index, element) in nameArray.enumerated() {
+                  let corpsScore = ContestInterface.getCorpsScore(corpsId: element, score:(scoreArray[index]))
+                  corpsScores.append(corpsScore!)
+                }
+                CurrentContestItems.sharedInstance.corpsScores = corpsScores
+                
+              }) { (error) in
+                print(error.localizedDescription)
+              }
+              
+            }) { (error) in
+              print(error.localizedDescription)
+            }
+            
+          } else {
+            ContestInterface.setDefaultScorePicks(eventId: eventId)
+          }
+          
+        }) { (error) in
+          print(error.localizedDescription)
+        }
+        
+      } else {
+        ContestInterface.setDefaultScorePicks(eventId: eventId)
+      }
+      
     }) { (error) in
       print(error.localizedDescription)
     }
