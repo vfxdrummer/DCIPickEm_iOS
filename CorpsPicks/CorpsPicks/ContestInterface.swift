@@ -62,7 +62,7 @@ class ContestInterface: NSObject {
    */
   class func getScorePicks(eventId:String) {
     // move this to singleton, set on Auth
-    var userId = "123456"
+    let userId = "123456"
     
     let ref = FIRDatabase.database().reference()
     

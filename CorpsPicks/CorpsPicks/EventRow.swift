@@ -2,8 +2,8 @@
 //  EventRow.swift
 //  Earbits Radio
 //
-//  Created by James Tan on 4/29/16.
-//  Copyright © 2016 Earbits. All rights reserved.
+//  Created by Tim Brandt on 4/9/17.
+//  Copyright © 2017 Tim Brandt. All rights reserved.
 //
 //  USAGE: EventRow is a UITableViewCell that appears only in the ArtistView
 

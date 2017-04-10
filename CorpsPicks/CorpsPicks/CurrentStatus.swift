@@ -81,4 +81,26 @@ class CurrentContestItems : NSObject {
     }
   }
 }
+  
+//  MARK: CurrentLeaderboardItems
+protocol CurrentLeaderboardProtocol {
+    func updateLeaderboard(leaderboard:Leaderboard)
+}
+class CurrentLeaderboardItems : NSObject {
+    static let sharedInstance = CurrentLeaderboardItems()
+    private var delegates : [CurrentLeaderboardProtocol] = []
+    
+    var delegate : CurrentLeaderboardProtocol? = nil {
+        didSet {
+            delegates.append(delegate!)
+        }
+    }
+    var leaderboard : Leaderboard? {
+        didSet {
+            _ = delegates.map({
+                $0.updateLeaderboard(leaderboard:leaderboard!)
+            })
+        }
+    }
+}
 

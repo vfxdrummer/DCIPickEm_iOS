@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vC3-pB-5Vb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vC3-pB-5Vb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,12 +24,20 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Contest" id="pak-Fh-9gX"/>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Title" id="LNd-Zd-iEB">
+                        <barButtonItem key="rightBarButtonItem" title="Leaderboard" id="NHI-vU-y7M">
+                            <connections>
+                                <action selector="pressedLeaderboardButton:" destination="7bK-jq-Zjz" id="OoR-uB-vU9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="893-Nl-ZXX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                     <connections>
                         <outlet property="contestTable" destination="r7i-6Z-zg0" id="zOw-jJ-W8S"/>
+                        <outlet property="leaderboardButton" destination="NHI-vU-y7M" id="bzh-hg-Nr7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
@@ -41,6 +49,7 @@
             <objects>
                 <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -64,6 +73,7 @@
                     <connections>
                         <segue destination="pie-Oh-Yuk" kind="relationship" relationship="viewControllers" id="jj1-6d-k1t"/>
                         <segue destination="7bK-jq-Zjz" kind="relationship" relationship="viewControllers" id="J9o-X5-NwW"/>
+                        <segue destination="oO5-1z-63k" kind="relationship" relationship="viewControllers" id="cBy-Kb-nyl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ln2-HQ-oZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -87,6 +97,7 @@
                     <tabBarItem key="tabBarItem" title="Event" id="cqX-rT-dKU"/>
                     <navigationItem key="navigationItem" title="Master" id="xY5-fm-0h9"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="uiB-OA-AoW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                     <connections>
@@ -96,6 +107,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cY2-bU-P1Q" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="350" y="-70"/>
+        </scene>
+        <!--Leaderboard View-->
+        <scene sceneID="T94-1i-khm">
+            <objects>
+                <tableViewController storyboardIdentifier="Leaderboard" title="Master" clearsSelectionOnViewWillAppear="NO" id="oO5-1z-63k" userLabel="Leaderboard View" customClass="ContestView" customModule="CorpsPicks" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ieM-iw-9cx" userLabel="Leaderboard Table">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="oO5-1z-63k" id="Aho-p9-VXt"/>
+                            <outlet property="delegate" destination="oO5-1z-63k" id="eOh-WD-fzI"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Leaderboard" id="hYS-G3-47i" userLabel="Leaderboard"/>
+                    <navigationItem key="navigationItem" title="Master" id="RBr-99-NuX"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="RI5-H7-6dA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                    <connections>
+                        <outlet property="contestTable" destination="ieM-iw-9cx" id="xXr-2U-dCX"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DMj-J7-9uP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="-71"/>
         </scene>
     </scenes>
 </document>

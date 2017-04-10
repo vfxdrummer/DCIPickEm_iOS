@@ -1,19 +1,19 @@
 //
-//  ContestView.swift
+//  LeaderboardView.swift
 //  CorpsPicks
 //
-//  Created by Tim Brandt on 12/23/16.
-//  Copyright © 2016 Tim Brandt. All rights reserved.
+//  Created by Tim Brandt on 4/9/17.
+//  Copyright © 2017 Tim Brandt. All rights reserved.
 //
 
 import UIKit
 
-class ContestView: UITableViewController {
+class LeaderboardView: UITableViewController {
   
-  var contestViewModel : ContestViewModel? = nil
+  var leaderboardViewModel : LeaderboardViewModel? = nil
   var eventId : String? = nil
   
-  @IBOutlet var contestTable: UITableView!
+  @IBOutlet var leaderboardTable: UITableView!
   
   @IBOutlet weak var leaderboardButton: UIBarButtonItem!
     
@@ -24,33 +24,33 @@ class ContestView: UITableViewController {
     super.viewDidLoad()
     
     // Setup the ViewModel
-    contestViewModel = ContestViewModel(viewController: self)
-    contestViewModel?.setup(eventId:eventId!)
+    leaderboardViewModel = LeaderboardViewModel(viewController: self)
+    leaderboardViewModel?.setup(eventId:eventId!)
     
     // Setup the Tableview Delegates
-    contestTable.delegate = self
-    contestTable.dataSource = self
-    contestTable.tableFooterView = UIView(frame: CGRect.zero)
+    leaderboardTable.delegate = self
+    leaderboardTable.dataSource = self
+    leaderboardTable.tableFooterView = UIView(frame: CGRect.zero)
     let corpsNib = UINib(nibName: "ContestRow", bundle: nil)
-    contestTable.register(corpsNib, forCellReuseIdentifier: "ContestRow")
+    leaderboardTable.register(corpsNib, forCellReuseIdentifier: "ContestRow")
     
-    contestTable.setEditing(true, animated: true)
+    leaderboardTable.setEditing(true, animated: true)
     
     // Setup the ViewController Title
 //    self.title = Constants.contestTitle
     //    self.restorationIdentifier = "contest"
     
-    contestViewModel?.loadLineup()
+    leaderboardViewModel?.loadLineup()
     
-    self.refreshControl!.addTarget(self, action: #selector(ContestView.refresh(_:)), for: UIControlEvents.valueChanged)
+    self.refreshControl!.addTarget(self, action: #selector(LeaderboardView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
   
   override func viewWillAppear(_ animated: Bool) {
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
-    self.contestViewModel!.sortCorpsScores()
-    self.contestTable.reloadData()
+    self.leaderboardViewModel!.sortCorpsScores()
+    self.leaderboardTable.reloadData()
     
     if self.refreshControl!.isRefreshing
     {
@@ -66,14 +66,14 @@ class ContestView: UITableViewController {
    reload
    */
   func reload() {
-    contestTable.reloadData()
+    leaderboardTable.reloadData()
   }
   
   //  MARK: Custom Methods
   
   func updateCorpsScore(_ index:Int, pickScore:String) {
-    self.contestViewModel?.corpsScores[index].score.pick = pickScore
-    self.contestViewModel?.sortCorpsScores()
+    self.leaderboardViewModel?.corpsScores[index].score.pick = pickScore
+    self.leaderboardViewModel?.sortCorpsScores()
   }
   
   /**
@@ -92,7 +92,7 @@ class ContestView: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return contestViewModel!.corpsScores.count
+    return leaderboardViewModel!.corpsScores.count
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -122,9 +122,9 @@ class ContestView: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "ContestRow") as! ContestRow
-    cell.contestView = self
-    cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row])
+    let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardRow") as! LeaderboardRow
+    cell.leaderboardView = self
+    cell.load(indexPath.row, corpsScore: leaderboardViewModel!.corpsScores[indexPath.row])
     return cell
   }
   
@@ -143,19 +143,19 @@ class ContestView: UITableViewController {
   
   override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
     if (sourceIndexPath.row != destinationIndexPath.row) {
-      let score = contestViewModel!.corpsScores[destinationIndexPath.row].score.pick
-      contestViewModel!.corpsScores[destinationIndexPath.row].score.pick = contestViewModel!.corpsScores[sourceIndexPath.row].score.pick
-      contestViewModel!.corpsScores[sourceIndexPath.row].score.pick = score
-      swap(&contestViewModel!.corpsScores[sourceIndexPath.row], &contestViewModel!.corpsScores[destinationIndexPath.row])
-      contestViewModel!.setScorePicks()
-      self.contestTable.reloadData()
+      let score = leaderboardViewModel!.corpsScores[destinationIndexPath.row].score.pick
+      leaderboardViewModel!.corpsScores[destinationIndexPath.row].score.pick = leaderboardViewModel!.corpsScores[sourceIndexPath.row].score.pick
+      leaderboardViewModel!.corpsScores[sourceIndexPath.row].score.pick = score
+      swap(&leaderboardViewModel!.corpsScores[sourceIndexPath.row], &leaderboardViewModel!.corpsScores[destinationIndexPath.row])
+      leaderboardViewModel!.setScorePicks()
+      self.leaderboardTable.reloadData()
     }
   }
   
   // Mark - Leaderboard  button
   
   @IBAction func pressedLeaderboardButton(_ sender: Any) {
-    let leaderboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Leaderboard") as! ContestView
+    let leaderboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Leaderboard") as! LeaderboardView
     leaderboardVC.eventId = eventId
     show(leaderboardVC, sender: self)
   }

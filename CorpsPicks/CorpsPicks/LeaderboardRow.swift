@@ -1,15 +1,15 @@
 //
-//  ContestRow.swift
+//  LeaderboardRow.swift
 //  Earbits Radio
 //
 //  Created by Tim Brandt on 4/9/17.
 //  Copyright © 2017 Tim Brandt. All rights reserved.
 //
-//  USAGE: ContestRow is a UITableViewCell that appears only in the ArtistView
+//  USAGE: LeaderboardRow is a UITableViewCell that appears only in the ArtistView
 
 import UIKit
 
-class ContestRow: UITableViewCell {
+class LeaderboardRow: UITableViewCell {
 
   var corps : Corps? = nil
   var viewModel : CPViewModel? = nil
@@ -17,7 +17,7 @@ class ContestRow: UITableViewCell {
   var tapGesture : UITapGestureRecognizer? = nil
   var scoreDirection : Bool = true
   var index : Int = 0
-  weak var contestView: ContestView?
+  weak var leaderboardView: LeaderboardView?
   
   @IBOutlet var corpsName: UILabel!
   @IBOutlet var corpsImage: UIImageView!
@@ -45,8 +45,8 @@ class ContestRow: UITableViewCell {
     self.corpsScore.text = corpsScore.score.pick
     self.corpsImage.fadeIn(corpsScore.corps.imageFileName)
     
-    self.scoreGesture = UIPanGestureRecognizer(target: self, action: #selector(ContestRow.handlePan(_:)))
-    self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(ContestRow.handleTap(_:)))
+    self.scoreGesture = UIPanGestureRecognizer(target: self, action: #selector(LeaderboardRow.handlePan(_:)))
+    self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(LeaderboardRow.handleTap(_:)))
     self.scorePanGestureView.addGestureRecognizer(self.scoreGesture!)
     self.scorePanGestureView.addGestureRecognizer(self.tapGesture!)
   }
@@ -60,7 +60,7 @@ class ContestRow: UITableViewCell {
     let scoreText = String(format:"%.2f", corpsScoreFloat)
 //    self.corpsScore.text = scoreText
     
-    if (contestView != nil) { contestView!.updateCorpsScore(self.index, pickScore: scoreText) }
+    if (leaderboardView != nil) { leaderboardView!.updateCorpsScore(self.index, pickScore: scoreText) }
   }
 
   @IBAction func handleTap(_ recognizer:UIPanGestureRecognizer) {
@@ -69,7 +69,7 @@ class ContestRow: UITableViewCell {
     let scoreText = String(format:"%.2f", corpsScoreFloat)
 //        self.corpsScore.text = scoreText
     
-    if (contestView != nil) { contestView!.updateCorpsScore(self.index, pickScore: scoreText
+    if (leaderboardView != nil) { leaderboardView!.updateCorpsScore(self.index, pickScore: scoreText
       ) }
   }
   
