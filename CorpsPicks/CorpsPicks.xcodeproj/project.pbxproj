@@ -61,6 +61,8 @@
 		81A493831E9B5C200010364A /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A493821E9B5C200010364A /* Leaderboard.swift */; };
 		81A493861E9B5E4B0010364A /* LeaderboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A493841E9B5E4B0010364A /* LeaderboardRow.swift */; };
 		81A493871E9B5E4B0010364A /* LeaderboardRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A493851E9B5E4B0010364A /* LeaderboardRow.xib */; };
+		81A493891E9DC2D80010364A /* UserScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A493881E9DC2D80010364A /* UserScore.swift */; };
+		81A4938B1E9DC36A0010364A /* LeaderboardInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4938A1E9DC36A0010364A /* LeaderboardInterface.swift */; };
 		81FBE9071E84D19E00A67A02 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FBE9061E84D19E00A67A02 /* CurrentUser.swift */; };
 		D3A5F3F6D48D9AEC78BBEFF2 /* Pods_CorpsPicks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5321C5BAC1CD1D0A388782 /* Pods_CorpsPicks.framework */; };
 /* End PBXBuildFile section */
@@ -137,6 +139,8 @@
 		81A493821E9B5C200010364A /* Leaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		81A493841E9B5E4B0010364A /* LeaderboardRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardRow.swift; sourceTree = "<group>"; };
 		81A493851E9B5E4B0010364A /* LeaderboardRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardRow.xib; sourceTree = "<group>"; };
+		81A493881E9DC2D80010364A /* UserScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserScore.swift; sourceTree = "<group>"; };
+		81A4938A1E9DC36A0010364A /* LeaderboardInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardInterface.swift; sourceTree = "<group>"; };
 		81FBE9061E84D19E00A67A02 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		B998BB0AEB8D9ACA72757E46 /* Pods-CorpsPicks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorpsPicks.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CorpsPicks/Pods-CorpsPicks.release.xcconfig"; sourceTree = "<group>"; };
 		FA5321C5BAC1CD1D0A388782 /* Pods_CorpsPicks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CorpsPicks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +274,7 @@
 				812F5BBD1E5A71A1009B068C /* ContestInterface.swift */,
 				811B9B3F1E61042D0084E8AB /* CorpsInterface.swift */,
 				81055D661E594F6600FF8DCD /* EventInterface.swift */,
+				81A4938A1E9DC36A0010364A /* LeaderboardInterface.swift */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 				22A0F4D41E0D17F400DD2F2D /* Lineup.swift */,
 				22FA694B1E145C90003CAFEF /* Score.swift */,
 				22A0F4D71E0D1A5F00DD2F2D /* User.swift */,
+				81A493881E9DC2D80010364A /* UserScore.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -624,7 +630,9 @@
 				22A0F4E71E0D279C00DD2F2D /* CPViewModel.swift in Sources */,
 				81055D671E594F6600FF8DCD /* EventInterface.swift in Sources */,
 				81A493831E9B5C200010364A /* Leaderboard.swift in Sources */,
+				81A493891E9DC2D80010364A /* UserScore.swift in Sources */,
 				22FA69471E133D24003CAFEF /* ExtUIImage.swift in Sources */,
+				81A4938B1E9DC36A0010364A /* LeaderboardInterface.swift in Sources */,
 				22A0F4D81E0D1A5F00DD2F2D /* User.swift in Sources */,
 				22A0F4D21E0D177400DD2F2D /* Corps.swift in Sources */,
 				22A0F4E11E0D238F00DD2F2D /* ContestView.swift in Sources */,

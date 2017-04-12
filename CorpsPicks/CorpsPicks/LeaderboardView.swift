@@ -40,7 +40,7 @@ class LeaderboardView: UITableViewController {
 //    self.title = Constants.contestTitle
     //    self.restorationIdentifier = "contest"
     
-    leaderboardViewModel?.loadLineup()
+    leaderboardViewModel?.loadLeaderboard()
     
     self.refreshControl!.addTarget(self, action: #selector(LeaderboardView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
@@ -49,7 +49,7 @@ class LeaderboardView: UITableViewController {
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
-    self.leaderboardViewModel!.sortCorpsScores()
+//    self.leaderboardViewModel!.sortUserScores()
     self.leaderboardTable.reloadData()
     
     if self.refreshControl!.isRefreshing
@@ -71,11 +71,6 @@ class LeaderboardView: UITableViewController {
   
   //  MARK: Custom Methods
   
-  func updateCorpsScore(_ index:Int, pickScore:String) {
-    self.leaderboardViewModel?.corpsScores[index].score.pick = pickScore
-    self.leaderboardViewModel?.sortCorpsScores()
-  }
-  
   /**
    dismiss
    Called by EBViewModel - will execute if playing from a cell
@@ -92,7 +87,7 @@ class LeaderboardView: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return leaderboardViewModel!.corpsScores.count
+    return leaderboardViewModel!.userScores.count
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -124,7 +119,7 @@ class LeaderboardView: UITableViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardRow") as! LeaderboardRow
     cell.leaderboardView = self
-    cell.load(indexPath.row, corpsScore: leaderboardViewModel!.corpsScores[indexPath.row])
+    cell.load(indexPath.row, userScore: leaderboardViewModel!.userScores[indexPath.row])
     return cell
   }
   

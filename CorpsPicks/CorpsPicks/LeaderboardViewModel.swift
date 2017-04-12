@@ -9,34 +9,33 @@
 import UIKit
 
 class LeaderboardViewModel: CPViewModel, CurrentLeaderboardProtocol {
-  
-  var leaderboard : Leaderboard {
-    get {
-      return CurrentLeaderboardItems.sharedInstance.leaderboard!
-    }
-  }
-
-//  var corpsScores : [CorpsScore] = []
-  var eventId : String? = nil
-  
-  func setup(eventId:String) {
-    self.eventId = eventId
-    CurrentLeaderboardItems.sharedInstance.delegate = self
-  }
-  
-  func loadLineup() {
-    guard (eventId != nil) else { return }
-    ContestInterface.getLineup(eventId:eventId!)
-    ContestInterface.getScorePicks(eventId:eventId!)
-  }
-  
-  // CurrentLeaderboardProtocol
     
-  func updateLeaderboard(leaderboard:Leaderboard) {
-    if let view = self.vc as? LeaderboardView {
-      view.reload()
+    var leaderboard : Leaderboard {
+        get {
+            return CurrentLeaderboardItems.sharedInstance.leaderboard!
+        }
     }
-  }
-  
+    
+    var userScores : [UserScore] = []
+    var eventId : String? = nil
+    
+    func setup(eventId:String) {
+        self.eventId = eventId
+        CurrentLeaderboardItems.sharedInstance.delegate = self
+    }
+    
+    func loadLeaderboard() {
+        guard (eventId != nil) else { return }
+        LeaderboardInterface.getLeaderboard(eventId:eventId!)
+    }
+    
+    // CurrentLeaderboardProtocol
+    
+    func updateLeaderboard(leaderboard:Leaderboard) {
+        if let view = self.vc as? LeaderboardView {
+            view.reload()
+        }
+    }
+    
 }
 
