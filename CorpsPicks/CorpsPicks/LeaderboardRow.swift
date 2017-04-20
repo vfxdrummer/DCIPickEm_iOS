@@ -18,11 +18,10 @@ class LeaderboardRow: UITableViewCell {
   var scoreDirection : Bool = true
   var index : Int = 0
   weak var leaderboardView: LeaderboardView?
-  
-  @IBOutlet var corpsName: UILabel!
-  @IBOutlet var corpsImage: UIImageView!
-  @IBOutlet var corpsScore: UILabel!
-  @IBOutlet var scorePanGestureView: UIView!
+    
+  @IBOutlet var userPlacement: UILabel!
+  @IBOutlet var userName: UILabel!
+  @IBOutlet var userScore: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -33,44 +32,12 @@ class LeaderboardRow: UITableViewCell {
   }
   
   /**
-   load
-   Loads the album's name, subtitle, and cover image
-   If is a local album, fetches the artwork from the Media Library
-   viewModel is not assigned here and is assined in the ArtistView
+   load the UserScore
    - parameter album: Album
    */
-  func load(_ index:Int, corpsScore:CorpsScore) {
+  func load(_ index:Int, userScore:UserScore) {
     self.index = index
-    self.corpsName.text = corpsScore.corps.name
-    self.corpsScore.text = corpsScore.score.pick
-    self.corpsImage.fadeIn(corpsScore.corps.imageFileName)
-    
-    self.scoreGesture = UIPanGestureRecognizer(target: self, action: #selector(LeaderboardRow.handlePan(_:)))
-    self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(LeaderboardRow.handleTap(_:)))
-    self.scorePanGestureView.addGestureRecognizer(self.scoreGesture!)
-    self.scorePanGestureView.addGestureRecognizer(self.tapGesture!)
+    self.userName.text = userScore.user.name
+    self.userScore.text = userScore.score
   }
-  
-  @IBAction func handlePan(_ recognizer:UIPanGestureRecognizer) {
-    let translation = recognizer.translation(in: self.scorePanGestureView)
-    var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!) + (translation.x / 100.0)
-    corpsScoreFloat = (corpsScoreFloat <= 100) ? corpsScoreFloat : 100
-    corpsScoreFloat = (corpsScoreFloat >= 0) ? corpsScoreFloat : 0
-    self.scoreDirection = translation.x > 0.0 ? true : false
-    let scoreText = String(format:"%.2f", corpsScoreFloat)
-//    self.corpsScore.text = scoreText
-    
-    if (leaderboardView != nil) { leaderboardView!.updateCorpsScore(self.index, pickScore: scoreText) }
-  }
-
-  @IBAction func handleTap(_ recognizer:UIPanGestureRecognizer) {
-    var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!)
-    corpsScoreFloat = self.scoreDirection ? corpsScoreFloat + 0.01 : corpsScoreFloat - 0.01
-    let scoreText = String(format:"%.2f", corpsScoreFloat)
-//        self.corpsScore.text = scoreText
-    
-    if (leaderboardView != nil) { leaderboardView!.updateCorpsScore(self.index, pickScore: scoreText
-      ) }
-  }
-  
 }

@@ -10,9 +10,9 @@ import UIKit
 
 class UserScore : NSObject {
   var user : User = User()
-  var score : Score = Score(score: "")
+  var score : String
   
-  init(user: User, score : Score) {
+  init(user: User, score : String) {
     self.user = user
     self.score = score
   }

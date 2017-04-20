@@ -155,7 +155,7 @@ class ContestView: UITableViewController {
   // Mark - Leaderboard  button
   
   @IBAction func pressedLeaderboardButton(_ sender: Any) {
-    let leaderboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Leaderboard") as! ContestView
+    let leaderboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Leaderboard") as! LeaderboardView
     leaderboardVC.eventId = eventId
     show(leaderboardVC, sender: self)
   }

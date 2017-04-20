@@ -31,8 +31,8 @@ class LeaderboardView: UITableViewController {
     leaderboardTable.delegate = self
     leaderboardTable.dataSource = self
     leaderboardTable.tableFooterView = UIView(frame: CGRect.zero)
-    let corpsNib = UINib(nibName: "ContestRow", bundle: nil)
-    leaderboardTable.register(corpsNib, forCellReuseIdentifier: "ContestRow")
+    let corpsNib = UINib(nibName: "LeaderboardRow", bundle: nil)
+    leaderboardTable.register(corpsNib, forCellReuseIdentifier: "LeaderboardRow")
     
     leaderboardTable.setEditing(true, animated: true)
     
@@ -94,28 +94,6 @@ class LeaderboardView: UITableViewController {
     return 100
   }
   
-  override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    for view in cell.subviews {
-      if NSStringFromClass(view.classForCoder) == "UITableViewCellReorderControl"
-      {
-        // Move reorder handle to the far left of the cell
-        // Creates a new subview the size of the entire cell
-        let movedReorderRect : CGRect = CGRect(x: 0.0, y: 0.0, width: view.frame.maxX, height: view.frame.maxY)
-        // Adds the reorder control view to our new subview
-        let movedReorderControl : UIView = UIView(frame: movedReorderRect)
-        // Adds our new subview to the cell
-        movedReorderControl.addSubview(view)
-        // Adds our new subview to the cell
-        cell.addSubview(movedReorderControl)
-        // move it to the left
-        let moveLeft : CGSize = CGSize(width: movedReorderControl.frame.size.width - view.frame.size.width, height: movedReorderControl.frame.size.height - view.frame.size.height)
-        var transform : CGAffineTransform = CGAffineTransform.identity
-        transform = transform.translatedBy(x: -moveLeft.width, y: -moveLeft.height)
-        movedReorderControl.transform = transform
-      }
-    }
-  }
-  
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardRow") as! LeaderboardRow
     cell.leaderboardView = self
@@ -126,34 +104,13 @@ class LeaderboardView: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
   }
   
-  //  MARK: UITableViewDelegate - editting / rearranging methods
-  
-  override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
-    return UITableViewCellEditingStyle.none
-  }
-  
-  override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-    return true
-  }
-  
-  override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-    if (sourceIndexPath.row != destinationIndexPath.row) {
-      let score = leaderboardViewModel!.corpsScores[destinationIndexPath.row].score.pick
-      leaderboardViewModel!.corpsScores[destinationIndexPath.row].score.pick = leaderboardViewModel!.corpsScores[sourceIndexPath.row].score.pick
-      leaderboardViewModel!.corpsScores[sourceIndexPath.row].score.pick = score
-      swap(&leaderboardViewModel!.corpsScores[sourceIndexPath.row], &leaderboardViewModel!.corpsScores[destinationIndexPath.row])
-      leaderboardViewModel!.setScorePicks()
-      self.leaderboardTable.reloadData()
-    }
-  }
-  
   // Mark - Leaderboard  button
   
-  @IBAction func pressedLeaderboardButton(_ sender: Any) {
-    let leaderboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Leaderboard") as! LeaderboardView
-    leaderboardVC.eventId = eventId
-    show(leaderboardVC, sender: self)
-  }
+//  @IBAction func pressedLeaderboardButton(_ sender: Any) {
+//    let leaderboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Leaderboard") as! LeaderboardView
+//    leaderboardVC.eventId = eventId
+//    show(leaderboardVC, sender: self)
+//  }
   
 }
 
