@@ -14,8 +14,6 @@ class LeaderboardView: UITableViewController {
   var eventId : String? = nil
   
   @IBOutlet var leaderboardTable: UITableView!
-  
-  @IBOutlet weak var leaderboardButton: UIBarButtonItem!
     
   //  MARK: UIView Lifecycle Methods
   
@@ -103,14 +101,6 @@ class LeaderboardView: UITableViewController {
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
   }
-  
-  // Mark - Leaderboard  button
-  
-//  @IBAction func pressedLeaderboardButton(_ sender: Any) {
-//    let leaderboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Leaderboard") as! LeaderboardView
-//    leaderboardVC.eventId = eventId
-//    show(leaderboardVC, sender: self)
-//  }
   
 }
 

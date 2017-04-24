@@ -129,7 +129,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                     <connections>
-                        <outlet property="contestTable" destination="ieM-iw-9cx" id="xXr-2U-dCX"/>
+                        <outlet property="leaderboardTable" destination="ieM-iw-9cx" id="Xg8-NJ-OHg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMj-J7-9uP" sceneMemberID="firstResponder"/>
