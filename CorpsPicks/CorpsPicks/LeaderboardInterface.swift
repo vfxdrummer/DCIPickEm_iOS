@@ -17,17 +17,18 @@ class LeaderboardInterface: NSObject {
    Get Leaderboard list from Firebase DB
    */
   class func getLeaderboard(eventId: String) {
-//    let ref = FIRDatabase.database().reference()
+    print("eventId : \(eventId)")
+    let ref = FIRDatabase.database().reference()
     
-//    ref.child("lineups").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
-//      guard let lineupArray = snapshot.value as? [String] else {
-//        return
-//      }
-//      let lineup = Lineup.init(lineupArray: lineupArray as! [String])
-//      CurrentContestItems.sharedInstance.lineup = lineup
-//    }) { (error) in
-//      print(error.localizedDescription)
-//    }
+    ref.child("leaderboard").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
+        guard let leaderboardDict = snapshot.value as? [String:Int] else {
+        return
+      }
+      let leaderboard = Leaderboard.init(leaderboardDict: leaderboardDict as! Dictionary<String, AnyObject>)
+      CurrentLeaderboardItems.sharedInstance.leaderboard = leaderboard
+    }) { (error) in
+      print(error.localizedDescription)
+    }
     
     let leaderboardDict:Dictionary<String, AnyObject> = [:]
     let leaderboard = Leaderboard(leaderboardDict: leaderboardDict)

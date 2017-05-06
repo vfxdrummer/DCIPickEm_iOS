@@ -47,7 +47,6 @@ class LeaderboardView: UITableViewController {
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
-//    self.leaderboardViewModel!.sortUserScores()
     self.leaderboardTable.reloadData()
     
     if self.refreshControl!.isRefreshing

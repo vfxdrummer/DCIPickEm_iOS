@@ -21,8 +21,16 @@ def myPods
   # FB SDK
 #  pod 'FBSDKLoginKit'
 
+  # Firebase UI
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Facebook'
+  pod 'FirebaseUI/Twitter'
+
   # Firebase
   pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Core'
   pod 'Firebase/Database'
 
 end

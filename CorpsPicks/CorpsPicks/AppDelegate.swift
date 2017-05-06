@@ -8,9 +8,12 @@
 
 import UIKit
 import Firebase
+import FirebaseAuthUI
+import FirebaseGoogleAuthUI
+import FirebaseFacebookAuthUI
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, FUIAuthDelegate, UIApplicationDelegate {
 
   var window: UIWindow?
 
@@ -20,13 +23,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Firebase
     FIRApp.configure()
     
+    // Firebase Auth
+    let authUI = FUIAuth.defaultAuthUI()
+    // You need to adopt a FUIAuthDelegate protocol to receive callback
+    authUI?.delegate = self
+    
+    let providers: [FUIAuthProvider] = [
+        FUIGoogleAuth(),
+        FUIFacebookAuth(),
+        ]
+    authUI?.providers = providers
+    
+    // Present the auth view controller and then implement the sign in callback.
+    let authViewController = authUI!.authViewController()
+    self.window?.rootViewController = authViewController
+    
     // Set status bar style
-    launchStoryboard(StoryboardName.Main)
+//    launchStoryboard(StoryboardName.Main)
     
     // Startup code
     StartupService.sharedInstance.start()
     
     return true
+  }
+  
+  // FUIAuthDelegate
+  func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
+    // handle user and error as necessary
+  }
+    
+  // Firebase Facebook / Google Auth callback
+  func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+    let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
+    if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+      return true
+    }
+    // other URL handling goes here.
+    return false
   }
 
   func applicationWillResignActive(_ application: UIApplication) {
