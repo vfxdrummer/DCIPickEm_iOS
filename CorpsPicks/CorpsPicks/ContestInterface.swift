@@ -62,7 +62,7 @@ class ContestInterface: NSObject {
    */
   class func getScorePicks(eventId:String) {
     // move this to singleton, set on Auth
-    let userId = "123456"
+    let userId = CurrentUser.sharedInstance.id
     
     let ref = FIRDatabase.database().reference()
     
@@ -124,7 +124,7 @@ class ContestInterface: NSObject {
   
   class func setScorePicks(eventId:String, corpsScores:[CorpsScore]) {
     // move this to singleton, set on Auth
-    var userId = "123456"
+    var userId = CurrentUser.sharedInstance.id
     
     let ref = FIRDatabase.database().reference()
     print("Setting scores for \(eventId)")
