@@ -34,14 +34,46 @@ class AppDelegate: UIResponder, FUIAuthDelegate, UIApplicationDelegate {
         ]
     authUI?.providers = providers
     
+    // ToS
+    let kFirebaseTermsOfService = URL(string: "https://firebase.google.com/terms/")!
+    authUI?.tosurl = kFirebaseTermsOfService
+    
     // Present the auth view controller and then implement the sign in callback.
     let authViewController = authUI!.authViewController()
-    self.window?.rootViewController = authViewController
+//    self.window?.rootViewController = authViewController
+    
+    // listen for changes in the authorization state
+    let authHandle = FIRAuth.auth()?.addStateDidChangeListener { (auth: FIRAuth, user: FIRUser?) in
+      
+      print("Firebase logged in with uid \(user!.uid)")
+      CurrentUser.sharedInstance.id = user!.uid
+      
+//      // check if there is a current user
+//      if let activeUser = user {
+//        // check if current app user is the current FIRUser
+//        if self.user != activeUser {
+//          // sign in
+//        }
+//      } else {
+//        // user must sign in
+//        self.loginSession()
+//      }
+    }
+    
+//    launchStoryboard(StoryboardName.Main)
+    
+//    self.loginSession()
     
     // Startup code
     StartupService.sharedInstance.start()
     
     return true
+  }
+  
+  func loginSession() {
+    let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
+    let rootVc = UIApplication.shared.keyWindow?.rootViewController
+    rootVc?.present(authViewController, animated: true, completion: nil)
   }
   
   // FUIAuthDelegate
