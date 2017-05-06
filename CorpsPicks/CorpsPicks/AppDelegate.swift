@@ -47,17 +47,22 @@ class AppDelegate: UIResponder, FUIAuthDelegate, UIApplicationDelegate {
   // FUIAuthDelegate
   func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
     // handle user and error as necessary
+    handleSuccessfulLogin()
   }
     
   // Firebase Facebook / Google Auth callback
   func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
     let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
     if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
-      launchStoryboard(StoryboardName.Main)
+      handleSuccessfulLogin()
       return true
     }
     // other URL handling goes here.
     return false
+  }
+  
+  func handleSuccessfulLogin() {
+    launchStoryboard(StoryboardName.Main)
   }
 
   func applicationWillResignActive(_ application: UIApplication) {
