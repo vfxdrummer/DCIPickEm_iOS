@@ -38,9 +38,6 @@ class AppDelegate: UIResponder, FUIAuthDelegate, UIApplicationDelegate {
     let authViewController = authUI!.authViewController()
     self.window?.rootViewController = authViewController
     
-    // Set status bar style
-//    launchStoryboard(StoryboardName.Main)
-    
     // Startup code
     StartupService.sharedInstance.start()
     
@@ -56,6 +53,7 @@ class AppDelegate: UIResponder, FUIAuthDelegate, UIApplicationDelegate {
   func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
     let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
     if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+      launchStoryboard(StoryboardName.Main)
       return true
     }
     // other URL handling goes here.
