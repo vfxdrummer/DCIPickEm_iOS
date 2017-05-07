@@ -94,7 +94,8 @@ class LeaderboardView: UITableViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardRow") as! LeaderboardRow
     cell.leaderboardView = self
-    cell.load(indexPath.row, userScore: leaderboardViewModel!.userScores[indexPath.row])
+    let userScore = leaderboardViewModel!.userScores[indexPath.row]
+    cell.load(indexPath.row, userScore: userScore)
     return cell
   }
   

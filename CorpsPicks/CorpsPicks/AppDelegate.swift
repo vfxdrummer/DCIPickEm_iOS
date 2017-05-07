@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
     FIRApp.configure()
     
     // Signout of Firebase
-    try! FIRAuth.auth()!.signOut()
+//    try! FIRAuth.auth()!.signOut()
     
     // Firebase Auth
     let authUI = FUIAuth.defaultAuthUI()

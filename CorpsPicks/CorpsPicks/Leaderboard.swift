@@ -10,15 +10,18 @@ import UIKit
 
 class Leaderboard : NSObject {
     var id : String = ""
-    var userScores : Dictionary<String, String> = [:]
+    var userScores : [UserScore] = []
     
     init(leaderboardDict: Dictionary<String, AnyObject>) {
         super.init()
-        if let id = leaderboardDict["id"] {
-            self.id = id as! String
-        }
-        if let userScores = leaderboardDict["userScores"] {
-            self.userScores = userScores as! Dictionary<String, String>
-        }
+        let scoreArray = Array(leaderboardDict.keys)
+        _ = scoreArray.map({
+            print($0)
+            print(leaderboardDict[$0]!)
+            let user = User()
+            user.uid = $0
+            userScores.append(UserScore.init(user: user, score: leaderboardDict[$0]! as! String))
+            print(self.userScores)
+        })
     }
 }
