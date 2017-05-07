@@ -10,13 +10,21 @@ import UIKit
 
 class LeaderboardViewModel: CPViewModel, CurrentLeaderboardProtocol {
     
-    var leaderboard : Leaderboard {
+    var leaderboard : Leaderboard? {
         get {
-            return CurrentLeaderboardItems.sharedInstance.leaderboard!
+            return CurrentLeaderboardItems.sharedInstance.leaderboard
         }
     }
     
-    var userScores : [UserScore] = []
+    var userScores : [UserScore] {
+        get {
+            if let leaderboard = self.leaderboard {
+                return leaderboard.userScores
+            }
+            return []
+        }
+    }
+    
     var eventId : String? = nil
     
     func setup(eventId:String) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -58,15 +58,6 @@
                             </mask>
                         </variation>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
-                        <rect key="frame" x="167" y="54" width="175" height="40"/>
-                        <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="BEm-25-iYr"/>
-                            <constraint firstAttribute="width" constant="175" id="ieX-h0-dkI"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
@@ -77,9 +68,7 @@
                     <constraint firstItem="Gjx-Ju-6LR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="PiU-gi-wDY"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Q3d-Xs-7I0"/>
                     <constraint firstAttribute="trailing" secondItem="ylr-i8-IIi" secondAttribute="trailing" constant="8" id="RY8-6e-fzh"/>
-                    <constraint firstItem="sB2-EP-uKl" firstAttribute="centerX" secondItem="ylr-i8-IIi" secondAttribute="centerX" id="aFu-5h-4xP"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cgU-av-oqN"/>
-                    <constraint firstItem="sB2-EP-uKl" firstAttribute="top" secondItem="ylr-i8-IIi" secondAttribute="bottom" constant="2" id="mT8-Hm-Srq"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="97" id="qVa-RG-aET"/>
                 </constraints>
                 <variation key="default">
@@ -93,7 +82,6 @@
             <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
             <connections>
-                <outlet property="scorePanGestureView" destination="sB2-EP-uKl" id="SxX-ME-UfU"/>
                 <outlet property="userName" destination="yvE-3T-i1K" id="3bj-Cz-ucC"/>
                 <outlet property="userPlacement" destination="Gjx-Ju-6LR" id="uSj-Ta-mvF"/>
                 <outlet property="userScore" destination="ylr-i8-IIi" id="76V-Lo-1j7"/>
