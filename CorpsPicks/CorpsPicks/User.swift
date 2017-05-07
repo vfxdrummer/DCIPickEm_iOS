@@ -9,11 +9,20 @@
 import UIKit
 
 class User : NSObject {
-  var id : String = ""
+  var uid : String = ""
   var name : String = ""
+  var email : String = ""
+  var photoURL : URL?
   
   override init() {
-    id = "123456"
-    name = "Timothy Brandt"
+    
+  }
+  
+  convenience init(uid:String, name:String, email:String, photoURL:URL?) {
+    self.init()
+    self.uid = uid
+    self.name = name
+    self.email = email
+    self.photoURL = photoURL
   }
 }

@@ -11,9 +11,10 @@ import Firebase
 import FirebaseAuthUI
 import FirebaseGoogleAuthUI
 import FirebaseFacebookAuthUI
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, FUIAuthDelegate, UIApplicationDelegate {
+class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicationDelegate {
 
   var window: UIWindow?
 
@@ -22,6 +23,9 @@ class AppDelegate: UIResponder, FUIAuthDelegate, UIApplicationDelegate {
     
     // Firebase
     FIRApp.configure()
+    
+    // Signout of Firebase
+    try! FIRAuth.auth()!.signOut()
     
     // Firebase Auth
     let authUI = FUIAuth.defaultAuthUI()
@@ -34,35 +38,33 @@ class AppDelegate: UIResponder, FUIAuthDelegate, UIApplicationDelegate {
         ]
     authUI?.providers = providers
     
+    // Google Sign-In
+    GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+    GIDSignIn.sharedInstance().delegate = self
+    
     // ToS
     let kFirebaseTermsOfService = URL(string: "https://firebase.google.com/terms/")!
     authUI?.tosurl = kFirebaseTermsOfService
     
     // Present the auth view controller and then implement the sign in callback.
-    let authViewController = authUI!.authViewController()
+    _ = authUI!.authViewController()
 //    self.window?.rootViewController = authViewController
     
     // listen for changes in the authorization state
-    let authHandle = FIRAuth.auth()?.addStateDidChangeListener { (auth: FIRAuth, user: FIRUser?) in
+    _ = FIRAuth.auth()?.addStateDidChangeListener { (auth: FIRAuth, user: FIRUser?) in
       
-      print("Firebase logged in with uid \(user!.uid)")
-      CurrentUser.sharedInstance.id = user!.uid
       
-//      // check if there is a current user
-//      if let activeUser = user {
-//        // check if current app user is the current FIRUser
-//        if self.user != activeUser {
-//          // sign in
-//        }
-//      } else {
-//        // user must sign in
-//        self.loginSession()
-//      }
+      // check if there is a current user
+      if let activeUser = user {
+        print("Firebase logged in with uid \(user!.uid)")
+        CurrentUser.sharedInstance.uid = user!.uid
+        CurrentUser.sharedInstance.email = user!.email!
+        CurrentUser.sharedInstance.photoURL = user!.photoURL
+      } else {
+        // user must sign in
+        self.loginSession()
+      }
     }
-    
-//    launchStoryboard(StoryboardName.Main)
-    
-//    self.loginSession()
     
     // Startup code
     StartupService.sharedInstance.start()
@@ -89,8 +91,35 @@ class AppDelegate: UIResponder, FUIAuthDelegate, UIApplicationDelegate {
       handleSuccessfulLogin()
       return true
     }
-    // other URL handling goes here.
+    // GIDSignIn
+    return GIDSignIn.sharedInstance().handle(url,
+                                             sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                             annotation: [:])
     return false
+  }
+  
+  func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+    return GIDSignIn.sharedInstance().handle(url,
+                                             sourceApplication: sourceApplication,
+                                             annotation: annotation)
+  }
+  
+  func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+    // ...
+    if let error = error {
+      // ...
+      return
+    }
+    
+    guard let authentication = user.authentication else { return }
+    let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                      accessToken: authentication.accessToken)
+    // ...
+  }
+  
+  func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+    // Perform any operations when the user disconnects from app here.
+    // ...
   }
   
   func handleSuccessfulLogin() {

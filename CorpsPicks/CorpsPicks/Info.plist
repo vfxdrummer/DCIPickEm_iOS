@@ -21,24 +21,23 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>URL schemes</key>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb263416347402894</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.867542715344-q3nellpdu801kug0doa1umd178p4cc8p</string>
+			</array>
+		</dict>
 	</array>
-	<key>CFBundleURLTypes</key>
-	<array>
-    		<dict>
-        		<key>CFBundleURLName</key>
-        		<string></string>
-        		<key>CFBundleURLSchemes</key>
-        		<array>
-            			<string>fb263416347402894</string>
-        		</array>
-        	</dict>
-        </array>
-        <key>CFBundleVersion</key>
+	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
 	<string>263416347402894</string>
