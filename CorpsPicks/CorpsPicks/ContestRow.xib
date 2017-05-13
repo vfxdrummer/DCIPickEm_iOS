@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,18 +17,15 @@
             <rect key="frame" x="0.0" y="0.0" width="465" height="106"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="465" height="105"/>
+                <rect key="frame" x="0.0" y="0.0" width="465" height="105.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bd.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4W8-HH-yB2" userLabel="Corps Image">
-                        <rect key="frame" x="8" y="8" width="89" height="89"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="4W8-HH-yB2" secondAttribute="height" multiplier="1:1" id="YDg-yw-j1H"/>
-                        </constraints>
+                        <rect key="frame" x="8" y="8" width="449" height="89.5"/>
                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-3T-i1K" userLabel="Corps Name">
-                        <rect key="frame" x="105" y="44" width="150" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-3T-i1K" userLabel="Corps Name">
+                        <rect key="frame" x="105.5" y="44" width="150" height="18"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="B8Q-5p-gd9"/>
                             <constraint firstAttribute="width" secondItem="yvE-3T-i1K" secondAttribute="height" multiplier="352:21" id="U5r-Ps-uo1"/>
@@ -41,8 +39,8 @@
                             </mask>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="Corps Score">
-                        <rect key="frame" x="255" y="52" width="0.0" height="0.0"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="Corps Score">
+                        <rect key="frame" x="255.5" y="52" width="0.0" height="0.0"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ylr-i8-IIi" secondAttribute="height" multiplier="352:21" id="TCx-4w-yOI"/>
                         </constraints>
@@ -55,8 +53,8 @@
                             </mask>
                         </variation>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
-                        <rect key="frame" x="167" y="54" width="175" height="40"/>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
+                        <rect key="frame" x="167.5" y="54" width="175" height="40"/>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
@@ -68,31 +66,23 @@
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="leading" secondItem="yvE-3T-i1K" secondAttribute="trailing" id="0Ex-3K-4c2"/>
-                    <constraint firstAttribute="bottom" secondItem="4W8-HH-yB2" secondAttribute="bottom" constant="8" id="7w6-8J-U42"/>
+                    <constraint firstItem="4W8-HH-yB2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="2Wd-gr-cHk"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4W8-HH-yB2" secondAttribute="bottom" id="3N3-lE-SHv"/>
                     <constraint firstAttribute="trailing" secondItem="yvE-3T-i1K" secondAttribute="trailing" constant="8" id="EJA-vZ-PmT"/>
-                    <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="8" id="P5A-0F-gFl"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="top" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="1" id="PgV-xz-4Mq"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Q3d-Xs-7I0"/>
-                    <constraint firstItem="4W8-HH-yB2" firstAttribute="top" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="-45" id="RMy-wa-OaY"/>
                     <constraint firstAttribute="trailing" secondItem="ylr-i8-IIi" secondAttribute="trailing" constant="8" id="RY8-6e-fzh"/>
-                    <constraint firstItem="4W8-HH-yB2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="V39-6m-Xez"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4W8-HH-yB2" secondAttribute="trailing" id="Rpd-1E-pJF"/>
                     <constraint firstItem="sB2-EP-uKl" firstAttribute="centerX" secondItem="ylr-i8-IIi" secondAttribute="centerX" id="aFu-5h-4xP"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cgU-av-oqN"/>
-                    <constraint firstItem="ylr-i8-IIi" firstAttribute="leading" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="8" id="cnW-Sz-3X7"/>
+                    <constraint firstItem="4W8-HH-yB2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="e4c-nP-Kwa"/>
                     <constraint firstItem="sB2-EP-uKl" firstAttribute="top" secondItem="ylr-i8-IIi" secondAttribute="bottom" constant="2" id="mT8-Hm-Srq"/>
-                    <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="8" id="nLv-78-FBp"/>
-                    <constraint firstItem="ylr-i8-IIi" firstAttribute="top" secondItem="4W8-HH-yB2" secondAttribute="top" id="t3C-ik-2wj"/>
-                    <constraint firstItem="4W8-HH-yB2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="vfd-sL-Yjb"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="RMy-wa-OaY"/>
                         <exclude reference="EJA-vZ-PmT"/>
-                        <exclude reference="P5A-0F-gFl"/>
                         <exclude reference="PgV-xz-4Mq"/>
                         <exclude reference="RY8-6e-fzh"/>
-                        <exclude reference="cnW-Sz-3X7"/>
-                        <exclude reference="t3C-ik-2wj"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>

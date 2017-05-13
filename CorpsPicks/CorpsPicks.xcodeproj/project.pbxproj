@@ -32,13 +32,6 @@
 		22A0F4F01E0D36D900DD2F2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4EF1E0D36D900DD2F2D /* Constants.swift */; };
 		22A0F4F11E0D36D900DD2F2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4EF1E0D36D900DD2F2D /* Constants.swift */; };
 		22FA69341E0E2986003CAFEF /* CPTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69331E0E2986003CAFEF /* CPTopView.swift */; };
-		22FA69371E0E36B8003CAFEF /* bd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22FA69361E0E36B8003CAFEF /* bd.jpg */; };
-		22FA693E1E11BEB1003CAFEF /* crown.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22FA69381E11BEB0003CAFEF /* crown.jpeg */; };
-		22FA693F1E11BEB1003CAFEF /* crown2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22FA69391E11BEB0003CAFEF /* crown2.jpg */; };
-		22FA69401E11BEB1003CAFEF /* cavaliers.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22FA693A1E11BEB0003CAFEF /* cavaliers.jpeg */; };
-		22FA69411E11BEB1003CAFEF /* cadets.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22FA693B1E11BEB0003CAFEF /* cadets.jpeg */; };
-		22FA69421E11BEB1003CAFEF /* bluedevils.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FA693C1E11BEB0003CAFEF /* bluedevils.png */; };
-		22FA69431E11BEB1003CAFEF /* bluecoats.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22FA693D1E11BEB0003CAFEF /* bluecoats.jpeg */; };
 		22FA69471E133D24003CAFEF /* ExtUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69451E133D24003CAFEF /* ExtUIImage.swift */; };
 		22FA69481E133D24003CAFEF /* ExtUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69461E133D24003CAFEF /* ExtUIImageView.swift */; };
 		22FA694A1E13C641003CAFEF /* ContestPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69491E13C641003CAFEF /* ContestPick.swift */; };
@@ -55,6 +48,21 @@
 		812F5BB81E5A29A6009B068C /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB61E5A29A6009B068C /* EventRow.swift */; };
 		812F5BBA1E5A30B8009B068C /* CurrentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB91E5A30B8009B068C /* CurrentStatus.swift */; };
 		812F5BBE1E5A71A1009B068C /* ContestInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BBD1E5A71A1009B068C /* ContestInterface.swift */; };
+		816582DC1EC7478E002C9BA2 /* bd1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 816582DA1EC7478E002C9BA2 /* bd1.jpg */; };
+		816582DD1EC7478E002C9BA2 /* crown1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 816582DB1EC7478E002C9BA2 /* crown1.jpg */; };
+		816582E71EC74848002C9BA2 /* bd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 816582E01EC74848002C9BA2 /* bd.jpg */; };
+		816582E81EC74848002C9BA2 /* bluecoats.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 816582E11EC74848002C9BA2 /* bluecoats.jpeg */; };
+		816582E91EC74848002C9BA2 /* bluedevils.png in Resources */ = {isa = PBXBuildFile; fileRef = 816582E21EC74848002C9BA2 /* bluedevils.png */; };
+		816582EA1EC74848002C9BA2 /* cadets.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 816582E31EC74848002C9BA2 /* cadets.jpeg */; };
+		816582EB1EC74848002C9BA2 /* cavaliers.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 816582E41EC74848002C9BA2 /* cavaliers.jpeg */; };
+		816582EC1EC74848002C9BA2 /* crown.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 816582E51EC74848002C9BA2 /* crown.jpeg */; };
+		816582ED1EC74848002C9BA2 /* crown2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 816582E61EC74848002C9BA2 /* crown2.jpg */; };
+		816582F11EC74857002C9BA2 /* fdc_logo_no_padding.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582EE1EC74857002C9BA2 /* fdc_logo_no_padding.pdf */; };
+		816582F21EC74857002C9BA2 /* fdc_logo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582EF1EC74857002C9BA2 /* fdc_logo.pdf */; };
+		816582F31EC74857002C9BA2 /* fdc_with_logotype.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582F01EC74857002C9BA2 /* fdc_with_logotype.pdf */; };
+		816582F71EC7486C002C9BA2 /* fdc_app_icon_image.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582F41EC7486C002C9BA2 /* fdc_app_icon_image.pdf */; };
+		816582F81EC7486C002C9BA2 /* fdc_icon_one_color_stamp.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582F51EC7486C002C9BA2 /* fdc_icon_one_color_stamp.pdf */; };
+		816582F91EC7486C002C9BA2 /* inside_the_shield_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582F61EC7486C002C9BA2 /* inside_the_shield_icon.pdf */; };
 		819C11BB1E8CD86C003A2781 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C11BA1E8CD86C003A2781 /* LeaderboardView.swift */; };
 		819C11BD1E8CDAC1003A2781 /* LeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C11BC1E8CDAC1003A2781 /* LeaderboardViewModel.swift */; };
 		81A493831E9B5C200010364A /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A493821E9B5C200010364A /* Leaderboard.swift */; };
@@ -107,13 +115,6 @@
 		22A0F4EA1E0D2A5500DD2F2D /* ContestRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContestRow.xib; sourceTree = "<group>"; };
 		22A0F4EF1E0D36D900DD2F2D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22FA69331E0E2986003CAFEF /* CPTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPTopView.swift; sourceTree = "<group>"; };
-		22FA69361E0E36B8003CAFEF /* bd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bd.jpg; path = resources/images/bd.jpg; sourceTree = "<group>"; };
-		22FA69381E11BEB0003CAFEF /* crown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = crown.jpeg; path = resources/images/crown.jpeg; sourceTree = "<group>"; };
-		22FA69391E11BEB0003CAFEF /* crown2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = crown2.jpg; path = resources/images/crown2.jpg; sourceTree = "<group>"; };
-		22FA693A1E11BEB0003CAFEF /* cavaliers.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cavaliers.jpeg; path = resources/images/cavaliers.jpeg; sourceTree = "<group>"; };
-		22FA693B1E11BEB0003CAFEF /* cadets.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cadets.jpeg; path = resources/images/cadets.jpeg; sourceTree = "<group>"; };
-		22FA693C1E11BEB0003CAFEF /* bluedevils.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluedevils.png; path = resources/images/bluedevils.png; sourceTree = "<group>"; };
-		22FA693D1E11BEB0003CAFEF /* bluecoats.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bluecoats.jpeg; path = resources/images/bluecoats.jpeg; sourceTree = "<group>"; };
 		22FA69451E133D24003CAFEF /* ExtUIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUIImage.swift; sourceTree = "<group>"; };
 		22FA69461E133D24003CAFEF /* ExtUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUIImageView.swift; sourceTree = "<group>"; };
 		22FA69491E13C641003CAFEF /* ContestPick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestPick.swift; sourceTree = "<group>"; };
@@ -133,6 +134,21 @@
 		812F5BB61E5A29A6009B068C /* EventRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
 		812F5BB91E5A30B8009B068C /* CurrentStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentStatus.swift; sourceTree = "<group>"; };
 		812F5BBD1E5A71A1009B068C /* ContestInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestInterface.swift; sourceTree = "<group>"; };
+		816582DA1EC7478E002C9BA2 /* bd1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bd1.jpg; path = resources/images/banners/bd1.jpg; sourceTree = "<group>"; };
+		816582DB1EC7478E002C9BA2 /* crown1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = crown1.jpg; path = resources/images/banners/crown1.jpg; sourceTree = "<group>"; };
+		816582E01EC74848002C9BA2 /* bd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bd.jpg; path = resources/images/badges/bd.jpg; sourceTree = "<group>"; };
+		816582E11EC74848002C9BA2 /* bluecoats.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bluecoats.jpeg; path = resources/images/badges/bluecoats.jpeg; sourceTree = "<group>"; };
+		816582E21EC74848002C9BA2 /* bluedevils.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluedevils.png; path = resources/images/badges/bluedevils.png; sourceTree = "<group>"; };
+		816582E31EC74848002C9BA2 /* cadets.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cadets.jpeg; path = resources/images/badges/cadets.jpeg; sourceTree = "<group>"; };
+		816582E41EC74848002C9BA2 /* cavaliers.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cavaliers.jpeg; path = resources/images/badges/cavaliers.jpeg; sourceTree = "<group>"; };
+		816582E51EC74848002C9BA2 /* crown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = crown.jpeg; path = resources/images/badges/crown.jpeg; sourceTree = "<group>"; };
+		816582E61EC74848002C9BA2 /* crown2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = crown2.jpg; path = resources/images/badges/crown2.jpg; sourceTree = "<group>"; };
+		816582EE1EC74857002C9BA2 /* fdc_logo_no_padding.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = fdc_logo_no_padding.pdf; path = resources/images/logo/fdc_logo_no_padding.pdf; sourceTree = "<group>"; };
+		816582EF1EC74857002C9BA2 /* fdc_logo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = fdc_logo.pdf; path = resources/images/logo/fdc_logo.pdf; sourceTree = "<group>"; };
+		816582F01EC74857002C9BA2 /* fdc_with_logotype.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = fdc_with_logotype.pdf; path = resources/images/logo/fdc_with_logotype.pdf; sourceTree = "<group>"; };
+		816582F41EC7486C002C9BA2 /* fdc_app_icon_image.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = fdc_app_icon_image.pdf; path = resources/images/icon/fdc_app_icon_image.pdf; sourceTree = "<group>"; };
+		816582F51EC7486C002C9BA2 /* fdc_icon_one_color_stamp.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = fdc_icon_one_color_stamp.pdf; path = resources/images/icon/fdc_icon_one_color_stamp.pdf; sourceTree = "<group>"; };
+		816582F61EC7486C002C9BA2 /* inside_the_shield_icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = inside_the_shield_icon.pdf; path = resources/images/icon/inside_the_shield_icon.pdf; sourceTree = "<group>"; };
 		819C11BA1E8CD86C003A2781 /* LeaderboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		819C11BC1E8CDAC1003A2781 /* LeaderboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewModel.swift; sourceTree = "<group>"; };
 		81A493821E9B5C200010364A /* Leaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
@@ -326,13 +342,10 @@
 		22FA69351E0E36AE003CAFEF /* images */ = {
 			isa = PBXGroup;
 			children = (
-				22FA69381E11BEB0003CAFEF /* crown.jpeg */,
-				22FA69391E11BEB0003CAFEF /* crown2.jpg */,
-				22FA693A1E11BEB0003CAFEF /* cavaliers.jpeg */,
-				22FA693B1E11BEB0003CAFEF /* cadets.jpeg */,
-				22FA693C1E11BEB0003CAFEF /* bluedevils.png */,
-				22FA693D1E11BEB0003CAFEF /* bluecoats.jpeg */,
-				22FA69361E0E36B8003CAFEF /* bd.jpg */,
+				816582DF1EC74811002C9BA2 /* badges */,
+				816582DE1EC74805002C9BA2 /* logo */,
+				816582D81EC74774002C9BA2 /* banners */,
+				816582D91EC7477E002C9BA2 /* icon */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -344,6 +357,49 @@
 				22FA69461E133D24003CAFEF /* ExtUIImageView.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		816582D81EC74774002C9BA2 /* banners */ = {
+			isa = PBXGroup;
+			children = (
+				816582DA1EC7478E002C9BA2 /* bd1.jpg */,
+				816582DB1EC7478E002C9BA2 /* crown1.jpg */,
+			);
+			name = banners;
+			sourceTree = "<group>";
+		};
+		816582D91EC7477E002C9BA2 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				816582F41EC7486C002C9BA2 /* fdc_app_icon_image.pdf */,
+				816582F51EC7486C002C9BA2 /* fdc_icon_one_color_stamp.pdf */,
+				816582F61EC7486C002C9BA2 /* inside_the_shield_icon.pdf */,
+			);
+			name = icon;
+			sourceTree = "<group>";
+		};
+		816582DE1EC74805002C9BA2 /* logo */ = {
+			isa = PBXGroup;
+			children = (
+				816582EE1EC74857002C9BA2 /* fdc_logo_no_padding.pdf */,
+				816582EF1EC74857002C9BA2 /* fdc_logo.pdf */,
+				816582F01EC74857002C9BA2 /* fdc_with_logotype.pdf */,
+			);
+			name = logo;
+			sourceTree = "<group>";
+		};
+		816582DF1EC74811002C9BA2 /* badges */ = {
+			isa = PBXGroup;
+			children = (
+				816582E01EC74848002C9BA2 /* bd.jpg */,
+				816582E11EC74848002C9BA2 /* bluecoats.jpeg */,
+				816582E21EC74848002C9BA2 /* bluedevils.png */,
+				816582E31EC74848002C9BA2 /* cadets.jpeg */,
+				816582E41EC74848002C9BA2 /* cavaliers.jpeg */,
+				816582E51EC74848002C9BA2 /* crown.jpeg */,
+				816582E61EC74848002C9BA2 /* crown2.jpg */,
+			);
+			name = badges;
 			sourceTree = "<group>";
 		};
 		A7618BD3FD97156551A860A9 /* Frameworks */ = {
@@ -479,19 +535,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22FA69421E11BEB1003CAFEF /* bluedevils.png in Resources */,
-				22FA69371E0E36B8003CAFEF /* bd.jpg in Resources */,
+				816582EC1EC74848002C9BA2 /* crown.jpeg in Resources */,
+				816582E91EC74848002C9BA2 /* bluedevils.png in Resources */,
+				816582EA1EC74848002C9BA2 /* cadets.jpeg in Resources */,
+				816582F31EC74857002C9BA2 /* fdc_with_logotype.pdf in Resources */,
+				816582DC1EC7478E002C9BA2 /* bd1.jpg in Resources */,
+				816582ED1EC74848002C9BA2 /* crown2.jpg in Resources */,
+				816582DD1EC7478E002C9BA2 /* crown1.jpg in Resources */,
 				22A0F4A61E0D0BA400DD2F2D /* LaunchScreen.storyboard in Resources */,
-				22FA69431E11BEB1003CAFEF /* bluecoats.jpeg in Resources */,
+				816582E81EC74848002C9BA2 /* bluecoats.jpeg in Resources */,
 				22A0F4A31E0D0BA400DD2F2D /* Assets.xcassets in Resources */,
-				22FA693E1E11BEB1003CAFEF /* crown.jpeg in Resources */,
-				22FA69401E11BEB1003CAFEF /* cavaliers.jpeg in Resources */,
 				81A493871E9B5E4B0010364A /* LeaderboardRow.xib in Resources */,
-				22FA69411E11BEB1003CAFEF /* cadets.jpeg in Resources */,
+				816582E71EC74848002C9BA2 /* bd.jpg in Resources */,
 				22A0F4ED1E0D2A5500DD2F2D /* ContestRow.xib in Resources */,
+				816582F71EC7486C002C9BA2 /* fdc_app_icon_image.pdf in Resources */,
 				22A0F4A11E0D0BA400DD2F2D /* Main.storyboard in Resources */,
-				22FA693F1E11BEB1003CAFEF /* crown2.jpg in Resources */,
 				812F5BB71E5A29A6009B068C /* EventRow.xib in Resources */,
+				816582F91EC7486C002C9BA2 /* inside_the_shield_icon.pdf in Resources */,
+				816582EB1EC74848002C9BA2 /* cavaliers.jpeg in Resources */,
+				816582F81EC7486C002C9BA2 /* fdc_icon_one_color_stamp.pdf in Resources */,
+				816582F21EC74857002C9BA2 /* fdc_logo.pdf in Resources */,
+				816582F11EC74857002C9BA2 /* fdc_logo_no_padding.pdf in Resources */,
 				81F12B441EBD84FC00A1681E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
