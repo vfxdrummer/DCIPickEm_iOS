@@ -24,6 +24,6 @@ class Corps : NSObject {
       self.name = name
     }
     
-    self.imageFileName = "bluedevils.png"
+    self.imageFileName = "bd1.jpg"
   }
 }

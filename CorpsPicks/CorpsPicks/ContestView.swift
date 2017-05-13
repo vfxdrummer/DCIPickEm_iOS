@@ -16,7 +16,7 @@ class ContestView: UITableViewController {
   @IBOutlet var contestTable: UITableView!
   
   @IBOutlet weak var leaderboardButton: UIBarButtonItem!
-    
+  
   //  MARK: UIView Lifecycle Methods
   
   override func viewDidLoad() {
@@ -37,7 +37,7 @@ class ContestView: UITableViewController {
     contestTable.setEditing(true, animated: true)
     
     // Setup the ViewController Title
-//    self.title = Constants.contestTitle
+    //    self.title = Constants.contestTitle
     //    self.restorationIdentifier = "contest"
     
     contestViewModel?.loadLineup()
@@ -139,6 +139,10 @@ class ContestView: UITableViewController {
   
   override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
     return true
+  }
+  
+  override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+    return false
   }
   
   override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {

@@ -41,6 +41,10 @@ class ContestRow: UITableViewCell {
    */
   func load(_ index:Int, corpsScore:CorpsScore) {
     self.index = index
+    
+    // TEMP HACK!!!!!!!
+    corpsScore.corps.imageFileName = (index % 2) == 0 ? "bd1.jpg" : "crown1.jpg"
+    
     self.corpsName.text = corpsScore.corps.name
     self.corpsScore.text = corpsScore.score.pick
     self.corpsImage.fadeIn(corpsScore.corps.imageFileName)
