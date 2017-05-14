@@ -48,6 +48,8 @@ class ContestRow: UITableViewCell {
     self.scoreEntryField.text = corpsScore.score.pick
     self.corpsImage.fadeIn(corpsScore.corps.imageFileName)
     
+    self.scoreEntryField.becomeFirstResponder()
+    
     // HIDE score label for now
     self.corpsScore.isHidden = true
     

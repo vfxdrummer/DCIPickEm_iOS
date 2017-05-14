@@ -148,7 +148,9 @@ class ContestInterface: NSObject {
   
   class func checkScoreString(score:String) -> String {
     // ensure they are digits
-    let doubleValue : Double = NSString(string: score).doubleValue
+    var doubleValue : Double = NSString(string: score).doubleValue
+    doubleValue = (doubleValue >= 0.0) ? doubleValue : 0.0
+    doubleValue = (doubleValue <= 100.0) ? doubleValue : 100.0
     return "\(doubleValue)"
   }
   

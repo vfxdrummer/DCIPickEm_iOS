@@ -40,7 +40,7 @@ public class KeyboardMovement: CustomStringConvertible {
     }
 
     public var animationCurveOptions: UIViewAnimationOptions {
-        return animationOptions(for: animationCurve)
+        return animationDuration(for: animationCurve)
     }
 
     public var isLocal: Bool {
