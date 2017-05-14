@@ -23,6 +23,7 @@ class ContestRow: UITableViewCell {
   @IBOutlet var corpsImage: UIImageView!
   @IBOutlet var corpsScore: UILabel!
   @IBOutlet var scorePanGestureView: UIView!
+  @IBOutlet weak var scoreEntryField: UITextField!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -42,12 +43,13 @@ class ContestRow: UITableViewCell {
   func load(_ index:Int, corpsScore:CorpsScore) {
     self.index = index
     
-    // TEMP HACK!!!!!!!
-    corpsScore.corps.imageFileName = (index % 2) == 0 ? "bd1.jpg" : "crown1.jpg"
-    
     self.corpsName.text = corpsScore.corps.name
     self.corpsScore.text = corpsScore.score.pick
+    self.scoreEntryField.text = corpsScore.score.pick
     self.corpsImage.fadeIn(corpsScore.corps.imageFileName)
+    
+    // HIDE score label for now
+    self.corpsScore.isHidden = true
     
     self.scoreGesture = UIPanGestureRecognizer(target: self, action: #selector(ContestRow.handlePan(_:)))
     self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(ContestRow.handleTap(_:)))
