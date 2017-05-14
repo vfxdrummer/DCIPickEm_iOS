@@ -146,9 +146,15 @@ class ContestInterface: NSObject {
     }
   }
   
+  class func checkScoreString(score:String) -> String {
+    // ensure they are digits
+    let doubleValue : Double = NSString(string: score).doubleValue
+    return "\(doubleValue)"
+  }
+  
   class func getCorpsScore(corpsId:String, score:String) -> CorpsScore? {
     let corps:Corps = CorpsInterface.getCorpsById(corpsId:corpsId)
-    let score:Score = Score.init(score: score)
+    let score:Score = Score.init(score: checkScoreString(score: score))
     return CorpsScore.init(corps:corps, score:score)
   }
 }
