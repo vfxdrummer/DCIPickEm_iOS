@@ -41,6 +41,13 @@
 		81055D671E594F6600FF8DCD /* EventInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81055D661E594F6600FF8DCD /* EventInterface.swift */; };
 		811B9B401E61042D0084E8AB /* CorpsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B9B3F1E61042D0084E8AB /* CorpsInterface.swift */; };
 		811B9B421E614BF80084E8AB /* StartupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B9B411E614BF80084E8AB /* StartupService.swift */; };
+		81265E351ECEAA8400547013 /* contests-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 81265E2F1ECEAA8400547013 /* contests-black.png */; };
+		81265E361ECEAA8400547013 /* contests-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 81265E301ECEAA8400547013 /* contests-white.png */; };
+		81265E371ECEAA8400547013 /* events-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 81265E311ECEAA8400547013 /* events-black.png */; };
+		81265E381ECEAA8400547013 /* events-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 81265E321ECEAA8400547013 /* events-white.png */; };
+		81265E391ECEAA8400547013 /* leaderboard-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 81265E331ECEAA8400547013 /* leaderboard-black.png */; };
+		81265E3A1ECEAA8400547013 /* leaderboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 81265E341ECEAA8400547013 /* leaderboard.png */; };
+		81265E3C1ECEB9B700547013 /* ExtUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81265E3B1ECEB9B700547013 /* ExtUIViewController.swift */; };
 		812F5BB01E5A23BF009B068C /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BAF1E5A23BF009B068C /* EventView.swift */; };
 		812F5BB21E5A255D009B068C /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB11E5A255D009B068C /* EventViewModel.swift */; };
 		812F5BB41E5A25E6009B068C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB31E5A25E6009B068C /* Event.swift */; };
@@ -61,8 +68,6 @@
 		816582F71EC7486C002C9BA2 /* fdc_app_icon_image.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582F41EC7486C002C9BA2 /* fdc_app_icon_image.pdf */; };
 		816582F81EC7486C002C9BA2 /* fdc_icon_one_color_stamp.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582F51EC7486C002C9BA2 /* fdc_icon_one_color_stamp.pdf */; };
 		816582F91EC7486C002C9BA2 /* inside_the_shield_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582F61EC7486C002C9BA2 /* inside_the_shield_icon.pdf */; };
-		817197BE1EC819B200415BAC /* world in Resources */ = {isa = PBXBuildFile; fileRef = 817197BC1EC819B200415BAC /* world */; };
-		817197BF1EC819B200415BAC /* open in Resources */ = {isa = PBXBuildFile; fileRef = 817197BD1EC819B200415BAC /* open */; };
 		817197D71EC81DD600415BAC /* academy1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 817197C01EC81DD600415BAC /* academy1.jpg */; };
 		817197D81EC81DD600415BAC /* bluecoats1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 817197C11EC81DD600415BAC /* bluecoats1.jpg */; };
 		817197D91EC81DD600415BAC /* bluedevils1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 817197C21EC81DD600415BAC /* bluedevils1.jpg */; };
@@ -173,6 +178,13 @@
 		81055D661E594F6600FF8DCD /* EventInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInterface.swift; sourceTree = "<group>"; };
 		811B9B3F1E61042D0084E8AB /* CorpsInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorpsInterface.swift; sourceTree = "<group>"; };
 		811B9B411E614BF80084E8AB /* StartupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupService.swift; sourceTree = "<group>"; };
+		81265E2F1ECEAA8400547013 /* contests-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contests-black.png"; path = "resources/images/tabbar/contests-black.png"; sourceTree = "<group>"; };
+		81265E301ECEAA8400547013 /* contests-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contests-white.png"; path = "resources/images/tabbar/contests-white.png"; sourceTree = "<group>"; };
+		81265E311ECEAA8400547013 /* events-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "events-black.png"; path = "resources/images/tabbar/events-black.png"; sourceTree = "<group>"; };
+		81265E321ECEAA8400547013 /* events-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "events-white.png"; path = "resources/images/tabbar/events-white.png"; sourceTree = "<group>"; };
+		81265E331ECEAA8400547013 /* leaderboard-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "leaderboard-black.png"; path = "resources/images/tabbar/leaderboard-black.png"; sourceTree = "<group>"; };
+		81265E341ECEAA8400547013 /* leaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leaderboard.png; path = resources/images/tabbar/leaderboard.png; sourceTree = "<group>"; };
+		81265E3B1ECEB9B700547013 /* ExtUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUIViewController.swift; sourceTree = "<group>"; };
 		812F5BAF1E5A23BF009B068C /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		812F5BB11E5A255D009B068C /* EventViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		812F5BB31E5A25E6009B068C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -197,8 +209,6 @@
 		816582FD1EC76E0E002C9BA2 /* KeyboardMovementAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardMovementAction.swift; path = WolfCore/keyboard/KeyboardMovementAction.swift; sourceTree = "<group>"; };
 		816582FE1EC76E0E002C9BA2 /* KeyboardMovement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardMovement.swift; path = WolfCore/keyboard/KeyboardMovement.swift; sourceTree = "<group>"; };
 		816582FF1EC76E0E002C9BA2 /* KeyboardNotificationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardNotificationActions.swift; path = WolfCore/keyboard/KeyboardNotificationActions.swift; sourceTree = "<group>"; };
-		817197BC1EC819B200415BAC /* world */ = {isa = PBXFileReference; lastKnownFileType = folder; name = world; path = resources/images/banners/world; sourceTree = "<group>"; };
-		817197BD1EC819B200415BAC /* open */ = {isa = PBXFileReference; lastKnownFileType = folder; name = open; path = resources/images/banners/open; sourceTree = "<group>"; };
 		817197C01EC81DD600415BAC /* academy1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = academy1.jpg; path = CorpsPicks/resources/images/banners/world/academy1.jpg; sourceTree = "<group>"; };
 		817197C11EC81DD600415BAC /* bluecoats1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bluecoats1.jpg; path = CorpsPicks/resources/images/banners/world/bluecoats1.jpg; sourceTree = "<group>"; };
 		817197C21EC81DD600415BAC /* bluedevils1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bluedevils1.jpg; path = CorpsPicks/resources/images/banners/world/bluedevils1.jpg; sourceTree = "<group>"; };
@@ -288,52 +298,6 @@
 		22A0F48D1E0D0BA400DD2F2D = {
 			isa = PBXGroup;
 			children = (
-				817197EE1EC81DE900415BAC /* 7thregiment1.jpg */,
-				817197EF1EC81DEA00415BAC /* bluedevilsb1.jpg */,
-				817197F01EC81DEA00415BAC /* bluedevilsc1.jpg */,
-				817197F11EC81DEA00415BAC /* coltcadets1.jpg */,
-				817197F21EC81DEA00415BAC /* columbians1.jpg */,
-				817197F31EC81DEA00415BAC /* gold1.jpg */,
-				817197F41EC81DEA00415BAC /* goldenempire1.jpg */,
-				817197F51EC81DEA00415BAC /* guardians1.jpg */,
-				817197F61EC81DEA00415BAC /* heatwave1.jpg */,
-				817197F71EC81DEA00415BAC /* impulse1.jpg */,
-				817197F81EC81DEA00415BAC /* incognito1.jpg */,
-				817197F91EC81DEA00415BAC /* legends1.jpg */,
-				817197FA1EC81DEA00415BAC /* lesstentor1.jpg */,
-				817197FB1EC81DEA00415BAC /* louisianastars1.jpg */,
-				817197FC1EC81DEA00415BAC /* musiccity1.jpg */,
-				817197FD1EC81DEA00415BAC /* raiders1.jpg */,
-				817197FE1EC81DEA00415BAC /* rivercityryhthm1.jpg */,
-				817197FF1EC81DEA00415BAC /* shadow1.jpg */,
-				817198001EC81DEA00415BAC /* southwind1.jpg */,
-				817198011EC81DEA00415BAC /* spartans1.jpg */,
-				817198021EC81DEA00415BAC /* thebattalion1.jpg */,
-				817198031EC81DEA00415BAC /* vanguardcadets1.jpg */,
-				817198041EC81DEA00415BAC /* watchmen1.jpg */,
-				817197C01EC81DD600415BAC /* academy1.jpg */,
-				817197C11EC81DD600415BAC /* bluecoats1.jpg */,
-				817197C21EC81DD600415BAC /* bluedevils1.jpg */,
-				817197C31EC81DD600415BAC /* blueknights1.jpg */,
-				817197C41EC81DD600415BAC /* bluestars1.jpg */,
-				817197C51EC81DD600415BAC /* bostoncrusaders1.jpg */,
-				817197C61EC81DD600415BAC /* cadets1.jpg */,
-				817197C71EC81DD600415BAC /* cascades1.jpg */,
-				817197C81EC81DD600415BAC /* cavaliers1.jpg */,
-				817197C91EC81DD600415BAC /* colts1.jpg */,
-				817197CA1EC81DD600415BAC /* crossmen1.jpg */,
-				817197CB1EC81DD600415BAC /* crown1.jpg */,
-				817197CC1EC81DD600415BAC /* genesis1.jpg */,
-				817197CD1EC81DD600415BAC /* jerseysurf1.jpg */,
-				817197CE1EC81DD600415BAC /* madison1.jpg */,
-				817197CF1EC81DD600415BAC /* mandarins1.jpg */,
-				817197D01EC81DD600415BAC /* oregoncrusaders1.jpg */,
-				817197D11EC81DD600415BAC /* pacificcrest1.jpg */,
-				817197D21EC81DD600415BAC /* phantomregiment1.jpg */,
-				817197D31EC81DD600415BAC /* pioneer1.jpg */,
-				817197D41EC81DD600415BAC /* spiritofatlanta1.jpg */,
-				817197D51EC81DD600415BAC /* troopers1.jpg */,
-				817197D61EC81DD600415BAC /* vanguard1.jpg */,
 				22A0F4981E0D0BA400DD2F2D /* CorpsPicks */,
 				22A0F4AF1E0D0BA400DD2F2D /* CorpsPicksTests */,
 				22A0F4BA1E0D0BA500DD2F2D /* CorpsPicksUITests */,
@@ -485,9 +449,10 @@
 		22FA69351E0E36AE003CAFEF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8171981D1EC95C6700415BAC /* tabbar */,
+				8171981C1EC841BC00415BAC /* banners */,
 				816582DF1EC74811002C9BA2 /* badges */,
 				816582DE1EC74805002C9BA2 /* logo */,
-				816582D81EC74774002C9BA2 /* banners */,
 				816582D91EC7477E002C9BA2 /* icon */,
 			);
 			name = images;
@@ -498,17 +463,9 @@
 			children = (
 				22FA69451E133D24003CAFEF /* ExtUIImage.swift */,
 				22FA69461E133D24003CAFEF /* ExtUIImageView.swift */,
+				81265E3B1ECEB9B700547013 /* ExtUIViewController.swift */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		816582D81EC74774002C9BA2 /* banners */ = {
-			isa = PBXGroup;
-			children = (
-				817197BC1EC819B200415BAC /* world */,
-				817197BD1EC819B200415BAC /* open */,
-			);
-			name = banners;
 			sourceTree = "<group>";
 		};
 		816582D91EC7477E002C9BA2 /* icon */ = {
@@ -562,6 +519,73 @@
 				816582FF1EC76E0E002C9BA2 /* KeyboardNotificationActions.swift */,
 			);
 			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		8171981C1EC841BC00415BAC /* banners */ = {
+			isa = PBXGroup;
+			children = (
+				817197EE1EC81DE900415BAC /* 7thregiment1.jpg */,
+				817197EF1EC81DEA00415BAC /* bluedevilsb1.jpg */,
+				817197F01EC81DEA00415BAC /* bluedevilsc1.jpg */,
+				817197F11EC81DEA00415BAC /* coltcadets1.jpg */,
+				817197F21EC81DEA00415BAC /* columbians1.jpg */,
+				817197F31EC81DEA00415BAC /* gold1.jpg */,
+				817197F41EC81DEA00415BAC /* goldenempire1.jpg */,
+				817197F51EC81DEA00415BAC /* guardians1.jpg */,
+				817197F61EC81DEA00415BAC /* heatwave1.jpg */,
+				817197F71EC81DEA00415BAC /* impulse1.jpg */,
+				817197F81EC81DEA00415BAC /* incognito1.jpg */,
+				817197F91EC81DEA00415BAC /* legends1.jpg */,
+				817197FA1EC81DEA00415BAC /* lesstentor1.jpg */,
+				817197FB1EC81DEA00415BAC /* louisianastars1.jpg */,
+				817197FC1EC81DEA00415BAC /* musiccity1.jpg */,
+				817197FD1EC81DEA00415BAC /* raiders1.jpg */,
+				817197FE1EC81DEA00415BAC /* rivercityryhthm1.jpg */,
+				817197FF1EC81DEA00415BAC /* shadow1.jpg */,
+				817198001EC81DEA00415BAC /* southwind1.jpg */,
+				817198011EC81DEA00415BAC /* spartans1.jpg */,
+				817198021EC81DEA00415BAC /* thebattalion1.jpg */,
+				817198031EC81DEA00415BAC /* vanguardcadets1.jpg */,
+				817198041EC81DEA00415BAC /* watchmen1.jpg */,
+				817197C01EC81DD600415BAC /* academy1.jpg */,
+				817197C11EC81DD600415BAC /* bluecoats1.jpg */,
+				817197C21EC81DD600415BAC /* bluedevils1.jpg */,
+				817197C31EC81DD600415BAC /* blueknights1.jpg */,
+				817197C41EC81DD600415BAC /* bluestars1.jpg */,
+				817197C51EC81DD600415BAC /* bostoncrusaders1.jpg */,
+				817197C61EC81DD600415BAC /* cadets1.jpg */,
+				817197C71EC81DD600415BAC /* cascades1.jpg */,
+				817197C81EC81DD600415BAC /* cavaliers1.jpg */,
+				817197C91EC81DD600415BAC /* colts1.jpg */,
+				817197CA1EC81DD600415BAC /* crossmen1.jpg */,
+				817197CB1EC81DD600415BAC /* crown1.jpg */,
+				817197CC1EC81DD600415BAC /* genesis1.jpg */,
+				817197CD1EC81DD600415BAC /* jerseysurf1.jpg */,
+				817197CE1EC81DD600415BAC /* madison1.jpg */,
+				817197CF1EC81DD600415BAC /* mandarins1.jpg */,
+				817197D01EC81DD600415BAC /* oregoncrusaders1.jpg */,
+				817197D11EC81DD600415BAC /* pacificcrest1.jpg */,
+				817197D21EC81DD600415BAC /* phantomregiment1.jpg */,
+				817197D31EC81DD600415BAC /* pioneer1.jpg */,
+				817197D41EC81DD600415BAC /* spiritofatlanta1.jpg */,
+				817197D51EC81DD600415BAC /* troopers1.jpg */,
+				817197D61EC81DD600415BAC /* vanguard1.jpg */,
+			);
+			name = banners;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8171981D1EC95C6700415BAC /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				81265E2F1ECEAA8400547013 /* contests-black.png */,
+				81265E301ECEAA8400547013 /* contests-white.png */,
+				81265E311ECEAA8400547013 /* events-black.png */,
+				81265E321ECEAA8400547013 /* events-white.png */,
+				81265E331ECEAA8400547013 /* leaderboard-black.png */,
+				81265E341ECEAA8400547013 /* leaderboard.png */,
+			);
+			name = tabbar;
 			sourceTree = "<group>";
 		};
 		A7618BD3FD97156551A860A9 /* Frameworks */ = {
@@ -700,11 +724,13 @@
 			files = (
 				817198051EC81DEA00415BAC /* 7thregiment1.jpg in Resources */,
 				817198061EC81DEA00415BAC /* bluedevilsb1.jpg in Resources */,
+				81265E361ECEAA8400547013 /* contests-white.png in Resources */,
 				817198071EC81DEA00415BAC /* bluedevilsc1.jpg in Resources */,
 				817198081EC81DEA00415BAC /* coltcadets1.jpg in Resources */,
 				817198091EC81DEA00415BAC /* columbians1.jpg in Resources */,
 				8171980A1EC81DEA00415BAC /* gold1.jpg in Resources */,
 				8171980B1EC81DEA00415BAC /* goldenempire1.jpg in Resources */,
+				81265E381ECEAA8400547013 /* events-white.png in Resources */,
 				8171980C1EC81DEA00415BAC /* guardians1.jpg in Resources */,
 				8171980D1EC81DEA00415BAC /* heatwave1.jpg in Resources */,
 				8171980E1EC81DEA00415BAC /* impulse1.jpg in Resources */,
@@ -719,6 +745,7 @@
 				817198171EC81DEA00415BAC /* southwind1.jpg in Resources */,
 				817198181EC81DEA00415BAC /* spartans1.jpg in Resources */,
 				817198191EC81DEA00415BAC /* thebattalion1.jpg in Resources */,
+				81265E3A1ECEAA8400547013 /* leaderboard.png in Resources */,
 				8171981A1EC81DEA00415BAC /* vanguardcadets1.jpg in Resources */,
 				8171981B1EC81DEA00415BAC /* watchmen1.jpg in Resources */,
 				817197D71EC81DD600415BAC /* academy1.jpg in Resources */,
@@ -728,6 +755,7 @@
 				817197DB1EC81DD600415BAC /* bluestars1.jpg in Resources */,
 				817197DC1EC81DD600415BAC /* bostoncrusaders1.jpg in Resources */,
 				817197DD1EC81DD600415BAC /* cadets1.jpg in Resources */,
+				81265E371ECEAA8400547013 /* events-black.png in Resources */,
 				817197DE1EC81DD600415BAC /* cascades1.jpg in Resources */,
 				817197DF1EC81DD600415BAC /* cavaliers1.jpg in Resources */,
 				817197E01EC81DD600415BAC /* colts1.jpg in Resources */,
@@ -744,19 +772,19 @@
 				817197EB1EC81DD600415BAC /* spiritofatlanta1.jpg in Resources */,
 				817197EC1EC81DD600415BAC /* troopers1.jpg in Resources */,
 				817197ED1EC81DD600415BAC /* vanguard1.jpg in Resources */,
-				817197BE1EC819B200415BAC /* world in Resources */,
 				816582EC1EC74848002C9BA2 /* crown.jpeg in Resources */,
 				816582E91EC74848002C9BA2 /* bluedevils.png in Resources */,
 				816582EA1EC74848002C9BA2 /* cadets.jpeg in Resources */,
 				816582F31EC74857002C9BA2 /* fdc_with_logotype.pdf in Resources */,
 				816582ED1EC74848002C9BA2 /* crown2.jpg in Resources */,
 				22A0F4A61E0D0BA400DD2F2D /* LaunchScreen.storyboard in Resources */,
+				81265E351ECEAA8400547013 /* contests-black.png in Resources */,
 				816582E81EC74848002C9BA2 /* bluecoats.jpeg in Resources */,
 				22A0F4A31E0D0BA400DD2F2D /* Assets.xcassets in Resources */,
 				81A493871E9B5E4B0010364A /* LeaderboardRow.xib in Resources */,
 				816582E71EC74848002C9BA2 /* bd.jpg in Resources */,
+				81265E391ECEAA8400547013 /* leaderboard-black.png in Resources */,
 				22A0F4ED1E0D2A5500DD2F2D /* ContestRow.xib in Resources */,
-				817197BF1EC819B200415BAC /* open in Resources */,
 				816582F71EC7486C002C9BA2 /* fdc_app_icon_image.pdf in Resources */,
 				22A0F4A11E0D0BA400DD2F2D /* Main.storyboard in Resources */,
 				812F5BB71E5A29A6009B068C /* EventRow.xib in Resources */,
@@ -886,6 +914,7 @@
 			files = (
 				812F5BBE1E5A71A1009B068C /* ContestInterface.swift in Sources */,
 				22A0F4D51E0D17F400DD2F2D /* Lineup.swift in Sources */,
+				81265E3C1ECEB9B700547013 /* ExtUIViewController.swift in Sources */,
 				22A0F4F01E0D36D900DD2F2D /* Constants.swift in Sources */,
 				811B9B421E614BF80084E8AB /* StartupService.swift in Sources */,
 				22A0F4EB1E0D2A5500DD2F2D /* ContestRow.swift in Sources */,

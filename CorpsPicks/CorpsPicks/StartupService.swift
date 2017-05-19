@@ -8,9 +8,11 @@
 
 import UIKit
 
-class StartupService: NSObject {
+class StartupService: CurrentEventProtocol {
   
   static let sharedInstance : StartupService = StartupService()
+  
+  public var defaultEventId : String? = nil
   
   //  MARK: Startup Methods
   
@@ -20,6 +22,18 @@ class StartupService: NSObject {
    TODO:  Is somewhat brittle and would like to have this adopt certain things executed in AppDelegate (where this call is made).
    */
   func start() {
+    // set delegates
+    CurrentEventItems.sharedInstance.delegate = self
+    
+    // front load api items
     CorpsInterface.getCorps()
+    EventInterface.getEvents()
+  }
+  
+  func updateEvents(events:[Event]) {
+    guard (events.count > 0) else {
+      return
+    }
+    self.defaultEventId = events.first?.id
   }
 }

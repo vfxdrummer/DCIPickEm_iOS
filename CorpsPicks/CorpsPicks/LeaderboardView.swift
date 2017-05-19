@@ -18,8 +18,12 @@ class LeaderboardView: UITableViewController {
   //  MARK: UIView Lifecycle Methods
   
   override func viewDidLoad() {
-    
     super.viewDidLoad()
+    
+    // if eventId is nil, use default
+    if (eventId == nil) {
+      self.eventId = StartupService.sharedInstance.defaultEventId
+    }
     
     // Setup the ViewModel
     leaderboardViewModel = LeaderboardViewModel(viewController: self)

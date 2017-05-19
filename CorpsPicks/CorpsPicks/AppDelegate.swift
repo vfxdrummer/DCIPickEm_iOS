@@ -53,13 +53,13 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
     // listen for changes in the authorization state
     _ = FIRAuth.auth()?.addStateDidChangeListener { (auth: FIRAuth, user: FIRUser?) in
       
-      
       // check if there is a current user
-      if let activeUser = user {
+      if user != nil {
         print("Firebase logged in with uid \(user!.uid)")
         CurrentUser.sharedInstance.uid = user!.uid
         CurrentUser.sharedInstance.email = user!.email!
         CurrentUser.sharedInstance.photoURL = user!.photoURL
+        self.launchStoryboard(StoryboardName.Main)
       } else {
         // user must sign in
         self.loginSession()
@@ -123,7 +123,7 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
   }
   
   func handleSuccessfulLogin() {
-    launchStoryboard(StoryboardName.Main)
+//    launchStoryboard(StoryboardName.Main)
   }
 
   func applicationWillResignActive(_ application: UIApplication) {
@@ -152,6 +152,10 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
     let storyboard = UIStoryboard(name: storyboard.rawValue, bundle: nil)
     let controller = storyboard.instantiateInitialViewController()! as UIViewController
     self.window?.rootViewController = controller
+    
+    // set initial eventIds
+    let contestVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Contest") as! ContestView
+        contestVC.eventId = "999999"
   }
 
 }

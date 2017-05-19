@@ -9,7 +9,7 @@
 import UIKit
 
 class User : NSObject {
-  var uid : String = ""
+  var uid : String = "6X2gcbcGoBVAQR1lvz1NZToGzJx1"
   var name : String = ""
   var email : String = ""
   var photoURL : URL?

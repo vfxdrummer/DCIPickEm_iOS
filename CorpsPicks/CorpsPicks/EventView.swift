@@ -35,7 +35,7 @@ class EventView: UITableViewController {
 //    self.title = Constants.contestTitle
     //    self.restorationIdentifier = "contest"
     
-    eventViewModel?.loadEvents()
+//    eventViewModel?.loadEvents()
     
     self.refreshControl!.addTarget(self, action: #selector(EventView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
