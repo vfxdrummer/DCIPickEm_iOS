@@ -17,8 +17,9 @@ class EventView: UITableViewController {
   //  MARK: UIView Lifecycle Methods
   
   override func viewDidLoad() {
-    
     super.viewDidLoad()
+    
+    self.navigationItem.title = "EVENT"
     
     // Setup the ViewModel
     eventViewModel = EventViewModel(viewController: self)

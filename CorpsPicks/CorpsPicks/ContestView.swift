@@ -22,6 +22,8 @@ class ContestView: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.navigationItem.title = "CONTEST"
+    
     // if eventId is nil, use default
     if (eventId == nil) {
       self.eventId = StartupService.sharedInstance.defaultEventId

@@ -20,22 +20,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-3T-i1K" userLabel="Event Name">
-                        <rect key="frame" x="16" y="26.5" width="431" height="29"/>
+                        <rect key="frame" x="16" y="10.5" width="431" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doI-BE-nY0">
-                        <rect key="frame" x="16" y="79" width="431" height="16"/>
+                        <rect key="frame" x="16" y="49.5" width="431" height="45.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="Event Location">
-                                <rect key="frame" x="0.0" y="0.0" width="215.5" height="16"/>
+                                <rect key="frame" x="0.0" y="0.0" width="215.5" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.7975024287564767" green="0.7975024287564767" blue="0.7975024287564767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06a-4S-Asd" userLabel="Event Date">
-                                <rect key="frame" x="215.5" y="0.0" width="215.5" height="16"/>
+                                <rect key="frame" x="215.5" y="0.0" width="215.5" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.78614799222797926" green="0.78614799222797926" blue="0.78614799222797926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -52,10 +52,10 @@
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="IG0-DW-p9S"/>
-                    <constraint firstItem="doI-BE-nY0" firstAttribute="top" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="23.5" id="Oif-FK-fZa"/>
+                    <constraint firstItem="doI-BE-nY0" firstAttribute="top" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="10" id="Oif-FK-fZa"/>
                     <constraint firstItem="doI-BE-nY0" firstAttribute="leading" secondItem="yvE-3T-i1K" secondAttribute="leading" id="Zph-tb-rTI"/>
                     <constraint firstAttribute="trailingMargin" secondItem="doI-BE-nY0" secondAttribute="trailing" constant="10" id="bxS-Ji-ftc"/>
-                    <constraint firstItem="yvE-3T-i1K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="18.5" id="f4C-WN-LTn"/>
+                    <constraint firstItem="yvE-3T-i1K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="f4C-WN-LTn"/>
                     <constraint firstAttribute="bottomMargin" secondItem="doI-BE-nY0" secondAttribute="bottom" constant="2.5" id="n9G-bZ-UrK"/>
                     <constraint firstAttribute="trailingMargin" secondItem="yvE-3T-i1K" secondAttribute="trailing" constant="10" id="wew-y5-7nV"/>
                 </constraints>

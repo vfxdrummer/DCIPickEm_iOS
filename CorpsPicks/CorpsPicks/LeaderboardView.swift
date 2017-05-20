@@ -20,6 +20,8 @@ class LeaderboardView: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.navigationItem.title = "LEADERBOARD"
+    
     // if eventId is nil, use default
     if (eventId == nil) {
       self.eventId = StartupService.sharedInstance.defaultEventId
