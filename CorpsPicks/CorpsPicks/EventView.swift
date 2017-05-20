@@ -41,6 +41,8 @@ class EventView: UITableViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
+    self.eventTable.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 85.0
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
@@ -88,9 +90,9 @@ class EventView: UITableViewController {
     return eventViewModel!.events.count
   }
   
-  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 80
-  }
+//  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//    return 80
+//  }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "EventRow") as! EventRow
