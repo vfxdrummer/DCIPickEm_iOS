@@ -54,8 +54,6 @@ class ContestView: UITableViewController {
     //    self.title = Constants.contestTitle
     //    self.restorationIdentifier = "contest"
     
-    contestViewModel?.loadLineup()
-    
     self.loaded = true
     
     self.refreshControl!.addTarget(self, action: #selector(ContestView.refresh(_:)), for: UIControlEvents.valueChanged)
@@ -63,10 +61,16 @@ class ContestView: UITableViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     self.navigationController?.navigationBar.topItem?.title = "CONTEST"
+    
+    // load the lineup
+    contestViewModel?.loadLineup()
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
-    self.contestViewModel!.sortCorpsScores()
+//    self.contestViewModel!.sortCorpsScores(completion: { [unowned self] _ in
+//      self.reload()
+//    })
+    
     self.contestTable.reloadData()
     
     if self.refreshControl!.isRefreshing
@@ -94,8 +98,12 @@ class ContestView: UITableViewController {
   //  MARK: Custom Methods
   
   func updateCorpsScore(_ index:Int, pickScore:String) {
+    print("updateCorpsScore(\(index), \(pickScore))")
+    
     self.contestViewModel?.corpsScores[index].score.pick = pickScore
-    self.contestViewModel?.sortCorpsScores()
+    self.contestViewModel?.sortCorpsScores(completion : { [unowned self] _ in
+      self.reload()
+    })
   }
   
   /**
@@ -172,6 +180,7 @@ class ContestView: UITableViewController {
       let score = contestViewModel!.corpsScores[destinationIndexPath.row].score.pick
       contestViewModel!.corpsScores[destinationIndexPath.row].score.pick = contestViewModel!.corpsScores[sourceIndexPath.row].score.pick
       contestViewModel!.corpsScores[sourceIndexPath.row].score.pick = score
+      
       swap(&contestViewModel!.corpsScores[sourceIndexPath.row], &contestViewModel!.corpsScores[destinationIndexPath.row])
       contestViewModel!.setScorePicks()
       self.contestTable.reloadData()

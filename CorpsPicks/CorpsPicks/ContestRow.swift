@@ -87,6 +87,11 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
   
   // Mark - UITextFieldDelegate
   
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+  
   func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
     guard (textField.text != nil) else {
       return true

@@ -43,7 +43,7 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     ContestInterface.setScorePicks(eventId: eventId!, corpsScores:corpsScores)
   }
   
-  func sortCorpsScores() {
+  func sortCorpsScores(completion:@escaping () -> ()?) {
     let newCorpsScores:[CorpsScore] = self.corpsScores.sorted {
       ($0.score.pick as NSString).doubleValue > ($1.score.pick as NSString).doubleValue
     }
@@ -53,6 +53,7 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
       print("\(corpsScore.corps.name) \(corpsScore.score.pick)")
     }
     setScorePicks()
+    completion()
   }
   
   // CurrentContestProtocol
