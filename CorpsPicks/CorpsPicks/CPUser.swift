@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  CPUser.swift
 //  CorpsPicks
 //
 //  Created by Tim Brandt on 12/23/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class User : NSObject {
+class CPUser : NSObject {
   var uid : String = "6X2gcbcGoBVAQR1lvz1NZToGzJx1"
   var name : String = ""
   var email : String = ""

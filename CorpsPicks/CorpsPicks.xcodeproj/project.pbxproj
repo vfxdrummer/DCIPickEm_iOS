@@ -17,8 +17,8 @@
 		22A0F4D31E0D177400DD2F2D /* Corps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4D11E0D177400DD2F2D /* Corps.swift */; };
 		22A0F4D51E0D17F400DD2F2D /* Lineup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4D41E0D17F400DD2F2D /* Lineup.swift */; };
 		22A0F4D61E0D17F400DD2F2D /* Lineup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4D41E0D17F400DD2F2D /* Lineup.swift */; };
-		22A0F4D81E0D1A5F00DD2F2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4D71E0D1A5F00DD2F2D /* User.swift */; };
-		22A0F4D91E0D1A5F00DD2F2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4D71E0D1A5F00DD2F2D /* User.swift */; };
+		22A0F4D81E0D1A5F00DD2F2D /* CPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4D71E0D1A5F00DD2F2D /* CPUser.swift */; };
+		22A0F4D91E0D1A5F00DD2F2D /* CPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4D71E0D1A5F00DD2F2D /* CPUser.swift */; };
 		22A0F4E11E0D238F00DD2F2D /* ContestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E01E0D238F00DD2F2D /* ContestView.swift */; };
 		22A0F4E21E0D238F00DD2F2D /* ContestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E01E0D238F00DD2F2D /* ContestView.swift */; };
 		22A0F4E41E0D26A500DD2F2D /* ContestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4E31E0D26A500DD2F2D /* ContestViewModel.swift */; };
@@ -159,7 +159,7 @@
 		22A0F4BD1E0D0BA500DD2F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22A0F4D11E0D177400DD2F2D /* Corps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Corps.swift; sourceTree = "<group>"; };
 		22A0F4D41E0D17F400DD2F2D /* Lineup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lineup.swift; sourceTree = "<group>"; };
-		22A0F4D71E0D1A5F00DD2F2D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		22A0F4D71E0D1A5F00DD2F2D /* CPUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPUser.swift; sourceTree = "<group>"; };
 		22A0F4E01E0D238F00DD2F2D /* ContestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestView.swift; sourceTree = "<group>"; };
 		22A0F4E31E0D26A500DD2F2D /* ContestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestViewModel.swift; sourceTree = "<group>"; };
 		22A0F4E61E0D279C00DD2F2D /* CPViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPViewModel.swift; sourceTree = "<group>"; };
@@ -416,7 +416,7 @@
 				81A493821E9B5C200010364A /* Leaderboard.swift */,
 				22A0F4D41E0D17F400DD2F2D /* Lineup.swift */,
 				22FA694B1E145C90003CAFEF /* Score.swift */,
-				22A0F4D71E0D1A5F00DD2F2D /* User.swift */,
+				22A0F4D71E0D1A5F00DD2F2D /* CPUser.swift */,
 				81A493881E9DC2D80010364A /* UserScore.swift */,
 			);
 			name = Models;
@@ -953,7 +953,7 @@
 				22FA69471E133D24003CAFEF /* ExtUIImage.swift in Sources */,
 				814D99711ED2156B00E8DAC3 /* CPNavigationController.swift in Sources */,
 				81A4938B1E9DC36A0010364A /* LeaderboardInterface.swift in Sources */,
-				22A0F4D81E0D1A5F00DD2F2D /* User.swift in Sources */,
+				22A0F4D81E0D1A5F00DD2F2D /* CPUser.swift in Sources */,
 				22A0F4D21E0D177400DD2F2D /* Corps.swift in Sources */,
 				22A0F4E11E0D238F00DD2F2D /* ContestView.swift in Sources */,
 				22FA694A1E13C641003CAFEF /* ContestPick.swift in Sources */,
@@ -972,7 +972,7 @@
 				22A0F4F11E0D36D900DD2F2D /* Constants.swift in Sources */,
 				22A0F4E21E0D238F00DD2F2D /* ContestView.swift in Sources */,
 				22A0F4EC1E0D2A5500DD2F2D /* ContestRow.swift in Sources */,
-				22A0F4D91E0D1A5F00DD2F2D /* User.swift in Sources */,
+				22A0F4D91E0D1A5F00DD2F2D /* CPUser.swift in Sources */,
 				22A0F4E81E0D279C00DD2F2D /* CPViewModel.swift in Sources */,
 				22A0F4B11E0D0BA500DD2F2D /* CorpsPicksTests.swift in Sources */,
 				22A0F4E51E0D26A500DD2F2D /* ContestViewModel.swift in Sources */,

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Tim Brandt. All rights reserved.
 //
 
-class CurrentUser: User
+class CurrentUser: CPUser
 {
   static let sharedInstance: CurrentUser = CurrentUser()
   
