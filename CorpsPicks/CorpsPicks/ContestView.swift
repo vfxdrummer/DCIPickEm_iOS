@@ -47,6 +47,9 @@ class ContestView: UITableViewController {
     
     contestTable.setEditing(true, animated: true)
     
+    // Left NavBar Button
+    self.setLeftBackButton()
+    
     // Keyboard
     self.hideKeyboardRecognizer()
     
@@ -64,6 +67,16 @@ class ContestView: UITableViewController {
     
     // load the lineup
     contestViewModel?.loadLineup()
+  }
+  
+  private func setLeftBackButton() {
+    let leftButton = UIBarButtonItem(title: "<--", style: .plain, target: self, action: Selector("toEvent"))
+//    self.navigationItem.leftBarButtonItem  = leftButton
+    self.navigationController?.navigationItem.leftBarButtonItem = leftButton
+  }
+  
+  private func toEvent() {
+    CPTabView.shared?.showEvents()
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {

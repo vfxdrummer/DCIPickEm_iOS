@@ -50,7 +50,7 @@
         <scene sceneID="r7l-gg-dq7">
             <objects>
                 <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="DjV-YW-jjY">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="CPNavigationBar" translucent="NO" id="DjV-YW-jjY" customClass="CPNavigationBar" customModule="CorpsPicks" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,6 +86,7 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
+                        <outlet property="cpNavItem" destination="MXE-zL-K4b" id="bkH-O5-iSW"/>
                         <outlet property="cpTabBar" destination="W4Q-Ru-0Fq" id="NjI-0j-q90"/>
                         <segue destination="pie-Oh-Yuk" kind="relationship" relationship="viewControllers" id="jj1-6d-k1t"/>
                         <segue destination="7bK-jq-Zjz" kind="relationship" relationship="viewControllers" id="J9o-X5-NwW"/>

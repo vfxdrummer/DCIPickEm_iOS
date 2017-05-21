@@ -55,6 +55,7 @@
 		812F5BB81E5A29A6009B068C /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB61E5A29A6009B068C /* EventRow.swift */; };
 		812F5BBA1E5A30B8009B068C /* CurrentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB91E5A30B8009B068C /* CurrentStatus.swift */; };
 		812F5BBE1E5A71A1009B068C /* ContestInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BBD1E5A71A1009B068C /* ContestInterface.swift */; };
+		814D99711ED2156B00E8DAC3 /* CPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D99701ED2156B00E8DAC3 /* CPNavigationController.swift */; };
 		816582E71EC74848002C9BA2 /* bd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 816582E01EC74848002C9BA2 /* bd.jpg */; };
 		816582E81EC74848002C9BA2 /* bluecoats.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 816582E11EC74848002C9BA2 /* bluecoats.jpeg */; };
 		816582E91EC74848002C9BA2 /* bluedevils.png in Resources */ = {isa = PBXBuildFile; fileRef = 816582E21EC74848002C9BA2 /* bluedevils.png */; };
@@ -192,6 +193,7 @@
 		812F5BB61E5A29A6009B068C /* EventRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
 		812F5BB91E5A30B8009B068C /* CurrentStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentStatus.swift; sourceTree = "<group>"; };
 		812F5BBD1E5A71A1009B068C /* ContestInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestInterface.swift; sourceTree = "<group>"; };
+		814D99701ED2156B00E8DAC3 /* CPNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPNavigationController.swift; sourceTree = "<group>"; };
 		816582E01EC74848002C9BA2 /* bd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bd.jpg; path = resources/images/badges/bd.jpg; sourceTree = "<group>"; };
 		816582E11EC74848002C9BA2 /* bluecoats.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bluecoats.jpeg; path = resources/images/badges/bluecoats.jpeg; sourceTree = "<group>"; };
 		816582E21EC74848002C9BA2 /* bluedevils.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluedevils.png; path = resources/images/badges/bluedevils.png; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 		22A0F4CA1E0D10C300DD2F2D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				814D99701ED2156B00E8DAC3 /* CPNavigationController.swift */,
 				22FA69331E0E2986003CAFEF /* CPTabView.swift */,
 				22A0F4E01E0D238F00DD2F2D /* ContestView.swift */,
 				812F5BAF1E5A23BF009B068C /* EventView.swift */,
@@ -934,6 +937,7 @@
 				81A493831E9B5C200010364A /* Leaderboard.swift in Sources */,
 				81A493891E9DC2D80010364A /* UserScore.swift in Sources */,
 				22FA69471E133D24003CAFEF /* ExtUIImage.swift in Sources */,
+				814D99711ED2156B00E8DAC3 /* CPNavigationController.swift in Sources */,
 				81A4938B1E9DC36A0010364A /* LeaderboardInterface.swift in Sources */,
 				22A0F4D81E0D1A5F00DD2F2D /* User.swift in Sources */,
 				22A0F4D21E0D177400DD2F2D /* Corps.swift in Sources */,

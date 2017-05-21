@@ -12,15 +12,36 @@ class CPTabView: UITabBarController, UITabBarControllerDelegate {
   static var shared : CPTabView? = nil
   private var eventId : String?
   
+  @IBOutlet weak var cpNavItem: UINavigationItem!
   @IBOutlet var cpTabBar: UITabBar?
   
   override func viewDidLoad() {
     self.delegate = self
     CPTabView.shared = self
     self.eventId = StartupService.sharedInstance.defaultEventId
+    setTabIconOffsets()
   }
   
   override func viewDidAppear(_ animated: Bool) {
+  }
+  
+  private func setTabIconOffsets() {
+    cpTabBar!.items?[0].imageInsets = UIEdgeInsetsMake(8, 1, -4, -1)
+    cpTabBar!.items?[1].imageInsets = UIEdgeInsetsMake(8, 1, -4, -1)
+    cpTabBar!.items?[2].imageInsets = UIEdgeInsetsMake(8, 1, -4, -1)
+  }
+  
+  private func setLeftNavItem() {
+//    let leftButton = UIBarButtonItem(title: "<--", style: .plain, target: self, action: #selector(CPTabView.showEvents))
+//    //    self.navigationItem.leftBarButtonItem  = leftButton
+//    self.navigationController?.navigationItem.leftBarButtonItem = leftButton
+    
+  }
+  
+  public func showEvents() {
+    if cpTabBar?.items?[0] != nil {
+      self.selectedIndex = 0
+    }
   }
   
   public func showContest(eventId: String) {
