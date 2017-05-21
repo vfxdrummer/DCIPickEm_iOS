@@ -18,7 +18,7 @@ class LeaderboardInterface: NSObject {
      */
     class func getLeaderboard(eventId: String) {
         print("eventId : \(eventId)")
-        let ref = FIRDatabase.database().reference()
+        let ref = Database.database().reference()
         
         ref.child("leaderboard").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
             guard let leaderboardDict = snapshot.value as? [String:String] else {

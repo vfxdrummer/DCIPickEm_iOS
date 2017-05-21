@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
     // Firebase
-    FIRApp.configure()
+    FirebaseApp.configure()
     
     // Signout of Firebase
 //    try! FIRAuth.auth()!.signOut()
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
     authUI?.providers = providers
     
     // Google Sign-In
-    GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+    GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
     GIDSignIn.sharedInstance().delegate = self
     
     // ToS
@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
 //    self.window?.rootViewController = authViewController
     
     // listen for changes in the authorization state
-    _ = FIRAuth.auth()?.addStateDidChangeListener { (auth: FIRAuth, user: FIRUser?) in
+    _ = FIRAuth.auth().addStateDidChangeListener { (auth: FIRAuth, user: FIRUser?) in
       
       // check if there is a current user
       if user != nil {
@@ -112,7 +112,7 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
     }
     
     guard let authentication = user.authentication else { return }
-    let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken,
+    let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                       accessToken: authentication.accessToken)
     // ...
   }

@@ -17,12 +17,12 @@ class CorpsInterface: NSObject {
    Get Corps list from Firebase DB
    */
   class func getCorps() {
-    let ref = FIRDatabase.database().reference()
+    let ref = Database.database().reference()
     let eventsRef = ref.child("corps")
     eventsRef.observe(.value, with: { snapshot in
       var corpsDict:[String:Corps] = [:]
       for _ in snapshot.children {
-        for corps in snapshot.children.allObjects as! [FIRDataSnapshot] {
+        for corps in snapshot.children.allObjects as! [DataSnapshot] {
           guard let corpsDictNew = corps.value as? [String: AnyObject] else {
             continue
           }

@@ -624,6 +624,7 @@
 				22A0F4941E0D0BA400DD2F2D /* Resources */,
 				3BAE1935252725A496003468 /* [CP] Embed Pods Frameworks */,
 				908B2EA3E42B740DCF02C56F /* [CP] Copy Pods Resources */,
+				811E0A171ED2223F005DAE78 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -862,6 +863,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-CorpsPicksTests/Pods-CorpsPicksTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		811E0A171ED2223F005DAE78 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" c26515780af69e8dbd65292360fda2c15918a6db 55760050980d29d74057ee3ceeb1d508fab414ff8aad50da37c8ae79a5903869";
 		};
 		81D1F7DE69205A655325C02B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

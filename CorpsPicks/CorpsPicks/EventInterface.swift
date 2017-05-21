@@ -17,12 +17,12 @@ class EventInterface: NSObject {
    Get Event list from Firebase DB
    */
   class func getEvents() {
-    let ref = FIRDatabase.database().reference()
+    let ref = Database.database().reference()
     let eventsRef = ref.child("events")
     eventsRef.observe(.value, with: { snapshot in
       var events:[Event] = []
       for _ in snapshot.children {
-        for event in snapshot.children.allObjects as! [FIRDataSnapshot] {
+        for event in snapshot.children.allObjects as! [DataSnapshot] {
           guard let eventDict = event.value as? [String: AnyObject] else {
             continue
           }

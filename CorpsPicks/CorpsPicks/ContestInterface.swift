@@ -17,7 +17,7 @@ class ContestInterface: NSObject {
    Get Lineup list from Firebase DB
    */
   class func getLineup(eventId: String) {
-    let ref = FIRDatabase.database().reference()
+    let ref = Database.database().reference()
     
     ref.child("lineups").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
       guard let lineupArray = snapshot.value as? [String] else {
@@ -35,7 +35,7 @@ class ContestInterface: NSObject {
    Get User score picks for lineup from Firebase DB
    */
   class func setDefaultScorePicks(eventId:String) {
-    let ref = FIRDatabase.database().reference()
+    let ref = Database.database().reference()
     
     ref.child("lineups").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
       guard let lineupArray = snapshot.value as? [String] else {
@@ -64,7 +64,7 @@ class ContestInterface: NSObject {
     // move this to singleton, set on Auth
     let userId = CurrentUser.sharedInstance.uid
     
-    let ref = FIRDatabase.database().reference()
+    let ref = Database.database().reference()
     
     // observe picks
     ref.child("picks").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -126,7 +126,7 @@ class ContestInterface: NSObject {
     // move this to singleton, set on Auth
     let userId = CurrentUser.sharedInstance.uid
     
-    let ref = FIRDatabase.database().reference()
+    let ref = Database.database().reference()
     print("Setting scores for \(eventId)")
     for corpsScore in corpsScores {
       print("\(corpsScore.corps.name) \(corpsScore.score)")
