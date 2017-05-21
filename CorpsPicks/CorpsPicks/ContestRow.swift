@@ -48,7 +48,9 @@ class ContestRow: UITableViewCell {
     self.scoreEntryField.text = corpsScore.score.pick
     self.corpsImage.fadeIn(corpsScore.corps.imageFileName)
     
+    // setup scoreEntryField
     self.scoreEntryField.becomeFirstResponder()
+    self.scoreEntryField.keyboardType = UIKeyboardType.numbersAndPunctuation
     
     // HIDE score label for now
     self.corpsScore.isHidden = true
