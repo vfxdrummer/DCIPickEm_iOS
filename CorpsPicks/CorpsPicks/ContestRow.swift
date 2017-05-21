@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ContestRow: UITableViewCell {
+class ContestRow: UITableViewCell, UITextFieldDelegate {
 
   var corps : Corps? = nil
   var viewModel : CPViewModel? = nil
@@ -49,6 +49,7 @@ class ContestRow: UITableViewCell {
     self.corpsImage.fadeIn(corpsScore.corps.imageFileName)
     
     // setup scoreEntryField
+    self.scoreEntryField.delegate = self
     self.scoreEntryField.becomeFirstResponder()
     self.scoreEntryField.keyboardType = UIKeyboardType.numbersAndPunctuation
     
@@ -61,6 +62,11 @@ class ContestRow: UITableViewCell {
     self.scorePanGestureView.addGestureRecognizer(self.tapGesture!)
   }
   
+  private func updateCorpsScore(scoreText:String) {
+    if (contestView != nil) { contestView!.updateCorpsScore(self.index, pickScore: scoreText
+      ) }
+  }
+  
   @IBAction func handlePan(_ recognizer:UIPanGestureRecognizer) {
     let translation = recognizer.translation(in: self.scorePanGestureView)
     var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!) + (translation.x / 100.0)
@@ -68,19 +74,25 @@ class ContestRow: UITableViewCell {
     corpsScoreFloat = (corpsScoreFloat >= 0) ? corpsScoreFloat : 0
     self.scoreDirection = translation.x > 0.0 ? true : false
     let scoreText = String(format:"%.2f", corpsScoreFloat)
-//    self.corpsScore.text = scoreText
     
-    if (contestView != nil) { contestView!.updateCorpsScore(self.index, pickScore: scoreText) }
+    updateCorpsScore(scoreText:scoreText)
   }
 
   @IBAction func handleTap(_ recognizer:UIPanGestureRecognizer) {
     var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!)
     corpsScoreFloat = self.scoreDirection ? corpsScoreFloat + 0.01 : corpsScoreFloat - 0.01
     let scoreText = String(format:"%.2f", corpsScoreFloat)
-//        self.corpsScore.text = scoreText
-    
-    if (contestView != nil) { contestView!.updateCorpsScore(self.index, pickScore: scoreText
-      ) }
+    updateCorpsScore(scoreText:scoreText)
+  }
+  
+  // Mark - UITextFieldDelegate
+  
+  func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+    guard (textField.text != nil) else {
+      return true
+    }
+    updateCorpsScore(scoreText:textField.text!)
+    return true
   }
   
 }

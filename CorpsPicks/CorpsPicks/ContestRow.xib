@@ -53,14 +53,10 @@
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <view hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
-                        <rect key="frame" x="124" y="52" width="175" height="40"/>
+                    <view opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
+                        <rect key="frame" x="8" y="70.5" width="449" height="35"/>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="BEm-25-iYr"/>
-                            <constraint firstAttribute="width" constant="175" id="ieX-h0-dkI"/>
-                        </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,11 +66,13 @@
                     <constraint firstAttribute="trailingMargin" secondItem="ylr-i8-IIi" secondAttribute="trailing" constant="10" id="2dN-d3-kQN"/>
                     <constraint firstAttribute="bottomMargin" secondItem="4W8-HH-yB2" secondAttribute="bottom" constant="-8" id="3N3-lE-SHv"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3sK-Lf-KpM"/>
-                    <constraint firstItem="sB2-EP-uKl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="44" id="OEa-8O-BE0"/>
+                    <constraint firstItem="sB2-EP-uKl" firstAttribute="top" secondItem="mH1-vb-qPA" secondAttribute="bottom" id="63A-4I-QaM"/>
+                    <constraint firstItem="sB2-EP-uKl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="DS1-1G-iki"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sB2-EP-uKl" secondAttribute="trailing" id="NYg-qw-Z4I"/>
                     <constraint firstAttribute="trailingMargin" secondItem="mH1-vb-qPA" secondAttribute="trailing" constant="10" id="Q8I-gS-zkG"/>
                     <constraint firstAttribute="trailingMargin" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="-8" id="Rpd-1E-pJF"/>
-                    <constraint firstItem="sB2-EP-uKl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="124" id="XWm-kT-XD3"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="40" id="bu1-3K-KbE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="sB2-EP-uKl" secondAttribute="bottom" constant="-8" id="dD1-cr-UvP"/>
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="e4c-nP-Kwa"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="jli-XH-Qgv"/>
                     <constraint firstItem="mH1-vb-qPA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qaB-cr-5ut"/>

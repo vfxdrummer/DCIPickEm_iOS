@@ -186,7 +186,5 @@ class ContestView: UITableViewController {
     show(leaderboardVC, sender: self)
   }
   
-  // Mark - Keyboard
-  
 }
 
