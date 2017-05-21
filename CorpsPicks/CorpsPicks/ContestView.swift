@@ -47,6 +47,9 @@ class ContestView: UITableViewController {
     
     contestTable.setEditing(true, animated: true)
     
+    // Keyboard
+    self.hideKeyboardRecognizer()
+    
     // Setup the ViewController Title
     //    self.title = Constants.contestTitle
     //    self.restorationIdentifier = "contest"

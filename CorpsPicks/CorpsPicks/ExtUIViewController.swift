@@ -10,11 +10,19 @@ import Foundation
 import UIKit
 
 extension UIViewController {
+  
+  func hideKeyboardRecognizer()
+  {
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+      target: self,
+      action: #selector(UIViewController.dismissKeyboard))
     
-    func goToTab(index:Int) {
-        if let tabBarVC = self.navigationController!.viewControllers.first as? UITabBarController {
-            tabBarVC.selectedIndex = index
-        }
-    }
-    
+    view.addGestureRecognizer(tap)
+  }
+  
+  func dismissKeyboard()
+  {
+    view.endEditing(true)
+  }
+  
 }
