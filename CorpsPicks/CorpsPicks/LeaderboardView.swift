@@ -20,8 +20,6 @@ class LeaderboardView: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.navigationController?.navigationBar.topItem?.title = "LEADERBOARD"
-    
     // if eventId is nil, use default
     if (eventId == nil) {
       self.eventId = StartupService.sharedInstance.defaultEventId
@@ -50,6 +48,7 @@ class LeaderboardView: UITableViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
+    self.navigationController?.navigationBar.topItem?.title = "LEADERBOARD"
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {

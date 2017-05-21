@@ -29,8 +29,6 @@ class ContestView: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.navigationController?.navigationBar.topItem?.title = "CONTEST"
-    
     // if eventId is nil, use default
     if (eventId == nil) {
       self.eventId = StartupService.sharedInstance.defaultEventId
@@ -61,6 +59,7 @@ class ContestView: UITableViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
+    self.navigationController?.navigationBar.topItem?.title = "CONTEST"
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
