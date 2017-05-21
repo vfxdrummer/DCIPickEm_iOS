@@ -53,6 +53,7 @@
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="DjV-YW-jjY">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.23570898175239563" green="0.21983841061592102" blue="0.20300781726837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,19 +67,26 @@
             </objects>
             <point key="canvasLocation" x="-409" y="-829"/>
         </scene>
-        <!--CONTEST-->
+        <!--Tab View-->
         <scene sceneID="jtz-iI-HGE">
             <objects>
-                <tabBarController modalTransitionStyle="crossDissolve" id="sN6-kQ-XLo" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="CONTEST" id="MXE-zL-K4b"/>
+                <tabBarController modalTransitionStyle="crossDissolve" id="sN6-kQ-XLo" customClass="CPTabView" customModule="CorpsPicks" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MXE-zL-K4b"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W4Q-Ru-0Fq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.23570898179999999" green="0.21983841060000001" blue="0.2030078173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.96185492915099646" green="0.94507268475266137" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                <color key="value" red="0.24844751263112899" green="0.5890497117995066" blue="0.83907464378238339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
+                        <outlet property="cpTabBar" destination="W4Q-Ru-0Fq" id="NjI-0j-q90"/>
                         <segue destination="pie-Oh-Yuk" kind="relationship" relationship="viewControllers" id="jj1-6d-k1t"/>
                         <segue destination="7bK-jq-Zjz" kind="relationship" relationship="viewControllers" id="J9o-X5-NwW"/>
                         <segue destination="oO5-1z-63k" kind="relationship" relationship="viewControllers" id="cBy-Kb-nyl"/>

@@ -10,8 +10,15 @@ import UIKit
 
 class ContestView: UITableViewController {
   
+  private var loaded : Bool = false
   var contestViewModel : ContestViewModel? = nil
-  var eventId : String? = nil
+  var eventId : String? = nil {
+    didSet {
+      if (self.loaded) {
+        reload()
+      }
+    }
+  }
   
   @IBOutlet var contestTable: UITableView!
   
@@ -22,7 +29,7 @@ class ContestView: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.navigationItem.title = "CONTEST"
+    self.navigationController?.navigationBar.topItem?.title = "CONTEST"
     
     // if eventId is nil, use default
     if (eventId == nil) {
@@ -48,6 +55,8 @@ class ContestView: UITableViewController {
     
     contestViewModel?.loadLineup()
     
+    self.loaded = true
+    
     self.refreshControl!.addTarget(self, action: #selector(ContestView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
   
@@ -68,10 +77,15 @@ class ContestView: UITableViewController {
     super.didReceiveMemoryWarning()
   }
   
+  private func syncEventId() {
+    self.contestViewModel?.eventId = self.eventId
+  }
+  
   /**
    reload
    */
   func reload() {
+    syncEventId()
     contestTable.reloadData()
   }
   

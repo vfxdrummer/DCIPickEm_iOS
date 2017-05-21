@@ -31,7 +31,7 @@
 		22A0F4EE1E0D2A5500DD2F2D /* ContestRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A0F4EA1E0D2A5500DD2F2D /* ContestRow.xib */; };
 		22A0F4F01E0D36D900DD2F2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4EF1E0D36D900DD2F2D /* Constants.swift */; };
 		22A0F4F11E0D36D900DD2F2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0F4EF1E0D36D900DD2F2D /* Constants.swift */; };
-		22FA69341E0E2986003CAFEF /* CPTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69331E0E2986003CAFEF /* CPTopView.swift */; };
+		22FA69341E0E2986003CAFEF /* CPTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69331E0E2986003CAFEF /* CPTabView.swift */; };
 		22FA69471E133D24003CAFEF /* ExtUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69451E133D24003CAFEF /* ExtUIImage.swift */; };
 		22FA69481E133D24003CAFEF /* ExtUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69461E133D24003CAFEF /* ExtUIImageView.swift */; };
 		22FA694A1E13C641003CAFEF /* ContestPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA69491E13C641003CAFEF /* ContestPick.swift */; };
@@ -165,7 +165,7 @@
 		22A0F4E91E0D2A5500DD2F2D /* ContestRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestRow.swift; sourceTree = "<group>"; };
 		22A0F4EA1E0D2A5500DD2F2D /* ContestRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContestRow.xib; sourceTree = "<group>"; };
 		22A0F4EF1E0D36D900DD2F2D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		22FA69331E0E2986003CAFEF /* CPTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPTopView.swift; sourceTree = "<group>"; };
+		22FA69331E0E2986003CAFEF /* CPTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPTabView.swift; sourceTree = "<group>"; };
 		22FA69451E133D24003CAFEF /* ExtUIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUIImage.swift; sourceTree = "<group>"; };
 		22FA69461E133D24003CAFEF /* ExtUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUIImageView.swift; sourceTree = "<group>"; };
 		22FA69491E13C641003CAFEF /* ContestPick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestPick.swift; sourceTree = "<group>"; };
@@ -371,7 +371,7 @@
 		22A0F4CA1E0D10C300DD2F2D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				22FA69331E0E2986003CAFEF /* CPTopView.swift */,
+				22FA69331E0E2986003CAFEF /* CPTabView.swift */,
 				22A0F4E01E0D238F00DD2F2D /* ContestView.swift */,
 				812F5BAF1E5A23BF009B068C /* EventView.swift */,
 				819C11BA1E8CD86C003A2781 /* LeaderboardView.swift */,
@@ -923,7 +923,7 @@
 				812F5BB01E5A23BF009B068C /* EventView.swift in Sources */,
 				812F5BB81E5A29A6009B068C /* EventRow.swift in Sources */,
 				812F5BB41E5A25E6009B068C /* Event.swift in Sources */,
-				22FA69341E0E2986003CAFEF /* CPTopView.swift in Sources */,
+				22FA69341E0E2986003CAFEF /* CPTabView.swift in Sources */,
 				812F5BBA1E5A30B8009B068C /* CurrentStatus.swift in Sources */,
 				22FA69481E133D24003CAFEF /* ExtUIImageView.swift in Sources */,
 				819C11BB1E8CD86C003A2781 /* LeaderboardView.swift in Sources */,

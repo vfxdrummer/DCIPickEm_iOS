@@ -17,7 +17,15 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   }
 
   var corpsScores : [CorpsScore] = []
-  var eventId : String? = nil
+  private var lastEventId : String? = nil
+  var eventId : String? = nil {
+    didSet {
+      if (eventId != lastEventId) {
+        loadLineup()
+      }
+      lastEventId = eventId
+    }
+  }
   
   func setup(eventId:String) {
     self.eventId = eventId

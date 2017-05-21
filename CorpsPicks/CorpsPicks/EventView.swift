@@ -19,7 +19,7 @@ class EventView: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.navigationItem.title = "EVENT"
+    self.navigationController?.navigationBar.topItem?.title = "EVENT"
     
     // Setup the ViewModel
     eventViewModel = EventViewModel(viewController: self)
@@ -105,9 +105,7 @@ class EventView: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let cell = tableView.cellForRow(at: indexPath) as! EventRow
     if let event = eventViewModel?.events[indexPath.row] as Event? {
-      let contestVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Contest") as! ContestView
-      contestVC.eventId = event.id
-      show(contestVC, sender: self)
+      CPTabView.shared?.showContest(eventId: event.id)
       cell.isSelected = false
     }
   }
