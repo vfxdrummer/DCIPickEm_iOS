@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.swift
 //  CorpsPicks
@@ -7,6 +8,8 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 import Firebase
 import FirebaseAuthUI
 import FirebaseGoogleAuthUI
@@ -20,6 +23,9 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    // Fabric
+    Fabric.with([Crashlytics.self])
     
     // Firebase
     FirebaseApp.configure()
@@ -95,7 +101,6 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
     return GIDSignIn.sharedInstance().handle(url,
                                              sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
                                              annotation: [:])
-    return false
   }
   
   func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
@@ -106,13 +111,13 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
   
   func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
     // ...
-    if let error = error {
+    if error != nil {
       // ...
       return
     }
     
     guard let authentication = user.authentication else { return }
-    let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+    _ = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                       accessToken: authentication.accessToken)
     // ...
   }

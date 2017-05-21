@@ -24,7 +24,7 @@ class LeaderboardInterface: NSObject {
             guard let leaderboardDict = snapshot.value as? [String:String] else {
                 return
             }
-            let leaderboard = Leaderboard.init(leaderboardDict: leaderboardDict as! Dictionary<String, AnyObject>)
+            let leaderboard = Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>)
             leaderboard.id = eventId
             CurrentLeaderboardItems.sharedInstance.leaderboard = leaderboard
         }) { (error) in

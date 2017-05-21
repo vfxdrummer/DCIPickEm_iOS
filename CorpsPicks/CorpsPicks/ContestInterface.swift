@@ -23,7 +23,7 @@ class ContestInterface: NSObject {
       guard let lineupArray = snapshot.value as? [String] else {
         return
       }
-      let lineup = Lineup.init(lineupArray: lineupArray as! [String])
+      let lineup = Lineup.init(lineupArray: lineupArray )
       CurrentContestItems.sharedInstance.lineup = lineup
     }) { (error) in
       print(error.localizedDescription)

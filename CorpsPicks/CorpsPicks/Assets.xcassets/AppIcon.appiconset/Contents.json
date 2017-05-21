@@ -135,8 +135,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "ipad",
       "size" : "83.5x83.5",
+      "idiom" : "ipad",
+      "filename" : "Icon-83.5@2x.png",
       "scale" : "2x"
     },
     {
@@ -198,12 +199,6 @@
       "idiom" : "mac",
       "filename" : "appicon_1024.png",
       "scale" : "2x"
-    },
-    {
-      "size" : "120x120",
-      "idiom" : "car",
-      "filename" : "appicon_120.png",
-      "scale" : "1x"
     }
   ],
   "info" : {

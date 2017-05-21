@@ -70,7 +70,7 @@ class ContestView: UITableViewController {
   }
   
   private func setLeftBackButton() {
-    let leftButton = UIBarButtonItem(title: "<--", style: .plain, target: self, action: Selector("toEvent"))
+    let leftButton = UIBarButtonItem(title: "<--", style: .plain, target: self, action: Selector(("toEvent")))
 //    self.navigationItem.leftBarButtonItem  = leftButton
     self.navigationController?.navigationItem.leftBarButtonItem = leftButton
   }
