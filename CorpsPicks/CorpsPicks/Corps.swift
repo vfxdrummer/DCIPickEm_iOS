@@ -12,6 +12,7 @@ class Corps : NSObject {
   var id : String = ""
   var slug : String = ""
   var name : String = ""
+  var lastScore : CGFloat = 0.0
   var imageFileName : String = ""
   var logo_image_url : String = ""
   var logo_image_url_thumb : String = ""
@@ -24,6 +25,11 @@ class Corps : NSObject {
     if let name = corpsDict["name"] {
       self.name = name
       self.slug = slugNameFromCorpsName(corpsName: name)
+    }
+    if let lastScore = corpsDict["lastScore"] {
+      if let n = NumberFormatter().number(from: lastScore) {
+        self.lastScore = CGFloat(n)
+      }
     }
     
     self.imageFileName = "\(self.slug)1.jpg"

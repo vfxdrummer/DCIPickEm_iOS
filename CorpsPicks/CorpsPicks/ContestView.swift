@@ -19,6 +19,13 @@ class ContestView: UITableViewController {
       }
     }
   }
+  var eventName : String? = nil {
+    didSet {
+      if (self.loaded) {
+        reload()
+      }
+    }
+  }
   
   @IBOutlet var contestTable: UITableView!
   
@@ -63,7 +70,7 @@ class ContestView: UITableViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    self.navigationController?.navigationBar.topItem?.title = "CONTEST"
+    self.navigationController?.navigationBar.topItem?.title = (eventName != nil) ? eventName : "CONTEST"
     
     // load the lineup
     contestViewModel?.loadLineup()

@@ -10,6 +10,7 @@ import UIKit
 
 class CPTabView: UITabBarController, UITabBarControllerDelegate {
   static var shared : CPTabView? = nil
+  private var event : Event?
   private var eventId : String?
   
   @IBOutlet weak var cpNavItem: UINavigationItem!
@@ -44,27 +45,31 @@ class CPTabView: UITabBarController, UITabBarControllerDelegate {
     }
   }
   
-  public func showContest(eventId: String) {
+  public func showContest(event: Event) {
     if cpTabBar?.items?[1] != nil {
-      self.eventId = eventId
-      syncEventIdForViewControllers()
+      self.event = event
+      self.eventId = event.id
+      
+      syncEventForViewControllers()
       self.selectedIndex = 1
     }
   }
   
-  private func syncEventId(viewController: UIViewController) {
+  private func syncEvent(viewController: UIViewController) {
     if let contestVC = viewController as? ContestView {
-      contestVC.eventId = self.eventId
+      contestVC.eventId = self.event?.id
+      contestVC.eventName = self.event?.name
     }
     
     if let leaderboardVC = viewController as? LeaderboardView {
-      leaderboardVC.eventId = self.eventId
+      leaderboardVC.eventId = self.event?.id
+      leaderboardVC.eventName = self.event?.name
     }
   }
   
-  private func syncEventIdForViewControllers() {
+  private func syncEventForViewControllers() {
     for vc in self.viewControllers! {
-      syncEventId(viewController: vc)
+      syncEvent(viewController: vc)
     }
   }
   
@@ -76,6 +81,6 @@ class CPTabView: UITabBarController, UITabBarControllerDelegate {
   
   func tabBarController(_ tabBarController: UITabBarController,
                         didSelect viewController: UIViewController) {
-    self.syncEventId(viewController: viewController)
+    self.syncEvent(viewController: viewController)
   }
 }

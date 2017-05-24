@@ -12,6 +12,7 @@ class LeaderboardView: UITableViewController {
   
   var leaderboardViewModel : LeaderboardViewModel? = nil
   var eventId : String? = nil
+  var eventName : String? = nil
   
   @IBOutlet var leaderboardTable: UITableView!
     
