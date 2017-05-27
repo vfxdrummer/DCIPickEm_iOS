@@ -49,6 +49,8 @@ class ContestView: UITableViewController {
     contestTable.delegate = self
     contestTable.dataSource = self
     contestTable.tableFooterView = UIView(frame: CGRect.zero)
+    let corpsButtonNib = UINib(nibName: "ContestButtonRow", bundle: nil)
+    contestTable.register(corpsButtonNib, forCellReuseIdentifier: "ContestButtonRow")
     let corpsNib = UINib(nibName: "ContestRow", bundle: nil)
     contestTable.register(corpsNib, forCellReuseIdentifier: "ContestRow")
     
@@ -138,15 +140,25 @@ class ContestView: UITableViewController {
   //  MARK: UITableViewDelegate - UITableViewDataSource Methods
   
   override func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
+    return 2
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return contestViewModel!.corpsScores.count
+    switch (section) {
+    case 0:
+      return 1
+    default:
+      return contestViewModel!.corpsScores.count
+    }
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 100
+    switch (indexPath.section) {
+    case 0:
+      return 75
+    default:
+      return 100
+    }
   }
   
   override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -172,16 +184,32 @@ class ContestView: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "ContestRow") as! ContestRow
-    cell.contestView = self
-    cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row])
-    return cell
+    switch (indexPath.section) {
+    case 0:
+      let cell = tableView.dequeueReusableCell(withIdentifier: "ContestButtonRow") as! ContestButtonRow
+      cell.contestView = self
+      return cell
+    default:
+      let cell = tableView.dequeueReusableCell(withIdentifier: "ContestRow") as! ContestRow
+      cell.contestView = self
+      cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row])
+      return cell
+    }
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
   }
   
   //  MARK: UITableViewDelegate - editting / rearranging methods
+  
+  override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    switch (indexPath.section) {
+    case 0:
+      return false
+    default:
+      return true
+    }
+  }
   
   override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
     return UITableViewCellEditingStyle.none
@@ -207,7 +235,13 @@ class ContestView: UITableViewController {
     }
   }
   
-  // Mark - Leaderboard  button
+  // Mark - Initial scores button
+  
+  func pressedInitialScores() {
+    contestViewModel!.setInitialScores()
+  }
+  
+  // Mark - Leaderboard button
   
   @IBAction func pressedLeaderboardButton(_ sender: Any) {
     let leaderboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Leaderboard") as! LeaderboardView

@@ -12,7 +12,7 @@ class Corps : NSObject {
   var id : String = ""
   var slug : String = ""
   var name : String = ""
-  var lastScore : CGFloat = 0.0
+  var lastScore : String = "0.0"
   var imageFileName : String = ""
   var logo_image_url : String = ""
   var logo_image_url_thumb : String = ""
@@ -28,7 +28,7 @@ class Corps : NSObject {
     }
     if let lastScore = corpsDict["lastScore"] {
       if let n = NumberFormatter().number(from: lastScore) {
-        self.lastScore = CGFloat(n)
+        self.lastScore = CGFloat(n).description
       }
     }
     

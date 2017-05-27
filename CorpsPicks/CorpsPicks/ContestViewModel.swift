@@ -38,6 +38,15 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     ContestInterface.getScorePicks(eventId:eventId!)
   }
   
+  func setInitialScores() {
+    // set corpsScores using initial score
+    let newCorpsScores = self.corpsScores
+    for corpsScore in newCorpsScores {
+      corpsScore.score.pick = corpsScore.corps.lastScore
+    }
+    self.updateScores(corpsScores: newCorpsScores)
+  }
+  
   func setScorePicks() {
     guard (eventId != nil) else { return }
     ContestInterface.setScorePicks(eventId: eventId!, corpsScores:corpsScores)
