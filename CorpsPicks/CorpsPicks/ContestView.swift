@@ -235,10 +235,32 @@ class ContestView: UITableViewController {
     }
   }
   
+  
+  // Mark - Initial scores Alert
+  func initialScoresAlert() {
+    let title = "Set Initial Scores"
+    let message = "Continuing will override your score picks with initial settings from the database. These are simply ballpark numbers based on either last season's data or recent contests scores and meant to give you a starting point for your entry. Past performance does not indicate future results.\nWould you like to continue?"
+    
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    
+    let actionYes = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction) in
+      self.contestViewModel!.setInitialScores()
+      self.contestViewModel!.setInitialScoresDismissed()
+    }
+    
+    let actionNo = UIAlertAction(title: "No", style: .default) { (action:UIAlertAction) in
+      self.contestViewModel!.setInitialScoresDismissed()
+    }
+    
+    alertController.addAction(actionYes)
+    alertController.addAction(actionNo)
+    self.present(alertController, animated: true, completion:nil)
+  }
+  
   // Mark - Initial scores button
   
   func pressedInitialScores() {
-    contestViewModel!.setInitialScores()
+    initialScoresAlert()
   }
   
   // Mark - Leaderboard button
