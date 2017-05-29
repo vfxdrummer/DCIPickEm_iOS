@@ -239,8 +239,8 @@ class ContestView: UITableViewController {
   
   // Mark - Initial scores Alert
   func initialScoresAlert() {
-    let title = "Set Initial Scores"
-    let message = "Continuing will override your score picks with initial settings from the database. These are simply ballpark numbers based on either last season's data or recent contests scores and meant to give you a starting point for your entry. Past performance does not indicate future results.\nWould you like to continue?"
+    let title = "Set Initial Scores?"
+    let message = "Press yes to override score picks with default values.\n\nWould you like to continue?"
     
     let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
     
