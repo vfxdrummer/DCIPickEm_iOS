@@ -22,9 +22,9 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUL-fd-oMb">
                         <rect key="frame" x="0.0" y="0.0" width="465" height="105.5"/>
                         <color key="backgroundColor" red="0.12968750000000001" green="0.1181082589" blue="0.11422991070000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                         <state key="normal" title="SET INITIAL SCORES">
-                            <color key="titleColor" red="0.40653335489999998" green="0.40653335489999998" blue="0.40653335489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleColor" red="0.90412955029111364" green="0.10668123964762055" blue="0.22592789592143128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
                             <action selector="initialScoresButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1bK-xD-d6i"/>
@@ -39,7 +39,7 @@
                     <constraint firstAttribute="bottomMargin" secondItem="dUL-fd-oMb" secondAttribute="bottom" constant="-8" id="cw3-IT-aqT"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.23963040113449097" green="0.22376039624214172" blue="0.2069297730922699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
             <connections>
                 <outlet property="setInitialScoresButton" destination="dUL-fd-oMb" id="UtV-34-mt1"/>
