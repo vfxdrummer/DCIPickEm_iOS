@@ -89,10 +89,6 @@ class ContestView: UITableViewController {
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
-//    self.contestViewModel!.sortCorpsScores(completion: { [unowned self] _ in
-//      self.reload()
-//    })
-    
     self.contestTable.reloadData()
     
     if self.refreshControl!.isRefreshing
@@ -146,7 +142,7 @@ class ContestView: UITableViewController {
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     switch (section) {
     case 0:
-      return 1
+      return (contestViewModel!.initialScoresDismissed == false) ? 1 : 0
     default:
       return contestViewModel!.corpsScores.count
     }
@@ -197,6 +193,7 @@ class ContestView: UITableViewController {
       let cell = tableView.dequeueReusableCell(withIdentifier: "ContestRow") as! ContestRow
       cell.contestView = self
       cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row])
+      cell.layoutIfNeeded()
       return cell
     }
   }

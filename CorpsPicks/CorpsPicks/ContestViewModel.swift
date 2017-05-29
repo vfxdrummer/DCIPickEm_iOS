@@ -10,20 +10,27 @@ import UIKit
 
 class ContestViewModel: CPViewModel, CurrentContestProtocol {
   
-  var lineup : Lineup {
+  public var lineup : Lineup {
     get {
       return CurrentContestItems.sharedInstance.lineup!
     }
   }
 
-  var corpsScores : [CorpsScore] = []
+  public var corpsScores : [CorpsScore] = []
   private var lastEventId : String? = nil
-  var eventId : String? = nil {
+  public var eventId : String? = nil {
     didSet {
+      print("eventId didSet : \(eventId)")
       if (eventId != lastEventId) {
         loadLineup()
       }
       lastEventId = eventId
+    }
+  }
+  
+  var initialScoresDismissed : Bool {
+    get {
+      return CurrentContestItems.sharedInstance.initialScoresDismissed
     }
   }
   
@@ -38,18 +45,37 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     ContestInterface.getScorePicks(eventId:eventId!)
   }
   
+  // setInitialScores
+  // set corpsPicks using initial scores
   func setInitialScores() {
-    // set corpsScores using initial score
+    // update corpsScores using initial score
     let newCorpsScores = self.corpsScores
     for corpsScore in newCorpsScores {
       corpsScore.score.pick = corpsScore.corps.lastScore
     }
-    self.updateScores(corpsScores: newCorpsScores)
+    // set new corpsScores
+    self.corpsScores = newCorpsScores
+    
+    self.sortCorpsScores(completion : { [unowned self] _ in
+      // save new corps scores, trigger UI update
+      self.setScorePicks()
+    })
   }
   
+  
+  // setInitialScoresDismissed
+  // update score picks in FB DB
   func setScorePicks() {
-    guard (eventId != nil) else { return }
-    ContestInterface.setScorePicks(eventId: eventId!, corpsScores:corpsScores)
+    guard (self.eventId != nil) else { return }
+    ContestInterface.setScorePicks(eventId: self.eventId!, corpsScores:corpsScores)
+  }
+  
+  // setInitialScoresDismissed
+  // the user made a decision on initial scores
+  func setInitialScoresDismissed() {
+    guard (self.eventId != nil) else { return }
+    ContestInterface.setInitialScoresDismissed(eventId: self.eventId!)
+    CurrentContestItems.sharedInstance.initialScoresDismissed = true
   }
   
   func sortCorpsScores(completion:@escaping () -> ()?) {
@@ -75,6 +101,12 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   
   func updateScores(corpsScores:[CorpsScore]) {
     self.corpsScores = corpsScores
+    if let view = self.vc as? ContestView {
+      view.reload()
+    }
+  }
+  
+  func updateInitialScoresDismissed(initialScoresDismissed:Bool) {
     if let view = self.vc as? ContestView {
       view.reload()
     }

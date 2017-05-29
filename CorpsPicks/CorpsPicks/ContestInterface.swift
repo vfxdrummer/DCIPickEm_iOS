@@ -101,6 +101,32 @@ class ContestInterface: NSObject {
                 print(error.localizedDescription)
               }
               
+              // initial metadata settings
+              CurrentContestItems.sharedInstance.initialScoresDismissed = false
+              // check for metadata
+              ref.child("picks").child(eventId).child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                // check for metadata
+                if snapshot.hasChild("metadata") {
+                  
+                  // check for initialScoresDismissed
+                  ref.child("picks").child(eventId).child(userId).child("metadata").observeSingleEvent(of: .value, with: { (snapshot) in
+      
+                    // check for initialScoresDismissed
+                    if snapshot.hasChild("initialScoresDismissed") {
+                      CurrentContestItems.sharedInstance.initialScoresDismissed = true
+                    }
+                    
+                  }) { (error) in
+                    // observe metadata
+                    print(error.localizedDescription)
+                  }
+                }
+              }) { (error) in
+                // observe picks / userId
+                print(error.localizedDescription)
+              }
+              
             }) { (error) in
               print(error.localizedDescription)
             }
@@ -144,6 +170,18 @@ class ContestInterface: NSObject {
       userRef.child("name").setValue(corpsNameArray)
       userRef.child("score").setValue(corpsScoreArray)
     }
+  }
+  
+  class func setInitialScoresDismissed(eventId:String) {
+    // move this to singleton, set on Auth
+    let userId = CurrentUser.sharedInstance.uid
+    
+    let ref = Database.database().reference()
+    let picksRef = ref.child("/picks")
+    let eventRef = picksRef.child("/\(eventId)")
+    let userRef = eventRef.child("/\(userId)")
+    let metadataRef = userRef.child("/metadata")
+    metadataRef.child("initialScoresDismissed").setValue(true)
   }
   
   class func checkScoreString(score:String) -> String {
