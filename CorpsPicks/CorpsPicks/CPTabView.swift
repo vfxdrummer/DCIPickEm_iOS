@@ -56,7 +56,8 @@ class CPTabView: UITabBarController, UITabBarControllerDelegate {
   }
   
   private func syncEvent(viewController: UIViewController) {
-    if let contestVC = viewController as? ContestView {
+    if let contestVC = viewController as? ContestView,
+      self.event?.id != nil {
       contestVC.eventId = self.event?.id
       contestVC.eventName = self.event?.name
     }
