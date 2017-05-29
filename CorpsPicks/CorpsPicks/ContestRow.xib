@@ -24,7 +24,7 @@
                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Devils" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-3T-i1K" userLabel="Corps Name">
-                        <rect key="frame" x="48" y="0.0" width="400" height="106"/>
+                        <rect key="frame" x="23" y="0.0" width="400" height="106"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="400" id="BsW-DI-DiX"/>
                         </constraints>
@@ -71,7 +71,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="sB2-EP-uKl" secondAttribute="trailing" id="NYg-qw-Z4I"/>
                     <constraint firstAttribute="trailingMargin" secondItem="mH1-vb-qPA" secondAttribute="trailing" constant="10" id="Q8I-gS-zkG"/>
                     <constraint firstAttribute="trailingMargin" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="-8" id="Rpd-1E-pJF"/>
-                    <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="40" id="bu1-3K-KbE"/>
+                    <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="bu1-3K-KbE"/>
                     <constraint firstAttribute="bottomMargin" secondItem="sB2-EP-uKl" secondAttribute="bottom" constant="-8" id="dD1-cr-UvP"/>
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="e4c-nP-Kwa"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="jli-XH-Qgv"/>
