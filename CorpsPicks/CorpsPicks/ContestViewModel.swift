@@ -20,7 +20,6 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   private var lastEventId : String? = nil
   public var eventId : String? = nil {
     didSet {
-      print("eventId didSet : \(eventId)")
       if (eventId != lastEventId) {
         loadLineup()
       }
