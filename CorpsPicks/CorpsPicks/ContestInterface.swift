@@ -66,6 +66,9 @@ class ContestInterface: NSObject {
     
     let ref = Database.database().reference()
     
+    // initial metadata settings for eventID (in case there is no entry)
+    CurrentContestItems.sharedInstance.initialScoresDismissed = false
+    
     // observe picks
     ref.child("picks").observeSingleEvent(of: .value, with: { (snapshot) in
       
@@ -101,8 +104,6 @@ class ContestInterface: NSObject {
                 print(error.localizedDescription)
               }
               
-              // initial metadata settings
-              CurrentContestItems.sharedInstance.initialScoresDismissed = false
               // check for metadata
               ref.child("picks").child(eventId).child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
                 
