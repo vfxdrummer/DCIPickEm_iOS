@@ -82,10 +82,10 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
       ($0.score.pick as NSString).doubleValue > ($1.score.pick as NSString).doubleValue
     }
     self.updateScores(corpsScores: newCorpsScores)
-    print("sorted :")
-    for corpsScore in newCorpsScores {
-      print("\(corpsScore.corps.name) \(corpsScore.score.pick)")
-    }
+//    print("sorted :")
+//    for corpsScore in newCorpsScores {
+//      print("\(corpsScore.corps.name) \(corpsScore.score.pick)")
+//    }
     setScorePicks()
     completion()
   }

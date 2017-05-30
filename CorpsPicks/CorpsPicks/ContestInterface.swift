@@ -18,6 +18,7 @@ class ContestInterface: NSObject {
    */
   class func getLineup(eventId: String) {
     let ref = Database.database().reference()
+    print("getLineup(eventId:\(eventId))")
     
     ref.child("lineups").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
       guard let lineupArray = snapshot.value as? [String] else {
@@ -154,9 +155,9 @@ class ContestInterface: NSObject {
     let userId = CurrentUser.sharedInstance.uid
     
     let ref = Database.database().reference()
-    print("Setting scores for \(eventId)")
+//    print("Setting scores for \(eventId)")
     for corpsScore in corpsScores {
-      print("\(corpsScore.corps.name) \(corpsScore.score)")
+//      print("\(corpsScore.corps.name) \(corpsScore.score)")
       var corpsNameArray:Array<Any> = []
       _ = corpsScores.map({
         corpsNameArray.append($0.corps.name)

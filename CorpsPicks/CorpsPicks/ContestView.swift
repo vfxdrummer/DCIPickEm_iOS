@@ -121,7 +121,7 @@ class ContestView: UITableViewController {
   //  MARK: Custom Methods
   
   func updateCorpsScore(_ index:Int, pickScore:String) {
-    print("updateCorpsScore(\(index), \(pickScore))")
+//    print("updateCorpsScore(\(index), \(pickScore))")
     
     self.contestViewModel?.corpsScores[index].score.pick = pickScore
     self.contestViewModel?.sortCorpsScores(completion : { [unowned self] _ in
