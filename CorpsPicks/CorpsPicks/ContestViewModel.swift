@@ -20,7 +20,11 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   private var lastEventId : String? = nil
   public var eventId : String? = nil {
     didSet {
-      if (eventId != lastEventId) {
+      guard(eventId != nil && lastEventId != nil) else {
+        return
+      }
+      if (eventId! != lastEventId!) {
+        print("corpsScores.eventId didSet, eventId=\(eventId!), lastEventId=\(lastEventId!) : loadLineup()")
         loadLineup()
       }
       lastEventId = eventId
@@ -40,6 +44,7 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   
   func loadLineup() {
     guard (eventId != nil) else { return }
+    print("ContestVM : loadLineup")
     ContestInterface.getLineup(eventId:eventId!)
     ContestInterface.getScorePicks(eventId:eventId!)
   }

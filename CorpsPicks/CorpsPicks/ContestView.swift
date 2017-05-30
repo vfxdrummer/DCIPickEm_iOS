@@ -80,6 +80,7 @@ class ContestView: UITableViewController {
     self.navigationController?.navigationBar.topItem?.title = (eventName != nil) ? eventName : "CONTEST"
     
     // load the lineup
+    print("contestViewModel?.loadLineup()")
     contestViewModel?.loadLineup()
   }
   
