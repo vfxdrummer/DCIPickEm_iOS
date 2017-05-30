@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="465" height="105.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bd1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4W8-HH-yB2" userLabel="Corps Image">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluedevils1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4W8-HH-yB2" userLabel="Corps Image">
                         <rect key="frame" x="0.0" y="0.0" width="465" height="106"/>
                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
                     </imageView>
@@ -42,7 +42,7 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="98.70" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" background="bd1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-vb-qPA" userLabel="Score Entry">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="98.70" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" background="bluedevils1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-vb-qPA" userLabel="Score Entry">
                         <rect key="frame" x="377" y="35.5" width="70" height="35"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50957306338028174" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -91,6 +91,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="bd1.jpg" width="720" height="404"/>
+        <image name="bluedevils1.jpg" width="720" height="404"/>
     </resources>
 </document>
