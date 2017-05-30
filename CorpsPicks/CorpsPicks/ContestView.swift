@@ -54,6 +54,11 @@ class ContestView: UITableViewController {
     let corpsNib = UINib(nibName: "ContestRow", bundle: nil)
     contestTable.register(corpsNib, forCellReuseIdentifier: "ContestRow")
     
+    // scroll tableView up a bit
+    let adjustForTabbarInsets = UIEdgeInsetsMake(0, 0, 50, 0);
+    contestTable.contentInset = adjustForTabbarInsets
+    contestTable.scrollIndicatorInsets = adjustForTabbarInsets
+    
     contestTable.setEditing(true, animated: true)
     
     // Left NavBar Button
