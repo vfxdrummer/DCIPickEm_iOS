@@ -19,6 +19,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="465" height="105.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="4iD-Xc-JJc" userLabel="pickStatusImage">
+                        <rect key="frame" x="220" y="76.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="EgQ-h9-3iY"/>
+                            <constraint firstAttribute="height" constant="25" id="qsK-f9-Sdp"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-3T-i1K" userLabel="Event Name">
                         <rect key="frame" x="16" y="10.5" width="431" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -51,12 +58,14 @@
                 </subviews>
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
+                    <constraint firstItem="4iD-Xc-JJc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="2Fr-ve-Wej"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="IG0-DW-p9S"/>
                     <constraint firstItem="doI-BE-nY0" firstAttribute="top" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="10" id="Oif-FK-fZa"/>
                     <constraint firstItem="doI-BE-nY0" firstAttribute="leading" secondItem="yvE-3T-i1K" secondAttribute="leading" id="Zph-tb-rTI"/>
                     <constraint firstAttribute="trailingMargin" secondItem="doI-BE-nY0" secondAttribute="trailing" constant="10" id="bxS-Ji-ftc"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="f4C-WN-LTn"/>
                     <constraint firstAttribute="bottomMargin" secondItem="doI-BE-nY0" secondAttribute="bottom" constant="2.5" id="n9G-bZ-UrK"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4iD-Xc-JJc" secondAttribute="bottom" constant="-4" id="uqa-Qd-Bcp"/>
                     <constraint firstAttribute="trailingMargin" secondItem="yvE-3T-i1K" secondAttribute="trailing" constant="10" id="wew-y5-7nV"/>
                 </constraints>
             </tableViewCellContentView>
@@ -66,8 +75,12 @@
                 <outlet property="eventDate" destination="06a-4S-Asd" id="Dzp-xs-JC4"/>
                 <outlet property="eventLocation" destination="ylr-i8-IIi" id="3z2-uv-ocb"/>
                 <outlet property="eventName" destination="yvE-3T-i1K" id="n2w-Ey-TIR"/>
+                <outlet property="pickStatusImage" destination="4iD-Xc-JJc" id="8eD-CL-xpd"/>
             </connections>
             <point key="canvasLocation" x="512.5" y="437"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="close" width="30" height="30"/>
+    </resources>
 </document>

@@ -58,6 +58,39 @@ class ContestInterface: NSObject {
   }
   
   /**
+   contestPickStatus
+   Does the user have picks for the event?
+   */
+  class func getContestPickStatus(eventId:String, onSuccess:@escaping ()->(), onFailure:()->()) {
+    // move this to singleton, set on Auth
+    let userId = CurrentUser.sharedInstance.uid
+    
+    let ref = Database.database().reference()
+    
+    // initial metadata settings for eventID (in case there is no entry)
+    CurrentContestItems.sharedInstance.initialScoresDismissed = false
+    
+    // observe picks
+    ref.child("picks").observeSingleEvent(of: .value, with: { (snapshot) in
+      
+      if snapshot.hasChild(eventId) {
+        
+        // observe picks eventId
+        ref.child("picks").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
+          
+          if snapshot.hasChild(userId){
+            // has user entry for picks/$eventId !
+            onSuccess()
+          }
+        })
+      }
+    })
+    
+    onFailure()
+  }
+  
+  
+  /**
    getScorePicks
    Get User score picks for lineup from Firebase DB
    */

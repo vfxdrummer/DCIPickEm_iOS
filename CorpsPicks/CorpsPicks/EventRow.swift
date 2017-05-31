@@ -18,6 +18,7 @@ class EventRow: UITableViewCell {
   @IBOutlet var eventName: UILabel!
   @IBOutlet var eventDate: UILabel!
   @IBOutlet var eventLocation: UILabel!
+  @IBOutlet var pickStatusImage: UIImageView!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -39,6 +40,7 @@ class EventRow: UITableViewCell {
     self.eventName.text = event.name
     self.eventDate.text = event.date_label
     self.eventLocation.text = event.location
+    pickStatusImage.image = (event.pickStatus == true) ? UIImage(named:"checkMark")?.maskWithColor(color: .green) : UIImage(named:"close")?.maskWithColor(color: .red)
   }
   
 }

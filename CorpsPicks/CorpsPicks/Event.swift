@@ -14,6 +14,7 @@ class Event : NSObject {
   var date : Date = Date()
   var date_label : String = ""
   var location : String = ""
+  var pickStatus : Bool = false
   var time : Date = Date()
   var lineup : [String : Corps] = [:]
   var scores : [Corps : Float] = [:]

@@ -29,6 +29,12 @@ class EventInterface: NSObject {
           var eventDictNew = eventDict
           eventDictNew["id"] = event.key as String? as AnyObject?
           let event = Event.init(eventDict: eventDictNew as! Dictionary<String, String>)
+          // set pick status
+          ContestInterface.getContestPickStatus(eventId: event.id, onSuccess: {
+            event.pickStatus = true
+          }, onFailure: {
+            event.pickStatus = false
+          })
           events.append(event)
         }
       }
