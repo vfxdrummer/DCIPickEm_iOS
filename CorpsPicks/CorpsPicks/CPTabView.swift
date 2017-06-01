@@ -82,6 +82,9 @@ class CPTabView: UITabBarController, UITabBarControllerDelegate {
   
   func tabBarController(_ tabBarController: UITabBarController,
                         didSelect viewController: UIViewController) {
+    if let vc = viewController as? EventView {
+      vc.reloadInputViews()
+    }
     self.syncEvent(viewController: viewController)
   }
 }

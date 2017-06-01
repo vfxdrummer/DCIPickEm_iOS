@@ -117,6 +117,44 @@
 		817198191EC81DEA00415BAC /* thebattalion1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 817198021EC81DEA00415BAC /* thebattalion1.jpg */; };
 		8171981A1EC81DEA00415BAC /* vanguardcadets1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 817198031EC81DEA00415BAC /* vanguardcadets1.jpg */; };
 		8171981B1EC81DEA00415BAC /* watchmen1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 817198041EC81DEA00415BAC /* watchmen1.jpg */; };
+		81920ACA1EDFDD0B00A74B14 /* whitewater.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AA41EDFDD0B00A74B14 /* whitewater.jpg */; };
+		81920ACB1EDFDD0B00A74B14 /* san antonio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AA51EDFDD0B00A74B14 /* san antonio.jpg */; };
+		81920ACC1EDFDD0B00A74B14 /* pasadena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AA61EDFDD0B00A74B14 /* pasadena.jpg */; };
+		81920ACD1EDFDD0B00A74B14 /* massillon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AA71EDFDD0B00A74B14 /* massillon.jpg */; };
+		81920ACE1EDFDD0B00A74B14 /* indianapolis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AA81EDFDD0B00A74B14 /* indianapolis.jpg */; };
+		81920ACF1EDFDD0B00A74B14 /* houston.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AA91EDFDD0B00A74B14 /* houston.jpg */; };
+		81920AD01EDFDD0B00A74B14 /* event38.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AAA1EDFDD0B00A74B14 /* event38.jpg */; };
+		81920AD11EDFDD0B00A74B14 /* event37.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AAB1EDFDD0B00A74B14 /* event37.jpg */; };
+		81920AD21EDFDD0B00A74B14 /* event36.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AAC1EDFDD0B00A74B14 /* event36.jpg */; };
+		81920AD31EDFDD0B00A74B14 /* event35.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AAD1EDFDD0B00A74B14 /* event35.jpg */; };
+		81920AD41EDFDD0B00A74B14 /* event34.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AAE1EDFDD0B00A74B14 /* event34.jpg */; };
+		81920AD51EDFDD0B00A74B14 /* event33.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AAF1EDFDD0B00A74B14 /* event33.jpg */; };
+		81920AD61EDFDD0B00A74B14 /* event32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AB01EDFDD0B00A74B14 /* event32.jpg */; };
+		81920AD71EDFDD0B00A74B14 /* event31.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AB11EDFDD0B00A74B14 /* event31.jpg */; };
+		81920AD81EDFDD0B00A74B14 /* event30.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AB21EDFDD0B00A74B14 /* event30.jpg */; };
+		81920AD91EDFDD0B00A74B14 /* event29.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AB31EDFDD0B00A74B14 /* event29.jpg */; };
+		81920ADA1EDFDD0B00A74B14 /* event28.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AB41EDFDD0B00A74B14 /* event28.jpg */; };
+		81920ADB1EDFDD0B00A74B14 /* event27.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AB51EDFDD0B00A74B14 /* event27.jpg */; };
+		81920ADC1EDFDD0B00A74B14 /* event26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AB61EDFDD0B00A74B14 /* event26.jpg */; };
+		81920ADD1EDFDD0B00A74B14 /* event25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AB71EDFDD0B00A74B14 /* event25.jpg */; };
+		81920ADE1EDFDD0B00A74B14 /* event24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AB81EDFDD0B00A74B14 /* event24.jpg */; };
+		81920ADF1EDFDD0B00A74B14 /* event23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AB91EDFDD0B00A74B14 /* event23.jpg */; };
+		81920AE01EDFDD0B00A74B14 /* event22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920ABA1EDFDD0B00A74B14 /* event22.jpg */; };
+		81920AE11EDFDD0B00A74B14 /* event21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920ABB1EDFDD0B00A74B14 /* event21.jpg */; };
+		81920AE21EDFDD0B00A74B14 /* event20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920ABC1EDFDD0B00A74B14 /* event20.jpg */; };
+		81920AE31EDFDD0B00A74B14 /* event19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920ABD1EDFDD0B00A74B14 /* event19.jpg */; };
+		81920AE41EDFDD0B00A74B14 /* event18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920ABE1EDFDD0B00A74B14 /* event18.jpg */; };
+		81920AE51EDFDD0B00A74B14 /* event17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920ABF1EDFDD0B00A74B14 /* event17.jpg */; };
+		81920AE61EDFDD0B00A74B14 /* event16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC01EDFDD0B00A74B14 /* event16.jpg */; };
+		81920AE71EDFDD0B00A74B14 /* event15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC11EDFDD0B00A74B14 /* event15.jpg */; };
+		81920AE81EDFDD0B00A74B14 /* event14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC21EDFDD0B00A74B14 /* event14.jpg */; };
+		81920AE91EDFDD0B00A74B14 /* denver.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC31EDFDD0B00A74B14 /* denver.jpg */; };
+		81920AEA1EDFDD0B00A74B14 /* denton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC41EDFDD0B00A74B14 /* denton.jpg */; };
+		81920AEB1EDFDD0B00A74B14 /* dekalb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC51EDFDD0B00A74B14 /* dekalb.jpg */; };
+		81920AEC1EDFDD0B00A74B14 /* chester.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC61EDFDD0B00A74B14 /* chester.jpg */; };
+		81920AED1EDFDD0B00A74B14 /* cedar rapids.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC71EDFDD0B00A74B14 /* cedar rapids.jpg */; };
+		81920AEE1EDFDD0B00A74B14 /* buffalo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC81EDFDD0B00A74B14 /* buffalo.jpg */; };
+		81920AEF1EDFDD0B00A74B14 /* broken arrow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC91EDFDD0B00A74B14 /* broken arrow.jpg */; };
 		819C11BB1E8CD86C003A2781 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C11BA1E8CD86C003A2781 /* LeaderboardView.swift */; };
 		819C11BD1E8CDAC1003A2781 /* LeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C11BC1E8CDAC1003A2781 /* LeaderboardViewModel.swift */; };
 		81A493831E9B5C200010364A /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A493821E9B5C200010364A /* Leaderboard.swift */; };
@@ -261,6 +299,44 @@
 		817198021EC81DEA00415BAC /* thebattalion1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = thebattalion1.jpg; path = CorpsPicks/resources/images/banners/open/thebattalion1.jpg; sourceTree = "<group>"; };
 		817198031EC81DEA00415BAC /* vanguardcadets1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = vanguardcadets1.jpg; path = CorpsPicks/resources/images/banners/open/vanguardcadets1.jpg; sourceTree = "<group>"; };
 		817198041EC81DEA00415BAC /* watchmen1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = watchmen1.jpg; path = CorpsPicks/resources/images/banners/open/watchmen1.jpg; sourceTree = "<group>"; };
+		81920AA41EDFDD0B00A74B14 /* whitewater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = whitewater.jpg; path = resources/images/event_banners/whitewater.jpg; sourceTree = "<group>"; };
+		81920AA51EDFDD0B00A74B14 /* san antonio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "san antonio.jpg"; path = "resources/images/event_banners/san antonio.jpg"; sourceTree = "<group>"; };
+		81920AA61EDFDD0B00A74B14 /* pasadena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pasadena.jpg; path = resources/images/event_banners/pasadena.jpg; sourceTree = "<group>"; };
+		81920AA71EDFDD0B00A74B14 /* massillon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = massillon.jpg; path = resources/images/event_banners/massillon.jpg; sourceTree = "<group>"; };
+		81920AA81EDFDD0B00A74B14 /* indianapolis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = indianapolis.jpg; path = resources/images/event_banners/indianapolis.jpg; sourceTree = "<group>"; };
+		81920AA91EDFDD0B00A74B14 /* houston.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = houston.jpg; path = resources/images/event_banners/houston.jpg; sourceTree = "<group>"; };
+		81920AAA1EDFDD0B00A74B14 /* event38.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event38.jpg; path = resources/images/event_banners/event38.jpg; sourceTree = "<group>"; };
+		81920AAB1EDFDD0B00A74B14 /* event37.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event37.jpg; path = resources/images/event_banners/event37.jpg; sourceTree = "<group>"; };
+		81920AAC1EDFDD0B00A74B14 /* event36.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event36.jpg; path = resources/images/event_banners/event36.jpg; sourceTree = "<group>"; };
+		81920AAD1EDFDD0B00A74B14 /* event35.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event35.jpg; path = resources/images/event_banners/event35.jpg; sourceTree = "<group>"; };
+		81920AAE1EDFDD0B00A74B14 /* event34.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event34.jpg; path = resources/images/event_banners/event34.jpg; sourceTree = "<group>"; };
+		81920AAF1EDFDD0B00A74B14 /* event33.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event33.jpg; path = resources/images/event_banners/event33.jpg; sourceTree = "<group>"; };
+		81920AB01EDFDD0B00A74B14 /* event32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event32.jpg; path = resources/images/event_banners/event32.jpg; sourceTree = "<group>"; };
+		81920AB11EDFDD0B00A74B14 /* event31.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event31.jpg; path = resources/images/event_banners/event31.jpg; sourceTree = "<group>"; };
+		81920AB21EDFDD0B00A74B14 /* event30.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event30.jpg; path = resources/images/event_banners/event30.jpg; sourceTree = "<group>"; };
+		81920AB31EDFDD0B00A74B14 /* event29.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event29.jpg; path = resources/images/event_banners/event29.jpg; sourceTree = "<group>"; };
+		81920AB41EDFDD0B00A74B14 /* event28.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event28.jpg; path = resources/images/event_banners/event28.jpg; sourceTree = "<group>"; };
+		81920AB51EDFDD0B00A74B14 /* event27.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event27.jpg; path = resources/images/event_banners/event27.jpg; sourceTree = "<group>"; };
+		81920AB61EDFDD0B00A74B14 /* event26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event26.jpg; path = resources/images/event_banners/event26.jpg; sourceTree = "<group>"; };
+		81920AB71EDFDD0B00A74B14 /* event25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event25.jpg; path = resources/images/event_banners/event25.jpg; sourceTree = "<group>"; };
+		81920AB81EDFDD0B00A74B14 /* event24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event24.jpg; path = resources/images/event_banners/event24.jpg; sourceTree = "<group>"; };
+		81920AB91EDFDD0B00A74B14 /* event23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event23.jpg; path = resources/images/event_banners/event23.jpg; sourceTree = "<group>"; };
+		81920ABA1EDFDD0B00A74B14 /* event22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event22.jpg; path = resources/images/event_banners/event22.jpg; sourceTree = "<group>"; };
+		81920ABB1EDFDD0B00A74B14 /* event21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event21.jpg; path = resources/images/event_banners/event21.jpg; sourceTree = "<group>"; };
+		81920ABC1EDFDD0B00A74B14 /* event20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event20.jpg; path = resources/images/event_banners/event20.jpg; sourceTree = "<group>"; };
+		81920ABD1EDFDD0B00A74B14 /* event19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event19.jpg; path = resources/images/event_banners/event19.jpg; sourceTree = "<group>"; };
+		81920ABE1EDFDD0B00A74B14 /* event18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event18.jpg; path = resources/images/event_banners/event18.jpg; sourceTree = "<group>"; };
+		81920ABF1EDFDD0B00A74B14 /* event17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event17.jpg; path = resources/images/event_banners/event17.jpg; sourceTree = "<group>"; };
+		81920AC01EDFDD0B00A74B14 /* event16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event16.jpg; path = resources/images/event_banners/event16.jpg; sourceTree = "<group>"; };
+		81920AC11EDFDD0B00A74B14 /* event15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event15.jpg; path = resources/images/event_banners/event15.jpg; sourceTree = "<group>"; };
+		81920AC21EDFDD0B00A74B14 /* event14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = event14.jpg; path = resources/images/event_banners/event14.jpg; sourceTree = "<group>"; };
+		81920AC31EDFDD0B00A74B14 /* denver.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = denver.jpg; path = resources/images/event_banners/denver.jpg; sourceTree = "<group>"; };
+		81920AC41EDFDD0B00A74B14 /* denton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = denton.jpg; path = resources/images/event_banners/denton.jpg; sourceTree = "<group>"; };
+		81920AC51EDFDD0B00A74B14 /* dekalb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dekalb.jpg; path = resources/images/event_banners/dekalb.jpg; sourceTree = "<group>"; };
+		81920AC61EDFDD0B00A74B14 /* chester.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = chester.jpg; path = resources/images/event_banners/chester.jpg; sourceTree = "<group>"; };
+		81920AC71EDFDD0B00A74B14 /* cedar rapids.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "cedar rapids.jpg"; path = "resources/images/event_banners/cedar rapids.jpg"; sourceTree = "<group>"; };
+		81920AC81EDFDD0B00A74B14 /* buffalo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = buffalo.jpg; path = resources/images/event_banners/buffalo.jpg; sourceTree = "<group>"; };
+		81920AC91EDFDD0B00A74B14 /* broken arrow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "broken arrow.jpg"; path = "resources/images/event_banners/broken arrow.jpg"; sourceTree = "<group>"; };
 		819C11BA1E8CD86C003A2781 /* LeaderboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		819C11BC1E8CDAC1003A2781 /* LeaderboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewModel.swift; sourceTree = "<group>"; };
 		81A493821E9B5C200010364A /* Leaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
@@ -459,7 +535,8 @@
 			isa = PBXGroup;
 			children = (
 				8171981D1EC95C6700415BAC /* tabbar */,
-				8171981C1EC841BC00415BAC /* banners */,
+				8171981C1EC841BC00415BAC /* contest_banners */,
+				81920AA31EDFDBAE00A74B14 /* event_banners */,
 				816582DF1EC74811002C9BA2 /* badges */,
 				816582DE1EC74805002C9BA2 /* logo */,
 				816582D91EC7477E002C9BA2 /* icon */,
@@ -530,7 +607,7 @@
 			name = Keyboard;
 			sourceTree = "<group>";
 		};
-		8171981C1EC841BC00415BAC /* banners */ = {
+		8171981C1EC841BC00415BAC /* contest_banners */ = {
 			isa = PBXGroup;
 			children = (
 				817197EE1EC81DE900415BAC /* 7thregiment1.jpg */,
@@ -580,7 +657,7 @@
 				817197D51EC81DD600415BAC /* troopers1.jpg */,
 				817197D61EC81DD600415BAC /* vanguard1.jpg */,
 			);
-			name = banners;
+			name = contest_banners;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -595,6 +672,51 @@
 				81265E341ECEAA8400547013 /* leaderboard.png */,
 			);
 			name = tabbar;
+			sourceTree = "<group>";
+		};
+		81920AA31EDFDBAE00A74B14 /* event_banners */ = {
+			isa = PBXGroup;
+			children = (
+				81920AA41EDFDD0B00A74B14 /* whitewater.jpg */,
+				81920AA51EDFDD0B00A74B14 /* san antonio.jpg */,
+				81920AA61EDFDD0B00A74B14 /* pasadena.jpg */,
+				81920AA71EDFDD0B00A74B14 /* massillon.jpg */,
+				81920AA81EDFDD0B00A74B14 /* indianapolis.jpg */,
+				81920AA91EDFDD0B00A74B14 /* houston.jpg */,
+				81920AAA1EDFDD0B00A74B14 /* event38.jpg */,
+				81920AAB1EDFDD0B00A74B14 /* event37.jpg */,
+				81920AAC1EDFDD0B00A74B14 /* event36.jpg */,
+				81920AAD1EDFDD0B00A74B14 /* event35.jpg */,
+				81920AAE1EDFDD0B00A74B14 /* event34.jpg */,
+				81920AAF1EDFDD0B00A74B14 /* event33.jpg */,
+				81920AB01EDFDD0B00A74B14 /* event32.jpg */,
+				81920AB11EDFDD0B00A74B14 /* event31.jpg */,
+				81920AB21EDFDD0B00A74B14 /* event30.jpg */,
+				81920AB31EDFDD0B00A74B14 /* event29.jpg */,
+				81920AB41EDFDD0B00A74B14 /* event28.jpg */,
+				81920AB51EDFDD0B00A74B14 /* event27.jpg */,
+				81920AB61EDFDD0B00A74B14 /* event26.jpg */,
+				81920AB71EDFDD0B00A74B14 /* event25.jpg */,
+				81920AB81EDFDD0B00A74B14 /* event24.jpg */,
+				81920AB91EDFDD0B00A74B14 /* event23.jpg */,
+				81920ABA1EDFDD0B00A74B14 /* event22.jpg */,
+				81920ABB1EDFDD0B00A74B14 /* event21.jpg */,
+				81920ABC1EDFDD0B00A74B14 /* event20.jpg */,
+				81920ABD1EDFDD0B00A74B14 /* event19.jpg */,
+				81920ABE1EDFDD0B00A74B14 /* event18.jpg */,
+				81920ABF1EDFDD0B00A74B14 /* event17.jpg */,
+				81920AC01EDFDD0B00A74B14 /* event16.jpg */,
+				81920AC11EDFDD0B00A74B14 /* event15.jpg */,
+				81920AC21EDFDD0B00A74B14 /* event14.jpg */,
+				81920AC31EDFDD0B00A74B14 /* denver.jpg */,
+				81920AC41EDFDD0B00A74B14 /* denton.jpg */,
+				81920AC51EDFDD0B00A74B14 /* dekalb.jpg */,
+				81920AC61EDFDD0B00A74B14 /* chester.jpg */,
+				81920AC71EDFDD0B00A74B14 /* cedar rapids.jpg */,
+				81920AC81EDFDD0B00A74B14 /* buffalo.jpg */,
+				81920AC91EDFDD0B00A74B14 /* broken arrow.jpg */,
+			);
+			name = event_banners;
 			sourceTree = "<group>";
 		};
 		A7618BD3FD97156551A860A9 /* Frameworks */ = {
@@ -732,22 +854,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81920ADE1EDFDD0B00A74B14 /* event24.jpg in Resources */,
+				81920AE81EDFDD0B00A74B14 /* event14.jpg in Resources */,
+				81920ACC1EDFDD0B00A74B14 /* pasadena.jpg in Resources */,
+				81920ACF1EDFDD0B00A74B14 /* houston.jpg in Resources */,
 				817198051EC81DEA00415BAC /* 7thregiment1.jpg in Resources */,
 				817198061EC81DEA00415BAC /* bluedevilsb1.jpg in Resources */,
 				81265E361ECEAA8400547013 /* contests-white.png in Resources */,
 				817198071EC81DEA00415BAC /* bluedevilsc1.jpg in Resources */,
+				81920AE51EDFDD0B00A74B14 /* event17.jpg in Resources */,
 				817198081EC81DEA00415BAC /* coltcadets1.jpg in Resources */,
+				81920AD81EDFDD0B00A74B14 /* event30.jpg in Resources */,
+				81920AEE1EDFDD0B00A74B14 /* buffalo.jpg in Resources */,
+				81920ADA1EDFDD0B00A74B14 /* event28.jpg in Resources */,
+				81920AEC1EDFDD0B00A74B14 /* chester.jpg in Resources */,
+				81920AE61EDFDD0B00A74B14 /* event16.jpg in Resources */,
+				81920AE91EDFDD0B00A74B14 /* denver.jpg in Resources */,
 				817198091EC81DEA00415BAC /* columbians1.jpg in Resources */,
 				8171980A1EC81DEA00415BAC /* gold1.jpg in Resources */,
 				8171980B1EC81DEA00415BAC /* goldenempire1.jpg in Resources */,
 				81265E381ECEAA8400547013 /* events-white.png in Resources */,
+				81920AD41EDFDD0B00A74B14 /* event34.jpg in Resources */,
 				8171980C1EC81DEA00415BAC /* guardians1.jpg in Resources */,
+				81920AD61EDFDD0B00A74B14 /* event32.jpg in Resources */,
 				8171980D1EC81DEA00415BAC /* heatwave1.jpg in Resources */,
 				8171980E1EC81DEA00415BAC /* impulse1.jpg in Resources */,
+				81920AD91EDFDD0B00A74B14 /* event29.jpg in Resources */,
+				81920AD11EDFDD0B00A74B14 /* event37.jpg in Resources */,
 				8171980F1EC81DEA00415BAC /* incognito1.jpg in Resources */,
 				810133471ED9A70C00E33381 /* ContestButtonRow.xib in Resources */,
 				817198101EC81DEA00415BAC /* legends1.jpg in Resources */,
 				817198111EC81DEA00415BAC /* lesstentor1.jpg in Resources */,
+				81920AE41EDFDD0B00A74B14 /* event18.jpg in Resources */,
 				817198121EC81DEA00415BAC /* louisianastars1.jpg in Resources */,
 				817198131EC81DEA00415BAC /* musiccity1.jpg in Resources */,
 				817198141EC81DEA00415BAC /* raiders1.jpg in Resources */,
@@ -755,25 +893,38 @@
 				817198161EC81DEA00415BAC /* shadow1.jpg in Resources */,
 				817198171EC81DEA00415BAC /* southwind1.jpg in Resources */,
 				817198181EC81DEA00415BAC /* spartans1.jpg in Resources */,
+				81920AE01EDFDD0B00A74B14 /* event22.jpg in Resources */,
 				817198191EC81DEA00415BAC /* thebattalion1.jpg in Resources */,
 				81265E3A1ECEAA8400547013 /* leaderboard.png in Resources */,
 				8171981A1EC81DEA00415BAC /* vanguardcadets1.jpg in Resources */,
 				8171981B1EC81DEA00415BAC /* watchmen1.jpg in Resources */,
+				81920AD71EDFDD0B00A74B14 /* event31.jpg in Resources */,
+				81920AE31EDFDD0B00A74B14 /* event19.jpg in Resources */,
 				817197D71EC81DD600415BAC /* academy1.jpg in Resources */,
 				817197D81EC81DD600415BAC /* bluecoats1.jpg in Resources */,
 				817197D91EC81DD600415BAC /* bluedevils1.jpg in Resources */,
 				817197DA1EC81DD600415BAC /* blueknights1.jpg in Resources */,
+				81920ADB1EDFDD0B00A74B14 /* event27.jpg in Resources */,
 				817197DB1EC81DD600415BAC /* bluestars1.jpg in Resources */,
+				81920AD51EDFDD0B00A74B14 /* event33.jpg in Resources */,
 				817197DC1EC81DD600415BAC /* bostoncrusaders1.jpg in Resources */,
 				817197DD1EC81DD600415BAC /* cadets1.jpg in Resources */,
 				81265E371ECEAA8400547013 /* events-black.png in Resources */,
 				817197DE1EC81DD600415BAC /* cascades1.jpg in Resources */,
+				81920ADF1EDFDD0B00A74B14 /* event23.jpg in Resources */,
+				81920AEF1EDFDD0B00A74B14 /* broken arrow.jpg in Resources */,
+				81920ACD1EDFDD0B00A74B14 /* massillon.jpg in Resources */,
 				817197DF1EC81DD600415BAC /* cavaliers1.jpg in Resources */,
+				81920AD31EDFDD0B00A74B14 /* event35.jpg in Resources */,
 				817197E01EC81DD600415BAC /* colts1.jpg in Resources */,
+				81920AE21EDFDD0B00A74B14 /* event20.jpg in Resources */,
 				817197E11EC81DD600415BAC /* crossmen1.jpg in Resources */,
+				81920ADC1EDFDD0B00A74B14 /* event26.jpg in Resources */,
 				817197E21EC81DD600415BAC /* crown1.jpg in Resources */,
 				817197E31EC81DD600415BAC /* genesis1.jpg in Resources */,
 				817197E41EC81DD600415BAC /* jerseysurf1.jpg in Resources */,
+				81920ACB1EDFDD0B00A74B14 /* san antonio.jpg in Resources */,
+				81920AEA1EDFDD0B00A74B14 /* denton.jpg in Resources */,
 				817197E51EC81DD600415BAC /* madison1.jpg in Resources */,
 				817197E61EC81DD600415BAC /* mandarins1.jpg in Resources */,
 				817197E71EC81DD600415BAC /* oregoncrusaders1.jpg in Resources */,
@@ -781,22 +932,29 @@
 				817197E91EC81DD600415BAC /* phantomregiment1.jpg in Resources */,
 				817197EA1EC81DD600415BAC /* pioneer1.jpg in Resources */,
 				817197EB1EC81DD600415BAC /* spiritofatlanta1.jpg in Resources */,
+				81920ACA1EDFDD0B00A74B14 /* whitewater.jpg in Resources */,
 				817197EC1EC81DD600415BAC /* troopers1.jpg in Resources */,
 				817197ED1EC81DD600415BAC /* vanguard1.jpg in Resources */,
 				816582EC1EC74848002C9BA2 /* crown.jpeg in Resources */,
 				816582E91EC74848002C9BA2 /* bluedevils.png in Resources */,
 				816582EA1EC74848002C9BA2 /* cadets.jpeg in Resources */,
 				816582F31EC74857002C9BA2 /* fdc_with_logotype.pdf in Resources */,
+				81920AED1EDFDD0B00A74B14 /* cedar rapids.jpg in Resources */,
+				81920AD21EDFDD0B00A74B14 /* event36.jpg in Resources */,
 				816582ED1EC74848002C9BA2 /* crown2.jpg in Resources */,
 				22A0F4A61E0D0BA400DD2F2D /* LaunchScreen.storyboard in Resources */,
 				81265E351ECEAA8400547013 /* contests-black.png in Resources */,
+				81920ACE1EDFDD0B00A74B14 /* indianapolis.jpg in Resources */,
 				816582E81EC74848002C9BA2 /* bluecoats.jpeg in Resources */,
+				81920ADD1EDFDD0B00A74B14 /* event25.jpg in Resources */,
 				22A0F4A31E0D0BA400DD2F2D /* Assets.xcassets in Resources */,
 				81A493871E9B5E4B0010364A /* LeaderboardRow.xib in Resources */,
 				816582E71EC74848002C9BA2 /* bd.jpg in Resources */,
 				81265E391ECEAA8400547013 /* leaderboard-black.png in Resources */,
 				22A0F4ED1E0D2A5500DD2F2D /* ContestRow.xib in Resources */,
 				816582F71EC7486C002C9BA2 /* fdc_app_icon_image.pdf in Resources */,
+				81920AEB1EDFDD0B00A74B14 /* dekalb.jpg in Resources */,
+				81920AD01EDFDD0B00A74B14 /* event38.jpg in Resources */,
 				22A0F4A11E0D0BA400DD2F2D /* Main.storyboard in Resources */,
 				812F5BB71E5A29A6009B068C /* EventRow.xib in Resources */,
 				816582F91EC7486C002C9BA2 /* inside_the_shield_icon.pdf in Resources */,
@@ -804,6 +962,8 @@
 				816582F81EC7486C002C9BA2 /* fdc_icon_one_color_stamp.pdf in Resources */,
 				816582F21EC74857002C9BA2 /* fdc_logo.pdf in Resources */,
 				816582F11EC74857002C9BA2 /* fdc_logo_no_padding.pdf in Resources */,
+				81920AE11EDFDD0B00A74B14 /* event21.jpg in Resources */,
+				81920AE71EDFDD0B00A74B14 /* event15.jpg in Resources */,
 				81F12B441EBD84FC00A1681E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

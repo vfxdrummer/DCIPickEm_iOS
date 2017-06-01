@@ -19,6 +19,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="465" height="105.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="event14.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Th3-9u-Kva">
+                        <rect key="frame" x="0.0" y="0.0" width="465" height="105.5"/>
+                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="4iD-Xc-JJc" userLabel="pickStatusImage">
                         <rect key="frame" x="220" y="76.5" width="25" height="25"/>
                         <constraints>
@@ -59,7 +62,11 @@
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="4iD-Xc-JJc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="2Fr-ve-Wej"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Th3-9u-Kva" secondAttribute="trailing" constant="-8" id="34h-O5-JDc"/>
+                    <constraint firstItem="Th3-9u-Kva" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="72H-wR-byT"/>
+                    <constraint firstItem="Th3-9u-Kva" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Ese-6O-9un"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="IG0-DW-p9S"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Th3-9u-Kva" secondAttribute="bottom" constant="-8" id="Mqu-1s-UiV"/>
                     <constraint firstItem="doI-BE-nY0" firstAttribute="top" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="10" id="Oif-FK-fZa"/>
                     <constraint firstItem="doI-BE-nY0" firstAttribute="leading" secondItem="yvE-3T-i1K" secondAttribute="leading" id="Zph-tb-rTI"/>
                     <constraint firstAttribute="trailingMargin" secondItem="doI-BE-nY0" secondAttribute="trailing" constant="10" id="bxS-Ji-ftc"/>
@@ -73,6 +80,7 @@
             <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
             <connections>
                 <outlet property="eventDate" destination="06a-4S-Asd" id="Dzp-xs-JC4"/>
+                <outlet property="eventImage" destination="Th3-9u-Kva" id="HRz-mf-jIp"/>
                 <outlet property="eventLocation" destination="ylr-i8-IIi" id="3z2-uv-ocb"/>
                 <outlet property="eventName" destination="yvE-3T-i1K" id="n2w-Ey-TIR"/>
                 <outlet property="pickStatusImage" destination="4iD-Xc-JJc" id="8eD-CL-xpd"/>
@@ -82,5 +90,6 @@
     </objects>
     <resources>
         <image name="close" width="30" height="30"/>
+        <image name="event14.jpg" width="720" height="404"/>
     </resources>
 </document>

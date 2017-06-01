@@ -14,6 +14,7 @@ class Event : NSObject {
   var date : Date = Date()
   var date_label : String = ""
   var location : String = ""
+  var imageName : String = ""
   var pickStatus : Bool = false
   var time : Date = Date()
   var lineup : [String : Corps] = [:]
@@ -35,6 +36,9 @@ class Event : NSObject {
     }
     if let location = eventDict["location"] {
       self.location = location
+    }
+    if let imageName = eventDict["image"] {
+      self.imageName = imageName
     }
     if let time = eventDict["time"] {
       self.time = parseFirebaseTime(timeString: time)
