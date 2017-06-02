@@ -61,7 +61,7 @@ class ContestInterface: NSObject {
    contestPickStatus
    Does the user have picks for the event?
    */
-  class func getContestPickStatus(eventId:String, onSuccess:@escaping ()->()) {
+  class func getContestPickStatus(eventId:String, onSuccess:@escaping ()->(), onFailure:@escaping ()->()) {
     // move this to singleton, set on Auth
     let userId = CurrentUser.sharedInstance.uid
     
@@ -81,9 +81,12 @@ class ContestInterface: NSObject {
           if snapshot.hasChild(userId){
             // has user entry for picks/$eventId !
             onSuccess()
+            return
           }
         })
       }
+      
+      onFailure()
     })
   }
   
