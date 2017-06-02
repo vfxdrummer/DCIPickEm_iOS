@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class ContestView: UITableViewController {
   
@@ -25,6 +26,12 @@ class ContestView: UITableViewController {
         reload()
       }
     }
+  }
+  
+  private var activityIndicatorView : NVActivityIndicatorView {
+    let activityIndicatorView = NVActivityIndicatorView(frame: self.view.frame,
+                                                        type: NVActivityIndicatorType(rawValue: 3))
+    return activityIndicatorView
   }
   
   @IBOutlet var contestTable: UITableView!
@@ -80,8 +87,8 @@ class ContestView: UITableViewController {
     self.navigationController?.navigationBar.topItem?.title = (eventName != nil) ? eventName : "CONTEST"
     
     // load the lineup
-    print("contestViewModel?.loadLineup()")
     contestViewModel?.loadLineup()
+    activityIndicatorView.startAnimating()
   }
   
   private func setLeftBackButton() {
