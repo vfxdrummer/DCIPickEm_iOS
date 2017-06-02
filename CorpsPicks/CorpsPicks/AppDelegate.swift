@@ -20,6 +20,7 @@ import GoogleSignIn
 class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicationDelegate {
 
   var window: UIWindow?
+  var launched: Bool = false
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -29,6 +30,9 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
     
     // Firebase
     FirebaseApp.configure()
+    
+    // Startup code
+    StartupService.sharedInstance.start()
     
     // Signout of Firebase
 //    try! FIRAuth.auth().signOut()
@@ -71,9 +75,6 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
         self.loginSession()
       }
     }
-    
-    // Startup code
-    StartupService.sharedInstance.start()
     
     return true
   }
@@ -154,13 +155,15 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
   }
   
   func launchStoryboard(_ storyboard: StoryboardName) {
+    if (self.launched == true) { return }
+    self.launched = true
     let storyboard = UIStoryboard(name: storyboard.rawValue, bundle: nil)
     let controller = storyboard.instantiateInitialViewController()! as UIViewController
     self.window?.rootViewController = controller
     
     // set initial eventIds
-    let contestVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Contest") as! ContestView
-        contestVC.eventId = "999999"
+//    let contestVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Contest") as! ContestView
+//        contestVC.eventId = "999999"
   }
 
 }
