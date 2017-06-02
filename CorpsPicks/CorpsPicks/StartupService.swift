@@ -27,7 +27,7 @@ class StartupService: CurrentEventProtocol {
     
     // front load api items
     CorpsInterface.getCorps()
-    EventInterface.getEvents()
+    EventInterface.getEvents(maxItems: 10)
   }
   
   func updateEvents(events:[Event]) {
