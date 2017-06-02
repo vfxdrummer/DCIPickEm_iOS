@@ -190,8 +190,7 @@ class ContestInterface: NSObject {
     
     let ref = Database.database().reference()
 //    print("Setting scores for \(eventId)")
-    for corpsScore in corpsScores {
-//      print("\(corpsScore.corps.name) \(corpsScore.score)")
+    for _ in corpsScores {
       var corpsNameArray:Array<Any> = []
       _ = corpsScores.map({
         corpsNameArray.append($0.corps.name)
