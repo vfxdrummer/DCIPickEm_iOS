@@ -42,8 +42,13 @@ class EventRow: UITableViewCell {
     self.eventDate.text = event.date_label
     self.eventLocation.text = event.location
     self.setEventImage(event: event)
-    pickStatusImage.image = (event.pickStatus == true) ? UIImage(named:"checkMark")?.maskWithColor(color: .green) : UIImage(named:"close")?.maskWithColor(color: .red)
     
+    // fetch pickStatus and update accordingly
+    ContestInterface.getContestPickStatus(eventId: event.id, onSuccess: { [unowned self] in
+      self.pickStatusImage.image = UIImage(named:"checkMark")?.maskWithColor(color: .green)
+      }, onFailure: { [unowned self] in
+        self.pickStatusImage.image = UIImage(named:"close")?.maskWithColor(color: .red)
+    })
   }
   
   func setEventImage(event:Event) {
