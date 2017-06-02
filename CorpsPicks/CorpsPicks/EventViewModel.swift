@@ -15,6 +15,7 @@ class EventViewModel: CPViewModel, CurrentEventProtocol {
       return CurrentEventItems.sharedInstance.events
     }
   }
+  var initialLoad : Bool = true
   
   func setup() {
     CurrentEventItems.sharedInstance.delegate = self
@@ -25,12 +26,16 @@ class EventViewModel: CPViewModel, CurrentEventProtocol {
    Fetch leaderboard
    */
   func loadEvents() {
-    EventInterface.getEvents()
+    initialLoad = false
+    EventInterface.getEvents(maxItems: -1)
   }
   
   // CurrentEventProtocol
   
   func updateEvents(events:[Event]) {
+    if (initialLoad == true) {
+      loadEvents()
+    }
     if let view = self.vc as? EventView {
       view.loadEvents(events: events)
     }
