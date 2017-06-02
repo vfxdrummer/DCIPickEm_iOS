@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 import Fabric
 import Crashlytics
 import Firebase
