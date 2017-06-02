@@ -16,27 +16,26 @@ class EventInterface: NSObject {
    getEvents
    Get Event list from Firebase DB
    */
-  class func getEvents() {
+  class func getEvents(maxItems:Int) {
+    let useMaxItems = (maxItems != -1) ? true : false
     let ref = Database.database().reference()
     let eventsRef = ref.child("events")
+    var i = 0
     eventsRef.observe(.value, with: { snapshot in
       var events:[Event] = []
-      for _ in snapshot.children {
-        for event in snapshot.children.allObjects as! [DataSnapshot] {
-          guard let eventDict = event.value as? [String: AnyObject] else {
-            continue
-          }
-          var eventDictNew = eventDict
-          eventDictNew["id"] = event.key as String? as AnyObject?
-          let event = Event.init(eventDict: eventDictNew as! Dictionary<String, String>)
-          var pickStatus = false
-          // set pick status
-          ContestInterface.getContestPickStatus(eventId: event.id, onSuccess: {
-            pickStatus = true
-          })
-          event.pickStatus = pickStatus
-          events.append(event)
+      for event in snapshot.children.allObjects as! [DataSnapshot] {
+        // check for max items
+        if (useMaxItems == true && i >= maxItems) {
+          continue
         }
+        guard let eventDict = event.value as? [String: AnyObject] else {
+          continue
+        }
+        var eventDictNew = eventDict
+        eventDictNew["id"] = event.key as String? as AnyObject?
+        let event = Event.init(eventDict: eventDictNew as! Dictionary<String, String>)
+        events.append(event)
+        i += 1
       }
       CurrentEventItems.sharedInstance.events = events
     }) { (error) in
@@ -44,3 +43,4 @@ class EventInterface: NSObject {
     }
   }
 }
+
