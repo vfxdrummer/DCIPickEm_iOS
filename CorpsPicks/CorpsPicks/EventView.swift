@@ -40,7 +40,7 @@ class EventView: UITableViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    self.navigationController?.navigationBar.topItem?.title = "EVENT"
+    self.navigationController?.navigationBar.topItem?.title = "CORPS PICKS EVENTS"
     
     self.eventTable.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 85.0
