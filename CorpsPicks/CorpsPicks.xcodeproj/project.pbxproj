@@ -155,6 +155,7 @@
 		81920AED1EDFDD0B00A74B14 /* cedar rapids.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC71EDFDD0B00A74B14 /* cedar rapids.jpg */; };
 		81920AEE1EDFDD0B00A74B14 /* buffalo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC81EDFDD0B00A74B14 /* buffalo.jpg */; };
 		81920AEF1EDFDD0B00A74B14 /* broken arrow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81920AC91EDFDD0B00A74B14 /* broken arrow.jpg */; };
+		81920B051EE10CDF00A74B14 /* slider-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 81920B041EE10CDF00A74B14 /* slider-arrow.png */; };
 		819C11BB1E8CD86C003A2781 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C11BA1E8CD86C003A2781 /* LeaderboardView.swift */; };
 		819C11BD1E8CDAC1003A2781 /* LeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C11BC1E8CDAC1003A2781 /* LeaderboardViewModel.swift */; };
 		81A493831E9B5C200010364A /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A493821E9B5C200010364A /* Leaderboard.swift */; };
@@ -337,6 +338,7 @@
 		81920AC71EDFDD0B00A74B14 /* cedar rapids.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "cedar rapids.jpg"; path = "resources/images/event_banners/cedar rapids.jpg"; sourceTree = "<group>"; };
 		81920AC81EDFDD0B00A74B14 /* buffalo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = buffalo.jpg; path = resources/images/event_banners/buffalo.jpg; sourceTree = "<group>"; };
 		81920AC91EDFDD0B00A74B14 /* broken arrow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "broken arrow.jpg"; path = "resources/images/event_banners/broken arrow.jpg"; sourceTree = "<group>"; };
+		81920B041EE10CDF00A74B14 /* slider-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "slider-arrow.png"; path = "resources/images/accessory/slider-arrow.png"; sourceTree = "<group>"; };
 		819C11BA1E8CD86C003A2781 /* LeaderboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		819C11BC1E8CDAC1003A2781 /* LeaderboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewModel.swift; sourceTree = "<group>"; };
 		81A493821E9B5C200010364A /* Leaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 		22FA69351E0E36AE003CAFEF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				81920B031EE10CC900A74B14 /* accessory */,
 				8171981D1EC95C6700415BAC /* tabbar */,
 				8171981C1EC841BC00415BAC /* contest_banners */,
 				81920AA31EDFDBAE00A74B14 /* event_banners */,
@@ -717,6 +720,14 @@
 				81920AC91EDFDD0B00A74B14 /* broken arrow.jpg */,
 			);
 			name = event_banners;
+			sourceTree = "<group>";
+		};
+		81920B031EE10CC900A74B14 /* accessory */ = {
+			isa = PBXGroup;
+			children = (
+				81920B041EE10CDF00A74B14 /* slider-arrow.png */,
+			);
+			name = accessory;
 			sourceTree = "<group>";
 		};
 		A7618BD3FD97156551A860A9 /* Frameworks */ = {
@@ -916,6 +927,7 @@
 				81920ACD1EDFDD0B00A74B14 /* massillon.jpg in Resources */,
 				817197DF1EC81DD600415BAC /* cavaliers1.jpg in Resources */,
 				81920AD31EDFDD0B00A74B14 /* event35.jpg in Resources */,
+				81920B051EE10CDF00A74B14 /* slider-arrow.png in Resources */,
 				817197E01EC81DD600415BAC /* colts1.jpg in Resources */,
 				81920AE21EDFDD0B00A74B14 /* event20.jpg in Resources */,
 				817197E11EC81DD600415BAC /* crossmen1.jpg in Resources */,

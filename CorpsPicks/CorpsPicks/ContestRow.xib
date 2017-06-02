@@ -55,8 +55,19 @@
                     </textField>
                     <view opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
                         <rect key="frame" x="8" y="70.5" width="449" height="35"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Go-FB-eCa">
+                                <rect key="frame" x="0.0" y="0.0" width="449" height="35"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9Go-FB-eCa" secondAttribute="trailing" id="HeY-Sb-Cog"/>
+                            <constraint firstItem="9Go-FB-eCa" firstAttribute="top" secondItem="sB2-EP-uKl" secondAttribute="top" id="Ntb-fz-Mfe"/>
+                            <constraint firstItem="9Go-FB-eCa" firstAttribute="leading" secondItem="sB2-EP-uKl" secondAttribute="leading" id="Y8u-ZL-r8T"/>
+                            <constraint firstAttribute="bottom" secondItem="9Go-FB-eCa" secondAttribute="bottom" id="jb9-MV-MkU"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,5 +103,6 @@
     </objects>
     <resources>
         <image name="bluedevils1.jpg" width="720" height="404"/>
+        <image name="slider-arrow.png" width="685" height="34"/>
     </resources>
 </document>
