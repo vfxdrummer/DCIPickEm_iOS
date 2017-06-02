@@ -6,6 +6,9 @@ def myPods
   use_frameworks!
   pod 'SDWebImage'
 
+  # activity indicator
+  pod 'NVActivityIndicatorView'
+
   # JSON / Networking
   source 'https://github.com/CocoaPods/Specs.git'
   use_frameworks!
@@ -22,10 +25,11 @@ def myPods
 #  pod 'FBSDKLoginKit'
 
   # Firebase UI
+  pod 'FirebaseUI/Database'  
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Google'
   pod 'FirebaseUI/Facebook'
-  pod 'FirebaseUI/Twitter'
+#  pod 'FirebaseUI/Twitter'
 
   # Firebase
   pod 'Firebase'
