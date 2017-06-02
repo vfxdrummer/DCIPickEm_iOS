@@ -22,7 +22,7 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
   @IBOutlet var corpsName: UILabel!
   @IBOutlet var corpsImage: UIImageView!
   @IBOutlet var corpsScore: UILabel!
-  @IBOutlet var scorePanGestureView: UIView!
+  @IBOutlet var scorePanGestureView: UIImageView!
   @IBOutlet weak var scoreEntryField: UITextField!
   
   override func awakeFromNib() {

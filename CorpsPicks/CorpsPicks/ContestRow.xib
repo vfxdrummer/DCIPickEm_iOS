@@ -53,39 +53,28 @@
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <view opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
-                        <rect key="frame" x="8" y="70.5" width="449" height="35"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Go-FB-eCa">
-                                <rect key="frame" x="0.0" y="0.0" width="449" height="35"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <gestureRecognizers/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Go-FB-eCa">
+                        <rect key="frame" x="22" y="71.5" width="421" height="34"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="9Go-FB-eCa" secondAttribute="trailing" id="HeY-Sb-Cog"/>
-                            <constraint firstItem="9Go-FB-eCa" firstAttribute="top" secondItem="sB2-EP-uKl" secondAttribute="top" id="Ntb-fz-Mfe"/>
-                            <constraint firstItem="9Go-FB-eCa" firstAttribute="leading" secondItem="sB2-EP-uKl" secondAttribute="leading" id="Y8u-ZL-r8T"/>
-                            <constraint firstAttribute="bottom" secondItem="9Go-FB-eCa" secondAttribute="bottom" id="jb9-MV-MkU"/>
+                            <constraint firstAttribute="height" constant="34" id="yPZ-UZ-wDC"/>
                         </constraints>
-                    </view>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="-8.5" id="1Ky-Cy-IXc"/>
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="2Wd-gr-cHk"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ylr-i8-IIi" secondAttribute="trailing" constant="10" id="2dN-d3-kQN"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="9Go-FB-eCa" secondAttribute="leading" constant="-14" id="2nB-II-gos"/>
                     <constraint firstAttribute="bottomMargin" secondItem="4W8-HH-yB2" secondAttribute="bottom" constant="-8" id="3N3-lE-SHv"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3sK-Lf-KpM"/>
-                    <constraint firstItem="sB2-EP-uKl" firstAttribute="top" secondItem="mH1-vb-qPA" secondAttribute="bottom" id="63A-4I-QaM"/>
-                    <constraint firstItem="sB2-EP-uKl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="DS1-1G-iki"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="sB2-EP-uKl" secondAttribute="trailing" id="NYg-qw-Z4I"/>
                     <constraint firstAttribute="trailingMargin" secondItem="mH1-vb-qPA" secondAttribute="trailing" constant="10" id="Q8I-gS-zkG"/>
                     <constraint firstAttribute="trailingMargin" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="-8" id="Rpd-1E-pJF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9Go-FB-eCa" secondAttribute="bottom" constant="-8" id="SOf-8k-mN5"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="bu1-3K-KbE"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="sB2-EP-uKl" secondAttribute="bottom" constant="-8" id="dD1-cr-UvP"/>
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="e4c-nP-Kwa"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="jli-XH-Qgv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9Go-FB-eCa" secondAttribute="trailing" constant="14" id="mWX-uN-G1g"/>
                     <constraint firstItem="mH1-vb-qPA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qaB-cr-5ut"/>
                 </constraints>
             </tableViewCellContentView>
@@ -96,7 +85,7 @@
                 <outlet property="corpsName" destination="yvE-3T-i1K" id="LOp-8C-Ox6"/>
                 <outlet property="corpsScore" destination="ylr-i8-IIi" id="FVb-RX-mwQ"/>
                 <outlet property="scoreEntryField" destination="mH1-vb-qPA" id="kCz-er-a8S"/>
-                <outlet property="scorePanGestureView" destination="sB2-EP-uKl" id="bke-IA-jjQ"/>
+                <outlet property="scorePanGestureView" destination="9Go-FB-eCa" id="dhd-id-V9k"/>
             </connections>
             <point key="canvasLocation" x="512.5" y="437"/>
         </tableViewCell>
