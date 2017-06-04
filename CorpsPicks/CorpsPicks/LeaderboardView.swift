@@ -46,7 +46,7 @@ class LeaderboardView: UITableViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    self.navigationController?.navigationBar.topItem?.title = "LEADERBOARD"
+    self.navigationController?.navigationBar.topItem?.title = (eventName != nil) ? eventName : "LEADERBOARD"
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
