@@ -24,12 +24,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="465" height="450"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEADERBOARD UNAVAILABLE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSg-2E-DGN">
-                                <rect key="frame" x="95.5" y="50" width="275" height="25"/>
+                                <rect key="frame" x="83" y="35" width="300" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="W4H-Do-I09"/>
+                                    <constraint firstAttribute="width" constant="300" id="W4H-Do-I09"/>
                                     <constraint firstAttribute="height" constant="25" id="eiO-yE-zBi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" red="0.29458792099999997" green="0.29458792099999997" blue="0.29458792099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -55,7 +55,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="BRA-AX-KJl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" red="0.2396304011" green="0.22376039619999999" blue="0.20692977309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -63,7 +63,7 @@
                         <color key="backgroundColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="a39-gr-3bS" firstAttribute="centerX" secondItem="Gnn-L6-yzn" secondAttribute="centerX" id="34W-fu-cPS"/>
-                            <constraint firstItem="zSg-2E-DGN" firstAttribute="top" secondItem="Gnn-L6-yzn" secondAttribute="top" constant="50" id="8YZ-Ux-871"/>
+                            <constraint firstItem="zSg-2E-DGN" firstAttribute="top" secondItem="Gnn-L6-yzn" secondAttribute="top" constant="35" id="8YZ-Ux-871"/>
                             <constraint firstItem="0YY-Yu-9c6" firstAttribute="top" secondItem="Ke2-Ai-kLa" secondAttribute="bottom" constant="-60" id="BYG-sv-lRC"/>
                             <constraint firstItem="0YY-Yu-9c6" firstAttribute="centerX" secondItem="Gnn-L6-yzn" secondAttribute="centerX" id="Ehp-bp-zNR"/>
                             <constraint firstAttribute="height" constant="450" id="I3f-bg-RlO"/>
