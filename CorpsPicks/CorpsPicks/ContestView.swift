@@ -66,6 +66,7 @@ class ContestView: UITableViewController {
     
     // Keyboard
     self.hideKeyboardRecognizer()
+    self.dismissKeyboard()
     
     // Setup the ViewController Title
     //    self.title = Constants.contestTitle
