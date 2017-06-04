@@ -13,6 +13,7 @@ class LeaderboardView: UITableViewController {
   var leaderboardViewModel : LeaderboardViewModel? = nil
   var eventId : String? = nil
   var eventName : String? = nil
+  var hasData = false
   
   @IBOutlet var leaderboardTable: UITableView!
     
@@ -34,14 +35,10 @@ class LeaderboardView: UITableViewController {
     leaderboardTable.delegate = self
     leaderboardTable.dataSource = self
     leaderboardTable.tableFooterView = UIView(frame: CGRect.zero)
-    let corpsNib = UINib(nibName: "LeaderboardRow", bundle: nil)
-    leaderboardTable.register(corpsNib, forCellReuseIdentifier: "LeaderboardRow")
-    
-    leaderboardTable.setEditing(true, animated: true)
-    
-    // Setup the ViewController Title
-//    self.title = Constants.contestTitle
-    //    self.restorationIdentifier = "contest"
+    let leaderboardRowNib = UINib(nibName: "LeaderboardRow", bundle: nil)
+    leaderboardTable.register(leaderboardRowNib, forCellReuseIdentifier: "LeaderboardRow")
+    let leaderboardMessageRowNib = UINib(nibName: "LeaderboardMessageRow", bundle: nil)
+    leaderboardTable.register(leaderboardMessageRowNib, forCellReuseIdentifier: "LeaderboardMessageRow")
     
     leaderboardViewModel?.loadLeaderboard()
     
@@ -90,20 +87,37 @@ class LeaderboardView: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return leaderboardViewModel!.userScores.count
+    switch (hasData) {
+    case true:
+      return leaderboardViewModel!.userScores.count
+    case false:
+      return 1
+    }
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 100
+    switch (hasData) {
+    case true:
+      return 100
+    case false:
+      return UIScreen.main.bounds.size.height
+    }
   }
   
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardRow") as! LeaderboardRow
-    cell.leaderboardView = self
-    let userScore = leaderboardViewModel!.userScores[indexPath.row]
-    cell.load(indexPath.row, userScore: userScore)
-    return cell
-  }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      switch (hasData) {
+      case true:
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardRow") as! LeaderboardRow
+        cell.leaderboardView = self
+        let userScore = leaderboardViewModel!.userScores[indexPath.row]
+        cell.load(indexPath.row, userScore: userScore)
+        return cell
+        
+      case false:
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardMessageRow") as! LeaderboardMessageRow
+        return cell
+      }
+    }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
   }

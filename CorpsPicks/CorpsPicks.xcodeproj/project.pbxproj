@@ -41,6 +41,8 @@
 		810133461ED9A70C00E33381 /* ContestButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810133441ED9A70C00E33381 /* ContestButtonRow.swift */; };
 		810133471ED9A70C00E33381 /* ContestButtonRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810133451ED9A70C00E33381 /* ContestButtonRow.xib */; };
 		81055D671E594F6600FF8DCD /* EventInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81055D661E594F6600FF8DCD /* EventInterface.swift */; };
+		8111BF8B1EE4628100FB8E5C /* LeaderboardMessageRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8111BF8A1EE4628100FB8E5C /* LeaderboardMessageRow.xib */; };
+		8111BF8D1EE4633900FB8E5C /* LeaderboardMessageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8111BF8C1EE4633900FB8E5C /* LeaderboardMessageRow.swift */; };
 		811B9B401E61042D0084E8AB /* CorpsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B9B3F1E61042D0084E8AB /* CorpsInterface.swift */; };
 		811B9B421E614BF80084E8AB /* StartupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B9B411E614BF80084E8AB /* StartupService.swift */; };
 		81265E351ECEAA8400547013 /* contests-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 81265E2F1ECEAA8400547013 /* contests-black.png */; };
@@ -220,6 +222,8 @@
 		810133441ED9A70C00E33381 /* ContestButtonRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestButtonRow.swift; sourceTree = "<group>"; };
 		810133451ED9A70C00E33381 /* ContestButtonRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContestButtonRow.xib; sourceTree = "<group>"; };
 		81055D661E594F6600FF8DCD /* EventInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInterface.swift; sourceTree = "<group>"; };
+		8111BF8A1EE4628100FB8E5C /* LeaderboardMessageRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardMessageRow.xib; sourceTree = "<group>"; };
+		8111BF8C1EE4633900FB8E5C /* LeaderboardMessageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardMessageRow.swift; sourceTree = "<group>"; };
 		811B9B3F1E61042D0084E8AB /* CorpsInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorpsInterface.swift; sourceTree = "<group>"; };
 		811B9B411E614BF80084E8AB /* StartupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupService.swift; sourceTree = "<group>"; };
 		81265E2F1ECEAA8400547013 /* contests-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contests-black.png"; path = "resources/images/tabbar/contests-black.png"; sourceTree = "<group>"; };
@@ -448,6 +452,8 @@
 				810133451ED9A70C00E33381 /* ContestButtonRow.xib */,
 				812F5BB61E5A29A6009B068C /* EventRow.swift */,
 				812F5BB51E5A29A6009B068C /* EventRow.xib */,
+				8111BF8C1EE4633900FB8E5C /* LeaderboardMessageRow.swift */,
+				8111BF8A1EE4628100FB8E5C /* LeaderboardMessageRow.xib */,
 				81A493841E9B5E4B0010364A /* LeaderboardRow.swift */,
 				81A493851E9B5E4B0010364A /* LeaderboardRow.xib */,
 			);
@@ -964,6 +970,7 @@
 				816582E71EC74848002C9BA2 /* bd.jpg in Resources */,
 				81265E391ECEAA8400547013 /* leaderboard-black.png in Resources */,
 				22A0F4ED1E0D2A5500DD2F2D /* ContestRow.xib in Resources */,
+				8111BF8B1EE4628100FB8E5C /* LeaderboardMessageRow.xib in Resources */,
 				816582F71EC7486C002C9BA2 /* fdc_app_icon_image.pdf in Resources */,
 				81920AEB1EDFDD0B00A74B14 /* dekalb.jpg in Resources */,
 				81920AD01EDFDD0B00A74B14 /* event38.jpg in Resources */,
@@ -1128,6 +1135,7 @@
 				22A0F4E71E0D279C00DD2F2D /* CPViewModel.swift in Sources */,
 				81055D671E594F6600FF8DCD /* EventInterface.swift in Sources */,
 				81A493831E9B5C200010364A /* Leaderboard.swift in Sources */,
+				8111BF8D1EE4633900FB8E5C /* LeaderboardMessageRow.swift in Sources */,
 				81A493891E9DC2D80010364A /* UserScore.swift in Sources */,
 				22FA69471E133D24003CAFEF /* ExtUIImage.swift in Sources */,
 				814D99711ED2156B00E8DAC3 /* CPNavigationController.swift in Sources */,
