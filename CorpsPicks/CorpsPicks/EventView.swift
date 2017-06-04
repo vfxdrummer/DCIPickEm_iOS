@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class EventView: UITableViewController {
+class EventView: UITableViewController, NVActivityIndicatorViewable {
   
   var eventViewModel : EventViewModel? = nil
   
@@ -30,11 +31,7 @@ class EventView: UITableViewController {
     let eventNib = UINib(nibName: "EventRow", bundle: nil)
     eventTable.register(eventNib, forCellReuseIdentifier: "EventRow")
     
-    // Setup the ViewController Title
-//    self.title = Constants.contestTitle
-    //    self.restorationIdentifier = "contest"
-    
-//    eventViewModel?.loadEvents()
+    startAnimating(CGSize(width: 50, height: 50), message: "Loading Contest", type: .ballTrianglePath)
     
     self.refreshControl!.addTarget(self, action: #selector(EventView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
@@ -68,7 +65,7 @@ class EventView: UITableViewController {
    - parameter events:[Event]
    */
   func loadEvents(events:[Event]) {
-    
+    stopAnimating()
     eventTable.reloadData()
   }
   

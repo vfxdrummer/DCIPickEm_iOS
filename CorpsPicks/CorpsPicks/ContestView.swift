@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class ContestView: UITableViewController {
+class ContestView: UITableViewController, NVActivityIndicatorViewable {
   
   private var loaded : Bool = false
   var contestViewModel : ContestViewModel? = nil
@@ -83,6 +84,8 @@ class ContestView: UITableViewController {
     // load the lineup
     print("contestViewModel?.loadLineup()")
     contestViewModel?.loadLineup()
+    
+    startAnimating(CGSize(width: 50, height: 50), message: "Loading Contest", type: .ballTrianglePath)
   }
   
   private func setLeftBackButton() {
@@ -118,6 +121,7 @@ class ContestView: UITableViewController {
   func reload() {
     syncEventId()
     contestTable.reloadData()
+    stopAnimating()
   }
   
   //  MARK: Custom Methods
