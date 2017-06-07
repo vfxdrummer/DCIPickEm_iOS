@@ -60,6 +60,8 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
     self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(ContestRow.handleTap(_:)))
     self.scorePanGestureView.addGestureRecognizer(self.scoreGesture!)
     self.scorePanGestureView.addGestureRecognizer(self.tapGesture!)
+    
+    scoreEntryField.resignFirstResponder()
   }
   
   private func updateCorpsScore(scoreText:String) {
