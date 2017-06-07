@@ -38,6 +38,10 @@ class Corps : NSObject {
   // temp hack until we're using slug names
   func slugNameFromCorpsName(corpsName: String) -> String {
     switch(corpsName) {
+    case "North Star":
+      return "7thregiment"
+    case "The Muchachos":
+      return "7thregiment"
     case "7th Regiment":
       return "7thregiment"
     case "Blue Devils B":
