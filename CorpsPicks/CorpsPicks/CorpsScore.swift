@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CorpsScore : NSObject {
+public class CorpsScore {
   var corps : Corps = Corps(corpsDict: [:])
   var score : Score = Score(score: "")
   

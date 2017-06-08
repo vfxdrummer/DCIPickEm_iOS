@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Score : NSObject {
+public class Score {
   var pick : String = ""
   var lastScore : String = ""
   var lastScoreDate : String = ""

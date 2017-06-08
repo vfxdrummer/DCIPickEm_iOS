@@ -90,7 +90,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   
   private func setLeftBackButton() {
     let leftButton = UIBarButtonItem(title: "<--", style: .plain, target: self, action: Selector(("toEvent")))
-//    self.navigationItem.leftBarButtonItem  = leftButton
+    //    self.navigationItem.leftBarButtonItem  = leftButton
     self.navigationController?.navigationItem.leftBarButtonItem = leftButton
   }
   
@@ -127,7 +127,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   //  MARK: Custom Methods
   
   func updateCorpsScore(_ index:Int, pickScore:String) {
-//    print("updateCorpsScore(\(index), \(pickScore))")
+    //    print("updateCorpsScore(\(index), \(pickScore))")
     
     self.contestViewModel?.corpsScores[index].score.pick = pickScore
     self.contestViewModel?.sortCorpsScores(completion : { [unowned self] _ in
@@ -168,31 +168,31 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     }
   }
   
-//
-//  Uncomment this to put the reorder handle on the left
-//
-//  override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//    for view in cell.subviews {
-//      if NSStringFromClass(view.classForCoder) == "UITableViewCellReorderControl"
-//      {
-//        // Move reorder handle to the far left of the cell
-//        // Creates a new subview the size of the entire cell
-//        let movedReorderRect : CGRect = CGRect(x: 0.0, y: 0.0, width: view.frame.maxX, height: view.frame.maxY)
-//        // Adds the reorder control view to our new subview
-//        let movedReorderControl : UIView = UIView(frame: movedReorderRect)
-//        // Adds our new subview to the cell
-//        movedReorderControl.addSubview(view)
-//        // Adds our new subview to the cell
-//        cell.addSubview(movedReorderControl)
-//        // move it to the left
-//        let moveLeft : CGSize = CGSize(width: movedReorderControl.frame.size.width - view.frame.size.width, height: movedReorderControl.frame.size.height - view.frame.size.height)
-//        var transform : CGAffineTransform = CGAffineTransform.identity
-//        transform = transform.translatedBy(x: -moveLeft.width, y: -moveLeft.height)
-//        movedReorderControl.transform = transform
-//      }
-//    }
-//    cell.layoutIfNeeded()
-//  }
+  //
+  //  Uncomment this to put the reorder handle on the left
+  //
+  //  override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+  //    for view in cell.subviews {
+  //      if NSStringFromClass(view.classForCoder) == "UITableViewCellReorderControl"
+  //      {
+  //        // Move reorder handle to the far left of the cell
+  //        // Creates a new subview the size of the entire cell
+  //        let movedReorderRect : CGRect = CGRect(x: 0.0, y: 0.0, width: view.frame.maxX, height: view.frame.maxY)
+  //        // Adds the reorder control view to our new subview
+  //        let movedReorderControl : UIView = UIView(frame: movedReorderRect)
+  //        // Adds our new subview to the cell
+  //        movedReorderControl.addSubview(view)
+  //        // Adds our new subview to the cell
+  //        cell.addSubview(movedReorderControl)
+  //        // move it to the left
+  //        let moveLeft : CGSize = CGSize(width: movedReorderControl.frame.size.width - view.frame.size.width, height: movedReorderControl.frame.size.height - view.frame.size.height)
+  //        var transform : CGAffineTransform = CGAffineTransform.identity
+  //        transform = transform.translatedBy(x: -moveLeft.width, y: -moveLeft.height)
+  //        movedReorderControl.transform = transform
+  //      }
+  //    }
+  //    cell.layoutIfNeeded()
+  //  }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     switch (indexPath.section) {
@@ -237,12 +237,50 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   
   override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
     if (sourceIndexPath.row != destinationIndexPath.row) {
-      let score = contestViewModel!.corpsScores[destinationIndexPath.row].score.pick
-      contestViewModel!.corpsScores[destinationIndexPath.row].score.pick = contestViewModel!.corpsScores[sourceIndexPath.row].score.pick
-      contestViewModel!.corpsScores[sourceIndexPath.row].score.pick = score
+      print("sourceIndexPath.row \(sourceIndexPath.row), destinationIndexPath.row \(destinationIndexPath.row)")
+      let i = sourceIndexPath.row
+      let j = destinationIndexPath.row
       
-      swap(&contestViewModel!.corpsScores[sourceIndexPath.row], &contestViewModel!.corpsScores[destinationIndexPath.row])
-      contestViewModel!.setScorePicks()
+      // retrieve local copy of corpsScores
+      var corpsScores = contestViewModel!.corpsScores
+      
+      // capture picks for all corpsScores in order
+      var picks: [String] = []
+      for k in (0 ..< corpsScores.count) {
+        picks.append(corpsScores[k].score.pick)
+      }
+      
+      // shift corps placements based on whether source or detination is bigger
+      if (i < j) {
+        // 0 1 2 3 4
+        // 0 -> 4
+        // 1 2 3 4 0
+        let temp = contestViewModel!.corpsScores[i]
+        for k in (i..<j) {
+          corpsScores[k] = contestViewModel!.corpsScores[k+1]
+        }
+        corpsScores[j] = temp
+      } else {
+        // 0 1 2 3 4
+        // 4 -> 0
+        // 4 0 1 2 3
+        let temp = contestViewModel!.corpsScores[i]
+        for k in (j+1..<i+1) {
+          corpsScores[k] = contestViewModel!.corpsScores[k-1]
+        }
+        corpsScores[j] = temp
+      }
+      
+      // write back scores in order to new positions
+      let lowIndex = (i < j) ? i : j
+      let highIndex = (j > i) ? j : i
+      for k in (lowIndex..<highIndex+1) {
+        corpsScores[k].score.pick = picks[k]
+      }
+      
+      // overwrite new corpsScores object on ViewModel
+      contestViewModel!.corpsScores = corpsScores
+      
       self.contestTable.reloadData()
     }
   }
