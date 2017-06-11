@@ -12,6 +12,7 @@ class CPTabView: UITabBarController, UITabBarControllerDelegate {
   static var shared : CPTabView? = nil
   private var event : Event?
   private var eventId : String?
+  private var eventDate : Date?
   
   @IBOutlet weak var cpNavItem: UINavigationItem!
   @IBOutlet var cpTabBar: UITabBar?
@@ -49,6 +50,7 @@ class CPTabView: UITabBarController, UITabBarControllerDelegate {
     if cpTabBar?.items?[1] != nil {
       self.event = event
       self.eventId = event.id
+      self.eventDate = event.date
       
       syncEventForViewControllers()
       self.selectedIndex = 1
@@ -58,8 +60,9 @@ class CPTabView: UITabBarController, UITabBarControllerDelegate {
   private func syncEvent(viewController: UIViewController) {
     if let contestVC = viewController as? ContestView,
       self.event?.id != nil {
-      contestVC.eventId = self.event?.id
-      contestVC.eventName = self.event?.name
+      CurrentContestItems.sharedInstance.eventId = (self.event?.id)!
+      CurrentContestItems.sharedInstance.eventName = (self.event?.name)!
+      CurrentContestItems.sharedInstance.eventDate = self.event?.date
     }
     
     if let leaderboardVC = viewController as? LeaderboardView {

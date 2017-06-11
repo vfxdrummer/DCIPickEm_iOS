@@ -13,19 +13,11 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   
   private var loaded : Bool = false
   var contestViewModel : ContestViewModel? = nil
-  var eventId : String? = nil {
-    didSet {
-      if (self.loaded) {
-        reload()
-      }
-    }
+  var eventId : String {
+    return contestViewModel!.eventId
   }
-  var eventName : String? = nil {
-    didSet {
-      if (self.loaded) {
-        reload()
-      }
-    }
+  var eventName : String {
+    return contestViewModel!.eventName
   }
   
   @IBOutlet var contestTable: UITableView!
@@ -37,14 +29,9 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // if eventId is nil, use default
-    if (eventId == nil) {
-      self.eventId = StartupService.sharedInstance.defaultEventId
-    }
-    
     // Setup the ViewModel
     contestViewModel = ContestViewModel(viewController: self)
-    contestViewModel?.setup(eventId:eventId!)
+    contestViewModel?.setup()
     
     // Setup the Tableview Delegates
     contestTable.delegate = self
@@ -113,15 +100,10 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     super.didReceiveMemoryWarning()
   }
   
-  private func syncEventId() {
-    self.contestViewModel?.eventId = self.eventId
-  }
-  
   /**
    reload
    */
   func reload() {
-    syncEventId()
     contestTable.reloadData()
     stopAnimating()
   }

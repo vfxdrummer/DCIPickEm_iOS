@@ -69,8 +69,15 @@ class CurrentContestItems : NSObject {
     }
   }
   var locked : Bool {
-    return true
+    // locked is date / time is at or after eventId date
+    guard (eventDate != nil) else {
+      return false
+    }
+    return (Date() >= eventDate!) ? true : false
   }
+  var eventId : String = StartupService.sharedInstance.defaultEventId!
+  var eventName : String = "Event"
+  var eventDate : Date?
   var lineup : Lineup? {
     didSet {
       _ = delegates.map({

@@ -10,6 +10,19 @@ import UIKit
 
 class ContestViewModel: CPViewModel, CurrentContestProtocol {
   
+  private var lastEventId : String? = nil
+  public var eventId : String {
+    get {
+      return CurrentContestItems.sharedInstance.eventId
+    }
+  }
+  
+  public var eventName : String {
+    get {
+      return CurrentContestItems.sharedInstance.eventName
+    }
+  }
+  
   public var lineup : Lineup {
     get {
       return CurrentContestItems.sharedInstance.lineup!
@@ -19,20 +32,6 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   public var corpsScores : [CorpsScore] = [] {
     didSet {
       setScorePicks()
-    }
-  }
-  
-  private var lastEventId : String? = nil
-  public var eventId : String? = nil {
-    didSet {
-      guard(eventId != nil && lastEventId != nil) else {
-        return
-      }
-      if (eventId! != lastEventId!) {
-        print("corpsScores.eventId didSet, eventId=\(eventId!), lastEventId=\(lastEventId!) : loadLineup()")
-        loadLineup()
-      }
-      lastEventId = eventId
     }
   }
   
@@ -54,16 +53,15 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     }
   }
   
-  func setup(eventId:String) {
-    self.eventId = eventId
+  func setup() {
     CurrentContestItems.sharedInstance.delegate = self
   }
   
   func loadLineup() {
     guard (eventId != nil) else { return }
     print("ContestVM : loadLineup")
-    ContestInterface.getLineup(eventId:eventId!)
-    ContestInterface.getScorePicks(eventId:eventId!)
+    ContestInterface.getLineup(eventId:eventId)
+    ContestInterface.getScorePicks(eventId:eventId)
   }
   
   // setInitialScores
@@ -92,7 +90,7 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     guard (locked == false) else {
       return
     }
-    ContestInterface.setPlacementsOnly(eventId: self.eventId!, placementOnly:value)
+    ContestInterface.setPlacementsOnly(eventId: self.eventId, placementOnly:value)
     CurrentContestItems.sharedInstance.placementOnly = value
   }
   
@@ -103,14 +101,14 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     guard (locked == false) else {
       return
     }
-    ContestInterface.setScorePicks(eventId: self.eventId!, corpsScores:corpsScores)
+    ContestInterface.setScorePicks(eventId: self.eventId, corpsScores:corpsScores)
   }
   
   // setInitialScoresDismissed
   // the user made a decision on initial scores
   func setInitialScoresDismissed() {
     guard (self.eventId != nil) else { return }
-    ContestInterface.setInitialScoresDismissed(eventId: self.eventId!)
+    ContestInterface.setInitialScoresDismissed(eventId: self.eventId)
     CurrentContestItems.sharedInstance.initialScoresDismissed = true
   }
   
