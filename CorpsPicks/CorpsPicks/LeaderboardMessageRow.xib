@@ -14,14 +14,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="500" id="KGk-i7-Jjw" userLabel="Leaderboard Message Row" customClass="LeaderboardMessageRow" customModule="CorpsPicks" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="465" height="500"/>
+            <rect key="frame" x="0.0" y="0.0" width="465" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="465" height="500"/>
+                <rect key="frame" x="0.0" y="0.0" width="465" height="599.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gnn-L6-yzn" userLabel="Message View">
-                        <rect key="frame" x="0.0" y="0.0" width="465" height="450"/>
+                        <rect key="frame" x="0.0" y="0.0" width="465" height="599.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEADERBOARD UNAVAILABLE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSg-2E-DGN">
                                 <rect key="frame" x="83" y="35" width="300" height="25"/>
@@ -59,6 +59,13 @@
                                 <color key="textColor" red="0.2396304011" green="0.22376039619999999" blue="0.20692977309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cesario-gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="mCV-oW-q0J">
+                                <rect key="frame" x="190.5" y="416" width="85" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="TH7-Vs-HIH"/>
+                                    <constraint firstAttribute="width" secondItem="mCV-oW-q0J" secondAttribute="height" multiplier="574:777" id="byR-NP-i6E"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,10 +73,10 @@
                             <constraint firstItem="zSg-2E-DGN" firstAttribute="top" secondItem="Gnn-L6-yzn" secondAttribute="top" constant="35" id="8YZ-Ux-871"/>
                             <constraint firstItem="0YY-Yu-9c6" firstAttribute="top" secondItem="Ke2-Ai-kLa" secondAttribute="bottom" constant="-60" id="BYG-sv-lRC"/>
                             <constraint firstItem="0YY-Yu-9c6" firstAttribute="centerX" secondItem="Gnn-L6-yzn" secondAttribute="centerX" id="Ehp-bp-zNR"/>
-                            <constraint firstAttribute="height" constant="450" id="I3f-bg-RlO"/>
                             <constraint firstItem="0YY-Yu-9c6" firstAttribute="top" secondItem="a39-gr-3bS" secondAttribute="bottom" constant="-100" id="RLL-rB-3HR"/>
                             <constraint firstItem="Ke2-Ai-kLa" firstAttribute="top" secondItem="Gnn-L6-yzn" secondAttribute="top" constant="50" id="U18-u3-oox"/>
                             <constraint firstItem="Ke2-Ai-kLa" firstAttribute="centerX" secondItem="Gnn-L6-yzn" secondAttribute="centerX" id="XlC-zb-f0W"/>
+                            <constraint firstItem="mCV-oW-q0J" firstAttribute="top" secondItem="a39-gr-3bS" secondAttribute="bottom" constant="15" id="bGV-8V-p8V"/>
                             <constraint firstAttribute="width" constant="465" id="dmn-Dv-VuE"/>
                             <constraint firstItem="zSg-2E-DGN" firstAttribute="centerX" secondItem="Gnn-L6-yzn" secondAttribute="centerX" id="oBd-n4-vgR"/>
                         </constraints>
@@ -78,7 +85,9 @@
                 <color key="backgroundColor" red="0.29458792099999997" green="0.29458792099999997" blue="0.29458792099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="Gnn-L6-yzn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="B81-9K-Fzu"/>
+                    <constraint firstItem="mCV-oW-q0J" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="G8B-D4-vAJ"/>
                     <constraint firstItem="Gnn-L6-yzn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="aP9-n2-ESf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Gnn-L6-yzn" secondAttribute="bottom" constant="-8" id="u16-BP-qXG"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,6 +96,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="cesario-gold.png" width="574" height="777"/>
         <image name="fdc_logo" width="612" height="792"/>
     </resources>
 </document>
