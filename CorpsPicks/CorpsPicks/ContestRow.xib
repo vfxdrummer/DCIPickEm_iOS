@@ -37,7 +37,7 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="98.70" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="Corps Score">
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="98.70" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="Corps Score">
                         <rect key="frame" x="247" y="25" width="200" height="54"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="54" id="Ebs-pS-M3E"/>
@@ -47,7 +47,7 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="98.70" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" background="bluedevils1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-vb-qPA" userLabel="Score Entry">
+                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="98.70" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" background="bluedevils1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-vb-qPA" userLabel="Score Entry">
                         <rect key="frame" x="377" y="35.5" width="70" height="35"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50957306338028174" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -58,7 +58,7 @@
                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="21"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <view opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
+                    <view hidden="YES" opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-EP-uKl" userLabel="GestureView">
                         <rect key="frame" x="8" y="70.5" width="449" height="35"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Go-FB-eCa">
