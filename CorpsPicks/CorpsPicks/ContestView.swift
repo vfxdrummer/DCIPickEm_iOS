@@ -229,7 +229,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   
   override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
     if (sourceIndexPath.row != destinationIndexPath.row) {
-      print("sourceIndexPath.row \(sourceIndexPath.row), destinationIndexPath.row \(destinationIndexPath.row)")
+//      print("sourceIndexPath.row \(sourceIndexPath.row), destinationIndexPath.row \(destinationIndexPath.row)")
       let i = sourceIndexPath.row
       let j = destinationIndexPath.row
       
