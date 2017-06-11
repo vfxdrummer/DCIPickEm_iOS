@@ -296,6 +296,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   
   
   // Mark - Initial scores Alert
+  
   func initialScoresAlert() {
     let title = "Set Initial Placements?"
     let message = "Press yes to override score picks with default values.\n\nWould you like to continue?"
@@ -320,10 +321,37 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     initialScoresAlert()
   }
   
+  // Mark - set placements only Alert
+  
+  func initialScoresAlert(placementsOnly: Bool) {
+    var title = "Set Placements Only?"
+    var message = "Enable this switch to only be judged based on placements. You can reactivate scores at any time. Continue?"
+    if (!placementsOnly) {
+      title = "Set Scores & Placements?"
+      message = "Disable switch to be judged on both scores and placements. Continue?"
+    }
+    
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    
+    let actionYes = UIAlertAction(title: "Yes", style: .default) { [unowned self] (action:UIAlertAction) in
+          self.contestViewModel!.setOptionSwitch(value: placementsOnly)
+    }
+    
+    
+    let actionNo = UIAlertAction(title: "No", style: .default) { (action:UIAlertAction) in
+      self.contestViewModel!.setOptionSwitch(value: !placementsOnly)
+    }
+    
+    alertController.addAction(actionYes)
+    alertController.addAction(actionNo)
+    self.present(alertController, animated: true, completion:nil)
+  }
+  
   // Mark - set placements only switch
   
   func contestOptionSwitchChanged(value: Bool) {
-    self.contestViewModel!.setOptionSwitch(value: value)
+//    self.contestViewModel!.setOptionSwitch(value: value)
+    initialScoresAlert(placementsOnly: value)
   }
   
   // Mark - Leaderboard button
