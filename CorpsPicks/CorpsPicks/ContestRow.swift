@@ -78,7 +78,16 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
   // set visibility accouding to locked and placementOnly
   func updateVisibility() {
     switch (self.locked) {
+
     case true:
+      // TODO : animate on and off
+//      scorePanGestureView.alpha = 1.0
+//      UIView.animate(withDuration: 1.0, animations: {
+//        self.scorePanGestureView.alpha = 0
+//      }) { (finished) in
+//        self.scorePanGestureView.isHidden = finished
+//      }
+      
       scorePanGestureView.isHidden =  true
       scoreEntryField.isHidden =      self.placementOnly
       scoreEntryField.isEnabled =     false
