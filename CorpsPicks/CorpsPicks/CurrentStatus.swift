@@ -89,7 +89,7 @@ class CurrentContestItems : NSObject {
       })
     }
   }
-  var placementOnly : Bool = false {
+  var placementOnly : Bool = true {
     didSet {
       _ = delegates.map({
         $0.updatePlacementOnly(placementOnly:placementOnly)

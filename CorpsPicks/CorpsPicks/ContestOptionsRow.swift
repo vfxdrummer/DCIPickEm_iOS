@@ -19,6 +19,13 @@ class ContestOptionsRow: UITableViewCell {
     super.awakeFromNib()
   }
   
+  /**
+   load
+   */
+  func load(_ placementOnly: Bool) {
+    contestOptionsSwitch.isOn = placementOnly
+  }
+  
   @IBAction func switchValueChanged(_ sender: UISwitch) {
     contestView?.contestOptionSwitchChanged(value: sender.isOn)
   }

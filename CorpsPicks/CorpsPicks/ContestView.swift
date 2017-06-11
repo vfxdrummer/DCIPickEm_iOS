@@ -205,6 +205,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
         return cell
       default:
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContestOptionsRow") as! ContestOptionsRow
+        cell.load((contestViewModel?.placementOnly)!)
         cell.contestView = self
         return cell
       }
