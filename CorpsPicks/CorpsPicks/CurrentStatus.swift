@@ -68,6 +68,9 @@ class CurrentContestItems : NSObject {
       delegates.append(delegate!)
     }
   }
+  var locked : Bool {
+    return false
+  }
   var lineup : Lineup? {
     didSet {
       _ = delegates.map({

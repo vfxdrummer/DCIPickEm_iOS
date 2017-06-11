@@ -31,6 +31,12 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     }
   }
   
+  var locked : Bool {
+    get {
+      return CurrentContestItems.sharedInstance.locked
+    }
+  }
+  
   var initialScoresDismissed : Bool {
     get {
       return CurrentContestItems.sharedInstance.initialScoresDismissed
