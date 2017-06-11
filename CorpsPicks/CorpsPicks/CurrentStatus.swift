@@ -69,7 +69,7 @@ class CurrentContestItems : NSObject {
     }
   }
   var locked : Bool {
-    return false
+    return true
   }
   var lineup : Lineup? {
     didSet {

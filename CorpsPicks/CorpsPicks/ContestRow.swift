@@ -17,6 +17,8 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
   var tapGesture : UITapGestureRecognizer? = nil
   var scoreDirection : Bool = true
   var index : Int = 0
+  var placementOnly : Bool = true
+  var locked : Bool = false
   weak var contestView: ContestView?
   
   @IBOutlet var corpsName: UILabel!
@@ -40,13 +42,15 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
    viewModel is not assigned here and is assined in the ArtistView
    - parameter album: Album
    */
-  func load(_ index:Int, corpsScore:CorpsScore, placementOnly: Bool) {
+  func load(_ index:Int, corpsScore:CorpsScore, placementOnly: Bool, locked: Bool) {
     self.index = index
     
     self.corpsName.text = corpsScore.corps.name
     self.corpsScore.text = corpsScore.score.pick
     self.scoreEntryField.text = corpsScore.score.pick
     self.corpsImage.fadeIn(corpsScore.corps.imageFileName)
+    self.placementOnly = placementOnly
+    self.locked = locked
     
     // setup scoreEntryField
     self.scoreEntryField.delegate = self
@@ -61,7 +65,7 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
     self.scorePanGestureView.addGestureRecognizer(self.scoreGesture!)
     self.scorePanGestureView.addGestureRecognizer(self.tapGesture!)
     
-    updatePlacementOnly(placementOnly: placementOnly)
+    updateVisibility()
     
     scoreEntryField.resignFirstResponder()
   }
@@ -71,9 +75,20 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
       ) }
   }
   
-  func updatePlacementOnly(placementOnly: Bool) {
-    scorePanGestureView.isHidden =  placementOnly
-    scoreEntryField.isHidden =      placementOnly
+  // set visibility accouding to locked and placementOnly
+  func updateVisibility() {
+    switch (self.locked) {
+    case true:
+      scorePanGestureView.isHidden =  true
+      scoreEntryField.isHidden =      self.placementOnly
+      scoreEntryField.isEnabled =     false
+      corpsScore.isHidden =           true
+    case false:
+      scorePanGestureView.isHidden =  self.placementOnly
+      scoreEntryField.isHidden =      self.placementOnly
+      scoreEntryField.isEnabled =     true
+      corpsScore.isHidden =           true
+    }
   }
   
   @IBAction func handlePan(_ recognizer:UIPanGestureRecognizer) {

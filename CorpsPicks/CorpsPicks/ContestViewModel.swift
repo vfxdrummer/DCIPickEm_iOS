@@ -69,6 +69,9 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   // setInitialScores
   // set corpsPicks using initial scores
   func setInitialScores() {
+    guard (locked == false) else {
+      return
+    }
     // update corpsScores using initial score
     let newCorpsScores = self.corpsScores
     for corpsScore in newCorpsScores {
@@ -86,6 +89,9 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   // setOptionSwitch
   // value of 'use placements only'
   func setOptionSwitch(value: Bool) {
+    guard (locked == false) else {
+      return
+    }
     ContestInterface.setPlacementsOnly(eventId: self.eventId!, placementOnly:value)
     CurrentContestItems.sharedInstance.placementOnly = value
   }
@@ -94,6 +100,9 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   // update score picks in FB DB
   func setScorePicks() {
     guard (self.eventId != nil) else { return }
+    guard (locked == false) else {
+      return
+    }
     ContestInterface.setScorePicks(eventId: self.eventId!, corpsScores:corpsScores)
   }
   

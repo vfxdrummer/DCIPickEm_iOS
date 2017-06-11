@@ -62,7 +62,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     contestTable.contentInset = adjustForTabbarInsets
     contestTable.scrollIndicatorInsets = adjustForTabbarInsets
     
-    contestTable.setEditing(true, animated: true)
+    contestTable.setEditing(!contestViewModel!.locked, animated: true)
     
     // Left NavBar Button
     self.setLeftBackButton()
@@ -154,7 +154,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     switch (section) {
     case 0:
-      return 2
+      return (contestViewModel!.locked == true) ? 0 : 2
     default:
       return contestViewModel!.corpsScores.count
     }
@@ -212,7 +212,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     default:
       let cell = tableView.dequeueReusableCell(withIdentifier: "ContestRow") as! ContestRow
       cell.contestView = self
-      cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row], placementOnly: (contestViewModel?.placementOnly)!)
+      cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row], placementOnly: (contestViewModel?.placementOnly)!, locked: contestViewModel!.locked)
       cell.layoutIfNeeded()
       return cell
     }
@@ -318,6 +318,9 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   // Mark - Initial scores button
   
   func pressedInitialScores() {
+    guard (contestViewModel!.locked == false) else {
+      return
+    }
     initialScoresAlert()
   }
   
@@ -350,7 +353,9 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   // Mark - set placements only switch
   
   func contestOptionSwitchChanged(value: Bool) {
-//    self.contestViewModel!.setOptionSwitch(value: value)
+    guard (contestViewModel!.locked == false) else {
+      return
+    }
     initialScoresAlert(placementsOnly: value)
   }
   
