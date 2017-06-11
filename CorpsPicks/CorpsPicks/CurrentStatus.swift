@@ -76,7 +76,7 @@ class CurrentContestItems : NSObject {
     return (Date() >= eventDate!) ? true : false
   }
   var eventId : String = StartupService.sharedInstance.defaultEventId!
-  var eventName : String = "Event"
+  var eventName : String = "CONTEST"
   var eventDate : Date?
   var lineup : Lineup? {
     didSet {

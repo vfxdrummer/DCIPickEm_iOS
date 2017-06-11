@@ -79,7 +79,7 @@ class Event : NSObject {
     let characters = dateString.characters.map { String($0) }
     let dateFormatString = "20\(characters[0])\(characters[1])-\(characters[2])\(characters[3])-\(characters[4])\(characters[5]) \(hour):\(minutes):00"
     print("\(dateFormatString)")
-    var date: Date? = dateFormatter.date(from: dateFormatString)
+    let date: Date? = dateFormatter.date(from: dateFormatString)
     
     return date!
   }

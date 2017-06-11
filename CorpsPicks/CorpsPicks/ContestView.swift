@@ -1,3 +1,4 @@
+
 //
 //  ContestView.swift
 //  CorpsPicks
@@ -68,7 +69,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    self.navigationController?.navigationBar.topItem?.title = (eventName != nil) ? eventName : "CONTEST"
+    self.navigationController?.navigationBar.topItem?.title = eventName
     
     // load the lineup
     print("contestViewModel?.loadLineup()")

@@ -1,3 +1,4 @@
+
 //
 //  ContestViewModel.swift
 //  CorpsPicks
@@ -58,7 +59,6 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   }
   
   func loadLineup() {
-    guard (eventId != nil) else { return }
     print("ContestVM : loadLineup")
     ContestInterface.getLineup(eventId:eventId)
     ContestInterface.getScorePicks(eventId:eventId)
@@ -97,7 +97,6 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   // setInitialScoresDismissed
   // update score picks in FB DB
   func setScorePicks() {
-    guard (self.eventId != nil) else { return }
     guard (locked == false) else {
       return
     }
@@ -107,7 +106,6 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   // setInitialScoresDismissed
   // the user made a decision on initial scores
   func setInitialScoresDismissed() {
-    guard (self.eventId != nil) else { return }
     ContestInterface.setInitialScoresDismissed(eventId: self.eventId)
     CurrentContestItems.sharedInstance.initialScoresDismissed = true
   }
@@ -124,8 +122,6 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   // CurrentContestProtocol
   
   func updateLineup(lineup:Lineup) {
-    if let view = self.vc as? ContestView {
-    }
   }
   
   func updateScores(corpsScores:[CorpsScore]) {
