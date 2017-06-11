@@ -28,38 +28,53 @@
                         <rect key="frame" x="0.0" y="-11" width="465" height="128"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvW-Y0-HdK">
-                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="115" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Placements Only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDQ-6u-QMb">
-                                <rect key="frame" x="97.5" y="0.0" width="220" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="6Ba-cv-7vf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FjA-DI-2MH" userLabel="optionsSwitchView">
-                                <rect key="frame" x="317.5" y="0.0" width="50" height="128"/>
+                                <rect key="frame" x="115" y="0.0" width="25" height="128"/>
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hg5-f3-ZeX">
-                                        <rect key="frame" x="0.5" y="48.5" width="51" height="31"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjr-PY-Er3" customClass="M13Checkbox" customModule="M13Checkbox">
+                                        <rect key="frame" x="0.0" y="51.5" width="25" height="25"/>
+                                        <color key="backgroundColor" red="0.21609130501747131" green="0.20016086101531982" blue="0.18749937415122986" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="DyC-xX-jp4"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="secondaryTintColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="secondaryCheckmarkTintColor">
+                                                <color key="value" white="0.32175039220000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="_IBCheckState" value="checked"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="switchValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="aDo-n6-Uxg"/>
+                                            <action selector="placementOnlyCheckBoxValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="fVD-Uw-fIJ"/>
                                         </connections>
-                                    </switch>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="hg5-f3-ZeX" firstAttribute="centerX" secondItem="FjA-DI-2MH" secondAttribute="centerX" id="bcM-vy-Lu7"/>
-                                    <constraint firstItem="hg5-f3-ZeX" firstAttribute="centerY" secondItem="FjA-DI-2MH" secondAttribute="centerY" id="itf-Vg-QVx"/>
-                                    <constraint firstAttribute="width" constant="50" id="pBU-qF-GYx"/>
+                                    <constraint firstItem="fjr-PY-Er3" firstAttribute="centerY" secondItem="FjA-DI-2MH" secondAttribute="centerY" id="fjx-ko-ie2"/>
+                                    <constraint firstAttribute="trailing" secondItem="fjr-PY-Er3" secondAttribute="trailing" id="nWv-cx-YPH"/>
+                                    <constraint firstAttribute="width" constant="25" id="pBU-qF-GYx"/>
+                                    <constraint firstItem="fjr-PY-Er3" firstAttribute="leading" secondItem="FjA-DI-2MH" secondAttribute="leading" id="xeW-XM-EXd"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET PLACEMENTS ONLY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDQ-6u-QMb">
+                                <rect key="frame" x="140" y="0.0" width="210" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="6Ba-cv-7vf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHc-DS-YnB">
-                                <rect key="frame" x="367.5" y="0.0" width="97.5" height="128"/>
+                                <rect key="frame" x="350" y="0.0" width="115" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -80,7 +95,7 @@
             <color key="backgroundColor" red="0.23963040113449097" green="0.22376039624214172" blue="0.2069297730922699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
             <connections>
-                <outlet property="contestOptionsSwitch" destination="hg5-f3-ZeX" id="3zX-Ml-FAP"/>
+                <outlet property="placementsOnlyCheckBox" destination="fjr-PY-Er3" id="xGO-U1-5z7"/>
             </connections>
             <point key="canvasLocation" x="512.5" y="437"/>
         </tableViewCell>
