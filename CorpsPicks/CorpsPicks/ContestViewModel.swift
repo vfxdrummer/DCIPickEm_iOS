@@ -16,7 +16,12 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     }
   }
 
-  public var corpsScores : [CorpsScore] = []
+  public var corpsScores : [CorpsScore] = [] {
+    didSet {
+      setScorePicks()
+    }
+  }
+  
   private var lastEventId : String? = nil
   public var eventId : String? = nil {
     didSet {
