@@ -9,6 +9,9 @@ def myPods
   # activity indicator
   pod 'NVActivityIndicatorView'
 
+  # M13 checkbox
+  pod 'M13Checkbox'  
+  
   # JSON / Networking
   source 'https://github.com/CocoaPods/Specs.git'
   use_frameworks!
