@@ -45,6 +45,8 @@
 		8111BF8D1EE4633900FB8E5C /* LeaderboardMessageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8111BF8C1EE4633900FB8E5C /* LeaderboardMessageRow.swift */; };
 		811B9B401E61042D0084E8AB /* CorpsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B9B3F1E61042D0084E8AB /* CorpsInterface.swift */; };
 		811B9B421E614BF80084E8AB /* StartupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B9B411E614BF80084E8AB /* StartupService.swift */; };
+		811F638B1EEA6775009AA6B2 /* ContestOptionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811F63891EEA6775009AA6B2 /* ContestOptionsRow.swift */; };
+		811F638C1EEA6775009AA6B2 /* ContestOptionsRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811F638A1EEA6775009AA6B2 /* ContestOptionsRow.xib */; };
 		81265E351ECEAA8400547013 /* contests-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 81265E2F1ECEAA8400547013 /* contests-black.png */; };
 		81265E361ECEAA8400547013 /* contests-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 81265E301ECEAA8400547013 /* contests-white.png */; };
 		81265E371ECEAA8400547013 /* events-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 81265E311ECEAA8400547013 /* events-black.png */; };
@@ -226,6 +228,18 @@
 		8111BF8C1EE4633900FB8E5C /* LeaderboardMessageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardMessageRow.swift; sourceTree = "<group>"; };
 		811B9B3F1E61042D0084E8AB /* CorpsInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorpsInterface.swift; sourceTree = "<group>"; };
 		811B9B411E614BF80084E8AB /* StartupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupService.swift; sourceTree = "<group>"; };
+		811F63891EEA6775009AA6B2 /* ContestOptionsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestOptionsRow.swift; sourceTree = "<group>"; };
+		811F638A1EEA6775009AA6B2 /* ContestOptionsRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContestOptionsRow.xib; sourceTree = "<group>"; };
+		811F638E1EEA7135009AA6B2 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../toneitup-IOS/ToneItUp/ToneItUp/Fonts/OpenSans/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		811F638F1EEA7135009AA6B2 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-BoldItalic.ttf"; path = "../../../toneitup-IOS/ToneItUp/ToneItUp/Fonts/OpenSans/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		811F63901EEA7135009AA6B2 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBold.ttf"; path = "../../../toneitup-IOS/ToneItUp/ToneItUp/Fonts/OpenSans/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		811F63911EEA7135009AA6B2 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../../../toneitup-IOS/ToneItUp/ToneItUp/Fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		811F63921EEA7135009AA6B2 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "../../../toneitup-IOS/ToneItUp/ToneItUp/Fonts/OpenSans/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		811F63931EEA7135009AA6B2 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "../../../toneitup-IOS/ToneItUp/ToneItUp/Fonts/OpenSans/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		811F63941EEA7135009AA6B2 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-LightItalic.ttf"; path = "../../../toneitup-IOS/ToneItUp/ToneItUp/Fonts/OpenSans/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		811F63951EEA7135009AA6B2 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../toneitup-IOS/ToneItUp/ToneItUp/Fonts/OpenSans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		811F63961EEA7135009AA6B2 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "../../../toneitup-IOS/ToneItUp/ToneItUp/Fonts/OpenSans/OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		811F63971EEA7135009AA6B2 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiboldItalic.ttf"; path = "../../../toneitup-IOS/ToneItUp/ToneItUp/Fonts/OpenSans/OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		81265E2F1ECEAA8400547013 /* contests-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contests-black.png"; path = "resources/images/tabbar/contests-black.png"; sourceTree = "<group>"; };
 		81265E301ECEAA8400547013 /* contests-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contests-white.png"; path = "resources/images/tabbar/contests-white.png"; sourceTree = "<group>"; };
 		81265E311ECEAA8400547013 /* events-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "events-black.png"; path = "resources/images/tabbar/events-black.png"; sourceTree = "<group>"; };
@@ -450,6 +464,8 @@
 				22A0F4EA1E0D2A5500DD2F2D /* ContestRow.xib */,
 				810133441ED9A70C00E33381 /* ContestButtonRow.swift */,
 				810133451ED9A70C00E33381 /* ContestButtonRow.xib */,
+				811F63891EEA6775009AA6B2 /* ContestOptionsRow.swift */,
+				811F638A1EEA6775009AA6B2 /* ContestOptionsRow.xib */,
 				812F5BB61E5A29A6009B068C /* EventRow.swift */,
 				812F5BB51E5A29A6009B068C /* EventRow.xib */,
 				8111BF8C1EE4633900FB8E5C /* LeaderboardMessageRow.swift */,
@@ -523,6 +539,7 @@
 		22A0F4CF1E0D16A300DD2F2D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				811F638D1EEA7124009AA6B2 /* Fonts */,
 				22FA69441E133D0B003CAFEF /* Extensions */,
 				22A0F4EF1E0D36D900DD2F2D /* Constants.swift */,
 			);
@@ -561,6 +578,23 @@
 				81265E3B1ECEB9B700547013 /* ExtUIViewController.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		811F638D1EEA7124009AA6B2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				811F638E1EEA7135009AA6B2 /* OpenSans-Bold.ttf */,
+				811F638F1EEA7135009AA6B2 /* OpenSans-BoldItalic.ttf */,
+				811F63901EEA7135009AA6B2 /* OpenSans-ExtraBold.ttf */,
+				811F63911EEA7135009AA6B2 /* OpenSans-ExtraBoldItalic.ttf */,
+				811F63921EEA7135009AA6B2 /* OpenSans-Italic.ttf */,
+				811F63931EEA7135009AA6B2 /* OpenSans-Light.ttf */,
+				811F63941EEA7135009AA6B2 /* OpenSans-LightItalic.ttf */,
+				811F63951EEA7135009AA6B2 /* OpenSans-Regular.ttf */,
+				811F63961EEA7135009AA6B2 /* OpenSans-Semibold.ttf */,
+				811F63971EEA7135009AA6B2 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		816582D91EC7477E002C9BA2 /* icon */ = {
@@ -923,6 +957,7 @@
 				817197DA1EC81DD600415BAC /* blueknights1.jpg in Resources */,
 				81920ADB1EDFDD0B00A74B14 /* event27.jpg in Resources */,
 				817197DB1EC81DD600415BAC /* bluestars1.jpg in Resources */,
+				811F638C1EEA6775009AA6B2 /* ContestOptionsRow.xib in Resources */,
 				81920AD51EDFDD0B00A74B14 /* event33.jpg in Resources */,
 				817197DC1EC81DD600415BAC /* bostoncrusaders1.jpg in Resources */,
 				817197DD1EC81DD600415BAC /* cadets1.jpg in Resources */,
@@ -1133,6 +1168,7 @@
 				22FA694C1E145C90003CAFEF /* Score.swift in Sources */,
 				812F5BB21E5A255D009B068C /* EventViewModel.swift in Sources */,
 				22A0F4E71E0D279C00DD2F2D /* CPViewModel.swift in Sources */,
+				811F638B1EEA6775009AA6B2 /* ContestOptionsRow.swift in Sources */,
 				81055D671E594F6600FF8DCD /* EventInterface.swift in Sources */,
 				81A493831E9B5C200010364A /* Leaderboard.swift in Sources */,
 				8111BF8D1EE4633900FB8E5C /* LeaderboardMessageRow.swift in Sources */,

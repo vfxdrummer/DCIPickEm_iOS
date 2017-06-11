@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "77B5B240CF940F2F3B5DA0F77B8A5F514BFD8727",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "77B5B240CF940F2F3B5DA0F77B8A5F514BFD8727" : 9223372036854775807,
+    "71192E6EF86D22160EFAA3922C17C4D482DB6F54" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "39B02F7E-8CBE-481A-88A2-0AD63CE036A4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "77B5B240CF940F2F3B5DA0F77B8A5F514BFD8727" : "DCIPickEm_iOS\/",
+    "71192E6EF86D22160EFAA3922C17C4D482DB6F54" : "toneitup-IOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CorpsPicks",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CorpsPicks.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/leftfieldlabs\/toneitup-IOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "71192E6EF86D22160EFAA3922C17C4D482DB6F54"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vfxdrummer\/DCIPickEm_iOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77B5B240CF940F2F3B5DA0F77B8A5F514BFD8727"
+    }
+  ]
+}

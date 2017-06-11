@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" rowHeight="106" id="KGk-i7-Jjw" userLabel="Contest Options Row" customClass="ContestOptionsRow" customModule="CorpsPicks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="465" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="465" height="105.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TcG-PV-jGv">
+                        <rect key="frame" x="0.0" y="-11" width="465" height="128"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvW-Y0-HdK">
+                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Placements Only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDQ-6u-QMb">
+                                <rect key="frame" x="97.5" y="0.0" width="220" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="6Ba-cv-7vf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FjA-DI-2MH" userLabel="optionsSwitchView">
+                                <rect key="frame" x="317.5" y="0.0" width="50" height="128"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hg5-f3-ZeX">
+                                        <rect key="frame" x="0.5" y="48.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="aDo-n6-Uxg"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hg5-f3-ZeX" firstAttribute="centerX" secondItem="FjA-DI-2MH" secondAttribute="centerX" id="bcM-vy-Lu7"/>
+                                    <constraint firstItem="hg5-f3-ZeX" firstAttribute="centerY" secondItem="FjA-DI-2MH" secondAttribute="centerY" id="itf-Vg-QVx"/>
+                                    <constraint firstAttribute="width" constant="50" id="pBU-qF-GYx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHc-DS-YnB">
+                                <rect key="frame" x="367.5" y="0.0" width="97.5" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="bHc-DS-YnB" firstAttribute="width" secondItem="cvW-Y0-HdK" secondAttribute="width" id="FpX-lA-0QK"/>
+                            <constraint firstAttribute="bottom" secondItem="FjA-DI-2MH" secondAttribute="bottom" id="LV4-pf-3E1"/>
+                            <constraint firstItem="FjA-DI-2MH" firstAttribute="top" secondItem="TcG-PV-jGv" secondAttribute="top" id="ek8-pR-Sqc"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="TcG-PV-jGv" secondAttribute="trailing" constant="-8" id="Bpd-Lp-ipt"/>
+                    <constraint firstItem="TcG-PV-jGv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LdH-Rq-w7n"/>
+                    <constraint firstItem="TcG-PV-jGv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="S9v-ev-ht5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.23963040113449097" green="0.22376039624214172" blue="0.2069297730922699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+            <connections>
+                <outlet property="contestOptionsSwitch" destination="hg5-f3-ZeX" id="3zX-Ml-FAP"/>
+            </connections>
+            <point key="canvasLocation" x="512.5" y="437"/>
+        </tableViewCell>
+    </objects>
+</document>

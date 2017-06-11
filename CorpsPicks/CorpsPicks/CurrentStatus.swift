@@ -57,6 +57,7 @@ protocol CurrentContestProtocol {
   func updateLineup(lineup:Lineup)
   func updateScores(corpsScores:[CorpsScore])
   func updateInitialScoresDismissed(initialScoresDismissed:Bool)
+  func updatePlacementOnly(placementOnly:Bool)
 }
 class CurrentContestItems : NSObject {
   static let sharedInstance = CurrentContestItems()
@@ -85,6 +86,13 @@ class CurrentContestItems : NSObject {
     didSet {
       _ = delegates.map({
         $0.updateInitialScoresDismissed(initialScoresDismissed:initialScoresDismissed)
+      })
+    }
+  }
+  var placementOnly : Bool = false {
+    didSet {
+      _ = delegates.map({
+        $0.updatePlacementOnly(placementOnly:placementOnly)
       })
     }
   }

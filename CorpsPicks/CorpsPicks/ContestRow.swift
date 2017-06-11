@@ -40,7 +40,7 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
    viewModel is not assigned here and is assined in the ArtistView
    - parameter album: Album
    */
-  func load(_ index:Int, corpsScore:CorpsScore) {
+  func load(_ index:Int, corpsScore:CorpsScore, placementOnly: Bool) {
     self.index = index
     
     self.corpsName.text = corpsScore.corps.name
@@ -61,12 +61,19 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
     self.scorePanGestureView.addGestureRecognizer(self.scoreGesture!)
     self.scorePanGestureView.addGestureRecognizer(self.tapGesture!)
     
+    updatePlacementOnly(placementOnly: placementOnly)
+    
     scoreEntryField.resignFirstResponder()
   }
   
   private func updateCorpsScore(scoreText:String) {
     if (contestView != nil) { contestView!.updateCorpsScore(self.index, pickScore: scoreText
       ) }
+  }
+  
+  func updatePlacementOnly(placementOnly: Bool) {
+    scorePanGestureView.isHidden =  placementOnly
+    scoreEntryField.isHidden =      placementOnly
   }
   
   @IBAction func handlePan(_ recognizer:UIPanGestureRecognizer) {

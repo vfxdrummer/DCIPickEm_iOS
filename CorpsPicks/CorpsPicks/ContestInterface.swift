@@ -153,6 +153,12 @@ class ContestInterface: NSObject {
                       CurrentContestItems.sharedInstance.initialScoresDismissed = true
                     }
                     
+                    // check for initialScoresDismissed
+                    if snapshot.hasChild("placementOnly") {
+                      ref.child("picks").child(eventId).child(userId).child("metadata").child("placementOnly").observeSingleEvent(of: .value, with: { (snapshot) in
+                        CurrentContestItems.sharedInstance.placementOnly = (snapshot.value as? Bool)!
+                      })
+                    }
                   }) { (error) in
                     // observe metadata
                     print(error.localizedDescription)
@@ -207,7 +213,9 @@ class ContestInterface: NSObject {
     }
   }
   
-  class func setInitialScoresDismissed(eventId:String) {
+  // getEventMetadataRef
+  // utility to get metadata ref
+  class func getEventMetadataRef(eventId:String) -> DatabaseReference {
     // move this to singleton, set on Auth
     let userId = CurrentUser.sharedInstance.uid
     
@@ -216,8 +224,23 @@ class ContestInterface: NSObject {
     let eventRef = picksRef.child("/\(eventId)")
     let userRef = eventRef.child("/\(userId)")
     let metadataRef = userRef.child("/metadata")
+    return metadataRef
+  }
+  
+  class func setInitialScoresDismissed(eventId:String) {
+    let metadataRef = ContestInterface.getEventMetadataRef(eventId: eventId)
     metadataRef.child("initialScoresDismissed").setValue(true)
   }
+  
+  class func setPlacementsOnly(eventId: String, placementOnly: Bool) {
+    let metadataRef = ContestInterface.getEventMetadataRef(eventId: eventId)
+    metadataRef.child("placementOnly").setValue(placementOnly)
+  }
+  
+//  class func getPlacementsOnly(eventId: String) -> Bool {
+//    let metadataRef = ContestInterface.getEventMetadataRef(eventId: eventId)
+//    metadataRef.child("placementOnly")
+//  }
   
   class func checkScoreString(score:String) -> String {
     // ensure they are digits

@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ContestButtonRow: UITableViewCell, UITextFieldDelegate {
+class ContestButtonRow: UITableViewCell {
   
   weak var contestView: ContestView?
     

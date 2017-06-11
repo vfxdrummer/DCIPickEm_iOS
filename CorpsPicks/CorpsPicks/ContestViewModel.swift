@@ -37,6 +37,12 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     }
   }
   
+  var placementOnly : Bool {
+    get {
+      return CurrentContestItems.sharedInstance.placementOnly
+    }
+  }
+  
   func setup(eventId:String) {
     self.eventId = eventId
     CurrentContestItems.sharedInstance.delegate = self
@@ -66,6 +72,12 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     })
   }
   
+  // setOptionSwitch
+  // value of 'use placements only'
+  func setOptionSwitch(value: Bool) {
+    ContestInterface.setPlacementsOnly(eventId: self.eventId!, placementOnly:value)
+    CurrentContestItems.sharedInstance.placementOnly = value
+  }
   
   // setInitialScoresDismissed
   // update score picks in FB DB
@@ -106,6 +118,12 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   }
   
   func updateInitialScoresDismissed(initialScoresDismissed:Bool) {
+    if let view = self.vc as? ContestView {
+      view.reload()
+    }
+  }
+  
+  func updatePlacementOnly(placementOnly:Bool) {
     if let view = self.vc as? ContestView {
       view.reload()
     }

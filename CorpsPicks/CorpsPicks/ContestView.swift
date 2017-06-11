@@ -52,6 +52,8 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     contestTable.tableFooterView = UIView(frame: CGRect.zero)
     let corpsButtonNib = UINib(nibName: "ContestButtonRow", bundle: nil)
     contestTable.register(corpsButtonNib, forCellReuseIdentifier: "ContestButtonRow")
+    let corpsOptionsNib = UINib(nibName: "ContestOptionsRow", bundle: nil)
+    contestTable.register(corpsOptionsNib, forCellReuseIdentifier: "ContestOptionsRow")
     let corpsNib = UINib(nibName: "ContestRow", bundle: nil)
     contestTable.register(corpsNib, forCellReuseIdentifier: "ContestRow")
     
@@ -128,7 +130,6 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   
   func updateCorpsScore(_ index:Int, pickScore:String) {
     //    print("updateCorpsScore(\(index), \(pickScore))")
-    
     self.contestViewModel?.corpsScores[index].score.pick = pickScore
     self.contestViewModel?.sortCorpsScores(completion : { [unowned self] _ in
       self.reload()
@@ -153,7 +154,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     switch (section) {
     case 0:
-      return (contestViewModel!.initialScoresDismissed == false) ? 1 : 0
+      return 2
     default:
       return contestViewModel!.corpsScores.count
     }
@@ -162,7 +163,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     switch (indexPath.section) {
     case 0:
-      return 75
+      return 50
     default:
       return 100
     }
@@ -197,13 +198,20 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     switch (indexPath.section) {
     case 0:
-      let cell = tableView.dequeueReusableCell(withIdentifier: "ContestButtonRow") as! ContestButtonRow
-      cell.contestView = self
-      return cell
+      switch(indexPath.row) {
+      case 0:
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContestButtonRow") as! ContestButtonRow
+        cell.contestView = self
+        return cell
+      default:
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContestOptionsRow") as! ContestOptionsRow
+        cell.contestView = self
+        return cell
+      }
     default:
       let cell = tableView.dequeueReusableCell(withIdentifier: "ContestRow") as! ContestRow
       cell.contestView = self
-      cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row])
+      cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row], placementOnly: (contestViewModel?.placementOnly)!)
       cell.layoutIfNeeded()
       return cell
     }
@@ -288,18 +296,16 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   
   // Mark - Initial scores Alert
   func initialScoresAlert() {
-    let title = "Set Initial Scores?"
+    let title = "Set Initial Placements?"
     let message = "Press yes to override score picks with default values.\n\nWould you like to continue?"
     
     let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
     
     let actionYes = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction) in
       self.contestViewModel!.setInitialScores()
-      self.contestViewModel!.setInitialScoresDismissed()
     }
     
     let actionNo = UIAlertAction(title: "No", style: .default) { (action:UIAlertAction) in
-      self.contestViewModel!.setInitialScoresDismissed()
     }
     
     alertController.addAction(actionYes)
@@ -311,6 +317,12 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   
   func pressedInitialScores() {
     initialScoresAlert()
+  }
+  
+  // Mark - set placements only switch
+  
+  func contestOptionSwitchChanged(value: Bool) {
+    self.contestViewModel!.setOptionSwitch(value: value)
   }
   
   // Mark - Leaderboard button
