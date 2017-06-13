@@ -66,7 +66,7 @@ class Event : NSObject {
   }
   
   func parseFirebaseDate(dateString: String, timeString: String) -> Date {
-    print("\(dateString)")
+    print("\(dateString) \(timeString)")
     // get hours and minutes
     let timeDate = parseFirebaseTime(timeString: timeString)
     let calendar = Calendar.current
@@ -75,13 +75,23 @@ class Event : NSObject {
     
     // formate total date
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    dateFormatter.timeZone = TimeZone(abbreviation: "PST")
     let characters = dateString.characters.map { String($0) }
     let dateFormatString = "20\(characters[0])\(characters[1])-\(characters[2])\(characters[3])-\(characters[4])\(characters[5]) \(hour):\(minutes):00"
     print("\(dateFormatString)")
     let date: Date? = dateFormatter.date(from: dateFormatString)
     
-    return date!
+//    // convert to UTC
+//    let date1 = dateFormatter.date(from: dateString as String)
+//    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
+//    dateFormatter.timeZone = NSTimeZone.init(abbreviation: "UTC") as TimeZone!
+//    let date2 = dateFormatter.date(from: date1)
+    
+    
+    print("Date() : \(Date())")
+    
+    return (date != nil) ? date! : Date()
   }
   
   func printDateComponents(date: Date) {
