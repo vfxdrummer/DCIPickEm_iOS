@@ -102,7 +102,23 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
   
   @IBAction func handlePan(_ recognizer:UIPanGestureRecognizer) {
     let translation = recognizer.translation(in: self.scorePanGestureView)
-    var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!) + (translation.x / 100.0)
+    if (abs(translation.y) > abs(translation.x)) {
+        return
+    }
+    print("x: \(translation.x), y: \(translation.y)")
+    var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!)
+    if (corpsScoreFloat < 50) {
+        corpsScoreFloat += (translation.x / 20.0)
+    } else if (corpsScoreFloat < 70) {
+        corpsScoreFloat += (translation.x / 35.0)
+    } else if (corpsScoreFloat < 80) {
+        corpsScoreFloat += (translation.x / 50.0)
+    } else if (corpsScoreFloat < 90) {
+        corpsScoreFloat += (translation.x / 75.0)
+    } else {
+        corpsScoreFloat += (translation.x / 100.0)
+    }
+    
     corpsScoreFloat = (corpsScoreFloat <= 100) ? corpsScoreFloat : 100
     corpsScoreFloat = (corpsScoreFloat >= 0) ? corpsScoreFloat : 0
     self.scoreDirection = translation.x > 0.0 ? true : false
