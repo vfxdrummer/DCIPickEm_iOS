@@ -24,7 +24,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="" image="contests-black" selectedImage="contests-black" id="pak-Fh-9gX">
-                        <inset key="imageInsets" minX="2" minY="12" maxX="2" maxY="-6"/>
+                        <inset key="imageInsets" minX="2" minY="10" maxX="2" maxY="-6"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="CONTEST" id="LNd-Zd-iEB">
                         <barButtonItem key="rightBarButtonItem" title="Leaderboard" id="NHI-vU-y7M">
@@ -112,7 +112,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="" image="events-black" selectedImage="events-black" id="cqX-rT-dKU">
-                        <inset key="imageInsets" minX="2" minY="11" maxX="2" maxY="-5"/>
+                        <inset key="imageInsets" minX="2" minY="10" maxX="2" maxY="-6"/>
                     </tabBarItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="uiB-OA-AoW">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -140,7 +140,9 @@
                             <outlet property="delegate" destination="oO5-1z-63k" id="eOh-WD-fzI"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="leaderboard-black" selectedImage="leaderboard-black" id="hYS-G3-47i" userLabel="Leaderboard"/>
+                    <tabBarItem key="tabBarItem" title="" image="leaderboard-black" selectedImage="leaderboard-black" id="hYS-G3-47i" userLabel="Leaderboard">
+                        <inset key="imageInsets" minX="2" minY="10" maxX="2" maxY="-6"/>
+                    </tabBarItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="RI5-H7-6dA">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>

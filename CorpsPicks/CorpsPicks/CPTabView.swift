@@ -28,9 +28,9 @@ class CPTabView: UITabBarController, UITabBarControllerDelegate {
   }
   
   private func setTabIconOffsets() {
-    cpTabBar!.items?[0].imageInsets = UIEdgeInsetsMake(8, 1, -4, -1)
-    cpTabBar!.items?[1].imageInsets = UIEdgeInsetsMake(8, 1, -4, -1)
-    cpTabBar!.items?[2].imageInsets = UIEdgeInsetsMake(8, 1, -4, -1)
+//    cpTabBar!.items?[0].imageInsets = UIEdgeInsetsMake(8, 1, -4, -1)
+//    cpTabBar!.items?[1].imageInsets = UIEdgeInsetsMake(8, 1, -4, -1)
+//    cpTabBar!.items?[2].imageInsets = UIEdgeInsetsMake(8, 1, -4, -1)
   }
   
   private func setLeftNavItem() {
