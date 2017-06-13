@@ -321,7 +321,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
     
     let actionYes = UIAlertAction(title: "Yes", style: .default) { [unowned self] (action:UIAlertAction) in
-          self.contestViewModel!.setOptionSwitch(value: placementsOnly)
+      self.contestViewModel!.setOptionSwitch(value: placementsOnly)
     }
     
     

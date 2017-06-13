@@ -101,11 +101,13 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
       scoreEntryField.isHidden =      self.placementOnly
       scoreEntryField.isEnabled =     false
       corpsScore.isHidden =           true
+      scoreStepper.isHidden =         true
     case false:
       scorePanGestureView.isHidden =  self.placementOnly
       scoreEntryField.isHidden =      self.placementOnly
       scoreEntryField.isEnabled =     true
       corpsScore.isHidden =           true
+      scoreStepper.isHidden =         self.placementOnly
     }
   }
   
