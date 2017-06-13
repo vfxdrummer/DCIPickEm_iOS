@@ -39,6 +39,8 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
   override func viewWillAppear(_ animated: Bool) {
     self.navigationController?.navigationBar.topItem?.title = "CORPS PICKS EVENTS"
     
+    self.eventTable.reloadData()
+    
     self.eventTable.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 85.0
   }
