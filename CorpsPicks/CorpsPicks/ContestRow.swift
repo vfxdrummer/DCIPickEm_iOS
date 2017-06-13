@@ -21,11 +21,13 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
   var locked : Bool = false
   weak var contestView: ContestView?
   
+  @IBOutlet var corpsPlacement: UILabel!
   @IBOutlet var corpsName: UILabel!
   @IBOutlet var corpsImage: UIImageView!
   @IBOutlet var corpsScore: UILabel!
   @IBOutlet var scorePanGestureView: UIImageView!
-  @IBOutlet weak var scoreEntryField: UITextField!
+  @IBOutlet var scoreEntryField: UITextField!
+  @IBOutlet var scoreStepper: UIStepper!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -65,9 +67,16 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
     self.scorePanGestureView.addGestureRecognizer(self.scoreGesture!)
     self.scorePanGestureView.addGestureRecognizer(self.tapGesture!)
     
+    // initial value for stepper
+    self.scoreStepper.value = 1.0
+    
     updateVisibility()
     
     scoreEntryField.resignFirstResponder()
+  }
+  
+  public func updatePlacement(number: Int) {
+    self.corpsPlacement.text = "\(number)"
   }
   
   private func updateCorpsScore(scoreText:String) {
@@ -105,7 +114,6 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
     if (abs(translation.y) > abs(translation.x)) {
         return
     }
-    print("x: \(translation.x), y: \(translation.y)")
     var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!)
     if (corpsScoreFloat < 50) {
         corpsScoreFloat += (translation.x / 20.0)
@@ -132,6 +140,15 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
     corpsScoreFloat = self.scoreDirection ? corpsScoreFloat + 0.01 : corpsScoreFloat - 0.01
     let scoreText = String(format:"%.2f", corpsScoreFloat)
     updateCorpsScore(scoreText:scoreText)
+  }
+  
+  @IBAction func stepperValueChanged(_ sender: UIStepper) {
+    print(sender.value)
+    var corpsScoreFloat = CGFloat(Double(self.corpsScore.text!)!)
+    corpsScoreFloat = corpsScoreFloat + CGFloat((sender.value - 1.0) / 20)
+    let scoreText = String(format:"%.2f", corpsScoreFloat)
+    updateCorpsScore(scoreText:scoreText)
+    sender.value = 1
   }
   
   // Mark - UITextFieldDelegate

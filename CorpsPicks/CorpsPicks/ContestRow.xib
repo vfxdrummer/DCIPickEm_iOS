@@ -28,8 +28,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="465" height="106"/>
                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orL-ya-3aj">
+                        <rect key="frame" x="0.0" y="39" width="30" height="27.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="jFd-8U-PP4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Devils" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-3T-i1K" userLabel="Corps Name">
-                        <rect key="frame" x="23" y="0.0" width="400" height="106"/>
+                        <rect key="frame" x="29" y="0.0" width="400" height="106"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="400" id="BsW-DI-DiX"/>
                         </constraints>
@@ -47,12 +56,12 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="98.70" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" background="bluedevils1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-vb-qPA" userLabel="Score Entry">
-                        <rect key="frame" x="377" y="35.5" width="70" height="35"/>
+                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="98.70" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" background="bluedevils1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-vb-qPA" userLabel="Score Entry">
+                        <rect key="frame" x="357" y="35.5" width="100" height="35"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50957306338028174" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="Ova-lG-QWo"/>
-                            <constraint firstAttribute="width" constant="70" id="o3S-Lk-jyd"/>
+                            <constraint firstAttribute="width" constant="100" id="o3S-Lk-jyd"/>
                         </constraints>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="21"/>
@@ -74,10 +83,18 @@
                             <constraint firstAttribute="bottom" secondItem="9Go-FB-eCa" secondAttribute="bottom" constant="2" id="jb9-MV-MkU"/>
                         </constraints>
                     </view>
+                    <stepper opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="tjo-MQ-ZPW">
+                        <rect key="frame" x="359" y="0.0" width="94" height="29"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="stepperValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="PrV-3O-s6L"/>
+                        </connections>
+                    </stepper>
                 </subviews>
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="-8.5" id="1Ky-Cy-IXc"/>
+                    <constraint firstItem="orL-ya-3aj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2W1-Ur-x2k"/>
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="2Wd-gr-cHk"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ylr-i8-IIi" secondAttribute="trailing" constant="10" id="2dN-d3-kQN"/>
                     <constraint firstAttribute="bottomMargin" secondItem="4W8-HH-yB2" secondAttribute="bottom" constant="-8" id="3N3-lE-SHv"/>
@@ -85,13 +102,17 @@
                     <constraint firstItem="sB2-EP-uKl" firstAttribute="top" secondItem="mH1-vb-qPA" secondAttribute="bottom" id="63A-4I-QaM"/>
                     <constraint firstItem="sB2-EP-uKl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="DS1-1G-iki"/>
                     <constraint firstAttribute="trailingMargin" secondItem="sB2-EP-uKl" secondAttribute="trailing" id="NYg-qw-Z4I"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="mH1-vb-qPA" secondAttribute="trailing" constant="10" id="Q8I-gS-zkG"/>
+                    <constraint firstAttribute="topMargin" secondItem="tjo-MQ-ZPW" secondAttribute="top" constant="8" id="PZa-TW-CYX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mH1-vb-qPA" secondAttribute="trailing" id="Q8I-gS-zkG"/>
                     <constraint firstAttribute="trailingMargin" secondItem="4W8-HH-yB2" secondAttribute="trailing" constant="-8" id="Rpd-1E-pJF"/>
-                    <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="bu1-3K-KbE"/>
+                    <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="21" id="bu1-3K-KbE"/>
                     <constraint firstAttribute="bottomMargin" secondItem="sB2-EP-uKl" secondAttribute="bottom" constant="-8" id="dD1-cr-UvP"/>
                     <constraint firstItem="4W8-HH-yB2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="e4c-nP-Kwa"/>
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="jli-XH-Qgv"/>
+                    <constraint firstItem="tjo-MQ-ZPW" firstAttribute="centerX" secondItem="mH1-vb-qPA" secondAttribute="centerX" id="mUB-Y4-jz7"/>
                     <constraint firstItem="mH1-vb-qPA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qaB-cr-5ut"/>
+                    <constraint firstItem="tjo-MQ-ZPW" firstAttribute="width" secondItem="mH1-vb-qPA" secondAttribute="width" constant="-4" id="vZw-gH-kTh"/>
+                    <constraint firstItem="orL-ya-3aj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="yDx-4Z-mwX"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -99,9 +120,11 @@
             <connections>
                 <outlet property="corpsImage" destination="4W8-HH-yB2" id="EgS-Vb-irZ"/>
                 <outlet property="corpsName" destination="yvE-3T-i1K" id="LOp-8C-Ox6"/>
+                <outlet property="corpsPlacement" destination="orL-ya-3aj" id="NUg-YH-fz9"/>
                 <outlet property="corpsScore" destination="ylr-i8-IIi" id="FVb-RX-mwQ"/>
                 <outlet property="scoreEntryField" destination="mH1-vb-qPA" id="kCz-er-a8S"/>
                 <outlet property="scorePanGestureView" destination="sB2-EP-uKl" id="bke-IA-jjQ"/>
+                <outlet property="scoreStepper" destination="tjo-MQ-ZPW" id="Wvb-HQ-trh"/>
             </connections>
             <point key="canvasLocation" x="512.5" y="437"/>
         </tableViewCell>

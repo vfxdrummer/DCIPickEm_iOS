@@ -196,6 +196,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
       let cell = tableView.dequeueReusableCell(withIdentifier: "ContestRow") as! ContestRow
       cell.contestView = self
       cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row], placementOnly: (contestViewModel?.placementOnly)!, locked: contestViewModel!.locked)
+      cell.updatePlacement(number: indexPath.row + 1)
       cell.layoutIfNeeded()
       return cell
     }
