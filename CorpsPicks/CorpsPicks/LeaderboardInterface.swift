@@ -20,7 +20,7 @@ class LeaderboardInterface: NSObject {
         print("eventId : \(eventId)")
         let ref = Database.database().reference()
         
-        ref.child("leaderboard").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("2017/v1/leaderboard").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
             guard let leaderboardDict = snapshot.value as? [String:String] else {
                 return
             }

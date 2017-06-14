@@ -10,6 +10,7 @@ import UIKit
 
 class Corps : NSObject {
   var slug : String = ""
+  var id : String = ""
   var name : String = ""
   var lastScore : String = "0.0"
   var imageFileName : String = ""
@@ -18,8 +19,9 @@ class Corps : NSObject {
   
   init(corpsDict: Dictionary<String, String>) {
     super.init()
-    if let name = corpsDict["name"] {
-      self.name = name
+    if let id = corpsDict["id"] {
+      self.id = id
+      self.name = id
       self.slug = slugNameFromCorpsName(corpsName: name)
     }
     if let lastScore = corpsDict["lastScore"] {

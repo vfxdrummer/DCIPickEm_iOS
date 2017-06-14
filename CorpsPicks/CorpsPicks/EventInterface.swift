@@ -19,7 +19,7 @@ class EventInterface: NSObject {
   class func getEvents(maxItems:Int) {
     let useMaxItems = (maxItems != -1) ? true : false
     let ref = Database.database().reference()
-    let eventsRef = ref.child("events")
+    let eventsRef = ref.child("2017/v1/events")
     var i = 0
     eventsRef.observe(.value, with: { snapshot in
       var events:[Event] = []

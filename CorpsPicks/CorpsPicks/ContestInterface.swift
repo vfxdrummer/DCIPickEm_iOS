@@ -20,7 +20,7 @@ class ContestInterface: NSObject {
     let ref = Database.database().reference()
     print("getLineup(eventId:\(eventId))")
     
-    ref.child("lineups").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
+    ref.child("2017/v1/lineups").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
       guard let lineupArray = snapshot.value as? [String] else {
         return
       }
@@ -38,7 +38,7 @@ class ContestInterface: NSObject {
   class func setDefaultScorePicks(eventId:String) {
     let ref = Database.database().reference()
     
-    ref.child("lineups").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
+    ref.child("2017/v1/lineups").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
       guard let lineupArray = snapshot.value as? [String] else {
         return
       }
@@ -71,12 +71,12 @@ class ContestInterface: NSObject {
     CurrentContestItems.sharedInstance.initialScoresDismissed = false
     
     // observe picks
-    ref.child("picks").observeSingleEvent(of: .value, with: { (snapshot) in
+    ref.child("2017/v1/picks").observeSingleEvent(of: .value, with: { (snapshot) in
       
       if snapshot.hasChild(eventId) {
         
         // observe picks eventId
-        ref.child("picks").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("2017/v1/picks").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
           
           if snapshot.hasChild(userId){
             // has user entry for picks/$eventId !
@@ -105,12 +105,12 @@ class ContestInterface: NSObject {
     CurrentContestItems.sharedInstance.initialScoresDismissed = false
     
     // observe picks
-    ref.child("picks").observeSingleEvent(of: .value, with: { (snapshot) in
+    ref.child("2017/v1/picks").observeSingleEvent(of: .value, with: { (snapshot) in
       
       if snapshot.hasChild(eventId){
         
         // observe picks eventId
-        ref.child("picks").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("2017/v1/picks").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
           
           if snapshot.hasChild(userId){
             
@@ -118,12 +118,12 @@ class ContestInterface: NSObject {
             var scoreArray:Array<String> = []
             
             // observe userId name
-            ref.child("picks").child(eventId).child(userId).child("name").observeSingleEvent(of: .value, with: { (snapshot) in
+            ref.child("2017/v1/picks").child(eventId).child(userId).child("name").observeSingleEvent(of: .value, with: { (snapshot) in
               
               nameArray = (snapshot.value as? [String])!
               
               // observe userId score
-              ref.child("picks").child(eventId).child(userId).child("score").observeSingleEvent(of: .value, with: { (snapshot) in
+              ref.child("2017/v1/picks").child(eventId).child(userId).child("score").observeSingleEvent(of: .value, with: { (snapshot) in
                 
                 scoreArray = (snapshot.value as? [String])!
                 
@@ -140,13 +140,13 @@ class ContestInterface: NSObject {
               }
               
               // check for metadata
-              ref.child("picks").child(eventId).child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
+              ref.child("2017/v1/picks").child(eventId).child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
                 
                 // check for metadata
                 if snapshot.hasChild("metadata") {
                   
                   // check for initialScoresDismissed
-                  ref.child("picks").child(eventId).child(userId).child("metadata").observeSingleEvent(of: .value, with: { (snapshot) in
+                  ref.child("2017/v1/picks").child(eventId).child(userId).child("metadata").observeSingleEvent(of: .value, with: { (snapshot) in
       
                     // check for initialScoresDismissed
                     if snapshot.hasChild("initialScoresDismissed") {
@@ -155,7 +155,7 @@ class ContestInterface: NSObject {
                     
                     // check for initialScoresDismissed
                     if snapshot.hasChild("placementOnly") {
-                      ref.child("picks").child(eventId).child(userId).child("metadata").child("placementOnly").observeSingleEvent(of: .value, with: { (snapshot) in
+                      ref.child("2017/v1/picks").child(eventId).child(userId).child("metadata").child("placementOnly").observeSingleEvent(of: .value, with: { (snapshot) in
                         CurrentContestItems.sharedInstance.placementOnly = (snapshot.value as? Bool)!
                       })
                     }
@@ -205,7 +205,7 @@ class ContestInterface: NSObject {
       _ = corpsScores.map({
         corpsScoreArray.append($0.score.pick)
       })
-      let picksRef = ref.child("/picks")
+      let picksRef = ref.child("2017/v1//picks")
       let eventRef = picksRef.child("/\(eventId)")
       let userRef = eventRef.child("/\(userId)")
       userRef.child("name").setValue(corpsNameArray)
@@ -220,7 +220,7 @@ class ContestInterface: NSObject {
     let userId = CurrentUser.sharedInstance.uid
     
     let ref = Database.database().reference()
-    let picksRef = ref.child("/picks")
+    let picksRef = ref.child("2017/v1//picks")
     let eventRef = picksRef.child("/\(eventId)")
     let userRef = eventRef.child("/\(userId)")
     let metadataRef = userRef.child("/metadata")

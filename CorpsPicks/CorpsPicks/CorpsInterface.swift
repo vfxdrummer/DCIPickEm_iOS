@@ -18,8 +18,8 @@ class CorpsInterface: NSObject {
    */
   class func getCorps() {
     let ref = Database.database().reference()
-    let eventsRef = ref.child("corps")
-    eventsRef.observe(.value, with: { snapshot in
+    let corpsRef = ref.child("2017/v1/corps")
+    corpsRef.observe(.value, with: { snapshot in
       var corpsDict:[String:Corps] = [:]
       for _ in snapshot.children {
         for corps in snapshot.children.allObjects as! [DataSnapshot] {
@@ -27,7 +27,7 @@ class CorpsInterface: NSObject {
             continue
           }
           let corps = Corps(corpsDict: corpsDictNew as! Dictionary<String, String>)
-          corpsDict[corps.name] = corps
+          corpsDict[corps.id] = corps
         }
       }
       CurrentCorpsItems.sharedInstance.corps = corpsDict
