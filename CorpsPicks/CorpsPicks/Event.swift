@@ -30,7 +30,8 @@ class Event : NSObject {
     }
     if let date = eventDict["date"],
       let time = eventDict["time"] {
-      self.date = parseFirebaseDate(dateString: date, timeString: time)
+      let timeZone = "PST"
+      self.date = parseFirebaseDate(dateString: date, timeString: time, timeZone: timeZone)
     }
     if let date_label = eventDict["date_label"] {
       self.date_label = date_label
@@ -65,7 +66,7 @@ class Event : NSObject {
     return time!
   }
   
-  func parseFirebaseDate(dateString: String, timeString: String) -> Date {
+  func parseFirebaseDate(dateString: String, timeString: String, timeZone: String) -> Date {
     print("\(dateString) \(timeString)")
     // get hours and minutes
     let timeDate = parseFirebaseTime(timeString: timeString)
@@ -76,22 +77,29 @@ class Event : NSObject {
     // formate total date
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-    dateFormatter.timeZone = TimeZone(abbreviation: "PST")
+    dateFormatter.timeZone = TimeZone(abbreviation: timeZone)
     let characters = dateString.characters.map { String($0) }
     let dateFormatString = "20\(characters[0])\(characters[1])-\(characters[2])\(characters[3])-\(characters[4])\(characters[5]) \(hour):\(minutes):00"
     print("\(dateFormatString)")
     let date: Date? = dateFormatter.date(from: dateFormatString)
     
-//    // convert to UTC
-//    let date1 = dateFormatter.date(from: dateString as String)
-//    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
-//    dateFormatter.timeZone = NSTimeZone.init(abbreviation: "UTC") as TimeZone!
-//    let date2 = dateFormatter.date(from: date1)
+    if (date == nil) {
+      return Date()
+    }
     
+    // convert to UTC
+    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
+    dateFormatter.timeZone = NSTimeZone.init(abbreviation: "UTC") as TimeZone!
+    let dateStringUTC = dateFormatter.string(from: date!)
     
     print("Date() : \(Date())")
+    print("date1 : \(dateStringUTC)")
     
-    return (date != nil) ? date! : Date()
+//    let dateUTC =  NSDate.init(utcDate: dateStringUTC) as Date
+//    print("dateUTC : \(dateUTC)")
+    
+//    return dateUTC
+    return date!
   }
   
   func printDateComponents(date: Date) {
@@ -116,4 +124,19 @@ class Event : NSObject {
     }
   }
   
+}
+
+extension NSDate {
+  convenience init(utcDate:String, dateFormat:String="yyyy-MM-dd HH:mm:ss.SSS+00:00") {
+    // 2016-06-06 00:24:21.164493+00:00
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = dateFormat
+    dateFormatter.timeZone = NSTimeZone.init(abbreviation: "UTC") as TimeZone!
+    
+    let date = dateFormatter.date(from: utcDate)!
+    let s = NSTimeZone.local.secondsFromGMT(for: date)
+    let timeInterval = TimeInterval(s)
+    
+    self.init(timeInterval: timeInterval, since:date)
+  }
 }
