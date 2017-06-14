@@ -47,6 +47,7 @@ class ContestInterface: NSObject {
       var corpsScores:[CorpsScore] = []
       for (index, element) in lineupArray.enumerated() {
         let corpsScore = ContestInterface.getCorpsScore(corpsId: element, score:(lineupArray[index]))
+        corpsScore!.score.pick = "50.0"
         corpsScores.append(corpsScore!)
       }
       CurrentContestItems.sharedInstance.corpsScores = corpsScores
