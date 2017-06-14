@@ -31,7 +31,7 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
     let eventNib = UINib(nibName: "EventRow", bundle: nil)
     eventTable.register(eventNib, forCellReuseIdentifier: "EventRow")
     
-    startAnimating(CGSize(width: 50, height: 50), message: "Loading Contest", type: .ballTrianglePath)
+    startAnimating(CGSize(width: 50, height: 50), message: "Loading Events", type: .ballTrianglePath)
     
     self.refreshControl!.addTarget(self, action: #selector(EventView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
@@ -43,6 +43,10 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
     
     self.eventTable.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 85.0
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    stopAnimating()
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
