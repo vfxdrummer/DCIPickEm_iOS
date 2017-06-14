@@ -32,9 +32,6 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
     // Firebase
     FirebaseApp.configure()
     
-    // Startup code
-    StartupService.sharedInstance.start()
-    
     // Signout of Firebase
 //    try! FIRAuth.auth().signOut()
     
@@ -161,6 +158,9 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
     let storyboard = UIStoryboard(name: storyboard.rawValue, bundle: nil)
     let controller = storyboard.instantiateInitialViewController()! as UIViewController
     self.window?.rootViewController = controller
+    
+    // Startup code
+    StartupService.sharedInstance.start()
     
     // set initial eventIds
 //    let contestVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Contest") as! ContestView
