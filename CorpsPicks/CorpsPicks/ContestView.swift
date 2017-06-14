@@ -14,6 +14,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
   
   private var loaded : Bool = false
   var contestViewModel : ContestViewModel? = nil
+  private var animating: Bool = false
   var eventId : String {
     return contestViewModel!.eventId
   }
@@ -75,7 +76,20 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     print("contestViewModel?.loadLineup()")
     contestViewModel?.loadLineup()
     
-    startAnimating(CGSize(width: 50, height: 50), message: "Loading Contest", type: .ballTrianglePath)
+    startAnimating()
+  }
+  
+  private func startAnimating() {
+    startAnimating(CGSize(width: 50, height: 50), message: "Loading Events", type: .ballTrianglePath)
+    animating = true
+  }
+  
+  private func stopAnimating() {
+    guard (animating == true) else {
+      return
+    }
+    NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+    animating = false
   }
   
   private func setLeftBackButton() {
@@ -106,7 +120,7 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
    */
   func reload() {
     contestTable.reloadData()
-    stopAnimating()
+    self.stopAnimating()
   }
   
   //  MARK: Custom Methods

@@ -12,6 +12,7 @@ import NVActivityIndicatorView
 class EventView: UITableViewController, NVActivityIndicatorViewable {
   
   var eventViewModel : EventViewModel? = nil
+  private var animating: Bool = false
   
   @IBOutlet var eventTable: UITableView!
   
@@ -31,7 +32,7 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
     let eventNib = UINib(nibName: "EventRow", bundle: nil)
     eventTable.register(eventNib, forCellReuseIdentifier: "EventRow")
     
-    startAnimating(CGSize(width: 50, height: 50), message: "Loading Events", type: .ballTrianglePath)
+    startAnimating()
     
     self.refreshControl!.addTarget(self, action: #selector(EventView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
@@ -46,7 +47,20 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
   }
   
   override func viewWillDisappear(_ animated: Bool) {
-    stopAnimating()
+    self.stopAnimating()
+  }
+  
+  private func startAnimating() {
+    startAnimating(CGSize(width: 50, height: 50), message: "Loading Events", type: .ballTrianglePath)
+    animating = true
+  }
+  
+  private func stopAnimating() {
+    guard (animating == true) else {
+      return
+    }
+    NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+    animating = false
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
@@ -71,7 +85,7 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
    - parameter events:[Event]
    */
   func loadEvents(events:[Event]) {
-    stopAnimating()
+    self.stopAnimating()
     eventTable.reloadData()
   }
   
