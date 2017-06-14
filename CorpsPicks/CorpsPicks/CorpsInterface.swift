@@ -27,7 +27,7 @@ class CorpsInterface: NSObject {
             continue
           }
           let corps = Corps(corpsDict: corpsDictNew as! Dictionary<String, String>)
-          corpsDict[corps.id] = corps
+          corpsDict[corps.name] = corps
         }
       }
       CurrentCorpsItems.sharedInstance.corps = corpsDict
