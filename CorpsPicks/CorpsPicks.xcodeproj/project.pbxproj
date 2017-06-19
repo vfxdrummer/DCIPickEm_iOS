@@ -169,6 +169,7 @@
 		81A4938B1E9DC36A0010364A /* LeaderboardInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4938A1E9DC36A0010364A /* LeaderboardInterface.swift */; };
 		81C25A251EED8D1A00C0FF7C /* cesario-gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C25A241EED8D1A00C0FF7C /* cesario-gold.png */; };
 		81F12B441EBD84FC00A1681E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81F12B431EBD84FC00A1681E /* GoogleService-Info.plist */; };
+		81F735311EF76AB3001EF05E /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F735301EF76AB3001EF05E /* UserInterface.swift */; };
 		81FBE9071E84D19E00A67A02 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FBE9061E84D19E00A67A02 /* CurrentUser.swift */; };
 		D3A5F3F6D48D9AEC78BBEFF2 /* Pods_CorpsPicks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5321C5BAC1CD1D0A388782 /* Pods_CorpsPicks.framework */; };
 /* End PBXBuildFile section */
@@ -367,6 +368,7 @@
 		81A4938A1E9DC36A0010364A /* LeaderboardInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardInterface.swift; sourceTree = "<group>"; };
 		81C25A241EED8D1A00C0FF7C /* cesario-gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cesario-gold.png"; path = "resources/images/medals/cesario-gold.png"; sourceTree = "<group>"; };
 		81F12B431EBD84FC00A1681E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		81F735301EF76AB3001EF05E /* UserInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
 		81FBE9061E84D19E00A67A02 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		B998BB0AEB8D9ACA72757E46 /* Pods-CorpsPicks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorpsPicks.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CorpsPicks/Pods-CorpsPicks.release.xcconfig"; sourceTree = "<group>"; };
 		FA5321C5BAC1CD1D0A388782 /* Pods_CorpsPicks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CorpsPicks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -509,6 +511,7 @@
 				811B9B3F1E61042D0084E8AB /* CorpsInterface.swift */,
 				81055D661E594F6600FF8DCD /* EventInterface.swift */,
 				81A4938A1E9DC36A0010364A /* LeaderboardInterface.swift */,
+				81F735301EF76AB3001EF05E /* UserInterface.swift */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -1180,6 +1183,7 @@
 				22FA694C1E145C90003CAFEF /* Score.swift in Sources */,
 				812F5BB21E5A255D009B068C /* EventViewModel.swift in Sources */,
 				22A0F4E71E0D279C00DD2F2D /* CPViewModel.swift in Sources */,
+				81F735311EF76AB3001EF05E /* UserInterface.swift in Sources */,
 				811F638B1EEA6775009AA6B2 /* ContestOptionsRow.swift in Sources */,
 				81055D671E594F6600FF8DCD /* EventInterface.swift in Sources */,
 				81A493831E9B5C200010364A /* Leaderboard.swift in Sources */,

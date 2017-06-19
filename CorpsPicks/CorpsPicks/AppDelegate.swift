@@ -67,6 +67,7 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
         CurrentUser.sharedInstance.uid = user!.uid
         CurrentUser.sharedInstance.email = user!.email!
         CurrentUser.sharedInstance.photoURL = user!.photoURL
+        UserInterface.setUser()
         self.launchStoryboard(StoryboardName.Main)
       } else {
         // user must sign in
