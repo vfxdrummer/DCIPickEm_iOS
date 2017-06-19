@@ -51,8 +51,6 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     contestTable.contentInset = adjustForTabbarInsets
     contestTable.scrollIndicatorInsets = adjustForTabbarInsets
     
-    contestTable.setEditing(!contestViewModel!.locked, animated: true)
-    
     // Left NavBar Button
     self.setLeftBackButton()
     
@@ -75,6 +73,8 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     // load the lineup
     print("contestViewModel?.loadLineup()")
     contestViewModel?.loadLineup()
+    
+    contestTable.setEditing(!contestViewModel!.locked, animated: true)
     
     startAnimating()
   }
