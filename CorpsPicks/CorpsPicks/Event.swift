@@ -30,8 +30,7 @@ class Event : NSObject {
     }
     if let date = eventDict["date"],
       let time = eventDict["time"] {
-      let timeZone = "PST"
-      self.date = parseFirebaseDate(dateString: date, timeString: time, timeZone: timeZone)
+      self.date = parseFirebaseDate(dateString: date, timeString: time)
     }
     if let date_label = eventDict["date_label"] {
       self.date_label = date_label
@@ -51,7 +50,7 @@ class Event : NSObject {
   
   func parseFirebaseTime(timeString: String) -> Date {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "hh:mm"
+    dateFormatter.dateFormat = "HH:mm"
     
     var tokens1 = timeString.components(separatedBy:":")
     if tokens1.count < 2 { return Date() }
@@ -60,45 +59,63 @@ class Event : NSObject {
     if hour.characters.count == 1 {
       hour = "0\(hour)"
     }
+    if (tokens2[1] == "p.m.") {
+      hour = String(Int(hour)! + 12)
+    }
     let minute = tokens2[0]
     let timeFormatString = "\(hour):\(minute)"
+    print(timeFormatString)
     let time: Date? = dateFormatter.date(from: timeFormatString)
     return time!
   }
   
-  func parseFirebaseDate(dateString: String, timeString: String, timeZone: String) -> Date {
-    print("\(dateString) \(timeString)")
+  func parseFirebaseTimeZone(timeString: String) -> String {
+    var tokens = timeString.components(separatedBy:" ")
+    var timeZone = ""
+    if (tokens[2] == "(ET)") {
+      timeZone = "EST"
+    }
+    if (tokens[2] == "(CT)") {
+      timeZone = "CST"
+    }
+    if (tokens[2] == "(PT)") {
+      timeZone = "PST"
+    }
+    return timeZone
+  }
+  
+  func parseFirebaseDate(dateString: String, timeString: String) -> Date {
+    print("\n\ndateString : \(dateString) timeString : \(timeString)")
     // get hours and minutes
     let timeDate = parseFirebaseTime(timeString: timeString)
+    let timeZone = parseFirebaseTimeZone(timeString: timeString)
     let calendar = Calendar.current
     let hour = calendar.component(.hour, from: timeDate)
     let minutes = calendar.component(.minute, from: timeDate)
     
-    // formate total date
+    // format total date
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
     dateFormatter.timeZone = TimeZone(abbreviation: timeZone)
     let characters = dateString.characters.map { String($0) }
     let dateFormatString = "20\(characters[0])\(characters[1])-\(characters[2])\(characters[3])-\(characters[4])\(characters[5]) \(hour):\(minutes):00"
     print("\(dateFormatString)")
-    let date: Date? = dateFormatter.date(from: dateFormatString)
+    var date: Date? = dateFormatter.date(from: dateFormatString)
+    date = Calendar.current.date(byAdding: .day, value: -1, to: date!)
+    print("date : \(date)")
     
     if (date == nil) {
       return Date()
     }
     
-    // convert to UTC
-    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
-    dateFormatter.timeZone = NSTimeZone.init(abbreviation: "UTC") as TimeZone!
-    let dateStringUTC = dateFormatter.string(from: date!)
+//    // convert to UTC
+//    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
+//    dateFormatter.timeZone = NSTimeZone.init(abbreviation: "UTC") as TimeZone!
+//    let dateStringUTC = dateFormatter.string(from: date!)
+//    print("Date() : \(Date())")
+//    print("date1 : \(dateStringUTC)")
+//    
     
-    print("Date() : \(Date())")
-    print("date1 : \(dateStringUTC)")
-    
-//    let dateUTC =  NSDate.init(utcDate: dateStringUTC) as Date
-//    print("dateUTC : \(dateUTC)")
-    
-//    return dateUTC
     return date!
   }
   
