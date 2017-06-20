@@ -193,6 +193,64 @@ class ContestInterface: NSObject {
     }
   }
   
+  
+  /**
+   getResults
+   Get contest score results from Firebase DB
+   */
+  class func getResults(eventId:String) {
+    let ref = Database.database().reference()
+    // observe picks
+    ref.child("2017/v1/results").observeSingleEvent(of: .value, with: { (snapshot) in
+      
+      if snapshot.hasChild(eventId){
+        
+        var nameArray:Array<String> = []
+        var scoreArray:Array<String> = []
+        
+        // observe picks eventId
+        ref.child("2017/v1/results").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
+          
+          // observe userId name
+          ref.child("2017/v1/results").child(eventId).child("name").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            nameArray = (snapshot.value as? [String])!
+            
+            // observe userId score
+            ref.child("2017/v1/results").child(eventId).child("score").observeSingleEvent(of: .value, with: { (snapshot) in
+              
+              scoreArray = (snapshot.value as? [String])!
+              
+              // create formal array of CorpsScore objects
+              var resultScores:[CorpsScore] = []
+              for (index, element) in nameArray.enumerated() {
+                let resultScore = ContestInterface.getCorpsScore(corpsId: element, score:(scoreArray[index]))
+                resultScores.append(resultScore!)
+              }
+              CurrentContestItems.sharedInstance.resultScores = resultScores
+              
+            }) { (error) in
+              print(error.localizedDescription)
+            }
+            
+          }) { (error) in
+            // observe picks / userId
+            print(error.localizedDescription)
+          }
+          
+        }) { (error) in
+          print(error.localizedDescription)
+        }
+        
+      } else {
+        ContestInterface.setDefaultScorePicks(eventId: eventId)
+      }
+      
+    }) { (error) in
+      print(error.localizedDescription)
+    }
+}
+
   class func setScorePicks(eventId:String, corpsScores:[CorpsScore]) {
     // move this to singleton, set on Auth
     let userId = CurrentUser.sharedInstance.uid

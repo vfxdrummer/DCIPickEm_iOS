@@ -87,6 +87,7 @@ class CurrentContestItems : NSObject {
       })
     }
   }
+  var resultScores : [CorpsScore] = []
   var corpsScores : [CorpsScore] = [] {
     didSet {
       _ = delegates.map({

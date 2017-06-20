@@ -29,6 +29,12 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
       return CurrentContestItems.sharedInstance.lineup!
     }
   }
+  
+  public var resultScores : [CorpsScore] {
+    get {
+      return CurrentContestItems.sharedInstance.resultScores
+    }
+  }
 
   public var corpsScores : [CorpsScore] = [] {
     didSet {
@@ -74,6 +80,7 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     print("ContestVM : loadLineup")
     ContestInterface.getLineup(eventId:eventId)
     ContestInterface.getScorePicks(eventId:eventId)
+    ContestInterface.getResults(eventId:eventId)
   }
   
   // setInitialScores
