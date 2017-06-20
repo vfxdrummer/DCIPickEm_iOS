@@ -51,6 +51,7 @@ class ContestInterface: NSObject {
         corpsScores.append(corpsScore!)
       }
       CurrentContestItems.sharedInstance.corpsScores = corpsScores
+      CurrentContestItems.sharedInstance.madePicks = false
       
       
     }) { (error) in
@@ -135,6 +136,7 @@ class ContestInterface: NSObject {
                   corpsScores.append(corpsScore!)
                 }
                 CurrentContestItems.sharedInstance.corpsScores = corpsScores
+                CurrentContestItems.sharedInstance.madePicks = true
                 
               }) { (error) in
                 print(error.localizedDescription)

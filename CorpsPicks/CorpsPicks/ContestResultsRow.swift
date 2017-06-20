@@ -80,9 +80,8 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
   }
   
   private func updateCorpsScore(scoreText:String) {
-    if (contestView != nil) {
-      contestView!.updateCorpsScore(self.index, pickScore: scoreText)
-    }
+    if (contestView != nil) { contestView!.updateCorpsScore(self.index, pickScore: scoreText
+      ) }
   }
   
   // set visibility accouding to locked and placementOnly

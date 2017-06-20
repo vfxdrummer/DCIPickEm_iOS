@@ -36,6 +36,18 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     }
   }
   
+  var madePicks : Bool {
+    get {
+      return CurrentContestItems.sharedInstance.madePicks
+    }
+  }
+  
+  var isComplete : Bool {
+    get {
+      return CurrentContestItems.sharedInstance.isComplete
+    }
+  }
+  
   var locked : Bool {
     get {
       return CurrentContestItems.sharedInstance.locked

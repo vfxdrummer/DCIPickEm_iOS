@@ -68,6 +68,8 @@ class CurrentContestItems : NSObject {
       delegates.append(delegate!)
     }
   }
+  var madePicks : Bool = false
+  var isComplete : Bool = false
   var locked : Bool {
     // locked is date / time is at or after eventId date
     guard (eventDate != nil) else {

@@ -75,6 +75,8 @@
 		816582F71EC7486C002C9BA2 /* fdc_app_icon_image.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582F41EC7486C002C9BA2 /* fdc_app_icon_image.pdf */; };
 		816582F81EC7486C002C9BA2 /* fdc_icon_one_color_stamp.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582F51EC7486C002C9BA2 /* fdc_icon_one_color_stamp.pdf */; };
 		816582F91EC7486C002C9BA2 /* inside_the_shield_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 816582F61EC7486C002C9BA2 /* inside_the_shield_icon.pdf */; };
+		816E33941EF8D87D002FB242 /* ContestResultsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E33921EF8D87D002FB242 /* ContestResultsRow.swift */; };
+		816E33951EF8D87D002FB242 /* ContestResultsRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816E33931EF8D87D002FB242 /* ContestResultsRow.xib */; };
 		817197D71EC81DD600415BAC /* academy1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 817197C01EC81DD600415BAC /* academy1.jpg */; };
 		817197D81EC81DD600415BAC /* bluecoats1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 817197C11EC81DD600415BAC /* bluecoats1.jpg */; };
 		817197D91EC81DD600415BAC /* bluedevils1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 817197C21EC81DD600415BAC /* bluedevils1.jpg */; };
@@ -274,6 +276,8 @@
 		816582FD1EC76E0E002C9BA2 /* KeyboardMovementAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardMovementAction.swift; path = WolfCore/keyboard/KeyboardMovementAction.swift; sourceTree = "<group>"; };
 		816582FE1EC76E0E002C9BA2 /* KeyboardMovement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardMovement.swift; path = WolfCore/keyboard/KeyboardMovement.swift; sourceTree = "<group>"; };
 		816582FF1EC76E0E002C9BA2 /* KeyboardNotificationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardNotificationActions.swift; path = WolfCore/keyboard/KeyboardNotificationActions.swift; sourceTree = "<group>"; };
+		816E33921EF8D87D002FB242 /* ContestResultsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestResultsRow.swift; sourceTree = "<group>"; };
+		816E33931EF8D87D002FB242 /* ContestResultsRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContestResultsRow.xib; sourceTree = "<group>"; };
 		817197C01EC81DD600415BAC /* academy1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = academy1.jpg; path = CorpsPicks/resources/images/banners/world/academy1.jpg; sourceTree = "<group>"; };
 		817197C11EC81DD600415BAC /* bluecoats1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bluecoats1.jpg; path = CorpsPicks/resources/images/banners/world/bluecoats1.jpg; sourceTree = "<group>"; };
 		817197C21EC81DD600415BAC /* bluedevils1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bluedevils1.jpg; path = CorpsPicks/resources/images/banners/world/bluedevils1.jpg; sourceTree = "<group>"; };
@@ -470,6 +474,8 @@
 				810133451ED9A70C00E33381 /* ContestButtonRow.xib */,
 				811F63891EEA6775009AA6B2 /* ContestOptionsRow.swift */,
 				811F638A1EEA6775009AA6B2 /* ContestOptionsRow.xib */,
+				816E33921EF8D87D002FB242 /* ContestResultsRow.swift */,
+				816E33931EF8D87D002FB242 /* ContestResultsRow.xib */,
 				812F5BB61E5A29A6009B068C /* EventRow.swift */,
 				812F5BB51E5A29A6009B068C /* EventRow.xib */,
 				8111BF8C1EE4633900FB8E5C /* LeaderboardMessageRow.swift */,
@@ -947,6 +953,7 @@
 				81920AD91EDFDD0B00A74B14 /* event29.jpg in Resources */,
 				81920AD11EDFDD0B00A74B14 /* event37.jpg in Resources */,
 				8171980F1EC81DEA00415BAC /* incognito1.jpg in Resources */,
+				816E33951EF8D87D002FB242 /* ContestResultsRow.xib in Resources */,
 				810133471ED9A70C00E33381 /* ContestButtonRow.xib in Resources */,
 				817198101EC81DEA00415BAC /* legends1.jpg in Resources */,
 				817198111EC81DEA00415BAC /* lesstentor1.jpg in Resources */,
@@ -1169,6 +1176,7 @@
 				22A0F4D51E0D17F400DD2F2D /* Lineup.swift in Sources */,
 				81265E3C1ECEB9B700547013 /* ExtUIViewController.swift in Sources */,
 				22A0F4F01E0D36D900DD2F2D /* Constants.swift in Sources */,
+				816E33941EF8D87D002FB242 /* ContestResultsRow.swift in Sources */,
 				811B9B421E614BF80084E8AB /* StartupService.swift in Sources */,
 				22A0F4EB1E0D2A5500DD2F2D /* ContestRow.swift in Sources */,
 				81A493861E9B5E4B0010364A /* LeaderboardRow.swift in Sources */,

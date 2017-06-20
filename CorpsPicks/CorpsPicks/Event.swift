@@ -16,6 +16,7 @@ class Event : NSObject {
   var location : String = ""
   var imageName : String = ""
   var pickStatus : Bool = false
+  var isComplete : Bool = false
   var time : Date = Date()
   var lineup : [String : Corps] = [:]
   var scores : [Corps : Float] = [:]
@@ -44,6 +45,9 @@ class Event : NSObject {
     if let time = eventDict["time"] {
       self.time = parseFirebaseTime(timeString: time)
     }
+    if let isComplete = eventDict["isComplete"] {
+      self.isComplete = (eventDict["isComplete"] == "true") ? true : false
+    }
   }
   
   // Parsers
@@ -64,7 +68,6 @@ class Event : NSObject {
     }
     let minute = tokens2[0]
     let timeFormatString = "\(hour):\(minute)"
-    print(timeFormatString)
     let time: Date? = dateFormatter.date(from: timeFormatString)
     return time!
   }
@@ -85,7 +88,7 @@ class Event : NSObject {
   }
   
   func parseFirebaseDate(dateString: String, timeString: String) -> Date {
-    print("\n\ndateString : \(dateString) timeString : \(timeString)")
+//    print("\n\ndateString : \(dateString) timeString : \(timeString)")
     // get hours and minutes
     let timeDate = parseFirebaseTime(timeString: timeString)
     let timeZone = parseFirebaseTimeZone(timeString: timeString)
@@ -99,9 +102,9 @@ class Event : NSObject {
     dateFormatter.timeZone = TimeZone(abbreviation: timeZone)
     let characters = dateString.characters.map { String($0) }
     let dateFormatString = "20\(characters[0])\(characters[1])-\(characters[2])\(characters[3])-\(characters[4])\(characters[5]) \(hour):\(minutes):00"
-    print("\(dateFormatString)")
+//    print("\(dateFormatString)")
     let date: Date? = dateFormatter.date(from: dateFormatString)
-    print("date : \(date)")
+//    print("date : \(date)")
     
     if (date == nil) {
       return Date()
@@ -113,7 +116,6 @@ class Event : NSObject {
 //    let dateStringUTC = dateFormatter.string(from: date!)
 //    print("Date() : \(Date())")
 //    print("date1 : \(dateStringUTC)")
-    
     
     return date!
   }

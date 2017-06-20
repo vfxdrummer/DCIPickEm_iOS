@@ -45,6 +45,8 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     contestTable.register(corpsOptionsNib, forCellReuseIdentifier: "ContestOptionsRow")
     let corpsNib = UINib(nibName: "ContestRow", bundle: nil)
     contestTable.register(corpsNib, forCellReuseIdentifier: "ContestRow")
+    let corpsResultsNib = UINib(nibName: "ContestResultsRow", bundle: nil)
+    contestTable.register(corpsResultsNib, forCellReuseIdentifier: "ContestResultsRow")
     
     // scroll tableView up a bit
     let adjustForTabbarInsets = UIEdgeInsetsMake(0, 0, 50, 0);
@@ -166,6 +168,8 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
     }
   }
   
+  /// contestViewModel?.isComplete : do we have results the show?
+  /// contestViewModel!.locked : has the show been locked
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     switch (indexPath.section) {
     case 0:
@@ -181,12 +185,21 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
         return cell
       }
     default:
-      let cell = tableView.dequeueReusableCell(withIdentifier: "ContestRow") as! ContestRow
-      cell.contestView = self
-      cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row], placementOnly: (contestViewModel?.placementOnly)!, locked: contestViewModel!.locked)
-      cell.updatePlacement(number: indexPath.row + 1)
-      cell.layoutIfNeeded()
-      return cell
+      switch (contestViewModel?.isComplete)! {
+      case true:
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContestResultsRow") as! ContestResultsRow
+        cell.contestView = self
+        cell.load(indexPath.row+1, placementPick: indexPath.row, resultsScore: contestViewModel!.corpsScores[indexPath.row], corpsScore: contestViewModel!.corpsScores[indexPath.row], madePicks: contestViewModel!.madePicks, placementOnly: (contestViewModel?.placementOnly)!)
+        cell.layoutIfNeeded()
+        return cell
+      case false:
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContestRow") as! ContestRow
+        cell.contestView = self
+        cell.load(indexPath.row, corpsScore: contestViewModel!.corpsScores[indexPath.row], placementOnly: (contestViewModel?.placementOnly)!, locked: contestViewModel!.locked)
+        cell.updatePlacement(number: indexPath.row + 1)
+        cell.layoutIfNeeded()
+        return cell
+      }
     }
   }
   

@@ -63,6 +63,7 @@ class CPTabView: UITabBarController, UITabBarControllerDelegate {
       CurrentContestItems.sharedInstance.eventId = (self.event?.id)!
       CurrentContestItems.sharedInstance.eventName = (self.event?.name)!
       CurrentContestItems.sharedInstance.eventDate = self.event?.date
+      CurrentContestItems.sharedInstance.isComplete = (self.event?.isComplete)!
     }
     
     if let leaderboardVC = viewController as? LeaderboardView {
