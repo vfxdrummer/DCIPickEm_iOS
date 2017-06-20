@@ -100,8 +100,7 @@ class Event : NSObject {
     let characters = dateString.characters.map { String($0) }
     let dateFormatString = "20\(characters[0])\(characters[1])-\(characters[2])\(characters[3])-\(characters[4])\(characters[5]) \(hour):\(minutes):00"
     print("\(dateFormatString)")
-    var date: Date? = dateFormatter.date(from: dateFormatString)
-    date = Calendar.current.date(byAdding: .day, value: -1, to: date!)
+    let date: Date? = dateFormatter.date(from: dateFormatString)
     print("date : \(date)")
     
     if (date == nil) {
@@ -114,7 +113,7 @@ class Event : NSObject {
 //    let dateStringUTC = dateFormatter.string(from: date!)
 //    print("Date() : \(Date())")
 //    print("date1 : \(dateStringUTC)")
-//    
+    
     
     return date!
   }
