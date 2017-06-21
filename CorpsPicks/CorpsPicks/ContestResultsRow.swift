@@ -45,8 +45,8 @@ class ContestResultsRow: UITableViewCell, UITextFieldDelegate {
    - parameter album: Album
    */
   func load(_ placementResult:Int, placementPick:Int, resultsScore:CorpsScore, corpsScore:CorpsScore, madePicks: Bool, placementOnly: Bool) {
-    self.corpsName.text = corpsScore.corps.name
-    self.corpsImage.fadeIn(corpsScore.corps.imageFileName)
+    self.corpsName.text = resultsScore.corps.name
+    self.corpsImage.fadeIn(resultsScore.corps.imageFileName)
     
     self.corpsPlacementResult.text = "\(placementResult)"
     self.corpsPlacementPick.text = "\(placementPick)"

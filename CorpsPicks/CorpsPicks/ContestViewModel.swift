@@ -30,6 +30,7 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
     }
   }
   
+  public var resultPickPlacements : [Int] = []
   public var resultScores : [CorpsScore] {
     get {
       return CurrentContestItems.sharedInstance.resultScores
@@ -143,7 +144,27 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   func updateLineup(lineup:Lineup) {
   }
   
+  /// If this method is called, our contest has results
+  /// This means that we should sort corpsScores to be parallel with them
+  /// So we can display in order
   func updateResults(resultScores:[CorpsScore]) {
+    var i = 0
+    var newCorpsScores = self.corpsScores
+    resultPickPlacements = []
+    for cS1 in resultScores {
+      var j = 0
+      for cS2 in self.corpsScores {
+        if (cS1.corps.name == cS2.corps.name) {
+          print("\(i) \(j)")
+          newCorpsScores[i] = self.corpsScores[j]
+          resultPickPlacements.append(j)
+        }
+        j += 1
+      }
+      i += 1
+    }
+    self.corpsScores = newCorpsScores
+    
     if let view = self.vc as? ContestView {
       view.reload()
     }
