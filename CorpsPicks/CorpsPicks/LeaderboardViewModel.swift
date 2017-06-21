@@ -9,41 +9,66 @@
 import UIKit
 
 class LeaderboardViewModel: CPViewModel, CurrentLeaderboardProtocol {
-    
-    var leaderboard : Leaderboard? {
-        get {
-            return CurrentLeaderboardItems.sharedInstance.leaderboard
-        }
+  
+  var placement : Leaderboard? {
+    get {
+      return CurrentLeaderboardItems.sharedInstance.placement
     }
-    
-    var userScores : [UserScore] {
-        get {
-            if let leaderboard = self.leaderboard {
-                return leaderboard.userScores
-            }
-            return []
-        }
+  }
+  
+  var scores : Leaderboard? {
+    get {
+      return CurrentLeaderboardItems.sharedInstance.scores
     }
-    
-    var eventId : String? = nil
-    
-    func setup(eventId:String) {
-        self.eventId = eventId
-        CurrentLeaderboardItems.sharedInstance.delegate = self
+  }
+  
+  var placementScores : [UserScore] {
+    get {
+      if let leaderboard = self.placement {
+        return leaderboard.userScores
+      }
+      return []
     }
-    
-    func loadLeaderboard() {
-        guard (eventId != nil) else { return }
-        LeaderboardInterface.getLeaderboard(eventId:eventId!)
+  }
+  
+  var scoresScores : [UserScore] {
+    get {
+      if let leaderboard = self.scores {
+        return leaderboard.userScores
+      }
+      return []
     }
-    
-    // CurrentLeaderboardProtocol
-    
-    func updateLeaderboard(leaderboard:Leaderboard) {
-        if let view = self.vc as? LeaderboardView {
-            view.reload()
-        }
+  }
+  
+  var hasData : Bool = false
+  
+  var eventId : String? = nil
+  
+  func setup(eventId:String) {
+    self.eventId = eventId
+    CurrentLeaderboardItems.sharedInstance.delegate = self
+  }
+  
+  func loadLeaderboard() {
+    guard (eventId != nil) else { return }
+    LeaderboardInterface.getLeaderboard(eventId:eventId!)
+  }
+  
+  // CurrentLeaderboardProtocol
+  
+  func updatePlacementLeaderboard(leaderboard:Leaderboard) {
+    hasData = true
+    if let view = self.vc as? LeaderboardView {
+      view.reload()
     }
-    
+  }
+  
+  func updateScoresLeaderboard(leaderboard:Leaderboard) {
+    hasData = true
+    if let view = self.vc as? LeaderboardView {
+      view.reload()
+    }
+  }
+  
 }
 

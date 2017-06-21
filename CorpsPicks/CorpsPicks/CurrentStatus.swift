@@ -117,26 +117,34 @@ class CurrentContestItems : NSObject {
     }
   }
 }
-  
+
 //  MARK: CurrentLeaderboardItems
 protocol CurrentLeaderboardProtocol {
-    func updateLeaderboard(leaderboard:Leaderboard)
+  func updatePlacementLeaderboard(leaderboard:Leaderboard)
+  func updateScoresLeaderboard(leaderboard:Leaderboard)
 }
 class CurrentLeaderboardItems : NSObject {
-    static let sharedInstance = CurrentLeaderboardItems()
-    private var delegates : [CurrentLeaderboardProtocol] = []
-    
-    var delegate : CurrentLeaderboardProtocol? = nil {
-        didSet {
-            delegates.append(delegate!)
-        }
+  static let sharedInstance = CurrentLeaderboardItems()
+  private var delegates : [CurrentLeaderboardProtocol] = []
+  
+  var delegate : CurrentLeaderboardProtocol? = nil {
+    didSet {
+      delegates.append(delegate!)
     }
-    var leaderboard : Leaderboard? {
-        didSet {
-            _ = delegates.map({
-                $0.updateLeaderboard(leaderboard:leaderboard!)
-            })
-        }
+  }
+  var placement : Leaderboard? {
+    didSet {
+      _ = delegates.map({
+        $0.updatePlacementLeaderboard(leaderboard:placement!)
+      })
     }
+  }
+  var scores : Leaderboard? {
+    didSet {
+      _ = delegates.map({
+        $0.updateScoresLeaderboard(leaderboard:scores!)
+      })
+    }
+  }
 }
 

@@ -11,29 +11,42 @@ import FirebaseAnalytics
 import FirebaseDatabase
 
 class LeaderboardInterface: NSObject {
+  
+  /**
+   getLeaderboard
+   Get Leaderboard list from Firebase DB
+   */
+  class func getLeaderboard(eventId: String) {
+    print("eventId : \(eventId)")
+    let ref = Database.database().reference()
     
-    /**
-     getLeaderboard
-     Get Leaderboard list from Firebase DB
-     */
-    class func getLeaderboard(eventId: String) {
-        print("eventId : \(eventId)")
-        let ref = Database.database().reference()
-        
-        ref.child("2017/v1/leaderboard").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let leaderboardDict = snapshot.value as? [String:String] else {
-                return
-            }
-            let leaderboard = Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>)
-            leaderboard.id = eventId
-            CurrentLeaderboardItems.sharedInstance.leaderboard = leaderboard
-        }) { (error) in
-            print(error.localizedDescription)
+    ref.child("2017/v1/leaderboard").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
+      
+      ref.child("2017/v1/leaderboard").child(eventId).child("placement").observeSingleEvent(of: .value, with: { (snapshot) in
+        guard let leaderboardDict = snapshot.value as? [String:String] else {
+          return
         }
+        let leaderboard = Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>)
+        leaderboard.id = eventId
+        CurrentLeaderboardItems.sharedInstance.placement = leaderboard
         
-        let leaderboardDict:Dictionary<String, AnyObject> = [:]
-        let leaderboard = Leaderboard(leaderboardDict: leaderboardDict)
+      }) { (error) in
+        print(error.localizedDescription)
+      }
+      
+      ref.child("2017/v1/leaderboard").child(eventId).child("scores").observeSingleEvent(of: .value, with: { (snapshot) in
+        guard let leaderboardDict = snapshot.value as? [String:String] else {
+          return
+        }
+        let leaderboard = Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>)
+        leaderboard.id = eventId
+        CurrentLeaderboardItems.sharedInstance.scores = leaderboard
         
-        CurrentLeaderboardItems.sharedInstance.leaderboard = leaderboard
+      }) { (error) in
+        print(error.localizedDescription)
+      }
+    }) { (error) in
+      print(error.localizedDescription)
     }
+  }
 }
