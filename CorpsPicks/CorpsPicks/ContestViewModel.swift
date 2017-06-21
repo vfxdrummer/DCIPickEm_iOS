@@ -143,6 +143,12 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   func updateLineup(lineup:Lineup) {
   }
   
+  func updateResults(resultScores:[CorpsScore]) {
+    if let view = self.vc as? ContestView {
+      view.reload()
+    }
+  }
+  
   func updateScores(corpsScores:[CorpsScore]) {
     self.corpsScores = corpsScores
     if let view = self.vc as? ContestView {

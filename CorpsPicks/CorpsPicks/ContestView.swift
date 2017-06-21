@@ -189,7 +189,9 @@ class ContestView: UITableViewController, NVActivityIndicatorViewable {
       case true:
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContestResultsRow") as! ContestResultsRow
         cell.contestView = self
-        cell.load(indexPath.row+1, placementPick: indexPath.row, resultsScore: contestViewModel!.resultScores[indexPath.row], corpsScore: contestViewModel!.corpsScores[indexPath.row], madePicks: contestViewModel!.madePicks, placementOnly: (contestViewModel?.placementOnly)!)
+        if (contestViewModel!.resultScores.count > indexPath.row && contestViewModel!.corpsScores.count > indexPath.row) {
+            cell.load(indexPath.row+1, placementPick: 0, resultsScore: contestViewModel!.resultScores[indexPath.row], corpsScore: contestViewModel!.corpsScores[indexPath.row], madePicks: contestViewModel!.madePicks, placementOnly: (contestViewModel?.placementOnly)!)
+        }
         cell.layoutIfNeeded()
         return cell
       case false:

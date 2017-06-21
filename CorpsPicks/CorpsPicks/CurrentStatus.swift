@@ -56,6 +56,7 @@ class CurrentEventItems : NSObject {
 protocol CurrentContestProtocol {
   func updateLineup(lineup:Lineup)
   func updateScores(corpsScores:[CorpsScore])
+  func updateResults(resultScores:[CorpsScore])
   func updateInitialScoresDismissed(initialScoresDismissed:Bool)
   func updatePlacementOnly(placementOnly:Bool)
 }
@@ -87,7 +88,13 @@ class CurrentContestItems : NSObject {
       })
     }
   }
-  var resultScores : [CorpsScore] = []
+  var resultScores : [CorpsScore] = [] {
+    didSet {
+      _ = delegates.map({
+        $0.updateResults(resultScores:resultScores)
+      })
+    }
+  }
   var corpsScores : [CorpsScore] = [] {
     didSet {
       _ = delegates.map({
