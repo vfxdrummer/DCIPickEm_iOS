@@ -23,7 +23,12 @@ class Leaderboard : NSObject {
       UserInterface.getUserById(userId: userLocal.uid, onSuccess: { user in
         userLocal.name = user.name
         self.userScores.append(UserScore.init(user: userLocal, score: leaderboardDict[userLocal.uid]! as! String))
-        print(self.userScores)
+//        let newCorpsScores:[CorpsScore] = self.corpsScores.sorted {
+//            ($0.score.pick as NSString).doubleValue > ($1.score.pick as NSString).doubleValue
+//        }
+        self.userScores = self.userScores.sorted {
+            ($0.score as NSString).doubleValue > ($1.score as NSString).doubleValue
+        }
         onSuccess(self)
       })
     })
