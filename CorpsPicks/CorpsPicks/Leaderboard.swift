@@ -18,11 +18,13 @@ class Leaderboard : NSObject {
     _ = scoreArray.map({
       print($0)
       print(leaderboardDict[$0]!)
-      let user = CPUser()
-      user.uid = $0
-//      user.name = $0
-      userScores.append(UserScore.init(user: user, score: leaderboardDict[$0]! as! String))
-      print(self.userScores)
+      let userLocal = CPUser()
+      userLocal.uid = $0
+      UserInterface.getUserById(userId: $0, onSuccess: { user in
+        userLocal.name = user.name
+        self.userScores.append(UserScore.init(user: userLocal, score: leaderboardDict[userLocal.uid]! as! String))
+        print(self.userScores)
+      })
     })
   }
 }

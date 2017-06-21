@@ -1,6 +1,6 @@
 //
 //  UserInterface.swift
-//  CorpsPicks
+//  UserPicks
 //
 //  Created by Timothy Brandt on 2/18/17.
 //  Copyright © 2017 Tim Brandt. All rights reserved.
@@ -23,5 +23,19 @@ class UserInterface: NSObject {
     let userRef = usersRef.child("/\(userId)")
     userRef.child("email").setValue(email)
     userRef.child("photoURL").setValue(photoURL)
+  }
+  
+  /**
+   getUserById
+   Get User from CurrentUserItems using UserId
+   */
+  class func getUserById(userId:String, onSuccess:@escaping (CPUser)->()) {
+    let ref = Database.database().reference()
+      
+    ref.child("2017/v1/users").child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
+      let user = CPUser()
+      user.uid = userId
+      onSuccess(user)
+    })
   }
 }
