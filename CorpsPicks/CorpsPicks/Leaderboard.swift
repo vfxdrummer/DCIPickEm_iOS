@@ -20,7 +20,7 @@ class Leaderboard : NSObject {
       print(leaderboardDict[$0]!)
       let user = CPUser()
       user.uid = $0
-      user.name = $0
+//      user.name = $0
       userScores.append(UserScore.init(user: user, score: leaderboardDict[$0]! as! String))
       print(self.userScores)
     })
