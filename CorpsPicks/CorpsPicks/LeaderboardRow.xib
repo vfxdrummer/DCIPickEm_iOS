@@ -53,7 +53,7 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.875" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="User Score">
-                        <rect key="frame" x="367.5" y="40.5" width="59.5" height="26"/>
+                        <rect key="frame" x="367.5" y="40" width="59.5" height="26"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ylr-i8-IIi" secondAttribute="height" multiplier="352:21" id="TCx-4w-yOI"/>
                         </constraints>

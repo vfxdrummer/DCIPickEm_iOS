@@ -50,7 +50,6 @@ class LeaderboardView: UITableViewController {
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
-    reload()
     self.leaderboardTable.reloadData()
     
     if self.refreshControl!.isRefreshing

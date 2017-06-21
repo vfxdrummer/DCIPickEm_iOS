@@ -12,7 +12,7 @@ class StartupService: CurrentEventProtocol {
   
   static let sharedInstance : StartupService = StartupService()
   
-  public var defaultEventId : String? = nil
+  public var defaultEventId : String? = "7267157"
   
   //  MARK: Startup Methods
   

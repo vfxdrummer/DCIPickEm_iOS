@@ -26,9 +26,10 @@ class LeaderboardInterface: NSObject {
         guard let leaderboardDict = snapshot.value as? [String:String] else {
           return
         }
-        let leaderboard = Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>)
-        leaderboard.id = eventId
-        CurrentLeaderboardItems.sharedInstance.placement = leaderboard
+        Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>, onSuccess: { leaderboard in
+            leaderboard.id = eventId
+            CurrentLeaderboardItems.sharedInstance.placement = leaderboard
+        })
         
       }) { (error) in
         print(error.localizedDescription)
@@ -38,9 +39,10 @@ class LeaderboardInterface: NSObject {
         guard let leaderboardDict = snapshot.value as? [String:String] else {
           return
         }
-        let leaderboard = Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>)
-        leaderboard.id = eventId
-        CurrentLeaderboardItems.sharedInstance.scores = leaderboard
+        Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>, onSuccess: { leaderboard in
+            leaderboard.id = eventId
+            CurrentLeaderboardItems.sharedInstance.scores = leaderboard
+        })
         
       }) { (error) in
         print(error.localizedDescription)

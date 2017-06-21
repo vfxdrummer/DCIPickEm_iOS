@@ -31,11 +31,28 @@ class UserInterface: NSObject {
    */
   class func getUserById(userId:String, onSuccess:@escaping (CPUser)->()) {
     let ref = Database.database().reference()
-      
-    ref.child("2017/v1/users").child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
-      let user = CPUser()
-      user.uid = userId
-      onSuccess(user)
+    
+    let usersRef = ref.child("2017/v1//users")
+//    let userRef = usersRef.child("")
+    
+    ref.child("2017/v1//users").observeSingleEvent(of: .value, with: { (snapshot) in
+        let userId = userId.replacingOccurrences(of: "\"", with: "")
+        if snapshot.hasChild(userId) {
+            
+            ref.child("2017/v1//users").child(userId).child("email").observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                if let email = snapshot.value! as? String {
+                    var emailToks = email.components(separatedBy: "@")
+                    if emailToks.count >= 1 {
+                        let user = CPUser()
+                        user.uid = userId
+                        user.name = emailToks[0]
+                        user.email = email
+                        onSuccess(user)
+                    }
+                }
+            })
+        }
     })
   }
 }
