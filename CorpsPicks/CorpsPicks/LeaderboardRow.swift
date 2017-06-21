@@ -19,9 +19,9 @@ class LeaderboardRow: UITableViewCell {
   var index : Int = 0
   weak var leaderboardView: LeaderboardView?
     
-  @IBOutlet var userPlacement: UILabel!
-  @IBOutlet var userName: UILabel!
-  @IBOutlet var userScore: UILabel!
+  @IBOutlet var userPlacementLabel: UILabel!
+  @IBOutlet var userNameLabel: UILabel!
+  @IBOutlet var userScoreLabel: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -37,7 +37,8 @@ class LeaderboardRow: UITableViewCell {
    */
   func load(_ index:Int, userScore:UserScore) {
     self.index = index
-    self.userName.text = userScore.user.name
-    self.userScore.text = userScore.score
+    userPlacementLabel.text = "\(index)"
+    userNameLabel.text = userScore.user.name
+    userScoreLabel.text = userScore.score
   }
 }

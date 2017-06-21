@@ -109,7 +109,7 @@ class LeaderboardView: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardRow") as! LeaderboardRow
         cell.leaderboardView = self
         let userScore = leaderboardViewModel!.placementScores[indexPath.row]
-        cell.load(indexPath.row, userScore: userScore)
+        cell.load(indexPath.row+1, userScore: userScore)
         return cell
         
       case false:

@@ -148,6 +148,7 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
   /// This means that we should sort corpsScores to be parallel with them
   /// So we can display in order
   func updateResults(resultScores:[CorpsScore]) {
+    // TODO - this code is a mess
     var i = 0
     var newCorpsScores = self.corpsScores
     resultPickPlacements = []
@@ -155,7 +156,6 @@ class ContestViewModel: CPViewModel, CurrentContestProtocol {
       var j = 0
       for cS2 in self.corpsScores {
         if (cS1.corps.name == cS2.corps.name) {
-          print("\(i) \(j)")
           newCorpsScores[i] = self.corpsScores[j]
           resultPickPlacements.append(j)
         }
