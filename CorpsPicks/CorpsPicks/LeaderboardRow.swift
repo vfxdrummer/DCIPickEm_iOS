@@ -18,6 +18,7 @@ class LeaderboardRow: UITableViewCell {
   var scoreDirection : Bool = true
   weak var leaderboardView: LeaderboardView?
     
+  @IBOutlet weak var leaderboardImage: UIImageView!
   @IBOutlet var userPlacementLabel: UILabel!
   @IBOutlet var userNameLabel: UILabel!
   @IBOutlet var userScoreLabel: UILabel!
@@ -38,5 +39,15 @@ class LeaderboardRow: UITableViewCell {
     userPlacementLabel.text = userScore.placement != nil ? "\(userScore.placement!)" : ""
     userNameLabel.text = userScore.user.name
     userScoreLabel.text = userScore.score
+    self.setLeaderboardImage()
+  }
+  
+  func setLeaderboardImage() {
+    let eventMinNum = 0
+    let eventMaxNum = 42
+    let randomEvent = Int(arc4random_uniform(UInt32(eventMaxNum - eventMinNum)) + 1) + eventMinNum
+    let imageName = randomEvent > 0 ? "leaderboard\(randomEvent).jpg" : "leaderboard.jpg"
+    
+    self.leaderboardImage.image = UIImage(named:imageName)
   }
 }

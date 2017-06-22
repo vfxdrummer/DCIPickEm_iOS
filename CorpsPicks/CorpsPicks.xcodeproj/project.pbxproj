@@ -61,6 +61,48 @@
 		812F5BB81E5A29A6009B068C /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB61E5A29A6009B068C /* EventRow.swift */; };
 		812F5BBA1E5A30B8009B068C /* CurrentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB91E5A30B8009B068C /* CurrentStatus.swift */; };
 		812F5BBE1E5A71A1009B068C /* ContestInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BBD1E5A71A1009B068C /* ContestInterface.swift */; };
+		8134D1D11EFB92440050C2D5 /* leaderboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1A71EFB92440050C2D5 /* leaderboard.jpg */; };
+		8134D1D21EFB92440050C2D5 /* leaderboard2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1A81EFB92440050C2D5 /* leaderboard2.jpg */; };
+		8134D1D31EFB92440050C2D5 /* leaderboard3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1A91EFB92440050C2D5 /* leaderboard3.jpg */; };
+		8134D1D41EFB92440050C2D5 /* leaderboard4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1AA1EFB92440050C2D5 /* leaderboard4.jpg */; };
+		8134D1D51EFB92440050C2D5 /* leaderboard5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1AB1EFB92440050C2D5 /* leaderboard5.jpg */; };
+		8134D1D61EFB92440050C2D5 /* leaderboard6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1AC1EFB92440050C2D5 /* leaderboard6.jpg */; };
+		8134D1D71EFB92440050C2D5 /* leaderboard7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1AD1EFB92440050C2D5 /* leaderboard7.jpg */; };
+		8134D1D81EFB92440050C2D5 /* leaderboard8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1AE1EFB92440050C2D5 /* leaderboard8.jpg */; };
+		8134D1D91EFB92440050C2D5 /* leaderboard9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1AF1EFB92440050C2D5 /* leaderboard9.jpg */; };
+		8134D1DA1EFB92440050C2D5 /* leaderboard10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1B01EFB92440050C2D5 /* leaderboard10.jpg */; };
+		8134D1DB1EFB92440050C2D5 /* leaderboard11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1B11EFB92440050C2D5 /* leaderboard11.jpg */; };
+		8134D1DC1EFB92440050C2D5 /* leaderboard12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1B21EFB92440050C2D5 /* leaderboard12.jpg */; };
+		8134D1DD1EFB92440050C2D5 /* leaderboard13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1B31EFB92440050C2D5 /* leaderboard13.jpg */; };
+		8134D1DE1EFB92440050C2D5 /* leaderboard14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1B41EFB92440050C2D5 /* leaderboard14.jpg */; };
+		8134D1DF1EFB92440050C2D5 /* leaderboard15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1B51EFB92440050C2D5 /* leaderboard15.jpg */; };
+		8134D1E01EFB92440050C2D5 /* leaderboard16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1B61EFB92440050C2D5 /* leaderboard16.jpg */; };
+		8134D1E11EFB92440050C2D5 /* leaderboard17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1B71EFB92440050C2D5 /* leaderboard17.jpg */; };
+		8134D1E21EFB92440050C2D5 /* leaderboard18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1B81EFB92440050C2D5 /* leaderboard18.jpg */; };
+		8134D1E31EFB92440050C2D5 /* leaderboard19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1B91EFB92440050C2D5 /* leaderboard19.jpg */; };
+		8134D1E41EFB92440050C2D5 /* leaderboard20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1BA1EFB92440050C2D5 /* leaderboard20.jpg */; };
+		8134D1E51EFB92440050C2D5 /* leaderboard21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1BB1EFB92440050C2D5 /* leaderboard21.jpg */; };
+		8134D1E61EFB92440050C2D5 /* leaderboard22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1BC1EFB92440050C2D5 /* leaderboard22.jpg */; };
+		8134D1E71EFB92440050C2D5 /* leaderboard23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1BD1EFB92440050C2D5 /* leaderboard23.jpg */; };
+		8134D1E81EFB92440050C2D5 /* leaderboard24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1BE1EFB92440050C2D5 /* leaderboard24.jpg */; };
+		8134D1E91EFB92440050C2D5 /* leaderboard25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1BF1EFB92440050C2D5 /* leaderboard25.jpg */; };
+		8134D1EA1EFB92440050C2D5 /* leaderboard26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1C01EFB92440050C2D5 /* leaderboard26.jpg */; };
+		8134D1EB1EFB92440050C2D5 /* leaderboard27.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1C11EFB92440050C2D5 /* leaderboard27.jpg */; };
+		8134D1EC1EFB92440050C2D5 /* leaderboard28.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1C21EFB92440050C2D5 /* leaderboard28.jpg */; };
+		8134D1ED1EFB92440050C2D5 /* leaderboard29.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1C31EFB92440050C2D5 /* leaderboard29.jpg */; };
+		8134D1EE1EFB92440050C2D5 /* leaderboard30.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1C41EFB92440050C2D5 /* leaderboard30.jpg */; };
+		8134D1EF1EFB92440050C2D5 /* leaderboard31.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1C51EFB92440050C2D5 /* leaderboard31.jpg */; };
+		8134D1F01EFB92440050C2D5 /* leaderboard32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1C61EFB92440050C2D5 /* leaderboard32.jpg */; };
+		8134D1F11EFB92440050C2D5 /* leaderboard33.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1C71EFB92440050C2D5 /* leaderboard33.jpg */; };
+		8134D1F21EFB92440050C2D5 /* leaderboard34.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1C81EFB92440050C2D5 /* leaderboard34.jpg */; };
+		8134D1F31EFB92440050C2D5 /* leaderboard35.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1C91EFB92440050C2D5 /* leaderboard35.jpg */; };
+		8134D1F41EFB92440050C2D5 /* leaderboard36.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1CA1EFB92440050C2D5 /* leaderboard36.jpg */; };
+		8134D1F51EFB92440050C2D5 /* leaderboard37.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1CB1EFB92440050C2D5 /* leaderboard37.jpg */; };
+		8134D1F61EFB92440050C2D5 /* leaderboard38.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1CC1EFB92440050C2D5 /* leaderboard38.jpg */; };
+		8134D1F71EFB92440050C2D5 /* leaderboard39.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1CD1EFB92440050C2D5 /* leaderboard39.jpg */; };
+		8134D1F81EFB92440050C2D5 /* leaderboard40.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1CE1EFB92440050C2D5 /* leaderboard40.jpg */; };
+		8134D1F91EFB92440050C2D5 /* leaderboard41.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1CF1EFB92440050C2D5 /* leaderboard41.jpg */; };
+		8134D1FA1EFB92440050C2D5 /* leaderboard42.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1D01EFB92440050C2D5 /* leaderboard42.jpg */; };
 		814D99711ED2156B00E8DAC3 /* CPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D99701ED2156B00E8DAC3 /* CPNavigationController.swift */; };
 		816582E71EC74848002C9BA2 /* bd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 816582E01EC74848002C9BA2 /* bd.jpg */; };
 		816582E81EC74848002C9BA2 /* bluecoats.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 816582E11EC74848002C9BA2 /* bluecoats.jpeg */; };
@@ -258,6 +300,48 @@
 		812F5BB61E5A29A6009B068C /* EventRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
 		812F5BB91E5A30B8009B068C /* CurrentStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentStatus.swift; sourceTree = "<group>"; };
 		812F5BBD1E5A71A1009B068C /* ContestInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestInterface.swift; sourceTree = "<group>"; };
+		8134D1A71EFB92440050C2D5 /* leaderboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard.jpg"; sourceTree = "<group>"; };
+		8134D1A81EFB92440050C2D5 /* leaderboard2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard2.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard2.jpg"; sourceTree = "<group>"; };
+		8134D1A91EFB92440050C2D5 /* leaderboard3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard3.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard3.jpg"; sourceTree = "<group>"; };
+		8134D1AA1EFB92440050C2D5 /* leaderboard4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard4.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard4.jpg"; sourceTree = "<group>"; };
+		8134D1AB1EFB92440050C2D5 /* leaderboard5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard5.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard5.jpg"; sourceTree = "<group>"; };
+		8134D1AC1EFB92440050C2D5 /* leaderboard6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard6.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard6.jpg"; sourceTree = "<group>"; };
+		8134D1AD1EFB92440050C2D5 /* leaderboard7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard7.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard7.jpg"; sourceTree = "<group>"; };
+		8134D1AE1EFB92440050C2D5 /* leaderboard8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard8.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard8.jpg"; sourceTree = "<group>"; };
+		8134D1AF1EFB92440050C2D5 /* leaderboard9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard9.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard9.jpg"; sourceTree = "<group>"; };
+		8134D1B01EFB92440050C2D5 /* leaderboard10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard10.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard10.jpg"; sourceTree = "<group>"; };
+		8134D1B11EFB92440050C2D5 /* leaderboard11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard11.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard11.jpg"; sourceTree = "<group>"; };
+		8134D1B21EFB92440050C2D5 /* leaderboard12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard12.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard12.jpg"; sourceTree = "<group>"; };
+		8134D1B31EFB92440050C2D5 /* leaderboard13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard13.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard13.jpg"; sourceTree = "<group>"; };
+		8134D1B41EFB92440050C2D5 /* leaderboard14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard14.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard14.jpg"; sourceTree = "<group>"; };
+		8134D1B51EFB92440050C2D5 /* leaderboard15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard15.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard15.jpg"; sourceTree = "<group>"; };
+		8134D1B61EFB92440050C2D5 /* leaderboard16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard16.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard16.jpg"; sourceTree = "<group>"; };
+		8134D1B71EFB92440050C2D5 /* leaderboard17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard17.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard17.jpg"; sourceTree = "<group>"; };
+		8134D1B81EFB92440050C2D5 /* leaderboard18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard18.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard18.jpg"; sourceTree = "<group>"; };
+		8134D1B91EFB92440050C2D5 /* leaderboard19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard19.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard19.jpg"; sourceTree = "<group>"; };
+		8134D1BA1EFB92440050C2D5 /* leaderboard20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard20.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard20.jpg"; sourceTree = "<group>"; };
+		8134D1BB1EFB92440050C2D5 /* leaderboard21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard21.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard21.jpg"; sourceTree = "<group>"; };
+		8134D1BC1EFB92440050C2D5 /* leaderboard22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard22.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard22.jpg"; sourceTree = "<group>"; };
+		8134D1BD1EFB92440050C2D5 /* leaderboard23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard23.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard23.jpg"; sourceTree = "<group>"; };
+		8134D1BE1EFB92440050C2D5 /* leaderboard24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard24.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard24.jpg"; sourceTree = "<group>"; };
+		8134D1BF1EFB92440050C2D5 /* leaderboard25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard25.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard25.jpg"; sourceTree = "<group>"; };
+		8134D1C01EFB92440050C2D5 /* leaderboard26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard26.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard26.jpg"; sourceTree = "<group>"; };
+		8134D1C11EFB92440050C2D5 /* leaderboard27.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard27.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard27.jpg"; sourceTree = "<group>"; };
+		8134D1C21EFB92440050C2D5 /* leaderboard28.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard28.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard28.jpg"; sourceTree = "<group>"; };
+		8134D1C31EFB92440050C2D5 /* leaderboard29.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard29.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard29.jpg"; sourceTree = "<group>"; };
+		8134D1C41EFB92440050C2D5 /* leaderboard30.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard30.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard30.jpg"; sourceTree = "<group>"; };
+		8134D1C51EFB92440050C2D5 /* leaderboard31.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard31.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard31.jpg"; sourceTree = "<group>"; };
+		8134D1C61EFB92440050C2D5 /* leaderboard32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard32.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard32.jpg"; sourceTree = "<group>"; };
+		8134D1C71EFB92440050C2D5 /* leaderboard33.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard33.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard33.jpg"; sourceTree = "<group>"; };
+		8134D1C81EFB92440050C2D5 /* leaderboard34.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard34.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard34.jpg"; sourceTree = "<group>"; };
+		8134D1C91EFB92440050C2D5 /* leaderboard35.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard35.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard35.jpg"; sourceTree = "<group>"; };
+		8134D1CA1EFB92440050C2D5 /* leaderboard36.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard36.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard36.jpg"; sourceTree = "<group>"; };
+		8134D1CB1EFB92440050C2D5 /* leaderboard37.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard37.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard37.jpg"; sourceTree = "<group>"; };
+		8134D1CC1EFB92440050C2D5 /* leaderboard38.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard38.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard38.jpg"; sourceTree = "<group>"; };
+		8134D1CD1EFB92440050C2D5 /* leaderboard39.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard39.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard39.jpg"; sourceTree = "<group>"; };
+		8134D1CE1EFB92440050C2D5 /* leaderboard40.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard40.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard40.jpg"; sourceTree = "<group>"; };
+		8134D1CF1EFB92440050C2D5 /* leaderboard41.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard41.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard41.jpg"; sourceTree = "<group>"; };
+		8134D1D01EFB92440050C2D5 /* leaderboard42.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard42.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard42.jpg"; sourceTree = "<group>"; };
 		814D99701ED2156B00E8DAC3 /* CPNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPNavigationController.swift; sourceTree = "<group>"; };
 		816582E01EC74848002C9BA2 /* bd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bd.jpg; path = resources/images/badges/bd.jpg; sourceTree = "<group>"; };
 		816582E11EC74848002C9BA2 /* bluecoats.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bluecoats.jpeg; path = resources/images/badges/bluecoats.jpeg; sourceTree = "<group>"; };
@@ -574,6 +658,7 @@
 				8171981D1EC95C6700415BAC /* tabbar */,
 				8171981C1EC841BC00415BAC /* contest_banners */,
 				81920AA31EDFDBAE00A74B14 /* event_banners */,
+				8134D1A61EFB92220050C2D5 /* leaderboard_banners */,
 				816582DF1EC74811002C9BA2 /* badges */,
 				816582DE1EC74805002C9BA2 /* logo */,
 				81C25A231EED8C5800C0FF7C /* medals */,
@@ -607,6 +692,55 @@
 				811F63971EEA7135009AA6B2 /* OpenSans-SemiboldItalic.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		8134D1A61EFB92220050C2D5 /* leaderboard_banners */ = {
+			isa = PBXGroup;
+			children = (
+				8134D1A71EFB92440050C2D5 /* leaderboard.jpg */,
+				8134D1A81EFB92440050C2D5 /* leaderboard2.jpg */,
+				8134D1A91EFB92440050C2D5 /* leaderboard3.jpg */,
+				8134D1AA1EFB92440050C2D5 /* leaderboard4.jpg */,
+				8134D1AB1EFB92440050C2D5 /* leaderboard5.jpg */,
+				8134D1AC1EFB92440050C2D5 /* leaderboard6.jpg */,
+				8134D1AD1EFB92440050C2D5 /* leaderboard7.jpg */,
+				8134D1AE1EFB92440050C2D5 /* leaderboard8.jpg */,
+				8134D1AF1EFB92440050C2D5 /* leaderboard9.jpg */,
+				8134D1B01EFB92440050C2D5 /* leaderboard10.jpg */,
+				8134D1B11EFB92440050C2D5 /* leaderboard11.jpg */,
+				8134D1B21EFB92440050C2D5 /* leaderboard12.jpg */,
+				8134D1B31EFB92440050C2D5 /* leaderboard13.jpg */,
+				8134D1B41EFB92440050C2D5 /* leaderboard14.jpg */,
+				8134D1B51EFB92440050C2D5 /* leaderboard15.jpg */,
+				8134D1B61EFB92440050C2D5 /* leaderboard16.jpg */,
+				8134D1B71EFB92440050C2D5 /* leaderboard17.jpg */,
+				8134D1B81EFB92440050C2D5 /* leaderboard18.jpg */,
+				8134D1B91EFB92440050C2D5 /* leaderboard19.jpg */,
+				8134D1BA1EFB92440050C2D5 /* leaderboard20.jpg */,
+				8134D1BB1EFB92440050C2D5 /* leaderboard21.jpg */,
+				8134D1BC1EFB92440050C2D5 /* leaderboard22.jpg */,
+				8134D1BD1EFB92440050C2D5 /* leaderboard23.jpg */,
+				8134D1BE1EFB92440050C2D5 /* leaderboard24.jpg */,
+				8134D1BF1EFB92440050C2D5 /* leaderboard25.jpg */,
+				8134D1C01EFB92440050C2D5 /* leaderboard26.jpg */,
+				8134D1C11EFB92440050C2D5 /* leaderboard27.jpg */,
+				8134D1C21EFB92440050C2D5 /* leaderboard28.jpg */,
+				8134D1C31EFB92440050C2D5 /* leaderboard29.jpg */,
+				8134D1C41EFB92440050C2D5 /* leaderboard30.jpg */,
+				8134D1C51EFB92440050C2D5 /* leaderboard31.jpg */,
+				8134D1C61EFB92440050C2D5 /* leaderboard32.jpg */,
+				8134D1C71EFB92440050C2D5 /* leaderboard33.jpg */,
+				8134D1C81EFB92440050C2D5 /* leaderboard34.jpg */,
+				8134D1C91EFB92440050C2D5 /* leaderboard35.jpg */,
+				8134D1CA1EFB92440050C2D5 /* leaderboard36.jpg */,
+				8134D1CB1EFB92440050C2D5 /* leaderboard37.jpg */,
+				8134D1CC1EFB92440050C2D5 /* leaderboard38.jpg */,
+				8134D1CD1EFB92440050C2D5 /* leaderboard39.jpg */,
+				8134D1CE1EFB92440050C2D5 /* leaderboard40.jpg */,
+				8134D1CF1EFB92440050C2D5 /* leaderboard41.jpg */,
+				8134D1D01EFB92440050C2D5 /* leaderboard42.jpg */,
+			);
+			name = leaderboard_banners;
 			sourceTree = "<group>";
 		};
 		816582D91EC7477E002C9BA2 /* icon */ = {
@@ -933,12 +1067,16 @@
 				817198061EC81DEA00415BAC /* bluedevilsb1.jpg in Resources */,
 				81265E361ECEAA8400547013 /* contests-white.png in Resources */,
 				817198071EC81DEA00415BAC /* bluedevilsc1.jpg in Resources */,
+				8134D1E01EFB92440050C2D5 /* leaderboard16.jpg in Resources */,
+				8134D1DD1EFB92440050C2D5 /* leaderboard13.jpg in Resources */,
 				81920AE51EDFDD0B00A74B14 /* event17.jpg in Resources */,
+				8134D1E81EFB92440050C2D5 /* leaderboard24.jpg in Resources */,
 				817198081EC81DEA00415BAC /* coltcadets1.jpg in Resources */,
 				81920AD81EDFDD0B00A74B14 /* event30.jpg in Resources */,
 				81920AEE1EDFDD0B00A74B14 /* buffalo.jpg in Resources */,
 				81920ADA1EDFDD0B00A74B14 /* event28.jpg in Resources */,
 				81920AEC1EDFDD0B00A74B14 /* chester.jpg in Resources */,
+				8134D1F81EFB92440050C2D5 /* leaderboard40.jpg in Resources */,
 				81920AE61EDFDD0B00A74B14 /* event16.jpg in Resources */,
 				81920AE91EDFDD0B00A74B14 /* denver.jpg in Resources */,
 				817198091EC81DEA00415BAC /* columbians1.jpg in Resources */,
@@ -950,24 +1088,40 @@
 				81920AD61EDFDD0B00A74B14 /* event32.jpg in Resources */,
 				8171980D1EC81DEA00415BAC /* heatwave1.jpg in Resources */,
 				8171980E1EC81DEA00415BAC /* impulse1.jpg in Resources */,
+				8134D1E51EFB92440050C2D5 /* leaderboard21.jpg in Resources */,
 				81920AD91EDFDD0B00A74B14 /* event29.jpg in Resources */,
 				81920AD11EDFDD0B00A74B14 /* event37.jpg in Resources */,
 				8171980F1EC81DEA00415BAC /* incognito1.jpg in Resources */,
 				816E33951EF8D87D002FB242 /* ContestResultsRow.xib in Resources */,
+				8134D1D71EFB92440050C2D5 /* leaderboard7.jpg in Resources */,
 				810133471ED9A70C00E33381 /* ContestButtonRow.xib in Resources */,
+				8134D1F11EFB92440050C2D5 /* leaderboard33.jpg in Resources */,
+				8134D1F61EFB92440050C2D5 /* leaderboard38.jpg in Resources */,
 				817198101EC81DEA00415BAC /* legends1.jpg in Resources */,
+				8134D1E61EFB92440050C2D5 /* leaderboard22.jpg in Resources */,
+				8134D1D91EFB92440050C2D5 /* leaderboard9.jpg in Resources */,
+				8134D1D81EFB92440050C2D5 /* leaderboard8.jpg in Resources */,
 				817198111EC81DEA00415BAC /* lesstentor1.jpg in Resources */,
+				8134D1FA1EFB92440050C2D5 /* leaderboard42.jpg in Resources */,
+				8134D1F91EFB92440050C2D5 /* leaderboard41.jpg in Resources */,
+				8134D1D41EFB92440050C2D5 /* leaderboard4.jpg in Resources */,
 				81920AE41EDFDD0B00A74B14 /* event18.jpg in Resources */,
 				817198121EC81DEA00415BAC /* louisianastars1.jpg in Resources */,
+				8134D1E71EFB92440050C2D5 /* leaderboard23.jpg in Resources */,
 				817198131EC81DEA00415BAC /* musiccity1.jpg in Resources */,
 				817198141EC81DEA00415BAC /* raiders1.jpg in Resources */,
 				817198151EC81DEA00415BAC /* rivercityryhthm1.jpg in Resources */,
+				8134D1EC1EFB92440050C2D5 /* leaderboard28.jpg in Resources */,
 				817198161EC81DEA00415BAC /* shadow1.jpg in Resources */,
 				817198171EC81DEA00415BAC /* southwind1.jpg in Resources */,
 				817198181EC81DEA00415BAC /* spartans1.jpg in Resources */,
 				81920AE01EDFDD0B00A74B14 /* event22.jpg in Resources */,
+				8134D1D11EFB92440050C2D5 /* leaderboard.jpg in Resources */,
 				817198191EC81DEA00415BAC /* thebattalion1.jpg in Resources */,
+				8134D1D61EFB92440050C2D5 /* leaderboard6.jpg in Resources */,
+				8134D1F21EFB92440050C2D5 /* leaderboard34.jpg in Resources */,
 				81265E3A1ECEAA8400547013 /* leaderboard.png in Resources */,
+				8134D1EB1EFB92440050C2D5 /* leaderboard27.jpg in Resources */,
 				8171981A1EC81DEA00415BAC /* vanguardcadets1.jpg in Resources */,
 				8171981B1EC81DEA00415BAC /* watchmen1.jpg in Resources */,
 				81920AD71EDFDD0B00A74B14 /* event31.jpg in Resources */,
@@ -977,10 +1131,15 @@
 				817197D91EC81DD600415BAC /* bluedevils1.jpg in Resources */,
 				817197DA1EC81DD600415BAC /* blueknights1.jpg in Resources */,
 				81920ADB1EDFDD0B00A74B14 /* event27.jpg in Resources */,
+				8134D1F51EFB92440050C2D5 /* leaderboard37.jpg in Resources */,
+				8134D1F01EFB92440050C2D5 /* leaderboard32.jpg in Resources */,
+				8134D1E21EFB92440050C2D5 /* leaderboard18.jpg in Resources */,
 				817197DB1EC81DD600415BAC /* bluestars1.jpg in Resources */,
 				811F638C1EEA6775009AA6B2 /* ContestOptionsRow.xib in Resources */,
 				81920AD51EDFDD0B00A74B14 /* event33.jpg in Resources */,
 				817197DC1EC81DD600415BAC /* bostoncrusaders1.jpg in Resources */,
+				8134D1F71EFB92440050C2D5 /* leaderboard39.jpg in Resources */,
+				8134D1EF1EFB92440050C2D5 /* leaderboard31.jpg in Resources */,
 				817197DD1EC81DD600415BAC /* cadets1.jpg in Resources */,
 				81265E371ECEAA8400547013 /* events-black.png in Resources */,
 				817197DE1EC81DD600415BAC /* cascades1.jpg in Resources */,
@@ -1000,22 +1159,30 @@
 				81920ACB1EDFDD0B00A74B14 /* san antonio.jpg in Resources */,
 				81920AEA1EDFDD0B00A74B14 /* denton.jpg in Resources */,
 				817197E51EC81DD600415BAC /* madison1.jpg in Resources */,
+				8134D1F41EFB92440050C2D5 /* leaderboard36.jpg in Resources */,
 				817197E61EC81DD600415BAC /* mandarins1.jpg in Resources */,
+				8134D1E11EFB92440050C2D5 /* leaderboard17.jpg in Resources */,
 				817197E71EC81DD600415BAC /* oregoncrusaders1.jpg in Resources */,
 				817197E81EC81DD600415BAC /* pacificcrest1.jpg in Resources */,
 				817197E91EC81DD600415BAC /* phantomregiment1.jpg in Resources */,
 				817197EA1EC81DD600415BAC /* pioneer1.jpg in Resources */,
 				81C25A251EED8D1A00C0FF7C /* cesario-gold.png in Resources */,
 				817197EB1EC81DD600415BAC /* spiritofatlanta1.jpg in Resources */,
+				8134D1DC1EFB92440050C2D5 /* leaderboard12.jpg in Resources */,
 				81920ACA1EDFDD0B00A74B14 /* whitewater.jpg in Resources */,
 				817197EC1EC81DD600415BAC /* troopers1.jpg in Resources */,
+				8134D1ED1EFB92440050C2D5 /* leaderboard29.jpg in Resources */,
 				817197ED1EC81DD600415BAC /* vanguard1.jpg in Resources */,
 				816582EC1EC74848002C9BA2 /* crown.jpeg in Resources */,
+				8134D1E91EFB92440050C2D5 /* leaderboard25.jpg in Resources */,
+				8134D1DB1EFB92440050C2D5 /* leaderboard11.jpg in Resources */,
 				816582E91EC74848002C9BA2 /* bluedevils.png in Resources */,
+				8134D1D51EFB92440050C2D5 /* leaderboard5.jpg in Resources */,
 				816582EA1EC74848002C9BA2 /* cadets.jpeg in Resources */,
 				816582F31EC74857002C9BA2 /* fdc_with_logotype.pdf in Resources */,
 				81920AED1EDFDD0B00A74B14 /* cedar rapids.jpg in Resources */,
 				81920AD21EDFDD0B00A74B14 /* event36.jpg in Resources */,
+				8134D1DA1EFB92440050C2D5 /* leaderboard10.jpg in Resources */,
 				816582ED1EC74848002C9BA2 /* crown2.jpg in Resources */,
 				22A0F4A61E0D0BA400DD2F2D /* LaunchScreen.storyboard in Resources */,
 				81265E351ECEAA8400547013 /* contests-black.png in Resources */,
@@ -1024,8 +1191,10 @@
 				81920ADD1EDFDD0B00A74B14 /* event25.jpg in Resources */,
 				22A0F4A31E0D0BA400DD2F2D /* Assets.xcassets in Resources */,
 				81A493871E9B5E4B0010364A /* LeaderboardRow.xib in Resources */,
+				8134D1D21EFB92440050C2D5 /* leaderboard2.jpg in Resources */,
 				816582E71EC74848002C9BA2 /* bd.jpg in Resources */,
 				81265E391ECEAA8400547013 /* leaderboard-black.png in Resources */,
+				8134D1E31EFB92440050C2D5 /* leaderboard19.jpg in Resources */,
 				22A0F4ED1E0D2A5500DD2F2D /* ContestRow.xib in Resources */,
 				8111BF8B1EE4628100FB8E5C /* LeaderboardMessageRow.xib in Resources */,
 				816582F71EC7486C002C9BA2 /* fdc_app_icon_image.pdf in Resources */,
@@ -1033,14 +1202,21 @@
 				81920AD01EDFDD0B00A74B14 /* event38.jpg in Resources */,
 				22A0F4A11E0D0BA400DD2F2D /* Main.storyboard in Resources */,
 				812F5BB71E5A29A6009B068C /* EventRow.xib in Resources */,
+				8134D1EA1EFB92440050C2D5 /* leaderboard26.jpg in Resources */,
 				816582F91EC7486C002C9BA2 /* inside_the_shield_icon.pdf in Resources */,
+				8134D1D31EFB92440050C2D5 /* leaderboard3.jpg in Resources */,
 				816582EB1EC74848002C9BA2 /* cavaliers.jpeg in Resources */,
 				816582F81EC7486C002C9BA2 /* fdc_icon_one_color_stamp.pdf in Resources */,
+				8134D1DF1EFB92440050C2D5 /* leaderboard15.jpg in Resources */,
+				8134D1EE1EFB92440050C2D5 /* leaderboard30.jpg in Resources */,
 				816582F21EC74857002C9BA2 /* fdc_logo.pdf in Resources */,
 				816582F11EC74857002C9BA2 /* fdc_logo_no_padding.pdf in Resources */,
+				8134D1DE1EFB92440050C2D5 /* leaderboard14.jpg in Resources */,
+				8134D1F31EFB92440050C2D5 /* leaderboard35.jpg in Resources */,
 				81920AE11EDFDD0B00A74B14 /* event21.jpg in Resources */,
 				81920AE71EDFDD0B00A74B14 /* event15.jpg in Resources */,
 				81F12B441EBD84FC00A1681E /* GoogleService-Info.plist in Resources */,
+				8134D1E41EFB92440050C2D5 /* leaderboard20.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
