@@ -27,7 +27,12 @@ class Leaderboard : NSObject {
             ($0.score as NSString).doubleValue > ($1.score as NSString).doubleValue
         }
         for (index, element) in self.userScores.enumerated() {
-          self.userScores[index].placement = index + 1
+          if (index > 0 && self.userScores[index].score == self.userScores[index-1].score) {
+            // TIE
+            self.userScores[index].placement = self.userScores[index-1].placement
+          } else {
+            self.userScores[index].placement = index + 1
+          }
         }
         onSuccess(self)
       })
