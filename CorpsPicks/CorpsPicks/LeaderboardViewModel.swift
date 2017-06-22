@@ -25,6 +25,7 @@ class LeaderboardViewModel: CPViewModel, CurrentLeaderboardProtocol {
   var placementScores : [UserScore] {
     get {
       if let leaderboard = self.placement {
+        
         return leaderboard.userScores
       }
       return []
