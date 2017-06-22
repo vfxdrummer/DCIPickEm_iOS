@@ -65,8 +65,12 @@ class AppDelegate: UIResponder, FUIAuthDelegate, GIDSignInDelegate, UIApplicatio
       if user != nil {
         print("Firebase logged in with uid \(user!.uid)")
         CurrentUser.sharedInstance.uid = user!.uid
-        CurrentUser.sharedInstance.email = user!.email!
-        CurrentUser.sharedInstance.photoURL = user!.photoURL
+        if let email = user!.email {
+          CurrentUser.sharedInstance.email = email
+        }
+        if let photoURL = user!.photoURL {
+          CurrentUser.sharedInstance.photoURL = photoURL
+        }
         UserInterface.setUser()
         self.launchStoryboard(StoryboardName.Main)
       } else {

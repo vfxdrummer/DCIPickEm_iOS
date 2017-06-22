@@ -105,7 +105,7 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return eventViewModel!.events.count
+    return eventViewModel != nil ? eventViewModel!.events.count : 0
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
