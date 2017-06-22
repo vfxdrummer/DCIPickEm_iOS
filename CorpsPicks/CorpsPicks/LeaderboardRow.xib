@@ -14,9 +14,6 @@
         <array key="OpenSans-Bold.ttf">
             <string>OpenSans-Bold</string>
         </array>
-        <array key="OpenSans-Regular.ttf">
-            <string>OpenSans</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -29,26 +26,30 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaderboard10.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XN5-TY-Mab" userLabel="Leaderboard Image">
-                        <rect key="frame" x="0.0" y="0.0" width="465" height="105.5"/>
+                        <rect key="frame" x="0.0" y="-12" width="465" height="129.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjx-Ju-6LR" userLabel="User Placement">
-                        <rect key="frame" x="13" y="37" width="50" height="30"/>
+                        <rect key="frame" x="13" y="36" width="50" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="9KG-w2-NTB"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="22"/>
-                        <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.92416376184305382" green="0.92416376184305382" blue="0.92416376184305382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="1" height="2"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timothy Brandt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-3T-i1K" userLabel="User Name">
-                        <rect key="frame" x="48" y="38" width="300" height="30"/>
+                        <rect key="frame" x="48" y="36" width="300" height="35"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="300" id="B8Q-5p-gd9"/>
                             <constraint firstAttribute="width" secondItem="yvE-3T-i1K" secondAttribute="height" multiplier="352:21" id="U5r-Ps-uo1"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="22"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="24"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="1" height="2"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="U5r-Ps-uo1"/>
@@ -56,13 +57,15 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.875" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="User Score">
-                        <rect key="frame" x="351.5" y="36.5" width="75.5" height="33"/>
+                        <rect key="frame" x="350.5" y="35.5" width="76.5" height="35"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ylr-i8-IIi" secondAttribute="height" multiplier="352:21" id="TCx-4w-yOI"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="24"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="1" height="2"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="TCx-4w-yOI"/>
@@ -72,9 +75,10 @@
                 </subviews>
                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="XN5-TY-Mab" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="8y6-tD-JhG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="XN5-TY-Mab" secondAttribute="bottom" constant="-20" id="Asg-Ke-U1t"/>
                     <constraint firstAttribute="trailing" secondItem="yvE-3T-i1K" secondAttribute="trailing" constant="8" id="EJA-vZ-PmT"/>
                     <constraint firstItem="Gjx-Ju-6LR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="F1f-To-MkP"/>
+                    <constraint firstItem="XN5-TY-Mab" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-20" id="FVT-p6-hR0"/>
                     <constraint firstAttribute="trailingMargin" secondItem="XN5-TY-Mab" secondAttribute="trailing" constant="-8" id="M1M-vA-zd3"/>
                     <constraint firstItem="ylr-i8-IIi" firstAttribute="top" secondItem="yvE-3T-i1K" secondAttribute="bottom" constant="1" id="PgV-xz-4Mq"/>
                     <constraint firstItem="Gjx-Ju-6LR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="PiU-gi-wDY"/>
@@ -84,7 +88,6 @@
                     <constraint firstItem="yvE-3T-i1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="40" id="qVa-RG-aET"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ylr-i8-IIi" secondAttribute="trailing" constant="30" id="qe6-ZA-XJR"/>
                     <constraint firstItem="XN5-TY-Mab" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="qgu-sA-7TG"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="XN5-TY-Mab" secondAttribute="bottom" constant="-8" id="uwc-nf-Vwb"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">

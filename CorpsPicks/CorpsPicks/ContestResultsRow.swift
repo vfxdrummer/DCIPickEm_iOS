@@ -57,6 +57,15 @@ class ContestResultsRow: UITableViewCell, UITextFieldDelegate {
     self.madePicks = madePicks
     self.placementOnly = placementOnly
     
+    // blur
+    self.corpsImage.subviews.forEach({ $0.removeFromSuperview() })
+    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+    let blurEffectView = UIVisualEffectView(effect: blurEffect)
+    blurEffectView.frame = self.corpsImage.bounds
+    blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    blurEffectView.alpha = 0.35
+    self.corpsImage.addSubview(blurEffectView)
+    
     updateVisibility()
   }
   

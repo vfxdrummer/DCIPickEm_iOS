@@ -54,6 +54,15 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
     self.placementOnly = placementOnly
     self.locked = locked
     
+    // blur
+    self.corpsImage.subviews.forEach({ $0.removeFromSuperview() })
+    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+    let blurEffectView = UIVisualEffectView(effect: blurEffect)
+    blurEffectView.frame = self.corpsImage.bounds
+    blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    blurEffectView.alpha = 0.35
+    self.corpsImage.addSubview(blurEffectView)
+    
     // setup scoreEntryField
     self.scoreEntryField.delegate = self
     self.scoreEntryField.becomeFirstResponder()
