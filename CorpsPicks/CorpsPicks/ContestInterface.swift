@@ -242,8 +242,6 @@ class ContestInterface: NSObject {
           print(error.localizedDescription)
         }
         
-      } else {
-        ContestInterface.setDefaultScorePicks(eventId: eventId)
       }
       
     }) { (error) in
