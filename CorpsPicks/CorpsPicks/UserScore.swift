@@ -10,6 +10,7 @@ import UIKit
 
 class UserScore : NSObject {
   var user : CPUser = CPUser()
+  var placement : Int?
   var score : String
   
   init(user: CPUser, score : String) {

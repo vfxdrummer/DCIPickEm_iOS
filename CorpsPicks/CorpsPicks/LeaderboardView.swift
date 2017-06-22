@@ -138,7 +138,7 @@ class LeaderboardView: UITableViewController {
       cell.leaderboardView = self
       if (leaderboardViewModel!.placementScores.count > indexPath.row && leaderboardViewModel!.scoresScores.count > indexPath.row) {
         let userScore = placementOnly == true ? leaderboardViewModel!.placementScores[indexPath.row] : leaderboardViewModel!.scoresScores[indexPath.row]
-        cell.load(indexPath.row+1, userScore: userScore)
+        cell.load(userScore: userScore)
       }
       return cell
       

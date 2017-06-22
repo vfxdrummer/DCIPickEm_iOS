@@ -16,7 +16,6 @@ class LeaderboardRow: UITableViewCell {
   var scoreGesture : UIPanGestureRecognizer? = nil
   var tapGesture : UITapGestureRecognizer? = nil
   var scoreDirection : Bool = true
-  var index : Int = 0
   weak var leaderboardView: LeaderboardView?
     
   @IBOutlet var userPlacementLabel: UILabel!
@@ -35,9 +34,8 @@ class LeaderboardRow: UITableViewCell {
    load the UserScore
    - parameter album: Album
    */
-  func load(_ index:Int, userScore:UserScore) {
-    self.index = index
-    userPlacementLabel.text = "\(index)"
+  func load(userScore:UserScore) {
+    userPlacementLabel.text = userScore.placement != nil ? "\(String(describing: userScore.placement))" : ""
     userNameLabel.text = userScore.user.name
     userScoreLabel.text = userScore.score
   }
