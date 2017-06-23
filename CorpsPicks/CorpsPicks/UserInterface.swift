@@ -15,14 +15,14 @@ class UserInterface: NSObject {
     // move this to singleton, set on Auth
     let userId = CurrentUser.sharedInstance.uid
     let email = CurrentUser.sharedInstance.email
-    let photoURL = CurrentUser.sharedInstance.photoURL
+//    let photoURL = CurrentUser.sharedInstance.photoURL
     
     let ref = Database.database().reference()
     
     let usersRef = ref.child("2017/v1//users")
     let userRef = usersRef.child("/\(userId)")
     userRef.child("email").setValue(email)
-    userRef.child("photoURL").setValue(photoURL)
+//    userRef.child("photoURL").setValue(photoURL)
   }
   
   /**
