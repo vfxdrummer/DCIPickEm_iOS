@@ -51,7 +51,7 @@ class LeaderboardRow: UITableViewCell {
     self.leaderboardImage.image = UIImage(named:imageName)
     
     self.leaderboardImage.subviews.forEach({ $0.removeFromSuperview() })
-    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
     let blurEffectView = UIVisualEffectView(effect: blurEffect)
     blurEffectView.frame = self.leaderboardImage.bounds
     blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

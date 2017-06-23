@@ -59,7 +59,7 @@ class ContestResultsRow: UITableViewCell, UITextFieldDelegate {
     
     // blur
     self.corpsImage.subviews.forEach({ $0.removeFromSuperview() })
-    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
     let blurEffectView = UIVisualEffectView(effect: blurEffect)
     blurEffectView.frame = self.corpsImage.bounds
     blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
