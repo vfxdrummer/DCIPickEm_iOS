@@ -51,8 +51,12 @@ class ContestResultsRow: UITableViewCell, UITextFieldDelegate {
     self.corpsPlacementResult.text = "\(placementResult)"
     self.corpsPlacementPick.text = "\(placementPick)"
     
-    self.corpsScoreResult.text = resultsScore.score.pick
-    self.corpsScorePick.text = corpsScore.score.pick
+    if let corpsScoreResultDouble = Double(resultsScore.score.pick),
+        let corpsScorePickDouble = Double(corpsScore.score.pick) {
+        self.corpsScoreResult.text = String(format: "%.2f", corpsScoreResultDouble)
+        self.corpsScorePick.text = String(format: "%.2f", corpsScorePickDouble)
+        
+    }
     
     self.madePicks = madePicks
     self.placementOnly = placementOnly
