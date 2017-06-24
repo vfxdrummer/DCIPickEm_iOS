@@ -67,7 +67,7 @@ class EventRow: UITableViewCell {
     let blurEffectView = UIVisualEffectView(effect: blurEffect)
     blurEffectView.frame = self.eventImage.bounds
     blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-    blurEffectView.alpha = 0.4
+    blurEffectView.alpha = 0.35
     self.eventImage.addSubview(blurEffectView)
   }
   
