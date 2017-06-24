@@ -27,7 +27,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUL-fd-oMb">
                         <rect key="frame" x="0.0" y="0.0" width="465" height="105.5"/>
                         <color key="backgroundColor" red="0.12968750000000001" green="0.1181082589" blue="0.11422991070000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                         <state key="normal" title="SET INITIAL PLACEMENT">
                             <color key="titleColor" red="0.90412955029111364" green="0.10668123964762055" blue="0.22592789592143128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
