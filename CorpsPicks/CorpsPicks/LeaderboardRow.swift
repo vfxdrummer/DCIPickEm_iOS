@@ -38,7 +38,9 @@ class LeaderboardRow: UITableViewCell {
   func load(userScore:UserScore) {
     userPlacementLabel.text = userScore.placement != nil ? "\(userScore.placement!)" : ""
     userNameLabel.text = userScore.user.name
-    userScoreLabel.text = userScore.score
+    if let userScoreDouble = Double(userScore.score) {
+        self.userScoreLabel.text = String(format: "%.2f", userScoreDouble)
+    }
     self.setLeaderboardImage()
   }
   

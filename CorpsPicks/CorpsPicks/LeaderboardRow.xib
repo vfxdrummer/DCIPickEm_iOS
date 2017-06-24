@@ -29,26 +29,26 @@
                         <rect key="frame" x="0.0" y="-12" width="465" height="129.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjx-Ju-6LR" userLabel="User Placement">
-                        <rect key="frame" x="13" y="36" width="50" height="32"/>
+                        <rect key="frame" x="13" y="41" width="50" height="24"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="9KG-w2-NTB"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="22"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                         <color key="textColor" red="0.92416376184305382" green="0.92416376184305382" blue="0.92416376184305382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                         <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <size key="shadowOffset" width="1" height="2"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timothy Brandt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-3T-i1K" userLabel="User Name">
-                        <rect key="frame" x="48" y="36" width="300" height="35"/>
+                        <rect key="frame" x="48" y="38.5" width="300" height="29.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="300" id="B8Q-5p-gd9"/>
                             <constraint firstAttribute="width" secondItem="yvE-3T-i1K" secondAttribute="height" multiplier="352:21" id="U5r-Ps-uo1"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
-                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <size key="shadowOffset" width="1" height="2"/>
                         <variation key="default">
                             <mask key="constraints">
@@ -57,14 +57,14 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.875" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-i8-IIi" userLabel="User Score">
-                        <rect key="frame" x="350.5" y="35.5" width="76.5" height="35"/>
+                        <rect key="frame" x="369" y="39.5" width="58" height="27"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ylr-i8-IIi" secondAttribute="height" multiplier="352:21" id="TCx-4w-yOI"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
-                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <size key="shadowOffset" width="1" height="2"/>
                         <variation key="default">
                             <mask key="constraints">

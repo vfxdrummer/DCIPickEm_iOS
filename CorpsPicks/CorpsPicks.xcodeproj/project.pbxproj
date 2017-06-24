@@ -222,6 +222,7 @@
 		81E9E4481EFF12EE00725EFE /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 811F63951EEA7135009AA6B2 /* OpenSans-Regular.ttf */; };
 		81E9E4491EFF12F000725EFE /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 811F63961EEA7135009AA6B2 /* OpenSans-Semibold.ttf */; };
 		81E9E44A1EFF12F300725EFE /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 811F63971EEA7135009AA6B2 /* OpenSans-SemiboldItalic.ttf */; };
+		81E9E44C1EFF241C00725EFE /* ExtUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E9E44B1EFF241C00725EFE /* ExtUIColor.swift */; };
 		81F12B441EBD84FC00A1681E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81F12B431EBD84FC00A1681E /* GoogleService-Info.plist */; };
 		81F735311EF76AB3001EF05E /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F735301EF76AB3001EF05E /* UserInterface.swift */; };
 		81FBE9071E84D19E00A67A02 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FBE9061E84D19E00A67A02 /* CurrentUser.swift */; };
@@ -465,6 +466,7 @@
 		81A493881E9DC2D80010364A /* UserScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserScore.swift; sourceTree = "<group>"; };
 		81A4938A1E9DC36A0010364A /* LeaderboardInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardInterface.swift; sourceTree = "<group>"; };
 		81C25A241EED8D1A00C0FF7C /* cesario-gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cesario-gold.png"; path = "resources/images/medals/cesario-gold.png"; sourceTree = "<group>"; };
+		81E9E44B1EFF241C00725EFE /* ExtUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUIColor.swift; sourceTree = "<group>"; };
 		81F12B431EBD84FC00A1681E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81F735301EF76AB3001EF05E /* UserInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
 		81FBE9061E84D19E00A67A02 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
@@ -683,6 +685,7 @@
 				22FA69451E133D24003CAFEF /* ExtUIImage.swift */,
 				22FA69461E133D24003CAFEF /* ExtUIImageView.swift */,
 				81265E3B1ECEB9B700547013 /* ExtUIViewController.swift */,
+				81E9E44B1EFF241C00725EFE /* ExtUIColor.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1397,6 +1400,7 @@
 				814D99711ED2156B00E8DAC3 /* CPNavigationController.swift in Sources */,
 				81A4938B1E9DC36A0010364A /* LeaderboardInterface.swift in Sources */,
 				22A0F4D81E0D1A5F00DD2F2D /* CPUser.swift in Sources */,
+				81E9E44C1EFF241C00725EFE /* ExtUIColor.swift in Sources */,
 				22A0F4D21E0D177400DD2F2D /* Corps.swift in Sources */,
 				22A0F4E11E0D238F00DD2F2D /* ContestView.swift in Sources */,
 				22FA694A1E13C641003CAFEF /* ContestPick.swift in Sources */,

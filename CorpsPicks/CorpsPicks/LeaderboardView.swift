@@ -110,7 +110,8 @@ class LeaderboardView: UITableViewController {
   
   override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let vw = UIView()
-    vw.backgroundColor = .gray
+    let backgroundColor = UIColor(hex: "3D3935")
+    vw.backgroundColor = backgroundColor
     let segmentedControl = UISegmentedControl(items: ["placement", "scores"])
     
     segmentedControl.selectedSegmentIndex = placementOnly == true ? 0 : 1

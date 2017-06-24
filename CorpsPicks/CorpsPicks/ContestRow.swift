@@ -49,7 +49,6 @@ class ContestRow: UITableViewCell, UITextFieldDelegate {
     
     self.corpsName.text = corpsScore.corps.name
     self.corpsScore.text = corpsScore.score.pick
-//    self.scoreEntryField.text = corpsScore.score.pick
     if let corpsScoreEntryDouble = Double(corpsScore.score.pick) {
         self.scoreEntryField.text = String(format: "%.2f", corpsScoreEntryDouble)
     }
