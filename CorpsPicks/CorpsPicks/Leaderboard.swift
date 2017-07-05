@@ -26,6 +26,9 @@ class Leaderboard : NSObject {
         userLocal.email = user.email
         userLocal.uid = user.uid
         self.userScores.append(UserScore.init(user: userLocal, score: userScoreDict["score"]!, placement: userScoreDict["placement"]!))
+        self.userScores = self.userScores.sorted {
+          ($0.placement as NSString).doubleValue < ($1.placement as NSString).doubleValue
+        }
         // Call Success Block on last index in .map
         if (index+1 >= userArray.count) {
           onSuccess(self)

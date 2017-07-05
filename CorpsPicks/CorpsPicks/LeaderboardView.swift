@@ -136,10 +136,9 @@ class LeaderboardView: UITableViewController {
     case true:
       let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardRow") as! LeaderboardRow
       cell.leaderboardView = self
-      if (leaderboardViewModel!.placementScores.count > indexPath.row && leaderboardViewModel!.scoresScores.count > indexPath.row) {
-        let userScore = placementOnly == true ? leaderboardViewModel!.placementScores[indexPath.row] : leaderboardViewModel!.scoresScores[indexPath.row]
-        cell.load(userScore: userScore)
-      }
+      let userScore = placementOnly == true ? leaderboardViewModel!.placementScores[indexPath.row] : leaderboardViewModel!.scoresScores[indexPath.row]
+      print("\(userScore.placement), \(userScore.user.email), \(userScore.score)")
+      cell.load(userScore: userScore)
       return cell
       
     case false:
