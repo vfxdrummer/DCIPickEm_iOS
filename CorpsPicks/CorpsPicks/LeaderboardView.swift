@@ -40,13 +40,12 @@ class LeaderboardView: UITableViewController {
     let leaderboardMessageRowNib = UINib(nibName: "LeaderboardMessageRow", bundle: nil)
     leaderboardTable.register(leaderboardMessageRowNib, forCellReuseIdentifier: "LeaderboardMessageRow")
     
-    leaderboardViewModel?.loadLeaderboard()
-    
     self.refreshControl!.addTarget(self, action: #selector(LeaderboardView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
   
   override func viewWillAppear(_ animated: Bool) {
     self.navigationController?.navigationBar.topItem?.title = (eventName != nil) ? eventName : "LEADERBOARD"
+    leaderboardViewModel?.loadLeaderboard()
   }
   
   func refresh(_ refreshControl: UIRefreshControl) {
@@ -89,7 +88,7 @@ class LeaderboardView: UITableViewController {
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     switch (leaderboardViewModel!.hasData) {
     case true:
-      return leaderboardViewModel!.placementScores.count
+      return placementOnly == true ? leaderboardViewModel!.placementScores.count : leaderboardViewModel!.scoresScores.count
     case false:
       return 1
     }

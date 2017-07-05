@@ -20,37 +20,28 @@ class LeaderboardInterface: NSObject {
     print("eventId : \(eventId)")
     let ref = Database.database().reference()
     
-    ref.child("2017/v1/leaderboard").child(eventId).observeSingleEvent(of: .value, with: { (snapshot) in
-      
-      ref.child("2017/v1/leaderboard").child(eventId).child("placement").observeSingleEvent(of: .value, with: { (snapshot) in
-        for _ in snapshot.children.allObjects as! [DataSnapshot] {
-          guard let leaderboardDict = snapshot.value as? [String:AnyObject] else {
-            continue
-          }
-          _ = Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>, onSuccess: { leaderboard in
-            leaderboard.id = eventId
-            CurrentLeaderboardItems.sharedInstance.placement = leaderboard
-          })
-        }
-        
-      }) { (error) in
-        print(error.localizedDescription)
+    ref.child("2017/v1/leaderboard").child(eventId).child("placement").observeSingleEvent(of: .value, with: { (snapshot) in
+      guard let leaderboardDict = snapshot.value as? [String:AnyObject] else {
+        return
       }
+      _ = Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>, onSuccess: { leaderboard in
+        leaderboard.id = eventId
+        CurrentLeaderboardItems.sharedInstance.placement = leaderboard
+      })
       
-      ref.child("2017/v1/leaderboard").child(eventId).child("scores").observeSingleEvent(of: .value, with: { (snapshot) in
-        for _ in snapshot.children.allObjects as! [DataSnapshot] {
-          guard let leaderboardDict = snapshot.value as? [String:AnyObject] else {
-            continue
-          }
-          _ = Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>, onSuccess: { leaderboard in
-            leaderboard.id = eventId
-            CurrentLeaderboardItems.sharedInstance.scores = leaderboard
-          })
-        }
-        
-      }) { (error) in
-        print(error.localizedDescription)
+    }) { (error) in
+      print(error.localizedDescription)
+    }
+    
+    ref.child("2017/v1/leaderboard").child(eventId).child("scores").observeSingleEvent(of: .value, with: { (snapshot) in
+      guard let leaderboardDict = snapshot.value as? [String:AnyObject] else {
+        return
       }
+      _ = Leaderboard.init(leaderboardDict: leaderboardDict as Dictionary<String, AnyObject>, onSuccess: { leaderboard in
+        leaderboard.id = eventId
+        CurrentLeaderboardItems.sharedInstance.scores = leaderboard
+      })
+      
     }) { (error) in
       print(error.localizedDescription)
     }
