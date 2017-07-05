@@ -14,27 +14,22 @@ class Leaderboard : NSObject {
   
   init(leaderboardDict: Dictionary<String, AnyObject>, onSuccess:@escaping (Leaderboard)->()) {
     super.init()
-    let scoreArray = Array(leaderboardDict.keys)
-    _ = scoreArray.map({
-      print($0)
-      print(leaderboardDict[$0]!)
+    let userArray = Array(leaderboardDict.keys)
+    _ = userArray.enumerated().map({ (index, element) in
+      let userId = element
+      guard let userScoreDict = leaderboardDict[userId] as? [String:String] else {
+        return
+      }
       let userLocal = CPUser()
-      userLocal.uid = $0.replacingOccurrences(of: "\"", with: "", options: .literal, range: nil)
-      UserInterface.getUserById(userId: userLocal.uid, onSuccess: { user in
+      UserInterface.getUserById(userId: userId, onSuccess: { user in
         userLocal.name = user.name
-        self.userScores.append(UserScore.init(user: userLocal, score: leaderboardDict[userLocal.uid]! as! String))
-        self.userScores = self.userScores.sorted {
-            ($0.score as NSString).doubleValue > ($1.score as NSString).doubleValue
+        self.userScores.append(UserScore.init(user: userLocal, score: userScoreDict["score"]!, placement: userScoreDict["placement"]!))
+        print("\(index) \(userArray.count)")
+        if (index+1 >= userArray.count) {
+          onSuccess(self)
         }
-        for (index, element) in self.userScores.enumerated() {
-          if (index > 0 && self.userScores[index].score == self.userScores[index-1].score) {
-            // TIE
-            self.userScores[index].placement = self.userScores[index-1].placement
-          } else {
-            self.userScores[index].placement = index + 1
-          }
-        }
-        onSuccess(self)
+      }, onFailure: {
+        print("FAIL : \($0)")
       })
     })
   }
