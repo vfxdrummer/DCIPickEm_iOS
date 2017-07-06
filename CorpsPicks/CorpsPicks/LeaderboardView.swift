@@ -29,7 +29,6 @@ class LeaderboardView: UITableViewController {
     
     // Setup the ViewModel
     leaderboardViewModel = LeaderboardViewModel(viewController: self)
-    leaderboardViewModel?.setup(eventId:eventId!)
     
     // Setup the Tableview Delegates
     leaderboardTable.delegate = self
@@ -45,6 +44,7 @@ class LeaderboardView: UITableViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     self.navigationController?.navigationBar.topItem?.title = (eventName != nil) ? eventName : "LEADERBOARD"
+    leaderboardViewModel?.setup(eventId:eventId!)
     leaderboardViewModel?.loadLeaderboard()
   }
   
