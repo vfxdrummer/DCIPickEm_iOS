@@ -17,6 +17,8 @@ class Event : NSObject {
   var imageName : String = ""
   var pickStatus : Bool = false
   var isComplete : Bool = false
+  var isExhibition : Bool = false
+  var isRainout : Bool = false
   var time : Date = Date()
   var lineup : [String : Corps] = [:]
   var scores : [Corps : Float] = [:]
@@ -46,7 +48,13 @@ class Event : NSObject {
       self.time = parseFirebaseTime(timeString: time)
     }
     if let isComplete = eventDict["isComplete"] {
-      self.isComplete = (eventDict["isComplete"] == "true") ? true : false
+      self.isComplete = (isComplete == "true") ? true : false
+    }
+    if let isExhibition = eventDict["isExhibition"] {
+      self.isExhibition = (isExhibition == "true") ? true : false
+    }
+    if let isRainout = eventDict["isRainout"] {
+      self.isRainout = (isRainout == "true") ? true : false
     }
   }
   

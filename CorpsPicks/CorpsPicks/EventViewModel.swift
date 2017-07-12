@@ -17,12 +17,12 @@ class EventViewModel: CPViewModel, CurrentEventProtocol {
   }
   var pastEvents : [Event] {
     get {
-      return CurrentEventItems.sharedInstance.events.filter { $0.isComplete == true }
+      return CurrentEventItems.sharedInstance.events.filter { $0.isComplete == true || $0.isExhibition || $0.isRainout }
     }
   }
   var futureEvents : [Event] {
     get {
-      return CurrentEventItems.sharedInstance.events.filter { $0.isComplete == false }
+      return CurrentEventItems.sharedInstance.events.filter { $0.isComplete == false && $0.isExhibition == false && $0.isRainout == false }
     }
   }
   var initialLoad : Bool = true
