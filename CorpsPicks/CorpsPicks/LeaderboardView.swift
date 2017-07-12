@@ -137,7 +137,6 @@ class LeaderboardView: UITableViewController {
       let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardRow") as! LeaderboardRow
       cell.leaderboardView = self
       let userScore = placementOnly == true ? leaderboardViewModel!.placementScores[indexPath.row] : leaderboardViewModel!.scoresScores[indexPath.row]
-      print("\(userScore.placement), \(userScore.user.email), \(userScore.score)")
       cell.load(userScore: userScore)
       return cell
       

@@ -34,7 +34,7 @@ class Leaderboard : NSObject {
           onSuccess(self)
         }
       }, onFailure: {
-        print("FAIL : \($0)")
+//        print("FAIL : \($0)")
       })
     })
   }
