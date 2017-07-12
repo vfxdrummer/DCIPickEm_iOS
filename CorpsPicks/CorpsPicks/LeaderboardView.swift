@@ -13,7 +13,7 @@ class LeaderboardView: UITableViewController {
   var leaderboardViewModel : LeaderboardViewModel? = nil
   var eventId : String? = nil
   var eventName : String? = nil
-  var placementOnly : Bool = false
+  var placementOnly : Bool = true
   
   @IBOutlet var leaderboardTable: UITableView!
   
