@@ -63,6 +63,10 @@
 		812F5BBE1E5A71A1009B068C /* ContestInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BBD1E5A71A1009B068C /* ContestInterface.swift */; };
 		8130DC081F15E713006392A3 /* EventSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130DC071F15E713006392A3 /* EventSectionView.swift */; };
 		8130DC0A1F15E7A5006392A3 /* EventSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8130DC091F15E7A5006392A3 /* EventSectionView.xib */; };
+		8130DC0F1F160F9B006392A3 /* bronze.png in Resources */ = {isa = PBXBuildFile; fileRef = 8130DC0B1F160F9B006392A3 /* bronze.png */; };
+		8130DC101F160F9B006392A3 /* gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 8130DC0C1F160F9B006392A3 /* gold.png */; };
+		8130DC111F160F9B006392A3 /* silver.png in Resources */ = {isa = PBXBuildFile; fileRef = 8130DC0D1F160F9B006392A3 /* silver.png */; };
+		8130DC121F160F9B006392A3 /* top12.png in Resources */ = {isa = PBXBuildFile; fileRef = 8130DC0E1F160F9B006392A3 /* top12.png */; };
 		8134D1D11EFB92440050C2D5 /* leaderboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1A71EFB92440050C2D5 /* leaderboard.jpg */; };
 		8134D1D21EFB92440050C2D5 /* leaderboard2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1A81EFB92440050C2D5 /* leaderboard2.jpg */; };
 		8134D1D31EFB92440050C2D5 /* leaderboard3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1A91EFB92440050C2D5 /* leaderboard3.jpg */; };
@@ -315,6 +319,10 @@
 		812F5BBD1E5A71A1009B068C /* ContestInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestInterface.swift; sourceTree = "<group>"; };
 		8130DC071F15E713006392A3 /* EventSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSectionView.swift; sourceTree = "<group>"; };
 		8130DC091F15E7A5006392A3 /* EventSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventSectionView.xib; sourceTree = "<group>"; };
+		8130DC0B1F160F9B006392A3 /* bronze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bronze.png; path = resources/images/medals/bronze.png; sourceTree = "<group>"; };
+		8130DC0C1F160F9B006392A3 /* gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gold.png; path = resources/images/medals/gold.png; sourceTree = "<group>"; };
+		8130DC0D1F160F9B006392A3 /* silver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = silver.png; path = resources/images/medals/silver.png; sourceTree = "<group>"; };
+		8130DC0E1F160F9B006392A3 /* top12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = top12.png; path = resources/images/medals/top12.png; sourceTree = "<group>"; };
 		8134D1A71EFB92440050C2D5 /* leaderboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard.jpg"; sourceTree = "<group>"; };
 		8134D1A81EFB92440050C2D5 /* leaderboard2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard2.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard2.jpg"; sourceTree = "<group>"; };
 		8134D1A91EFB92440050C2D5 /* leaderboard3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard3.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard3.jpg"; sourceTree = "<group>"; };
@@ -938,6 +946,10 @@
 		81C25A231EED8C5800C0FF7C /* medals */ = {
 			isa = PBXGroup;
 			children = (
+				8130DC0B1F160F9B006392A3 /* bronze.png */,
+				8130DC0C1F160F9B006392A3 /* gold.png */,
+				8130DC0D1F160F9B006392A3 /* silver.png */,
+				8130DC0E1F160F9B006392A3 /* top12.png */,
 				81C25A241EED8D1A00C0FF7C /* cesario-gold.png */,
 			);
 			name = medals;
@@ -1152,6 +1164,7 @@
 				817197D81EC81DD600415BAC /* bluecoats1.jpg in Resources */,
 				817197D91EC81DD600415BAC /* bluedevils1.jpg in Resources */,
 				817197DA1EC81DD600415BAC /* blueknights1.jpg in Resources */,
+				8130DC111F160F9B006392A3 /* silver.png in Resources */,
 				81920ADB1EDFDD0B00A74B14 /* event27.jpg in Resources */,
 				8134D1F51EFB92440050C2D5 /* leaderboard37.jpg in Resources */,
 				8134D1F01EFB92440050C2D5 /* leaderboard32.jpg in Resources */,
@@ -1203,6 +1216,7 @@
 				817197ED1EC81DD600415BAC /* vanguard1.jpg in Resources */,
 				816582EC1EC74848002C9BA2 /* crown.jpeg in Resources */,
 				8134D1E91EFB92440050C2D5 /* leaderboard25.jpg in Resources */,
+				8130DC0F1F160F9B006392A3 /* bronze.png in Resources */,
 				8134D1DB1EFB92440050C2D5 /* leaderboard11.jpg in Resources */,
 				816582E91EC74848002C9BA2 /* bluedevils.png in Resources */,
 				8134D1D51EFB92440050C2D5 /* leaderboard5.jpg in Resources */,
@@ -1230,6 +1244,7 @@
 				81920AEB1EDFDD0B00A74B14 /* dekalb.jpg in Resources */,
 				81E9E4411EFF12C100725EFE /* OpenSans-ExtraBold.ttf in Resources */,
 				81920AD01EDFDD0B00A74B14 /* event38.jpg in Resources */,
+				8130DC121F160F9B006392A3 /* top12.png in Resources */,
 				22A0F4A11E0D0BA400DD2F2D /* Main.storyboard in Resources */,
 				812F5BB71E5A29A6009B068C /* EventRow.xib in Resources */,
 				8134D1EA1EFB92440050C2D5 /* leaderboard26.jpg in Resources */,
@@ -1241,6 +1256,7 @@
 				8134D1EE1EFB92440050C2D5 /* leaderboard30.jpg in Resources */,
 				816582F21EC74857002C9BA2 /* fdc_logo.pdf in Resources */,
 				816582F11EC74857002C9BA2 /* fdc_logo_no_padding.pdf in Resources */,
+				8130DC101F160F9B006392A3 /* gold.png in Resources */,
 				8134D1DE1EFB92440050C2D5 /* leaderboard14.jpg in Resources */,
 				8134D1F31EFB92440050C2D5 /* leaderboard35.jpg in Resources */,
 				81920AE11EDFDD0B00A74B14 /* event21.jpg in Resources */,

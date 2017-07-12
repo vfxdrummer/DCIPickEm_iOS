@@ -22,6 +22,7 @@ class LeaderboardRow: UITableViewCell {
   @IBOutlet var userPlacementLabel: UILabel!
   @IBOutlet var userNameLabel: UILabel!
   @IBOutlet var userScoreLabel: UILabel!
+  @IBOutlet weak var medalImage: UIImageView!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -41,6 +42,20 @@ class LeaderboardRow: UITableViewCell {
     if let userScoreDouble = Double(userScore.score) {
         self.userScoreLabel.text = String(format: "%.2f", userScoreDouble)
     }
+    
+    if let placement = Int(userScore.placement) {
+      switch(placement) {
+      case 1:
+        medalImage.image = UIImage(named: "gold.png")
+      case 2:
+        medalImage.image = UIImage(named: "silver.png")
+      case 3:
+        medalImage.image = UIImage(named: "bronze.png")
+      default:
+        medalImage.image = placement < 12 ? UIImage(named: "top12.png") : nil
+      }
+    }
+    
     self.setLeaderboardImage()
   }
   
