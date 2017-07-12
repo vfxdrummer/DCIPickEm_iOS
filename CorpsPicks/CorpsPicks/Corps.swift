@@ -50,6 +50,12 @@ class Corps : NSObject {
       return "coltcadets"
     case "Columbians":
       return "columbians"
+    case "Gold":
+      return "gold"
+    case "Golden Empire":
+      return "goldenempire"
+    case "Guardians":
+      return "guardians"
     case "Heat Wave":
       return "heatwave"
     case "Impulse":
@@ -58,8 +64,8 @@ class Corps : NSObject {
       return "incognito"
     case "Legends":
       return "legends"
-    case "Lessentor":
-      return "lessentor"
+    case "Les Sentors":
+      return "lessentors"
     case "Louisiana Stars":
       return "louisianastars"
     case "Music City":

@@ -674,7 +674,7 @@
 			children = (
 				81920B031EE10CC900A74B14 /* accessory */,
 				8171981D1EC95C6700415BAC /* tabbar */,
-				8171981C1EC841BC00415BAC /* contest_banners */,
+				8171981C1EC841BC00415BAC /* corps_banners */,
 				81920AA31EDFDBAE00A74B14 /* event_banners */,
 				8134D1A61EFB92220050C2D5 /* leaderboard_banners */,
 				816582DF1EC74811002C9BA2 /* badges */,
@@ -815,7 +815,7 @@
 			name = Keyboard;
 			sourceTree = "<group>";
 		};
-		8171981C1EC841BC00415BAC /* contest_banners */ = {
+		8171981C1EC841BC00415BAC /* corps_banners */ = {
 			isa = PBXGroup;
 			children = (
 				817197EE1EC81DE900415BAC /* 7thregiment1.jpg */,
@@ -865,7 +865,7 @@
 				817197D51EC81DD600415BAC /* troopers1.jpg */,
 				817197D61EC81DD600415BAC /* vanguard1.jpg */,
 			);
-			name = contest_banners;
+			name = corps_banners;
 			path = ..;
 			sourceTree = "<group>";
 		};
