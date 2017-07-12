@@ -39,6 +39,10 @@ class LeaderboardView: UITableViewController {
     let leaderboardMessageRowNib = UINib(nibName: "LeaderboardMessageRow", bundle: nil)
     leaderboardTable.register(leaderboardMessageRowNib, forCellReuseIdentifier: "LeaderboardMessageRow")
     
+    let adjustForTabbarInsets = UIEdgeInsetsMake(0, 0, 50, 0);
+    leaderboardTable.contentInset = adjustForTabbarInsets
+    leaderboardTable.scrollIndicatorInsets = adjustForTabbarInsets
+    
     self.refreshControl!.addTarget(self, action: #selector(LeaderboardView.refresh(_:)), for: UIControlEvents.valueChanged)
   }
   
@@ -150,10 +154,6 @@ class LeaderboardView: UITableViewController {
   }
   
   // Mark - SegmentedControl
-  
-//  func segmentedControlValueChanged(segment: UISegmentedControl) {
-//    
-//  }
   
   func segmentedValueChanged(_ sender:UISegmentedControl!)
   {
