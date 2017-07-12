@@ -15,6 +15,16 @@ class EventViewModel: CPViewModel, CurrentEventProtocol {
       return CurrentEventItems.sharedInstance.events
     }
   }
+  var pastEvents : [Event] {
+    get {
+      return CurrentEventItems.sharedInstance.events.filter { $0.isComplete == true }
+    }
+  }
+  var futureEvents : [Event] {
+    get {
+      return CurrentEventItems.sharedInstance.events.filter { $0.isComplete == false }
+    }
+  }
   var initialLoad : Bool = true
   
   func setup() {

@@ -13,6 +13,7 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
   
   var eventViewModel : EventViewModel? = nil
   private var animating: Bool = false
+  private var sectionHeaderHeight: CGFloat = 50.0
   
   @IBOutlet var eventTable: UITableView!
   
@@ -29,6 +30,7 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
     eventTable.delegate = self
     eventTable.dataSource = self
     eventTable.tableFooterView = UIView(frame: CGRect.zero)
+    eventTable.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
     let eventNib = UINib(nibName: "EventRow", bundle: nil)
     eventTable.register(eventNib, forCellReuseIdentifier: "EventRow")
     
@@ -63,6 +65,16 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
     animating = false
   }
   
+  private func scrollToFutureEventRow() {
+    guard (eventViewModel!.pastEvents.count > 0 && eventViewModel!.futureEvents.count > 0) else {
+      return
+    }
+    DispatchQueue.main.async {
+      let index = IndexPath(row: 0, section: 1)
+      self.eventTable.scrollToRow(at: index,at: .middle, animated: true)
+    }
+  }
+  
   func refresh(_ refreshControl: UIRefreshControl) {
     self.eventTable.reloadData()
     
@@ -87,6 +99,7 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
   func loadEvents(events:[Event]) {
     self.stopAnimating()
     eventTable.reloadData()
+    scrollToFutureEventRow()
   }
   
   /**
@@ -101,21 +114,55 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
   //  MARK: UITableViewDelegate - UITableViewDataSource Methods
   
   override func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
+    return 2
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return eventViewModel != nil ? eventViewModel!.events.count : 0
+    switch (section) {
+    case 0:
+      return eventViewModel != nil ? eventViewModel!.pastEvents.count : 0
+    default:
+      return eventViewModel != nil ? eventViewModel!.futureEvents.count : 0
+    }
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 120
   }
   
+  override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return sectionHeaderHeight
+  }
+  
+  override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let view = UIView()
+    view.backgroundColor = UIColor(hex: "3D3935")
+    
+    let titleLabel = UILabel()
+    titleLabel.textColor = .white
+    view.addSubview(titleLabel)
+    switch (section) {
+    case 0:
+      titleLabel.text = "Past Events"
+    default:
+      titleLabel.text = "Future Events"
+    }
+    titleLabel.textAlignment = .center
+    titleLabel.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: sectionHeaderHeight)
+    view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: sectionHeaderHeight)
+    
+    return view
+  }
+  
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "EventRow") as! EventRow
     cell.eventView = self
-    cell.load(indexPath.row, event: eventViewModel!.events[indexPath.row])
+    switch (indexPath.section) {
+    case 0:
+      cell.load(indexPath.row, event: eventViewModel!.pastEvents[indexPath.row])
+    default:
+      cell.load(indexPath.row, event: eventViewModel!.futureEvents[indexPath.row])
+    }
     return cell
   }
   

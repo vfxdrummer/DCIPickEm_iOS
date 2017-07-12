@@ -61,6 +61,8 @@
 		812F5BB81E5A29A6009B068C /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB61E5A29A6009B068C /* EventRow.swift */; };
 		812F5BBA1E5A30B8009B068C /* CurrentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BB91E5A30B8009B068C /* CurrentStatus.swift */; };
 		812F5BBE1E5A71A1009B068C /* ContestInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F5BBD1E5A71A1009B068C /* ContestInterface.swift */; };
+		8130DC081F15E713006392A3 /* EventSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130DC071F15E713006392A3 /* EventSectionView.swift */; };
+		8130DC0A1F15E7A5006392A3 /* EventSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8130DC091F15E7A5006392A3 /* EventSectionView.xib */; };
 		8134D1D11EFB92440050C2D5 /* leaderboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1A71EFB92440050C2D5 /* leaderboard.jpg */; };
 		8134D1D21EFB92440050C2D5 /* leaderboard2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1A81EFB92440050C2D5 /* leaderboard2.jpg */; };
 		8134D1D31EFB92440050C2D5 /* leaderboard3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8134D1A91EFB92440050C2D5 /* leaderboard3.jpg */; };
@@ -311,6 +313,8 @@
 		812F5BB61E5A29A6009B068C /* EventRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
 		812F5BB91E5A30B8009B068C /* CurrentStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentStatus.swift; sourceTree = "<group>"; };
 		812F5BBD1E5A71A1009B068C /* ContestInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestInterface.swift; sourceTree = "<group>"; };
+		8130DC071F15E713006392A3 /* EventSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSectionView.swift; sourceTree = "<group>"; };
+		8130DC091F15E7A5006392A3 /* EventSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventSectionView.xib; sourceTree = "<group>"; };
 		8134D1A71EFB92440050C2D5 /* leaderboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard.jpg"; sourceTree = "<group>"; };
 		8134D1A81EFB92440050C2D5 /* leaderboard2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard2.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard2.jpg"; sourceTree = "<group>"; };
 		8134D1A91EFB92440050C2D5 /* leaderboard3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leaderboard3.jpg; path = "../../../../Downloads/leaderboard images (1)/leaderboard3.jpg"; sourceTree = "<group>"; };
@@ -574,6 +578,8 @@
 				816E33931EF8D87D002FB242 /* ContestResultsRow.xib */,
 				812F5BB61E5A29A6009B068C /* EventRow.swift */,
 				812F5BB51E5A29A6009B068C /* EventRow.xib */,
+				8130DC071F15E713006392A3 /* EventSectionView.swift */,
+				8130DC091F15E7A5006392A3 /* EventSectionView.xib */,
 				8111BF8C1EE4633900FB8E5C /* LeaderboardMessageRow.swift */,
 				8111BF8A1EE4628100FB8E5C /* LeaderboardMessageRow.xib */,
 				81A493841E9B5E4B0010364A /* LeaderboardRow.swift */,
@@ -1124,6 +1130,7 @@
 				8134D1E71EFB92440050C2D5 /* leaderboard23.jpg in Resources */,
 				817198131EC81DEA00415BAC /* musiccity1.jpg in Resources */,
 				817198141EC81DEA00415BAC /* raiders1.jpg in Resources */,
+				8130DC0A1F15E7A5006392A3 /* EventSectionView.xib in Resources */,
 				817198151EC81DEA00415BAC /* rivercityryhthm1.jpg in Resources */,
 				8134D1EC1EFB92440050C2D5 /* leaderboard28.jpg in Resources */,
 				817198161EC81DEA00415BAC /* shadow1.jpg in Resources */,
@@ -1390,6 +1397,7 @@
 				22FA694C1E145C90003CAFEF /* Score.swift in Sources */,
 				812F5BB21E5A255D009B068C /* EventViewModel.swift in Sources */,
 				22A0F4E71E0D279C00DD2F2D /* CPViewModel.swift in Sources */,
+				8130DC081F15E713006392A3 /* EventSectionView.swift in Sources */,
 				81F735311EF76AB3001EF05E /* UserInterface.swift in Sources */,
 				811F638B1EEA6775009AA6B2 /* ContestOptionsRow.swift in Sources */,
 				81055D671E594F6600FF8DCD /* EventInterface.swift in Sources */,
