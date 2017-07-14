@@ -168,7 +168,7 @@ class EventView: UITableViewController, NVActivityIndicatorViewable {
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let cell = tableView.cellForRow(at: indexPath) as! EventRow
-    if let event = eventViewModel?.events[indexPath.row] as Event? {
+    if let event = cell.event {
       CPTabView.shared?.showContest(event: event)
       cell.isSelected = false
     }

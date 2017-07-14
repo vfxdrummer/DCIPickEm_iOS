@@ -38,6 +38,7 @@ class EventRow: UITableViewCell {
    */
   func load(_ index:Int, event:Event) {
     self.index = index
+    self.event = event
     self.eventName.text = event.name
     self.eventDate.text = event.date_label
     self.eventLocation.text = event.location
